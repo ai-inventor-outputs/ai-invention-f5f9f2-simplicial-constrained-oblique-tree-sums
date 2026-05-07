@@ -1,0 +1,1404 @@
+{
+  "metadata": {
+    "experiment_id": "experiment_iter2_dir3",
+    "method_name": "SC-OTS Simplicial Complex Construction Pipeline",
+    "description": "Validates persistent-homology-based feature interaction discovery using distance correlation dissimilarity, Rips filtration, and persistence threshold selection. Compares against Pearson correlation b...",
+    "summary": {
+      "total_datasets": 10,
+      "synthetic_with_gt": 4,
+      "real_datasets": 6
+    },
+    "step2_triangle_inequality": {
+      "friedman1": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "friedman3": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "synth_3way": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "synth_4way": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "diabetes": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "breast_w": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "adult": {
+        "raw_violations": 4,
+        "raw_violation_rate": 9.33184023889511e-06,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "wine_quality": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "california_housing": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      },
+      "spambase": {
+        "raw_violations": 0,
+        "raw_violation_rate": 0.0,
+        "sqrt_violations": 0,
+        "sqrt_violation_rate": 0.0
+      }
+    },
+    "step3_rips_filtration_summary": {
+      "friedman1": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.962078034841073,
+        "dissimilarity_used": "1-dCor"
+      },
+      "friedman3": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.965445160964789,
+        "dissimilarity_used": "1-dCor"
+      },
+      "synth_3way": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.934705770659117,
+        "dissimilarity_used": "1-dCor"
+      },
+      "synth_4way": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.9572429789558989,
+        "dissimilarity_used": "1-dCor"
+      },
+      "diabetes": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.5278502510982599,
+        "dissimilarity_used": "1-dCor"
+      },
+      "breast_w": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.43024730750268764,
+        "dissimilarity_used": "1-dCor"
+      },
+      "adult": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.5107479557718704,
+        "dissimilarity_used": "sqrt(1-dCor)"
+      },
+      "wine_quality": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.39533400895366577,
+        "dissimilarity_used": "1-dCor"
+      },
+      "california_housing": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.21004678067535654,
+        "dissimilarity_used": "1-dCor"
+      },
+      "spambase": {
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "gap_threshold": 0.11501745339043129,
+        "dissimilarity_used": "1-dCor"
+      }
+    },
+    "step4_interaction_recovery": {
+      "friedman1": {
+        "f1_at_optimal": 0.0163,
+        "f1_at_gap": 0.0,
+        "optimal_threshold": 0.97009,
+        "gap_threshold": 0.962078
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "f1_at_gap": 0.3077,
+        "optimal_threshold": 0.977905,
+        "gap_threshold": 0.965445
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.0784,
+        "f1_at_gap": 0.0,
+        "optimal_threshold": 0.96276,
+        "gap_threshold": 0.934706
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.129,
+        "f1_at_gap": 0.0976,
+        "optimal_threshold": 0.952753,
+        "gap_threshold": 0.957243
+      }
+    },
+    "step5_clique_inflation": {
+      "friedman1": {
+        "1": {
+          "total_simplices": 13,
+          "genuine": 0,
+          "spurious_total": 13,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "2": {
+          "total_simplices": 1,
+          "genuine": 0,
+          "spurious_total": 1,
+          "spurious_inflation": 1,
+          "inflation_rate": 1.0
+        },
+        "3": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        }
+      },
+      "friedman3": {
+        "1": {
+          "total_simplices": 2,
+          "genuine": 2,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "2": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "3": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        }
+      },
+      "synth_3way": {
+        "1": {
+          "total_simplices": 1,
+          "genuine": 0,
+          "spurious_total": 1,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "2": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "3": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        }
+      },
+      "synth_4way": {
+        "1": {
+          "total_simplices": 28,
+          "genuine": 2,
+          "spurious_total": 26,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        },
+        "2": {
+          "total_simplices": 1,
+          "genuine": 0,
+          "spurious_total": 1,
+          "spurious_inflation": 1,
+          "inflation_rate": 1.0
+        },
+        "3": {
+          "total_simplices": 0,
+          "genuine": 0,
+          "spurious_total": 0,
+          "spurious_inflation": 0,
+          "inflation_rate": 0.0
+        }
+      }
+    },
+    "step6_hsic_comparison": {
+      "skipped": false,
+      "dcor_f1_at_gap": 0.0,
+      "hsic_f1_at_gap": 0.0,
+      "dcor_optimal_f1": 0.0163,
+      "hsic_optimal_f1": 0.0455,
+      "hsic_gap_threshold": 0.523304,
+      "hsic_optimal_threshold": 1.031428,
+      "conclusion": "comparable"
+    },
+    "step7_real_datasets": {
+      "diabetes": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 2,
+          "2": 0,
+          "3": 0
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.5,
+        "top_edges": [
+          {
+            "features": [
+              "preg",
+              "age"
+            ],
+            "dcor": 0.6103
+          },
+          {
+            "features": [
+              "skin",
+              "insu"
+            ],
+            "dcor": 0.5336
+          },
+          {
+            "features": [
+              "skin",
+              "mass"
+            ],
+            "dcor": 0.4107
+          }
+        ]
+      },
+      "breast_w": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 24,
+          "2": 38,
+          "3": 36
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.8889,
+        "top_edges": [
+          {
+            "features": [
+              "Cell_Size_Uniformity",
+              "Cell_Shape_Uniformity"
+            ],
+            "dcor": 0.9021
+          },
+          {
+            "features": [
+              "Cell_Size_Uniformity",
+              "Single_Epi_Cell_Size"
+            ],
+            "dcor": 0.7798
+          },
+          {
+            "features": [
+              "Cell_Size_Uniformity",
+              "Bland_Chromatin"
+            ],
+            "dcor": 0.7511
+          }
+        ]
+      },
+      "california_housing": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.25,
+        "top_edges": [
+          {
+            "features": [
+              "Latitude",
+              "Longitude"
+            ],
+            "dcor": 0.9481
+          },
+          {
+            "features": [
+              "MedInc",
+              "AveRooms"
+            ],
+            "dcor": 0.6318
+          },
+          {
+            "features": [
+              "AveRooms",
+              "AveBedrms"
+            ],
+            "dcor": 0.4564
+          }
+        ]
+      },
+      "wine_quality": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 2,
+          "2": 0,
+          "3": 0
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.3636,
+        "top_edges": [
+          {
+            "features": [
+              "free.sulfur.dioxide",
+              "total.sulfur.dioxide"
+            ],
+            "dcor": 0.7117
+          },
+          {
+            "features": [
+              "density",
+              "alcohol"
+            ],
+            "dcor": 0.6794
+          },
+          {
+            "features": [
+              "chlorides",
+              "density"
+            ],
+            "dcor": 0.5299
+          }
+        ]
+      },
+      "adult": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.0208,
+        "top_edges": [
+          {
+            "features": [
+              "race_Black",
+              "race_White"
+            ],
+            "dcor": 0.8198
+          },
+          {
+            "features": [
+              "education-num",
+              "education_Bachelors"
+            ],
+            "dcor": 0.6436
+          },
+          {
+            "features": [
+              "marital-status_Married-civ-spouse",
+              "marital-status_Never-married"
+            ],
+            "dcor": 0.637
+          }
+        ]
+      },
+      "spambase": {
+        "simplex_counts": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0
+        },
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "participation_rate": 0.0351,
+        "top_edges": [
+          {
+            "features": [
+              "word_freq_857",
+              "word_freq_415"
+            ],
+            "dcor": 0.9874
+          },
+          {
+            "features": [
+              "word_freq_telnet",
+              "word_freq_857"
+            ],
+            "dcor": 0.7826
+          },
+          {
+            "features": [
+              "word_freq_telnet",
+              "word_freq_415"
+            ],
+            "dcor": 0.7758
+          }
+        ]
+      }
+    },
+    "baseline_pearson": {
+      "friedman1": {
+        "f1_at_optimal": 0.0125,
+        "optimal_threshold": 0.998281,
+        "f1_at_gap": 0.0,
+        "gap_threshold": 0.986029,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ]
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 0.999965,
+        "f1_at_gap": 0.3077,
+        "gap_threshold": 0.995728,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ]
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.1111,
+        "optimal_threshold": 0.99107,
+        "f1_at_gap": 0.0,
+        "gap_threshold": 0.990442,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ]
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.1429,
+        "optimal_threshold": 0.983457,
+        "f1_at_gap": 0.1429,
+        "gap_threshold": 0.983883,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "enhanced_interaction_dcor": {
+      "friedman1": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 0.0,
+        "f1_at_gap": 0.4,
+        "gap_threshold": 0.854326,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.789474": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "0.842105": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.854326": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.894737": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.947368": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "1.0": {
+            "precision": 0.0016,
+            "recall": 1.0,
+            "f1": 0.0032,
+            "tp": 1,
+            "fp": 626,
+            "fn": 0
+          }
+        }
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 1.0,
+        "f1_at_gap": 0.3077,
+        "gap_threshold": 0.895796,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.789474": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.842105": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.894737": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.895796": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.947368": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "1.0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 11,
+            "fp": 0,
+            "fn": 0
+          }
+        }
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.5714,
+        "optimal_threshold": 0.789474,
+        "f1_at_gap": 0.5714,
+        "gap_threshold": 0.822443,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.789474": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.822443": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.842105": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.894737": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.947368": {
+            "precision": 0.1111,
+            "recall": 0.4,
+            "f1": 0.1739,
+            "tp": 2,
+            "fp": 16,
+            "fn": 3
+          },
+          "1.0": {
+            "precision": 0.001,
+            "recall": 1.0,
+            "f1": 0.002,
+            "tp": 5,
+            "fp": 4923,
+            "fn": 0
+          }
+        }
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.4211,
+        "optimal_threshold": 0.947368,
+        "f1_at_gap": 0.1429,
+        "gap_threshold": 0.910922,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.052632": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.105263": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.157895": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.210526": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.263158": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.315789": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.368421": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.421053": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.473684": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.526316": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.578947": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.631579": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.684211": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.736842": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.789474": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.842105": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.894737": {
+            "precision": 0.5,
+            "recall": 0.0833,
+            "f1": 0.1429,
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "0.910922": {
+            "precision": 0.5,
+            "recall": 0.0833,
+            "f1": 0.1429,
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "0.947368": {
+            "precision": 0.5714,
+            "recall": 0.3333,
+            "f1": 0.4211,
+            "tp": 4,
+            "fp": 3,
+            "fn": 8
+          },
+          "1.0": {
+            "precision": 0.0006,
+            "recall": 1.0,
+            "f1": 0.0011,
+            "tp": 12,
+            "fp": 21667,
+            "fn": 0
+          }
+        }
+      }
+    },
+    "figures": {
+      "f1_vs_threshold": "iVBORw0KGgoAAAANSUhEUgAAC6MAAAJRCAYAAAAKiID/AAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgABAABJREFUeJzs3Xd4FOXax/HfpodUUiiB...",
+      "persistence_diagrams": "iVBORw0KGgoAAAANSUhEUgAABvgAAAXDCAYAAAAV4TmBAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgABAABJREFUeJzs3Xl8lNXZ//HvzGSyL2yB...",
+      "triangle_violations": "iVBORw0KGgoAAAANSUhEUgAABvgAAALbCAYAAAA/w4f5AAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgAA9ZZJREFUeJzs3XeYVdXdPu7nwNCRpoCN...",
+      "clique_inflation": "iVBORw0KGgoAAAANSUhEUgAABcwAAALbCAYAAADHOcO6AAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgAA40lJREFUeJzs3Xd4FFX/9/HPJiGF0AIp...",
+      "dcor_vs_hsic": "iVBORw0KGgoAAAANSUhEUgAABKAAAALbCAYAAADNbPiEAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgAAdXZJREFUeJzs3XlcVXX+x/H3ZZdFUMQV...",
+      "interaction_graphs": "iVBORw0KGgoAAAANSUhEUgAADD8AAAN5CAYAAAC1rHH0AAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjgsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvwVt1zgAAAAlwSFlzAAAXEgAAFxIBZ5/SUgABAABJREFUeJzs3Xd4FFX7//HPpvcempTQ..."
+    },
+    "key_findings": {
+      "triangle_inequality_recommendation": "sqrt(1-dCor)",
+      "gap_heuristic_reliability": "unreliable",
+      "mean_f1_at_gap_synthetic": 0.1013,
+      "clique_inflation_severity": "high",
+      "hsic_vs_dcor_verdict": "comparable",
+      "total_raw_triangle_violations": 4,
+      "total_sqrt_triangle_violations": 0,
+      "enhanced_interaction_dcor_f1s": {
+        "friedman1": 1.0,
+        "friedman3": 1.0,
+        "synth_3way": 0.5714,
+        "synth_4way": 0.4211
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "adult",
+      "examples": [
+        {
+          "input": "[38.0, 89814.0, 9.0, 0.0, 0.0, 50.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0...",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.5107, \"edges\": [[53, 55]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "adult",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 96
+        },
+        {
+          "input": "[18.0, 103497.0, 10.0, 0.0, 0.0, 30.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0...",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.5107, \"edges\": [[53, 55]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "adult",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 96
+        },
+        {
+          "input": "[29.0, 227026.0, 9.0, 0.0, 0.0, 40.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0....",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.5107, \"edges\": [[53, 55]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "adult",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 96
+        }
+      ]
+    },
+    {
+      "dataset": "breast_w",
+      "examples": [
+        {
+          "input": "[5.0, 1.0, 1.0, 1.0, 2.0, 1.0, 3.0, 1.0, 1.0]",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.4302, \"edges\": [[0, 1], [0, 2], [0, 5], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [3, 4], [3, 5], [3, 6], [3, 7...",
+          "metadata_dataset": "breast_w",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 9
+        },
+        {
+          "input": "[5.0, 4.0, 4.0, 5.0, 7.0, 10.0, 3.0, 2.0, 1.0]",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.4302, \"edges\": [[0, 1], [0, 2], [0, 5], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [3, 4], [3, 5], [3, 6], [3, 7...",
+          "metadata_dataset": "breast_w",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 9
+        },
+        {
+          "input": "[3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 3.0, 1.0, 1.0]",
+          "output": "0",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.4302, \"edges\": [[0, 1], [0, 2], [0, 5], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [3, 4], [3, 5], [3, 6], [3, 7...",
+          "metadata_dataset": "breast_w",
+          "metadata_task_type": "classification",
+          "metadata_n_features": 9
+        }
+      ]
+    },
+    {
+      "dataset": "california_housing",
+      "examples": [
+        {
+          "input": "[8.3252, 41.0, 6.984127, 1.02381, 322.0, 2.555556, 37.88, -122.23]",
+          "output": "4.526",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.21, \"edges\": [[6, 7]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "california_housing",
+          "metadata_task_type": "regression",
+          "metadata_n_features": 8
+        },
+        {
+          "input": "[8.3014, 21.0, 6.238137, 0.97188, 2401.0, 2.109842, 37.86, -122.22]",
+          "output": "3.585",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.21, \"edges\": [[6, 7]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "california_housing",
+          "metadata_task_type": "regression",
+          "metadata_n_features": 8
+        },
+        {
+          "input": "[7.2574, 52.0, 8.288136, 1.073446, 496.0, 2.80226, 37.85, -122.24]",
+          "output": "3.521",
+          "predict_our_method": "{\"method\": \"dCor_Rips\", \"gap_threshold\": 0.21, \"edges\": [[6, 7]], \"triangles\": [], \"n_edges\": 1, \"n_triangles\": 0}",
+          "metadata_dataset": "california_housing",
+          "metadata_task_type": "regression",
+          "metadata_n_features": 8
+        }
+      ]
+    }
+  ]
+}
