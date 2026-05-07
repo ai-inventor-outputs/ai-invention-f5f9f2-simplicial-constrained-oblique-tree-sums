@@ -1,0 +1,1385 @@
+2026-02-28 17:00:07.880 | INFO     | __main__:main:1615 - ============================================================
+2026-02-28 17:00:07.880 | INFO     | __main__:main:1616 - SC-OTS Ablation Experiment
+2026-02-28 17:00:07.880 | INFO     | __main__:main:1617 - ============================================================
+2026-02-28 17:00:07.880 | INFO     | __main__:load_datasets:140 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:00:07.881 | ERROR    | __main__:main:1620 - An error has been caught in function 'main', process 'MainProcess' (661519), thread 'MainThread' (133948788025152):
+Traceback (most recent call last):
+
+  File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1652, in <module>
+    main(max_datasets=max_ds, max_folds=max_fl)
+    │                 │                 └ 1
+    │                 └ 1
+    └ <function main at 0x79d32d280dc0>
+
+> File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1620, in main
+    datasets = load_datasets(DATA_PATH)
+               │             └ PosixPath('/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json')
+               └ <function load_datasets at 0x79d32d5af130>
+
+  File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 141, in load_datasets
+    raw = json.loads(data_path.read_text())
+          │    │     │         └ <function Path.read_text at 0x79d3612e6050>
+          │    │     └ PosixPath('/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json')
+          │    └ <function loads at 0x79d361394e50>
+          └ <module 'json' from '/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/__init__.py'>
+
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         │    │                       │                └ None
+         │    │                       └ 'locale'
+         │    └ <function Path.open at 0x79d3612e5f30>
+         └ PosixPath('/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json')
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+           │    │         │    │     │     │          │         └ None
+           │    │         │    │     │     │          └ 'locale'
+           │    │         │    │     │     └ -1
+           │    │         │    │     └ 'r'
+           │    │         │    └ PosixPath('/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json')
+           │    │         └ <built-in function open>
+           │    └ <pathlib._NormalAccessor object at 0x79d3612da140>
+           └ PosixPath('/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json')
+
+FileNotFoundError: [Errno 2] No such file or directory: '/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/iter_1/gen_art/data_id3_it1__opus/full_data_out.json'
+2026-02-28 17:00:07.884 | ERROR    | __main__:<module>:1652 - An error has been caught in function '<module>', process 'MainProcess' (661519), thread 'MainThread' (133948788025152):
+Traceback (most recent call last):
+
+> File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1652, in <module>
+    main(max_datasets=max_ds, max_folds=max_fl)
+    │                 │                 └ 1
+    │                 └ 1
+    └ <function main at 0x79d32d280dc0>
+
+  File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1621, in main
+    logger.info(f"Loaded {len(datasets)} datasets")
+    │      └ <function Logger.info at 0x79d32e6149d0>
+    └ <loguru.logger handlers=[(id=1, level=20, sink=<stdout>), (id=2, level=10, sink='logs/run.log')]>
+
+TypeError: object of type 'NoneType' has no len()
+2026-02-28 17:00:34.486 | INFO     | __main__:main:1615 - ============================================================
+2026-02-28 17:00:34.486 | INFO     | __main__:main:1616 - SC-OTS Ablation Experiment
+2026-02-28 17:00:34.486 | INFO     | __main__:main:1617 - ============================================================
+2026-02-28 17:00:34.486 | INFO     | __main__:load_datasets:140 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:00:35.155 | INFO     | __main__:load_datasets:142 - Loaded JSON with 10 datasets
+2026-02-28 17:00:35.176 | INFO     | __main__:load_datasets:177 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.187 | INFO     | __main__:load_datasets:177 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.206 | INFO     | __main__:load_datasets:177 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.228 | INFO     | __main__:load_datasets:177 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.231 | INFO     | __main__:load_datasets:177 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.233 | INFO     | __main__:load_datasets:177 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.878 | INFO     | __main__:load_datasets:177 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.908 | INFO     | __main__:load_datasets:177 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:35.988 | INFO     | __main__:load_datasets:177 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:36.042 | INFO     | __main__:load_datasets:177 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:00:36.095 | INFO     | __main__:main:1621 - Loaded 10 datasets
+2026-02-28 17:00:36.095 | INFO     | __main__:run_experiment:1159 - ═══ Dataset 1/1: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:00:36.095 | INFO     | __main__:run_experiment:1174 -   Fold 0/0
+2026-02-28 17:00:36.097 | DEBUG    | __main__:build:787 - Using dCor distance (n_features=10)
+2026-02-28 17:00:36.265 | DEBUG    | __main__:build:873 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:00:57.409 | INFO     | __main__:run_experiment:1220 -     Mode A (SIMPLICIAL): score=0.7118, splits=15, time=21.1s, n_simplices=91
+2026-02-28 17:02:15.294 | INFO     | __main__:run_experiment:1278 -     Mode B (RANDOM_MATCHED): score=0.5905, splits=10.8, time=15.6s
+2026-02-28 17:02:44.066 | INFO     | __main__:run_experiment:1306 -     Mode C (UNCONSTRAINED): score=0.4934, splits=15, time=28.8s
+2026-02-28 17:02:44.066 | INFO     | __main__:run_experiment:1346 -   Fold 0 completed in 128.0s
+2026-02-28 17:02:44.073 | INFO     | __main__:run_experiment:1352 -   Dataset friedman1 completed in 128.0s
+2026-02-28 17:02:44.073 | INFO     | __main__:run_experiment:1355 - Total experiment time: 128.0s
+2026-02-28 17:02:44.073 | INFO     | __main__:main:1631 - Computing statistics...
+2026-02-28 17:02:45.439 | INFO     | __main__:main:1634 - Conclusion: A > B ≈ C (topology helps)
+2026-02-28 17:02:45.440 | INFO     | __main__:main:1635 - Aggregate mean scores: {'SIMPLICIAL': 0.711771, 'RANDOM_MATCHED': 0.590453, 'UNCONSTRAINED': 0.493441}
+2026-02-28 17:02:45.440 | INFO     | __main__:main:1638 - Building output...
+2026-02-28 17:02:47.700 | INFO     | __main__:main:1642 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 17:02:48.351 | INFO     | __main__:main:1645 - Output written: 22.2 MB
+2026-02-28 17:03:19.242 | INFO     | __main__:main:1615 - ============================================================
+2026-02-28 17:03:19.243 | INFO     | __main__:main:1616 - SC-OTS Ablation Experiment
+2026-02-28 17:03:19.243 | INFO     | __main__:main:1617 - ============================================================
+2026-02-28 17:03:19.243 | INFO     | __main__:load_datasets:140 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:03:20.655 | INFO     | __main__:load_datasets:142 - Loaded JSON with 10 datasets
+2026-02-28 17:03:20.688 | INFO     | __main__:load_datasets:177 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:20.708 | INFO     | __main__:load_datasets:177 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:20.741 | INFO     | __main__:load_datasets:177 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:20.783 | INFO     | __main__:load_datasets:177 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:20.787 | INFO     | __main__:load_datasets:177 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:20.791 | INFO     | __main__:load_datasets:177 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:21.017 | INFO     | __main__:load_datasets:177 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:21.044 | INFO     | __main__:load_datasets:177 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:21.147 | INFO     | __main__:load_datasets:177 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:21.219 | INFO     | __main__:load_datasets:177 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:03:21.289 | INFO     | __main__:main:1621 - Loaded 10 datasets
+2026-02-28 17:03:21.290 | INFO     | __main__:run_experiment:1159 - ═══ Dataset 1/1: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:03:21.290 | INFO     | __main__:run_experiment:1174 -   Fold 0/0
+2026-02-28 17:03:21.292 | DEBUG    | __main__:build:787 - Using dCor distance (n_features=10)
+2026-02-28 17:03:21.503 | DEBUG    | __main__:build:873 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:03:25.975 | INFO     | __main__:run_experiment:1220 -     Mode A (SIMPLICIAL): score=0.5631, splits=7, time=4.5s, n_simplices=91
+2026-02-28 17:04:00.104 | INFO     | __main__:run_experiment:1278 -     Mode B (RANDOM_MATCHED): score=0.5172, splits=9.0, time=6.8s
+2026-02-28 17:04:12.067 | INFO     | __main__:run_experiment:1306 -     Mode C (UNCONSTRAINED): score=0.1915, splits=12, time=12.0s
+2026-02-28 17:04:12.068 | INFO     | __main__:run_experiment:1346 -   Fold 0 completed in 50.8s
+2026-02-28 17:04:12.069 | INFO     | __main__:run_experiment:1352 -   Dataset friedman1 completed in 50.8s
+2026-02-28 17:04:12.069 | INFO     | __main__:run_experiment:1355 - Total experiment time: 50.8s
+2026-02-28 17:04:12.069 | INFO     | __main__:main:1631 - Computing statistics...
+2026-02-28 17:04:12.998 | INFO     | __main__:main:1634 - Conclusion: A > B ≈ C (topology helps)
+2026-02-28 17:04:12.998 | INFO     | __main__:main:1635 - Aggregate mean scores: {'SIMPLICIAL': 0.563101, 'RANDOM_MATCHED': 0.517194, 'UNCONSTRAINED': 0.191494}
+2026-02-28 17:04:12.999 | INFO     | __main__:main:1638 - Building output...
+2026-02-28 17:04:14.656 | INFO     | __main__:main:1642 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 17:04:15.671 | INFO     | __main__:main:1645 - Output written: 22.2 MB
+2026-02-28 17:06:09.019 | INFO     | __main__:main:1616 - ============================================================
+2026-02-28 17:06:09.019 | INFO     | __main__:main:1617 - SC-OTS Ablation Experiment
+2026-02-28 17:06:09.020 | INFO     | __main__:main:1618 - ============================================================
+2026-02-28 17:06:09.020 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:06:09.919 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:06:09.952 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:09.972 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.005 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.042 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.046 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.049 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.233 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.265 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.359 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.405 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:06:10.455 | INFO     | __main__:main:1622 - Loaded 10 datasets
+2026-02-28 17:06:10.455 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 1/1: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:06:10.455 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:06:10.457 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:06:10.635 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:06:18.523 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=7.9s, n_simplices=91
+2026-02-28 17:06:56.836 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=7.7s
+2026-02-28 17:07:04.542 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=7.7s
+2026-02-28 17:07:04.543 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 54.1s
+2026-02-28 17:07:04.543 | INFO     | __main__:run_experiment:1353 -   Dataset friedman1 completed in 54.1s
+2026-02-28 17:07:04.543 | INFO     | __main__:run_experiment:1356 - Total experiment time: 54.1s
+2026-02-28 17:07:04.544 | INFO     | __main__:main:1632 - Computing statistics...
+2026-02-28 17:07:05.336 | INFO     | __main__:main:1635 - Conclusion: A > B ≈ C (topology helps)
+2026-02-28 17:07:05.337 | INFO     | __main__:main:1636 - Aggregate mean scores: {'SIMPLICIAL': 0.674, 'RANDOM_MATCHED': 0.502216, 'UNCONSTRAINED': 0.514014}
+2026-02-28 17:07:05.337 | INFO     | __main__:main:1639 - Building output...
+2026-02-28 17:07:06.960 | INFO     | __main__:main:1643 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 17:07:07.598 | INFO     | __main__:main:1646 - Output written: 22.2 MB
+2026-02-28 17:07:30.917 | INFO     | __main__:main:1616 - ============================================================
+2026-02-28 17:07:30.917 | INFO     | __main__:main:1617 - SC-OTS Ablation Experiment
+2026-02-28 17:07:30.917 | INFO     | __main__:main:1618 - ============================================================
+2026-02-28 17:07:30.917 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:07:31.614 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:07:31.638 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.652 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.671 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.694 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.696 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.698 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.856 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.877 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.940 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:31.991 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:07:32.038 | INFO     | __main__:main:1622 - Loaded 10 datasets
+2026-02-28 17:07:32.038 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 1/10: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:07:32.039 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:07:32.040 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:07:32.204 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:07:38.585 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=6.4s, n_simplices=91
+2026-02-28 17:08:08.756 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=6.0s
+2026-02-28 17:08:17.171 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=8.4s
+2026-02-28 17:08:17.172 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 45.1s
+2026-02-28 17:08:17.172 | INFO     | __main__:run_experiment:1353 -   Dataset friedman1 completed in 45.1s
+2026-02-28 17:08:17.172 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 2/10: friedman3 (n=5000, p=4, task=regression) ═══
+2026-02-28 17:08:17.172 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:08:17.173 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:08:17.244 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:08:18.255 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6762, splits=12, time=1.0s, n_simplices=4
+2026-02-28 17:08:22.083 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5452, splits=10.0, time=0.8s
+2026-02-28 17:08:23.022 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6492, splits=6, time=0.9s
+2026-02-28 17:08:23.023 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 5.9s
+2026-02-28 17:08:23.023 | INFO     | __main__:run_experiment:1353 -   Dataset friedman3 completed in 5.9s
+2026-02-28 17:08:23.023 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 3/10: synth_3way (n=5000, p=15, task=regression) ═══
+2026-02-28 17:08:23.023 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:08:23.024 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:08:23.277 | DEBUG    | __main__:build:874 - Simplicial complex: 430 simplices, dims={'3': 238, '2': 140, '1': 52}
+2026-02-28 17:08:32.475 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6645, splits=12, time=9.2s, n_simplices=430
+2026-02-28 17:08:50.854 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4115, splits=6.8, time=3.7s
+2026-02-28 17:08:52.287 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2596, splits=4, time=1.4s
+2026-02-28 17:08:52.288 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 29.3s
+2026-02-28 17:08:52.288 | INFO     | __main__:run_experiment:1353 -   Dataset synth_3way completed in 29.3s
+2026-02-28 17:08:52.288 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 4/10: synth_4way (n=5000, p=20, task=regression) ═══
+2026-02-28 17:08:52.288 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:08:52.290 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:08:52.639 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 77, '3': 98}
+2026-02-28 17:08:55.345 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.3598, splits=6, time=2.7s, n_simplices=200
+2026-02-28 17:09:07.213 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.3801, splits=5.6, time=2.4s
+2026-02-28 17:09:10.779 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4948, splits=7, time=3.6s
+2026-02-28 17:09:10.780 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 18.5s
+2026-02-28 17:09:10.780 | INFO     | __main__:run_experiment:1353 -   Dataset synth_4way completed in 18.5s
+2026-02-28 17:09:10.780 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 5/10: diabetes (n=768, p=8, task=classification) ═══
+2026-02-28 17:09:10.780 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:09:10.781 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:09:10.808 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:09:13.200 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8002, splits=7, time=2.4s, n_simplices=50
+2026-02-28 17:09:30.348 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7833, splits=8.6, time=3.4s
+2026-02-28 17:09:33.648 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8053, splits=8, time=3.3s
+2026-02-28 17:09:33.649 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 22.9s
+2026-02-28 17:09:33.649 | INFO     | __main__:run_experiment:1353 -   Dataset diabetes completed in 22.9s
+2026-02-28 17:09:33.649 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 6/10: breast_w (n=699, p=9, task=classification) ═══
+2026-02-28 17:09:33.650 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:09:33.651 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:09:33.683 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'2': 35, '3': 35, '1': 21}
+2026-02-28 17:09:37.661 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9922, splits=9, time=4.0s, n_simplices=91
+2026-02-28 17:10:00.684 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9941, splits=8.2, time=4.6s
+2026-02-28 17:10:04.370 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9914, splits=8, time=3.7s
+2026-02-28 17:10:04.371 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 30.7s
+2026-02-28 17:10:04.372 | INFO     | __main__:run_experiment:1353 -   Dataset breast_w completed in 30.7s
+2026-02-28 17:10:04.372 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 7/10: adult (n=10000, p=96, task=classification) ═══
+2026-02-28 17:10:04.373 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:10:04.387 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:10:14.011 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 14, '2': 64, '3': 122}
+2026-02-28 17:10:29.356 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8674, splits=12, time=15.2s, n_simplices=200
+2026-02-28 17:11:17.024 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7993, splits=11.8, time=9.5s
+2026-02-28 17:11:27.081 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8155, splits=12, time=9.6s
+2026-02-28 17:11:27.082 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 82.7s
+2026-02-28 17:11:27.083 | INFO     | __main__:run_experiment:1353 -   Dataset adult completed in 82.7s
+2026-02-28 17:11:27.083 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 8/10: wine_quality (n=6497, p=11, task=regression) ═══
+2026-02-28 17:11:27.083 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:11:27.084 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:11:27.305 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:11:31.895 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.1971, splits=7, time=4.6s, n_simplices=154
+2026-02-28 17:11:57.132 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.1933, splits=8.6, time=5.0s
+2026-02-28 17:12:01.069 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.1315, splits=7, time=3.9s
+2026-02-28 17:12:01.071 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 34.0s
+2026-02-28 17:12:01.071 | INFO     | __main__:run_experiment:1353 -   Dataset wine_quality completed in 34.0s
+2026-02-28 17:12:01.071 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 9/10: california_housing (n=20640, p=8, task=regression) ═══
+2026-02-28 17:12:01.071 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:12:01.075 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:12:01.617 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 17:12:04.524 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.5596, splits=9, time=2.3s, n_simplices=5
+2026-02-28 17:12:21.173 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4261, splits=10.0, time=3.3s
+2026-02-28 17:12:41.528 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6059, splits=12, time=20.3s
+2026-02-28 17:12:41.530 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 40.5s
+2026-02-28 17:12:41.531 | INFO     | __main__:run_experiment:1353 -   Dataset california_housing completed in 40.5s
+2026-02-28 17:12:41.531 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 10/10: spambase (n=4601, p=57, task=classification) ═══
+2026-02-28 17:12:41.531 | INFO     | __main__:run_experiment:1175 -   Fold 0/0
+2026-02-28 17:12:41.534 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 17:12:44.334 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 55, '3': 126}
+2026-02-28 17:12:50.036 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9403, splits=9, time=5.7s, n_simplices=200
+2026-02-28 17:13:36.284 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9392, splits=12.0, time=9.2s
+2026-02-28 17:13:47.654 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9424, splits=12, time=11.3s
+2026-02-28 17:13:47.655 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 66.1s
+2026-02-28 17:13:47.656 | INFO     | __main__:run_experiment:1353 -   Dataset spambase completed in 66.1s
+2026-02-28 17:13:47.656 | INFO     | __main__:run_experiment:1356 - Total experiment time: 375.6s
+2026-02-28 17:13:47.658 | INFO     | __main__:main:1632 - Computing statistics...
+2026-02-28 17:13:47.662 | INFO     | __main__:main:1635 - Conclusion: A > B ≈ C (topology helps)
+2026-02-28 17:13:47.663 | INFO     | __main__:main:1636 - Aggregate mean scores: {'SIMPLICIAL': 0.673134, 'RANDOM_MATCHED': 0.597431, 'UNCONSTRAINED': 0.620967}
+2026-02-28 17:13:47.663 | INFO     | __main__:main:1639 - Building output...
+2026-02-28 17:13:49.378 | INFO     | __main__:main:1643 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 17:13:50.075 | INFO     | __main__:main:1646 - Output written: 23.8 MB
+2026-02-28 17:14:09.955 | INFO     | __main__:main:1616 - ============================================================
+2026-02-28 17:14:09.956 | INFO     | __main__:main:1617 - SC-OTS Ablation Experiment
+2026-02-28 17:14:09.957 | INFO     | __main__:main:1618 - ============================================================
+2026-02-28 17:14:09.957 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:14:10.711 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:14:10.738 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:10.752 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:10.777 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:10.802 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:10.807 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:10.812 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:11.019 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:11.046 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:11.144 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:11.197 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:14:11.247 | INFO     | __main__:main:1622 - Loaded 10 datasets
+2026-02-28 17:14:11.247 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 1/10: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:14:11.248 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:14:11.249 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:14:11.471 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:14:19.616 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=8.1s, n_simplices=91
+2026-02-28 17:14:50.501 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=6.2s
+2026-02-28 17:14:57.754 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=7.2s
+2026-02-28 17:14:57.755 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 46.5s
+2026-02-28 17:14:57.755 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:14:57.757 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:14:57.915 | DEBUG    | __main__:build:874 - Simplicial complex: 64 simplices, dims={'3': 19, '1': 19, '2': 26}
+2026-02-28 17:15:01.514 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4536, splits=7, time=3.6s, n_simplices=64
+2026-02-28 17:15:37.674 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.6004, splits=10.0, time=7.2s
+2026-02-28 17:15:41.490 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4369, splits=7, time=3.8s
+2026-02-28 17:15:41.490 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 43.7s
+2026-02-28 17:15:41.491 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:15:41.492 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:15:41.659 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '1': 21, '2': 35}
+2026-02-28 17:15:45.496 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4929, splits=7, time=3.8s, n_simplices=91
+2026-02-28 17:16:18.974 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5536, splits=9.0, time=6.7s
+2026-02-28 17:16:30.373 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6833, splits=12, time=11.4s
+2026-02-28 17:16:30.375 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 48.9s
+2026-02-28 17:16:30.379 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:16:30.382 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:16:30.600 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '3': 2, '2': 7}
+2026-02-28 17:16:34.343 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4427, splits=8, time=3.7s, n_simplices=18
+2026-02-28 17:16:57.417 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5055, splits=9.4, time=4.6s
+2026-02-28 17:17:02.951 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5732, splits=7, time=5.5s
+2026-02-28 17:17:02.953 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 32.6s
+2026-02-28 17:17:02.953 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:17:02.954 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:17:03.166 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:17:11.592 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6705, splits=9, time=8.4s, n_simplices=91
+2026-02-28 17:17:45.100 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5867, splits=9.0, time=6.7s
+2026-02-28 17:17:49.058 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5854, splits=7, time=4.0s
+2026-02-28 17:17:49.059 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 46.1s
+2026-02-28 17:17:49.059 | INFO     | __main__:run_experiment:1353 -   Dataset friedman1 completed in 217.8s
+2026-02-28 17:17:49.059 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 2/10: friedman3 (n=5000, p=4, task=regression) ═══
+2026-02-28 17:17:49.059 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:17:49.060 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:17:49.130 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:17:50.173 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6762, splits=12, time=1.0s, n_simplices=4
+2026-02-28 17:17:54.390 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5452, splits=10.0, time=0.8s
+2026-02-28 17:17:55.333 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6492, splits=6, time=0.9s
+2026-02-28 17:17:55.334 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 6.3s
+2026-02-28 17:17:55.334 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:17:55.335 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:17:55.406 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:17:56.102 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.1625, splits=9, time=0.7s, n_simplices=4
+2026-02-28 17:17:58.695 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5563, splits=7.4, time=0.5s
+2026-02-28 17:18:00.590 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6911, splits=9, time=1.9s
+2026-02-28 17:18:00.591 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 5.3s
+2026-02-28 17:18:00.591 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:18:00.592 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:18:00.664 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:18:01.851 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6445, splits=12, time=1.2s, n_simplices=4
+2026-02-28 17:18:05.975 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4179, splits=8.2, time=0.8s
+2026-02-28 17:18:08.528 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5800, splits=10, time=2.5s
+2026-02-28 17:18:08.529 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 7.9s
+2026-02-28 17:18:08.530 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:18:08.532 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:18:08.606 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:18:09.167 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4856, splits=8, time=0.6s, n_simplices=4
+2026-02-28 17:18:14.044 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4970, splits=9.2, time=1.0s
+2026-02-28 17:18:15.996 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4374, splits=8, time=1.9s
+2026-02-28 17:18:15.998 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 7.5s
+2026-02-28 17:18:15.999 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:18:16.001 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:18:16.097 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:18:16.583 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.2699, splits=7, time=0.5s, n_simplices=4
+2026-02-28 17:18:19.616 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.3332, splits=7.6, time=0.6s
+2026-02-28 17:18:20.898 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2959, splits=7, time=1.3s
+2026-02-28 17:18:20.899 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 4.9s
+2026-02-28 17:18:20.899 | INFO     | __main__:run_experiment:1353 -   Dataset friedman3 completed in 31.8s
+2026-02-28 17:18:20.900 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 3/10: synth_3way (n=5000, p=15, task=regression) ═══
+2026-02-28 17:18:20.900 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:18:20.902 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:18:21.232 | DEBUG    | __main__:build:874 - Simplicial complex: 430 simplices, dims={'3': 238, '2': 140, '1': 52}
+2026-02-28 17:18:33.023 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6645, splits=12, time=11.8s, n_simplices=430
+2026-02-28 17:18:55.632 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4115, splits=6.8, time=4.5s
+2026-02-28 17:18:57.449 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2596, splits=4, time=1.8s
+2026-02-28 17:18:57.451 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 36.6s
+2026-02-28 17:18:57.451 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:18:57.453 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:18:57.743 | DEBUG    | __main__:build:874 - Simplicial complex: 103 simplices, dims={'3': 33, '1': 28, '2': 42}
+2026-02-28 17:19:03.782 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6042, splits=9, time=6.0s, n_simplices=103
+2026-02-28 17:19:34.250 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5277, splits=9.4, time=6.1s
+2026-02-28 17:19:36.961 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3297, splits=6, time=2.7s
+2026-02-28 17:19:36.962 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 39.5s
+2026-02-28 17:19:36.962 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:19:36.964 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:19:37.271 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:19:38.912 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.2489, splits=4, time=1.6s, n_simplices=154
+2026-02-28 17:19:54.935 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4227, splits=5.6, time=3.2s
+2026-02-28 17:19:56.366 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3360, splits=4, time=1.4s
+2026-02-28 17:19:56.368 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 19.4s
+2026-02-28 17:19:56.368 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:19:56.370 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:19:56.618 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:20:03.703 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6371, splits=11, time=7.1s, n_simplices=154
+2026-02-28 17:20:31.196 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5042, splits=9.6, time=5.5s
+2026-02-28 17:20:33.527 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2405, splits=6, time=2.3s
+2026-02-28 17:20:33.528 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 37.2s
+2026-02-28 17:20:33.528 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:20:33.530 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:20:33.808 | DEBUG    | __main__:build:874 - Simplicial complex: 182 simplices, dims={'3': 75, '2': 70, '1': 37}
+2026-02-28 17:20:41.143 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.5801, splits=12, time=7.3s, n_simplices=182
+2026-02-28 17:21:18.221 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4404, splits=10.0, time=7.4s
+2026-02-28 17:21:24.218 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3697, splits=8, time=6.0s
+2026-02-28 17:21:24.219 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 50.7s
+2026-02-28 17:21:24.220 | INFO     | __main__:run_experiment:1353 -   Dataset synth_3way completed in 183.3s
+2026-02-28 17:21:24.220 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 4/10: synth_4way (n=5000, p=20, task=regression) ═══
+2026-02-28 17:21:24.221 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:21:24.223 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:21:24.688 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 77, '3': 98}
+2026-02-28 17:21:29.303 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.3598, splits=6, time=4.6s, n_simplices=200
+2026-02-28 17:21:44.726 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.3801, splits=5.6, time=3.1s
+2026-02-28 17:21:49.025 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4948, splits=7, time=4.3s
+2026-02-28 17:21:49.027 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 24.8s
+2026-02-28 17:21:49.027 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:21:49.030 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:21:49.453 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 80, '3': 95}
+2026-02-28 17:21:56.811 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4620, splits=10, time=7.4s, n_simplices=200
+2026-02-28 17:22:19.342 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4721, splits=7.8, time=4.5s
+2026-02-28 17:22:25.200 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7299, splits=9, time=5.9s
+2026-02-28 17:22:25.201 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 36.2s
+2026-02-28 17:22:25.201 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:22:25.203 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:22:25.612 | DEBUG    | __main__:build:874 - Simplicial complex: 273 simplices, dims={'3': 115, '2': 105, '1': 53}
+2026-02-28 17:22:31.346 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.5832, splits=9, time=5.7s, n_simplices=273
+2026-02-28 17:23:00.685 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5815, splits=8.2, time=5.9s
+2026-02-28 17:23:09.293 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7252, splits=10, time=8.6s
+2026-02-28 17:23:09.294 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 44.1s
+2026-02-28 17:23:09.295 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:23:09.297 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:23:09.764 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 27, '2': 88, '3': 85}
+2026-02-28 17:23:17.652 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4632, splits=10, time=7.9s, n_simplices=200
+2026-02-28 17:23:38.766 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5054, splits=7.0, time=4.2s
+2026-02-28 17:23:45.666 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7289, splits=9, time=6.9s
+2026-02-28 17:23:45.667 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 36.4s
+2026-02-28 17:23:45.667 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:23:45.668 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:23:46.073 | DEBUG    | __main__:build:874 - Simplicial complex: 274 simplices, dims={'3': 134, '1': 44, '2': 96}
+2026-02-28 17:23:52.124 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.3062, splits=11, time=6.0s, n_simplices=274
+2026-02-28 17:24:20.397 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.6223, splits=8.8, time=5.6s
+2026-02-28 17:24:27.507 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7348, splits=9, time=7.1s
+2026-02-28 17:24:27.508 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 41.8s
+2026-02-28 17:24:27.508 | INFO     | __main__:run_experiment:1353 -   Dataset synth_4way completed in 183.3s
+2026-02-28 17:24:27.509 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 5/10: diabetes (n=768, p=8, task=classification) ═══
+2026-02-28 17:24:27.509 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:24:27.509 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:24:27.539 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:24:30.113 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8002, splits=7, time=2.6s, n_simplices=50
+2026-02-28 17:24:46.820 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7833, splits=8.6, time=3.3s
+2026-02-28 17:24:49.759 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8053, splits=8, time=2.9s
+2026-02-28 17:24:49.760 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 22.3s
+2026-02-28 17:24:49.760 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:24:49.760 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:24:49.785 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:24:54.969 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8388, splits=12, time=5.2s, n_simplices=50
+2026-02-28 17:25:12.769 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.8340, splits=8.8, time=3.6s
+2026-02-28 17:25:17.064 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8233, splits=10, time=4.3s
+2026-02-28 17:25:17.064 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 27.3s
+2026-02-28 17:25:17.064 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:25:17.065 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:25:17.094 | DEBUG    | __main__:build:874 - Simplicial complex: 19 simplices, dims={'3': 2, '2': 7, '1': 10}
+2026-02-28 17:25:20.292 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8087, splits=12, time=3.2s, n_simplices=19
+2026-02-28 17:25:28.221 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7904, splits=7.6, time=1.6s
+2026-02-28 17:25:31.243 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8279, splits=8, time=3.0s
+2026-02-28 17:25:31.244 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 14.2s
+2026-02-28 17:25:31.244 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:25:31.244 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:25:31.272 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:25:34.495 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.7574, splits=8, time=3.2s, n_simplices=50
+2026-02-28 17:25:52.605 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7761, splits=8.8, time=3.6s
+2026-02-28 17:25:56.650 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7688, splits=10, time=4.0s
+2026-02-28 17:25:56.650 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 25.4s
+2026-02-28 17:25:56.651 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:25:56.651 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:25:56.686 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:26:01.181 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.7526, splits=11, time=4.5s, n_simplices=50
+2026-02-28 17:27:03.986 | INFO     | __main__:main:1627 - ============================================================
+2026-02-28 17:27:03.986 | INFO     | __main__:main:1628 - SC-OTS Ablation Experiment
+2026-02-28 17:27:03.986 | INFO     | __main__:main:1629 - ============================================================
+2026-02-28 17:27:03.986 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:27:04.624 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:27:04.644 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.659 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.686 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.717 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.720 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.724 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.911 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:04.940 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:05.023 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:05.069 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:27:05.111 | INFO     | __main__:main:1633 - Loaded 10 datasets
+2026-02-28 17:27:05.111 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 1/10: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:27:05.112 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:27:05.113 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:27:05.286 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:27:12.235 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=6.9s, n_simplices=91
+2026-02-28 17:27:47.834 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=7.1s
+2026-02-28 17:27:56.165 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=8.3s
+2026-02-28 17:27:56.166 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 51.1s
+2026-02-28 17:27:56.166 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:27:56.167 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:27:56.333 | DEBUG    | __main__:build:874 - Simplicial complex: 64 simplices, dims={'3': 19, '1': 19, '2': 26}
+2026-02-28 17:28:00.168 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4536, splits=7, time=3.8s, n_simplices=64
+2026-02-28 17:28:38.826 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.6004, splits=10.0, time=7.7s
+2026-02-28 17:28:43.712 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4369, splits=7, time=4.9s
+2026-02-28 17:28:43.714 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 47.5s
+2026-02-28 17:28:43.714 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:28:43.716 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:28:43.935 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '1': 21, '2': 35}
+2026-02-28 17:28:49.086 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4929, splits=7, time=5.1s, n_simplices=91
+2026-02-28 17:29:24.575 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5536, splits=9.0, time=7.1s
+2026-02-28 17:29:36.303 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6833, splits=12, time=11.7s
+2026-02-28 17:29:36.304 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 52.6s
+2026-02-28 17:29:36.304 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:29:36.306 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:29:36.524 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '3': 2, '2': 7}
+2026-02-28 17:29:40.282 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4427, splits=8, time=3.8s, n_simplices=18
+2026-02-28 17:30:00.619 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5055, splits=9.4, time=4.1s
+2026-02-28 17:30:04.566 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5732, splits=7, time=3.9s
+2026-02-28 17:30:04.568 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 28.3s
+2026-02-28 17:30:04.568 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:30:04.569 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:30:04.738 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:30:11.469 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6705, splits=9, time=6.7s, n_simplices=91
+2026-02-28 17:30:45.826 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5867, splits=9.0, time=6.9s
+2026-02-28 17:30:51.041 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5854, splits=7, time=5.2s
+2026-02-28 17:30:51.042 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 46.5s
+2026-02-28 17:30:51.043 | INFO     | __main__:run_experiment:1353 -   Dataset friedman1 completed in 225.9s
+2026-02-28 17:30:51.044 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 2/10: friedman3 (n=5000, p=4, task=regression) ═══
+2026-02-28 17:30:51.044 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:30:51.045 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:30:51.119 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:30:52.441 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6762, splits=12, time=1.3s, n_simplices=4
+2026-02-28 17:30:57.395 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5452, splits=10.0, time=1.0s
+2026-02-28 17:30:58.451 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6492, splits=6, time=1.0s
+2026-02-28 17:30:58.453 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 7.4s
+2026-02-28 17:30:58.453 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:30:58.455 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:30:58.563 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:30:59.375 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.1625, splits=9, time=0.8s, n_simplices=4
+2026-02-28 17:31:02.370 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5563, splits=7.4, time=0.6s
+2026-02-28 17:31:04.573 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.6911, splits=9, time=2.2s
+2026-02-28 17:31:04.574 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 6.1s
+2026-02-28 17:31:04.575 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:31:04.576 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:31:04.649 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:31:05.929 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6445, splits=12, time=1.3s, n_simplices=4
+2026-02-28 17:31:09.229 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4179, splits=8.2, time=0.7s
+2026-02-28 17:31:11.310 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.5800, splits=10, time=2.1s
+2026-02-28 17:31:11.311 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 6.7s
+2026-02-28 17:31:11.311 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:31:11.312 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:31:11.380 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:31:12.420 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4856, splits=8, time=1.0s, n_simplices=4
+2026-02-28 17:31:15.249 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4970, splits=9.2, time=0.6s
+2026-02-28 17:31:16.598 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4374, splits=8, time=1.3s
+2026-02-28 17:31:16.599 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 5.3s
+2026-02-28 17:31:16.599 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:31:16.600 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 17:31:16.667 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 17:31:17.032 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.2699, splits=7, time=0.4s, n_simplices=4
+2026-02-28 17:31:19.207 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.3332, splits=7.6, time=0.4s
+2026-02-28 17:31:20.250 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2959, splits=7, time=1.0s
+2026-02-28 17:31:20.252 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 3.7s
+2026-02-28 17:31:20.252 | INFO     | __main__:run_experiment:1353 -   Dataset friedman3 completed in 29.2s
+2026-02-28 17:31:20.252 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 3/10: synth_3way (n=5000, p=15, task=regression) ═══
+2026-02-28 17:31:20.253 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:31:20.254 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:31:20.519 | DEBUG    | __main__:build:874 - Simplicial complex: 430 simplices, dims={'3': 238, '2': 140, '1': 52}
+2026-02-28 17:31:30.303 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6645, splits=12, time=9.8s, n_simplices=430
+2026-02-28 17:31:50.084 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4115, splits=6.8, time=3.9s
+2026-02-28 17:31:51.567 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2596, splits=4, time=1.5s
+2026-02-28 17:31:51.568 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 31.3s
+2026-02-28 17:31:51.568 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:31:51.570 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:31:51.840 | DEBUG    | __main__:build:874 - Simplicial complex: 103 simplices, dims={'3': 33, '1': 28, '2': 42}
+2026-02-28 17:31:56.935 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6042, splits=9, time=5.1s, n_simplices=103
+2026-02-28 17:32:28.601 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5277, splits=9.4, time=6.3s
+2026-02-28 17:32:31.523 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3297, splits=6, time=2.9s
+2026-02-28 17:32:31.525 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 40.0s
+2026-02-28 17:32:31.525 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:32:31.526 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:32:31.791 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:32:33.220 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.2489, splits=4, time=1.4s, n_simplices=154
+2026-02-28 17:32:47.207 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4227, splits=5.6, time=2.8s
+2026-02-28 17:32:48.909 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3360, splits=4, time=1.7s
+2026-02-28 17:32:48.910 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 17.4s
+2026-02-28 17:32:48.910 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:32:48.911 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:32:49.172 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:32:56.755 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.6371, splits=11, time=7.6s, n_simplices=154
+2026-02-28 17:33:26.910 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5042, splits=9.6, time=6.0s
+2026-02-28 17:33:30.206 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.2405, splits=6, time=3.3s
+2026-02-28 17:33:30.208 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 41.3s
+2026-02-28 17:33:30.208 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:33:30.210 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 17:33:30.505 | DEBUG    | __main__:build:874 - Simplicial complex: 182 simplices, dims={'3': 75, '2': 70, '1': 37}
+2026-02-28 17:33:37.911 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.5801, splits=12, time=7.4s, n_simplices=182
+2026-02-28 17:34:06.966 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4404, splits=10.0, time=5.8s
+2026-02-28 17:34:11.319 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.3697, splits=8, time=4.3s
+2026-02-28 17:34:11.320 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 41.1s
+2026-02-28 17:34:11.320 | INFO     | __main__:run_experiment:1353 -   Dataset synth_3way completed in 171.1s
+2026-02-28 17:34:11.321 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 4/10: synth_4way (n=5000, p=20, task=regression) ═══
+2026-02-28 17:34:11.321 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:34:11.322 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:34:11.754 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 77, '3': 98}
+2026-02-28 17:34:14.703 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.3598, splits=6, time=2.9s, n_simplices=200
+2026-02-28 17:34:28.311 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.3801, splits=5.6, time=2.7s
+2026-02-28 17:34:32.454 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.4948, splits=7, time=4.1s
+2026-02-28 17:34:32.454 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 21.1s
+2026-02-28 17:34:32.455 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:34:32.456 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:34:32.822 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 80, '3': 95}
+2026-02-28 17:34:39.137 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4620, splits=10, time=6.3s, n_simplices=200
+2026-02-28 17:35:06.495 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.4721, splits=7.8, time=5.5s
+2026-02-28 17:35:12.424 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7299, splits=9, time=5.9s
+2026-02-28 17:35:12.426 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 40.0s
+2026-02-28 17:35:12.426 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:35:12.428 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:35:12.790 | DEBUG    | __main__:build:874 - Simplicial complex: 273 simplices, dims={'3': 115, '2': 105, '1': 53}
+2026-02-28 17:35:17.631 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.5832, splits=9, time=4.8s, n_simplices=273
+2026-02-28 17:35:43.145 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5815, splits=8.2, time=5.1s
+2026-02-28 17:35:50.643 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7252, splits=10, time=7.5s
+2026-02-28 17:35:50.646 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 38.2s
+2026-02-28 17:35:50.646 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:35:50.649 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:35:51.093 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 27, '2': 88, '3': 85}
+2026-02-28 17:35:57.685 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.4632, splits=10, time=6.6s, n_simplices=200
+2026-02-28 17:36:16.767 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.5054, splits=7.0, time=3.8s
+2026-02-28 17:36:23.096 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7289, splits=9, time=6.3s
+2026-02-28 17:36:23.098 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 32.5s
+2026-02-28 17:36:23.098 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:36:23.100 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 17:36:23.483 | DEBUG    | __main__:build:874 - Simplicial complex: 274 simplices, dims={'3': 134, '1': 44, '2': 96}
+2026-02-28 17:36:30.096 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.3062, splits=11, time=6.6s, n_simplices=274
+2026-02-28 17:36:57.326 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.6223, splits=8.8, time=5.4s
+2026-02-28 17:37:03.195 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7348, splits=9, time=5.9s
+2026-02-28 17:37:03.196 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 40.1s
+2026-02-28 17:37:03.196 | INFO     | __main__:run_experiment:1353 -   Dataset synth_4way completed in 171.9s
+2026-02-28 17:37:03.197 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 5/10: diabetes (n=768, p=8, task=classification) ═══
+2026-02-28 17:37:03.197 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:37:03.198 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:37:03.229 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:37:05.994 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8002, splits=7, time=2.8s, n_simplices=50
+2026-02-28 17:37:24.556 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7833, splits=8.6, time=3.7s
+2026-02-28 17:37:27.701 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8053, splits=8, time=3.1s
+2026-02-28 17:37:27.702 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 24.5s
+2026-02-28 17:37:27.702 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:37:27.703 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:37:27.730 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:37:33.508 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8388, splits=12, time=5.8s, n_simplices=50
+2026-02-28 17:37:50.476 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.8340, splits=8.8, time=3.4s
+2026-02-28 17:37:54.943 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8233, splits=10, time=4.5s
+2026-02-28 17:37:54.943 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 27.2s
+2026-02-28 17:37:54.944 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:37:54.944 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:37:54.975 | DEBUG    | __main__:build:874 - Simplicial complex: 19 simplices, dims={'3': 2, '2': 7, '1': 10}
+2026-02-28 17:37:58.366 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8087, splits=12, time=3.4s, n_simplices=19
+2026-02-28 17:38:06.474 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7904, splits=7.6, time=1.6s
+2026-02-28 17:38:09.763 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.8279, splits=8, time=3.3s
+2026-02-28 17:38:09.763 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 14.8s
+2026-02-28 17:38:09.764 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:38:09.765 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:38:09.808 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:38:13.131 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.7574, splits=8, time=3.3s, n_simplices=50
+2026-02-28 17:38:30.313 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7761, splits=8.8, time=3.4s
+2026-02-28 17:38:34.214 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7688, splits=10, time=3.9s
+2026-02-28 17:38:34.214 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 24.5s
+2026-02-28 17:38:34.215 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:38:34.215 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:38:34.242 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 17:38:38.706 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.7526, splits=11, time=4.5s, n_simplices=50
+2026-02-28 17:38:58.560 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7642, splits=9.0, time=4.0s
+2026-02-28 17:39:01.839 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.7814, splits=8, time=3.3s
+2026-02-28 17:39:01.839 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 27.6s
+2026-02-28 17:39:01.839 | INFO     | __main__:run_experiment:1353 -   Dataset diabetes completed in 118.6s
+2026-02-28 17:39:01.840 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 6/10: breast_w (n=699, p=9, task=classification) ═══
+2026-02-28 17:39:01.840 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:39:01.841 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:39:01.871 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'2': 35, '3': 35, '1': 21}
+2026-02-28 17:39:05.375 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9922, splits=9, time=3.5s, n_simplices=91
+2026-02-28 17:39:20.725 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9941, splits=8.2, time=3.1s
+2026-02-28 17:39:24.398 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9914, splits=8, time=3.7s
+2026-02-28 17:39:24.398 | INFO     | __main__:run_experiment:1347 -   Fold 0 completed in 22.6s
+2026-02-28 17:39:24.398 | INFO     | __main__:run_experiment:1175 -   Fold 1/4
+2026-02-28 17:39:24.399 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:39:24.428 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:39:27.979 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9812, splits=8, time=3.5s, n_simplices=91
+2026-02-28 17:39:41.880 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9781, splits=7.0, time=2.8s
+2026-02-28 17:39:46.122 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9789, splits=10, time=4.2s
+2026-02-28 17:39:46.123 | INFO     | __main__:run_experiment:1347 -   Fold 1 completed in 21.7s
+2026-02-28 17:39:46.123 | INFO     | __main__:run_experiment:1175 -   Fold 2/4
+2026-02-28 17:39:46.123 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:39:46.156 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:39:49.075 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9780, splits=8, time=2.9s, n_simplices=91
+2026-02-28 17:40:04.200 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9846, splits=7.8, time=3.0s
+2026-02-28 17:40:09.840 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9796, splits=12, time=5.6s
+2026-02-28 17:40:09.841 | INFO     | __main__:run_experiment:1347 -   Fold 2 completed in 23.7s
+2026-02-28 17:40:09.841 | INFO     | __main__:run_experiment:1175 -   Fold 3/4
+2026-02-28 17:40:09.842 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:40:09.880 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:40:14.189 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9961, splits=10, time=4.3s, n_simplices=91
+2026-02-28 17:40:29.610 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9947, splits=7.2, time=3.0s
+2026-02-28 17:40:31.989 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9956, splits=7, time=2.4s
+2026-02-28 17:40:31.989 | INFO     | __main__:run_experiment:1347 -   Fold 3 completed in 22.1s
+2026-02-28 17:40:31.989 | INFO     | __main__:run_experiment:1175 -   Fold 4/4
+2026-02-28 17:40:31.990 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 17:40:32.023 | DEBUG    | __main__:build:874 - Simplicial complex: 75 simplices, dims={'2': 30, '3': 25, '1': 20}
+2026-02-28 17:40:36.386 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.9880, splits=10, time=4.4s, n_simplices=75
+2026-02-28 17:40:55.979 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.9925, splits=9.0, time=3.9s
+2026-02-28 17:40:59.501 | INFO     | __main__:run_experiment:1307 -     Mode C (UNCONSTRAINED): score=0.9959, splits=9, time=3.5s
+2026-02-28 17:40:59.501 | INFO     | __main__:run_experiment:1347 -   Fold 4 completed in 27.5s
+2026-02-28 17:40:59.501 | INFO     | __main__:run_experiment:1353 -   Dataset breast_w completed in 117.7s
+2026-02-28 17:40:59.502 | INFO     | __main__:run_experiment:1160 - ═══ Dataset 7/10: adult (n=10000, p=96, task=classification) ═══
+2026-02-28 17:40:59.502 | INFO     | __main__:run_experiment:1175 -   Fold 0/4
+2026-02-28 17:40:59.512 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:41:08.196 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 14, '2': 64, '3': 122}
+2026-02-28 17:41:20.614 | INFO     | __main__:run_experiment:1221 -     Mode A (SIMPLICIAL): score=0.8674, splits=12, time=12.3s, n_simplices=200
+2026-02-28 17:42:10.798 | INFO     | __main__:run_experiment:1279 -     Mode B (RANDOM_MATCHED): score=0.7993, splits=11.8, time=10.0s
+2026-02-28 17:43:49.985 | INFO     | __main__:main:1632 - ============================================================
+2026-02-28 17:43:49.986 | INFO     | __main__:main:1633 - SC-OTS Ablation Experiment
+2026-02-28 17:43:49.986 | INFO     | __main__:main:1634 - ============================================================
+2026-02-28 17:43:49.986 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:43:50.650 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:43:50.670 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.682 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.701 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.724 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.726 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.728 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.884 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.906 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:50.974 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:51.031 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:43:51.076 | INFO     | __main__:main:1638 - Loaded 10 datasets
+2026-02-28 17:43:51.077 | INFO     | __main__:run_experiment:1164 - ═══ Dataset 1/4: adult (n=10000, p=96, task=classification) ═══
+2026-02-28 17:43:51.077 | INFO     | __main__:run_experiment:1179 -   Fold 0/4
+2026-02-28 17:43:51.086 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:43:58.866 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 14, '2': 64, '3': 122}
+2026-02-28 17:44:11.186 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.8674, splits=12, time=12.2s, n_simplices=200
+2026-02-28 17:45:03.288 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.7993, splits=11.8, time=10.4s
+2026-02-28 17:45:13.492 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.8155, splits=12, time=9.8s
+2026-02-28 17:45:13.493 | INFO     | __main__:run_experiment:1351 -   Fold 0 completed in 82.4s
+2026-02-28 17:45:13.494 | INFO     | __main__:run_experiment:1179 -   Fold 1/4
+2026-02-28 17:45:13.502 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:45:30.812 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 66, '3': 121}
+2026-02-28 17:45:43.291 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.8668, splits=12, time=12.1s, n_simplices=200
+2026-02-28 17:46:33.742 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.8152, splits=10.8, time=10.1s
+2026-02-28 17:46:43.738 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.8354, splits=12, time=9.6s
+2026-02-28 17:46:43.739 | INFO     | __main__:run_experiment:1351 -   Fold 1 completed in 90.2s
+2026-02-28 17:46:43.740 | INFO     | __main__:run_experiment:1179 -   Fold 2/4
+2026-02-28 17:46:43.749 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:46:49.294 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 15, '2': 74, '3': 111}
+2026-02-28 17:47:00.041 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.8871, splits=12, time=10.7s, n_simplices=200
+2026-02-28 17:47:46.547 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.8260, splits=10.8, time=9.3s
+2026-02-28 17:47:57.824 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.8353, splits=12, time=10.8s
+2026-02-28 17:47:57.827 | INFO     | __main__:run_experiment:1351 -   Fold 2 completed in 74.1s
+2026-02-28 17:47:57.828 | INFO     | __main__:run_experiment:1179 -   Fold 3/4
+2026-02-28 17:47:57.837 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:48:11.376 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 51, '3': 136}
+2026-02-28 17:48:24.201 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.8754, splits=12, time=12.6s, n_simplices=200
+2026-02-28 17:49:09.608 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.7935, splits=11.0, time=9.1s
+2026-02-28 17:49:16.754 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.8090, splits=8, time=6.7s
+2026-02-28 17:49:16.755 | INFO     | __main__:run_experiment:1351 -   Fold 3 completed in 78.9s
+2026-02-28 17:49:16.755 | INFO     | __main__:run_experiment:1179 -   Fold 4/4
+2026-02-28 17:49:16.764 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 17:49:22.851 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 71, '3': 116}
+2026-02-28 17:49:34.292 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.8701, splits=12, time=11.4s, n_simplices=200
+2026-02-28 17:50:28.402 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.8372, splits=11.8, time=10.8s
+2026-02-28 17:50:36.910 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.8111, splits=10, time=8.0s
+2026-02-28 17:50:36.912 | INFO     | __main__:run_experiment:1351 -   Fold 4 completed in 80.2s
+2026-02-28 17:50:36.912 | INFO     | __main__:run_experiment:1357 -   Dataset adult completed in 405.8s
+2026-02-28 17:50:36.914 | INFO     | __main__:run_experiment:1164 - ═══ Dataset 2/4: wine_quality (n=6497, p=11, task=regression) ═══
+2026-02-28 17:50:36.914 | INFO     | __main__:run_experiment:1179 -   Fold 0/4
+2026-02-28 17:50:36.916 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:50:37.206 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 17:50:41.958 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.1971, splits=7, time=4.7s, n_simplices=154
+2026-02-28 17:51:08.386 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.1933, splits=8.6, time=5.3s
+2026-02-28 17:51:12.540 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.1315, splits=7, time=4.1s
+2026-02-28 17:51:12.541 | INFO     | __main__:run_experiment:1351 -   Fold 0 completed in 35.6s
+2026-02-28 17:51:12.541 | INFO     | __main__:run_experiment:1179 -   Fold 1/4
+2026-02-28 17:51:12.543 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:51:12.789 | DEBUG    | __main__:build:874 - Simplicial complex: 10 simplices, dims={'1': 10}
+2026-02-28 17:51:14.402 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.1602, splits=9, time=1.6s, n_simplices=10
+2026-02-28 17:51:27.685 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.2247, splits=9.6, time=2.7s
+2026-02-28 17:51:34.890 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.1608, splits=12, time=7.2s
+2026-02-28 17:51:34.891 | INFO     | __main__:run_experiment:1351 -   Fold 1 completed in 22.4s
+2026-02-28 17:51:34.892 | INFO     | __main__:run_experiment:1179 -   Fold 2/4
+2026-02-28 17:51:34.893 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:51:35.115 | DEBUG    | __main__:build:874 - Simplicial complex: 67 simplices, dims={'2': 27, '1': 21, '3': 19}
+2026-02-28 17:51:43.675 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.2943, splits=12, time=8.6s, n_simplices=67
+2026-02-28 17:52:02.699 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.2097, splits=6.4, time=3.8s
+2026-02-28 17:52:07.722 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.2656, splits=8, time=5.0s
+2026-02-28 17:52:07.724 | INFO     | __main__:run_experiment:1351 -   Fold 2 completed in 32.8s
+2026-02-28 17:52:07.725 | INFO     | __main__:run_experiment:1179 -   Fold 3/4
+2026-02-28 17:52:07.728 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:52:08.023 | DEBUG    | __main__:build:874 - Simplicial complex: 89 simplices, dims={'1': 24, '3': 29, '2': 36}
+2026-02-28 17:52:13.226 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.2414, splits=8, time=5.2s, n_simplices=89
+2026-02-28 17:52:39.988 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.1952, splits=8.8, time=5.3s
+2026-02-28 17:52:46.853 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.2465, splits=9, time=6.9s
+2026-02-28 17:52:46.854 | INFO     | __main__:run_experiment:1351 -   Fold 3 completed in 39.1s
+2026-02-28 17:52:46.854 | INFO     | __main__:run_experiment:1179 -   Fold 4/4
+2026-02-28 17:52:46.856 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 17:52:47.121 | DEBUG    | __main__:build:874 - Simplicial complex: 27 simplices, dims={'1': 15, '2': 10, '3': 2}
+2026-02-28 17:52:51.567 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.2672, splits=7, time=4.4s, n_simplices=27
+2026-02-28 17:53:10.882 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.2299, splits=8.6, time=3.9s
+2026-02-28 17:53:15.541 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.2402, splits=8, time=4.7s
+2026-02-28 17:53:15.543 | INFO     | __main__:run_experiment:1351 -   Fold 4 completed in 28.7s
+2026-02-28 17:53:15.544 | INFO     | __main__:run_experiment:1357 -   Dataset wine_quality completed in 158.6s
+2026-02-28 17:53:15.545 | INFO     | __main__:run_experiment:1164 - ═══ Dataset 3/4: california_housing (n=20640, p=8, task=regression) ═══
+2026-02-28 17:53:15.546 | INFO     | __main__:run_experiment:1179 -   Fold 0/4
+2026-02-28 17:53:15.550 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:53:16.207 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 17:53:18.793 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.5596, splits=9, time=2.6s, n_simplices=5
+2026-02-28 17:53:38.829 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.4261, splits=10.0, time=4.0s
+2026-02-28 17:53:58.378 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.6059, splits=12, time=19.5s
+2026-02-28 17:53:58.381 | INFO     | __main__:run_experiment:1351 -   Fold 0 completed in 42.8s
+2026-02-28 17:53:58.381 | INFO     | __main__:run_experiment:1179 -   Fold 1/4
+2026-02-28 17:53:58.384 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:53:58.952 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '2': 7, '3': 2}
+2026-02-28 17:54:03.744 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.2745, splits=6, time=4.8s, n_simplices=18
+2026-02-28 17:54:43.019 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.4170, splits=9.0, time=7.8s
+2026-02-28 17:54:59.517 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.3128, splits=10, time=16.5s
+2026-02-28 17:54:59.520 | INFO     | __main__:run_experiment:1351 -   Fold 1 completed in 61.1s
+2026-02-28 17:54:59.521 | INFO     | __main__:run_experiment:1179 -   Fold 2/4
+2026-02-28 17:54:59.524 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:55:00.186 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 17:55:02.884 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.3076, splits=9, time=2.7s, n_simplices=5
+2026-02-28 17:55:20.275 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.4131, splits=9.4, time=3.5s
+2026-02-28 17:55:39.199 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.3251, splits=11, time=18.9s
+2026-02-28 17:55:39.202 | INFO     | __main__:run_experiment:1351 -   Fold 2 completed in 39.7s
+2026-02-28 17:55:39.202 | INFO     | __main__:run_experiment:1179 -   Fold 3/4
+2026-02-28 17:55:39.206 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:55:39.798 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '2': 7, '3': 2}
+2026-02-28 17:55:51.230 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.3538, splits=10, time=11.4s, n_simplices=18
+2026-02-28 17:56:31.032 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.4898, splits=9.8, time=8.0s
+2026-02-28 17:56:53.104 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.6200, splits=12, time=22.1s
+2026-02-28 17:56:53.109 | INFO     | __main__:run_experiment:1351 -   Fold 3 completed in 73.9s
+2026-02-28 17:56:53.110 | INFO     | __main__:run_experiment:1179 -   Fold 4/4
+2026-02-28 17:56:53.114 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 17:56:53.824 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 17:56:58.178 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.5046, splits=12, time=4.3s, n_simplices=5
+2026-02-28 17:57:16.021 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.4030, splits=10.0, time=3.6s
+2026-02-28 17:57:32.746 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.3517, splits=10, time=16.7s
+2026-02-28 17:57:32.750 | INFO     | __main__:run_experiment:1351 -   Fold 4 completed in 39.6s
+2026-02-28 17:57:32.750 | INFO     | __main__:run_experiment:1357 -   Dataset california_housing completed in 257.2s
+2026-02-28 17:57:32.751 | INFO     | __main__:run_experiment:1164 - ═══ Dataset 4/4: spambase (n=4601, p=57, task=classification) ═══
+2026-02-28 17:57:32.751 | INFO     | __main__:run_experiment:1179 -   Fold 0/4
+2026-02-28 17:57:32.754 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 17:57:35.428 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 55, '3': 126}
+2026-02-28 17:57:41.176 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.9403, splits=9, time=5.7s, n_simplices=200
+2026-02-28 17:57:49.911 | INFO     | __main__:main:1650 - ============================================================
+2026-02-28 17:57:49.911 | INFO     | __main__:main:1651 - SC-OTS Ablation Experiment
+2026-02-28 17:57:49.911 | INFO     | __main__:main:1652 - ============================================================
+2026-02-28 17:57:49.911 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 17:57:50.677 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 17:57:50.700 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:50.712 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:50.732 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:50.762 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:50.767 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:50.771 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:51.008 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:51.030 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:51.106 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:51.173 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 17:57:51.224 | INFO     | __main__:main:1656 - Loaded 10 datasets
+2026-02-28 17:57:51.225 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 1/4: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 17:57:51.225 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 17:57:51.227 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:57:51.461 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 17:57:59.387 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=7.9s, n_simplices=91
+2026-02-28 17:58:28.325 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.9392, splits=12.0, time=9.4s
+2026-02-28 17:58:35.293 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=7.2s
+2026-02-28 17:58:38.052 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.9424, splits=12, time=9.7s
+2026-02-28 17:58:38.053 | INFO     | __main__:run_experiment:1351 -   Fold 0 completed in 65.3s
+2026-02-28 17:58:38.053 | INFO     | __main__:run_experiment:1179 -   Fold 1/4
+2026-02-28 17:58:38.057 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 17:58:41.308 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 20, '2': 60, '3': 120}
+2026-02-28 17:58:43.819 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=8.5s
+2026-02-28 17:58:43.820 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 52.6s
+2026-02-28 17:58:43.820 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 17:58:43.822 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:58:44.036 | DEBUG    | __main__:build:874 - Simplicial complex: 64 simplices, dims={'3': 19, '1': 19, '2': 26}
+2026-02-28 17:58:48.393 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4536, splits=7, time=4.4s, n_simplices=64
+2026-02-28 17:58:50.838 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.9492, splits=12, time=9.5s, n_simplices=200
+2026-02-28 17:59:31.598 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.6004, splits=10.0, time=8.6s
+2026-02-28 17:59:35.764 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.9402, splits=11.8, time=9.0s
+2026-02-28 17:59:36.809 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.4369, splits=7, time=5.2s
+2026-02-28 17:59:36.811 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 53.0s
+2026-02-28 17:59:36.811 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 17:59:36.813 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 17:59:37.033 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '1': 21, '2': 35}
+2026-02-28 17:59:42.946 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4929, splits=7, time=5.9s, n_simplices=91
+2026-02-28 17:59:48.515 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.9469, splits=12, time=12.7s
+2026-02-28 17:59:48.516 | INFO     | __main__:run_experiment:1351 -   Fold 1 completed in 70.5s
+2026-02-28 17:59:48.516 | INFO     | __main__:run_experiment:1179 -   Fold 2/4
+2026-02-28 17:59:48.519 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 17:59:52.364 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 60, '3': 121}
+2026-02-28 18:00:02.044 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.9455, splits=12, time=9.6s, n_simplices=200
+2026-02-28 18:00:19.878 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5536, splits=9.0, time=7.4s
+2026-02-28 18:00:29.062 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6833, splits=12, time=9.2s
+2026-02-28 18:00:29.065 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 52.3s
+2026-02-28 18:00:29.065 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:00:29.067 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:00:29.285 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '3': 2, '2': 7}
+2026-02-28 18:00:32.397 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4427, splits=8, time=3.1s, n_simplices=18
+2026-02-28 18:00:35.060 | INFO     | __main__:run_experiment:1283 -     Mode B (RANDOM_MATCHED): score=0.9205, splits=9.8, time=6.6s
+2026-02-28 18:00:44.302 | INFO     | __main__:run_experiment:1311 -     Mode C (UNCONSTRAINED): score=0.9346, splits=12, time=9.2s
+2026-02-28 18:00:44.303 | INFO     | __main__:run_experiment:1351 -   Fold 2 completed in 55.8s
+2026-02-28 18:00:44.303 | INFO     | __main__:run_experiment:1179 -   Fold 3/4
+2026-02-28 18:00:44.307 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:00:47.429 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 59, '3': 122}
+2026-02-28 18:00:52.221 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5055, splits=9.4, time=4.0s
+2026-02-28 18:00:53.014 | INFO     | __main__:run_experiment:1225 -     Mode A (SIMPLICIAL): score=0.9373, splits=8, time=5.5s, n_simplices=200
+2026-02-28 18:00:56.526 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5732, splits=7, time=4.3s
+2026-02-28 18:00:56.528 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 27.5s
+2026-02-28 18:00:56.528 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:00:56.529 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:00:56.705 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:01:04.384 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6705, splits=9, time=7.7s, n_simplices=91
+2026-02-28 18:01:33.966 | INFO     | __main__:main:1650 - ============================================================
+2026-02-28 18:01:33.966 | INFO     | __main__:main:1651 - SC-OTS Ablation Experiment
+2026-02-28 18:01:33.966 | INFO     | __main__:main:1652 - ============================================================
+2026-02-28 18:01:33.966 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 18:01:34.659 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 18:01:34.687 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.702 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.731 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.758 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.760 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.763 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.937 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:34.963 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:35.035 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:35.095 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:01:35.150 | INFO     | __main__:main:1656 - Loaded 10 datasets
+2026-02-28 18:01:35.150 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 1/4: friedman1 (n=5000, p=10, task=regression) ═══
+2026-02-28 18:01:35.151 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:01:35.152 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:01:35.325 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:01:41.812 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6740, splits=9, time=6.5s, n_simplices=91
+2026-02-28 18:02:12.309 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5022, splits=8.6, time=6.1s
+2026-02-28 18:02:19.859 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5140, splits=10, time=7.5s
+2026-02-28 18:02:19.860 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 44.7s
+2026-02-28 18:02:19.860 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:02:19.861 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:02:20.032 | DEBUG    | __main__:build:874 - Simplicial complex: 64 simplices, dims={'3': 19, '1': 19, '2': 26}
+2026-02-28 18:02:24.515 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4536, splits=7, time=4.5s, n_simplices=64
+2026-02-28 18:03:05.468 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.6004, splits=10.0, time=8.2s
+2026-02-28 18:03:09.486 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.4369, splits=7, time=4.0s
+2026-02-28 18:03:09.487 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 49.6s
+2026-02-28 18:03:09.487 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:03:09.489 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:03:09.671 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '1': 21, '2': 35}
+2026-02-28 18:03:13.594 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4929, splits=7, time=3.9s, n_simplices=91
+2026-02-28 18:03:46.132 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5536, splits=9.0, time=6.5s
+2026-02-28 18:03:55.856 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6833, splits=12, time=9.7s
+2026-02-28 18:03:55.857 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 46.4s
+2026-02-28 18:03:55.857 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:03:55.859 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:03:56.042 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '3': 2, '2': 7}
+2026-02-28 18:03:59.484 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4427, splits=8, time=3.4s, n_simplices=18
+2026-02-28 18:04:17.277 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5055, splits=9.4, time=3.6s
+2026-02-28 18:04:21.235 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5732, splits=7, time=4.0s
+2026-02-28 18:04:21.236 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 25.4s
+2026-02-28 18:04:21.236 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:04:21.237 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=10)
+2026-02-28 18:04:21.406 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:04:28.061 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6705, splits=9, time=6.7s, n_simplices=91
+2026-02-28 18:05:00.746 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5867, splits=9.0, time=6.5s
+2026-02-28 18:05:05.426 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5854, splits=7, time=4.7s
+2026-02-28 18:05:05.427 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 44.2s
+2026-02-28 18:05:05.427 | INFO     | __main__:run_experiment:1370 -   Dataset friedman1 completed in 210.3s
+2026-02-28 18:05:05.440 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 2/4: friedman3 (n=5000, p=4, task=regression) ═══
+2026-02-28 18:05:05.440 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:05:05.441 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 18:05:05.505 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 18:05:06.574 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6762, splits=12, time=1.1s, n_simplices=4
+2026-02-28 18:05:10.529 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5452, splits=10.0, time=0.8s
+2026-02-28 18:05:11.628 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6492, splits=6, time=1.1s
+2026-02-28 18:05:11.628 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 6.2s
+2026-02-28 18:05:11.629 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:05:11.630 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 18:05:11.704 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 18:05:12.554 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.1625, splits=9, time=0.8s, n_simplices=4
+2026-02-28 18:05:15.036 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5563, splits=7.4, time=0.5s
+2026-02-28 18:05:16.907 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6911, splits=9, time=1.9s
+2026-02-28 18:05:16.908 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 5.3s
+2026-02-28 18:05:16.908 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:05:16.909 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 18:05:16.975 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 18:05:18.115 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6445, splits=12, time=1.1s, n_simplices=4
+2026-02-28 18:05:21.188 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4179, splits=8.2, time=0.6s
+2026-02-28 18:05:23.241 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.5800, splits=10, time=2.0s
+2026-02-28 18:05:23.242 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 6.3s
+2026-02-28 18:05:23.242 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:05:23.244 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 18:05:23.308 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 18:05:23.801 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4856, splits=8, time=0.5s, n_simplices=4
+2026-02-28 18:05:26.768 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4970, splits=9.2, time=0.6s
+2026-02-28 18:05:30.512 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.4374, splits=8, time=3.7s
+2026-02-28 18:05:30.515 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 7.3s
+2026-02-28 18:05:30.515 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:05:30.520 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=4)
+2026-02-28 18:05:30.667 | DEBUG    | __main__:build:874 - Simplicial complex: 4 simplices, dims={'1': 3, '2': 1}
+2026-02-28 18:05:31.822 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2699, splits=7, time=1.1s, n_simplices=4
+2026-02-28 18:05:36.427 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.3332, splits=7.6, time=0.9s
+2026-02-28 18:05:38.645 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2959, splits=7, time=2.2s
+2026-02-28 18:05:38.646 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 8.1s
+2026-02-28 18:05:38.646 | INFO     | __main__:run_experiment:1370 -   Dataset friedman3 completed in 33.2s
+2026-02-28 18:05:38.737 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 3/4: synth_3way (n=5000, p=15, task=regression) ═══
+2026-02-28 18:05:38.737 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:05:38.739 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 18:05:39.100 | DEBUG    | __main__:build:874 - Simplicial complex: 430 simplices, dims={'3': 238, '2': 140, '1': 52}
+2026-02-28 18:05:49.216 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6645, splits=12, time=10.1s, n_simplices=430
+2026-02-28 18:06:10.336 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4115, splits=6.8, time=4.2s
+2026-02-28 18:06:12.210 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2596, splits=4, time=1.9s
+2026-02-28 18:06:12.211 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 33.5s
+2026-02-28 18:06:12.211 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:06:12.213 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 18:06:12.500 | DEBUG    | __main__:build:874 - Simplicial complex: 103 simplices, dims={'3': 33, '1': 28, '2': 42}
+2026-02-28 18:06:18.342 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6042, splits=9, time=5.8s, n_simplices=103
+2026-02-28 18:06:49.462 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5277, splits=9.4, time=6.2s
+2026-02-28 18:06:52.335 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3297, splits=6, time=2.9s
+2026-02-28 18:06:52.337 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 40.1s
+2026-02-28 18:06:52.337 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:06:52.339 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 18:06:52.650 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 18:06:54.359 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2489, splits=4, time=1.7s, n_simplices=154
+2026-02-28 18:07:08.494 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4227, splits=5.6, time=2.8s
+2026-02-28 18:07:10.079 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3360, splits=4, time=1.6s
+2026-02-28 18:07:10.080 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 17.7s
+2026-02-28 18:07:10.080 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:07:10.082 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 18:07:10.365 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 18:07:18.990 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.6371, splits=11, time=8.6s, n_simplices=154
+2026-02-28 18:07:50.251 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5042, splits=9.6, time=6.2s
+2026-02-28 18:07:53.158 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2405, splits=6, time=2.9s
+2026-02-28 18:07:53.159 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 43.1s
+2026-02-28 18:07:53.159 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:07:53.162 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=15)
+2026-02-28 18:07:53.480 | DEBUG    | __main__:build:874 - Simplicial complex: 182 simplices, dims={'3': 75, '2': 70, '1': 37}
+2026-02-28 18:08:02.617 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.5801, splits=12, time=9.1s, n_simplices=182
+2026-02-28 18:08:37.856 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4404, splits=10.0, time=7.0s
+2026-02-28 18:08:42.067 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3697, splits=8, time=4.2s
+2026-02-28 18:08:42.069 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 48.9s
+2026-02-28 18:08:42.069 | INFO     | __main__:run_experiment:1370 -   Dataset synth_3way completed in 183.3s
+2026-02-28 18:08:42.112 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 4/4: synth_4way (n=5000, p=20, task=regression) ═══
+2026-02-28 18:08:42.112 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:08:42.115 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 18:08:42.508 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 77, '3': 98}
+2026-02-28 18:08:45.277 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.3598, splits=6, time=2.8s, n_simplices=200
+2026-02-28 18:08:58.086 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.3801, splits=5.6, time=2.6s
+2026-02-28 18:09:01.827 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.4948, splits=7, time=3.7s
+2026-02-28 18:09:01.828 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 19.7s
+2026-02-28 18:09:01.828 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:09:01.830 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 18:09:02.215 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 25, '2': 80, '3': 95}
+2026-02-28 18:09:09.246 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4620, splits=10, time=7.0s, n_simplices=200
+2026-02-28 18:09:35.264 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4721, splits=7.8, time=5.2s
+2026-02-28 18:09:42.206 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7299, splits=9, time=6.9s
+2026-02-28 18:09:42.207 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 40.4s
+2026-02-28 18:09:42.207 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:09:42.209 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 18:09:42.645 | DEBUG    | __main__:build:874 - Simplicial complex: 273 simplices, dims={'3': 115, '2': 105, '1': 53}
+2026-02-28 18:09:47.898 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.5832, splits=9, time=5.2s, n_simplices=273
+2026-02-28 18:10:13.737 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5815, splits=8.2, time=5.2s
+2026-02-28 18:10:20.443 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7252, splits=10, time=6.7s
+2026-02-28 18:10:20.444 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 38.2s
+2026-02-28 18:10:20.444 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:10:20.446 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 18:10:20.831 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 27, '2': 88, '3': 85}
+2026-02-28 18:10:27.658 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.4632, splits=10, time=6.8s, n_simplices=200
+2026-02-28 18:10:48.894 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.5054, splits=7.0, time=4.2s
+2026-02-28 18:10:55.102 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7289, splits=9, time=6.2s
+2026-02-28 18:10:55.103 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 34.7s
+2026-02-28 18:10:55.103 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:10:55.106 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=20)
+2026-02-28 18:10:55.483 | DEBUG    | __main__:build:874 - Simplicial complex: 274 simplices, dims={'3': 134, '1': 44, '2': 96}
+2026-02-28 18:11:01.782 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.3062, splits=11, time=6.3s, n_simplices=274
+2026-02-28 18:11:31.071 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.6223, splits=8.8, time=5.9s
+2026-02-28 18:11:37.144 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7348, splits=9, time=6.1s
+2026-02-28 18:11:37.145 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 42.0s
+2026-02-28 18:11:37.145 | INFO     | __main__:run_experiment:1370 -   Dataset synth_4way completed in 175.0s
+2026-02-28 18:11:37.211 | INFO     | __main__:run_experiment:1389 - Total experiment time: 602.1s
+2026-02-28 18:11:37.212 | INFO     | __main__:main:1667 - Computing statistics...
+2026-02-28 18:11:38.358 | INFO     | __main__:main:1670 - Conclusion: C > A (unconstrained best)
+2026-02-28 18:11:38.358 | INFO     | __main__:main:1671 - Aggregate mean scores: {'SIMPLICIAL': 0.494082, 'RANDOM_MATCHED': 0.498306, 'UNCONSTRAINED': 0.519781}
+2026-02-28 18:11:38.358 | INFO     | __main__:main:1674 - Building output...
+2026-02-28 18:11:39.838 | INFO     | __main__:main:1678 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 18:11:40.494 | INFO     | __main__:main:1681 - Output written: 24.8 MB
+2026-02-28 18:11:57.775 | INFO     | __main__:main:1650 - ============================================================
+2026-02-28 18:11:57.775 | INFO     | __main__:main:1651 - SC-OTS Ablation Experiment
+2026-02-28 18:11:57.775 | INFO     | __main__:main:1652 - ============================================================
+2026-02-28 18:11:57.775 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 18:11:58.613 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 18:11:58.636 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.651 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.672 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.700 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.703 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.705 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.889 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.913 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:58.985 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:59.039 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:11:59.100 | INFO     | __main__:main:1656 - Loaded 10 datasets
+2026-02-28 18:11:59.125 | INFO     | __main__:run_experiment:1158 - Resuming: loaded 4 completed datasets from checkpoint: ['friedman1', 'friedman3', 'synth_3way', 'synth_4way']
+2026-02-28 18:11:59.126 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 1/4: diabetes (n=768, p=8, task=classification) ═══
+2026-02-28 18:11:59.126 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:11:59.127 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:11:59.156 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 18:12:01.853 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8002, splits=7, time=2.7s, n_simplices=50
+2026-02-28 18:12:21.008 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7833, splits=8.6, time=3.8s
+2026-02-28 18:12:24.504 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8053, splits=8, time=3.5s
+2026-02-28 18:12:24.505 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 25.4s
+2026-02-28 18:12:24.505 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:12:24.506 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:12:24.550 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 18:12:31.000 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8388, splits=12, time=6.4s, n_simplices=50
+2026-02-28 18:12:49.153 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.8340, splits=8.8, time=3.6s
+2026-02-28 18:12:53.314 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8233, splits=10, time=4.2s
+2026-02-28 18:12:53.314 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 28.8s
+2026-02-28 18:12:53.314 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:12:53.315 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:12:53.343 | DEBUG    | __main__:build:874 - Simplicial complex: 19 simplices, dims={'3': 2, '2': 7, '1': 10}
+2026-02-28 18:12:56.931 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8087, splits=12, time=3.6s, n_simplices=19
+2026-02-28 18:13:07.066 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7904, splits=7.6, time=2.0s
+2026-02-28 18:13:11.849 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8279, splits=8, time=4.8s
+2026-02-28 18:13:11.853 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 18.5s
+2026-02-28 18:13:11.853 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:13:11.854 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:13:11.885 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 18:13:15.604 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.7574, splits=8, time=3.7s, n_simplices=50
+2026-02-28 18:13:36.269 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7761, splits=8.8, time=4.1s
+2026-02-28 18:13:40.540 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7688, splits=10, time=4.3s
+2026-02-28 18:13:40.540 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 28.7s
+2026-02-28 18:13:40.540 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:13:40.541 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:13:40.569 | DEBUG    | __main__:build:874 - Simplicial complex: 50 simplices, dims={'3': 15, '2': 20, '1': 15}
+2026-02-28 18:13:45.274 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.7526, splits=11, time=4.7s, n_simplices=50
+2026-02-28 18:14:03.463 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7642, splits=9.0, time=3.6s
+2026-02-28 18:14:06.571 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.7814, splits=8, time=3.1s
+2026-02-28 18:14:06.572 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 26.0s
+2026-02-28 18:14:06.572 | INFO     | __main__:run_experiment:1370 -   Dataset diabetes completed in 127.4s
+2026-02-28 18:14:06.675 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 2/4: breast_w (n=699, p=9, task=classification) ═══
+2026-02-28 18:14:06.675 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:14:06.676 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 18:14:06.706 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'2': 35, '3': 35, '1': 21}
+2026-02-28 18:14:10.267 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9922, splits=9, time=3.6s, n_simplices=91
+2026-02-28 18:14:26.345 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9941, splits=8.2, time=3.2s
+2026-02-28 18:14:29.394 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9914, splits=8, time=3.0s
+2026-02-28 18:14:29.394 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 22.7s
+2026-02-28 18:14:29.394 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:14:29.395 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 18:14:29.424 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:14:32.635 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9812, splits=8, time=3.2s, n_simplices=91
+2026-02-28 18:14:45.860 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9781, splits=7.0, time=2.6s
+2026-02-28 18:14:50.827 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9789, splits=10, time=5.0s
+2026-02-28 18:14:50.827 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 21.4s
+2026-02-28 18:14:50.828 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:14:50.829 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 18:14:50.865 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:14:57.117 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9780, splits=8, time=6.2s, n_simplices=91
+2026-02-28 18:15:13.065 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9846, splits=7.8, time=3.2s
+2026-02-28 18:15:18.761 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9796, splits=12, time=5.7s
+2026-02-28 18:15:18.761 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 27.9s
+2026-02-28 18:15:18.761 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:15:18.762 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 18:15:18.791 | DEBUG    | __main__:build:874 - Simplicial complex: 91 simplices, dims={'3': 35, '2': 35, '1': 21}
+2026-02-28 18:15:23.155 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9961, splits=10, time=4.4s, n_simplices=91
+2026-02-28 18:15:37.920 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9947, splits=7.2, time=2.9s
+2026-02-28 18:15:40.501 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9956, splits=7, time=2.6s
+2026-02-28 18:15:40.501 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 21.7s
+2026-02-28 18:15:40.502 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:15:40.502 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=9)
+2026-02-28 18:15:40.534 | DEBUG    | __main__:build:874 - Simplicial complex: 75 simplices, dims={'2': 30, '3': 25, '1': 20}
+2026-02-28 18:15:44.870 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9880, splits=10, time=4.3s, n_simplices=75
+2026-02-28 18:16:07.472 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9925, splits=9.0, time=4.5s
+2026-02-28 18:16:11.343 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9959, splits=9, time=3.9s
+2026-02-28 18:16:11.344 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 30.8s
+2026-02-28 18:16:11.344 | INFO     | __main__:run_experiment:1370 -   Dataset breast_w completed in 124.7s
+2026-02-28 18:16:11.403 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 3/4: adult (n=10000, p=96, task=classification) ═══
+2026-02-28 18:16:11.404 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:16:11.414 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 18:16:19.843 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 14, '2': 64, '3': 122}
+2026-02-28 18:16:32.152 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8674, splits=12, time=12.2s, n_simplices=200
+2026-02-28 18:17:27.495 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7993, splits=11.8, time=11.1s
+2026-02-28 18:17:41.678 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8155, splits=12, time=13.6s
+2026-02-28 18:17:41.680 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 90.3s
+2026-02-28 18:17:41.680 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:17:41.691 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 18:17:59.534 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 66, '3': 121}
+2026-02-28 18:18:12.313 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8668, splits=12, time=12.5s, n_simplices=200
+2026-02-28 18:19:05.626 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.8152, splits=10.8, time=10.7s
+2026-02-28 18:19:17.208 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8354, splits=12, time=11.1s
+2026-02-28 18:19:17.209 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 95.5s
+2026-02-28 18:19:17.209 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:19:17.219 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 18:19:23.624 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 15, '2': 74, '3': 111}
+2026-02-28 18:19:35.877 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8871, splits=12, time=12.2s, n_simplices=200
+2026-02-28 18:20:20.713 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.8260, splits=10.8, time=9.0s
+2026-02-28 18:20:34.591 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8353, splits=12, time=13.4s
+2026-02-28 18:20:34.592 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 77.4s
+2026-02-28 18:20:34.593 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:20:34.605 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 18:20:47.428 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 51, '3': 136}
+2026-02-28 18:21:00.677 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8754, splits=12, time=13.0s, n_simplices=200
+2026-02-28 18:21:47.606 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.7935, splits=11.0, time=9.4s
+2026-02-28 18:21:55.233 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8090, splits=8, time=7.0s
+2026-02-28 18:21:55.234 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 80.6s
+2026-02-28 18:21:55.234 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:21:55.246 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=96 > 30)
+2026-02-28 18:22:04.408 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 13, '2': 71, '3': 116}
+2026-02-28 18:22:17.452 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.8701, splits=12, time=13.0s, n_simplices=200
+2026-02-28 18:23:14.008 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.8372, splits=11.8, time=11.3s
+2026-02-28 18:23:23.256 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.8111, splits=10, time=8.7s
+2026-02-28 18:23:23.258 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 88.0s
+2026-02-28 18:23:23.258 | INFO     | __main__:run_experiment:1370 -   Dataset adult completed in 431.9s
+2026-02-28 18:23:23.353 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 4/4: wine_quality (n=6497, p=11, task=regression) ═══
+2026-02-28 18:23:23.353 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:23:23.356 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 18:23:23.688 | DEBUG    | __main__:build:874 - Simplicial complex: 154 simplices, dims={'3': 70, '2': 56, '1': 28}
+2026-02-28 18:23:28.438 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.1971, splits=7, time=4.7s, n_simplices=154
+2026-02-28 18:23:56.207 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.1933, splits=8.6, time=5.5s
+2026-02-28 18:24:01.412 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.1315, splits=7, time=5.2s
+2026-02-28 18:24:01.414 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 38.1s
+2026-02-28 18:24:01.414 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:24:01.416 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 18:24:01.694 | DEBUG    | __main__:build:874 - Simplicial complex: 10 simplices, dims={'1': 10}
+2026-02-28 18:24:03.800 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.1602, splits=9, time=2.1s, n_simplices=10
+2026-02-28 18:24:17.022 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.2247, splits=9.6, time=2.6s
+2026-02-28 18:24:26.418 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.1608, splits=12, time=9.4s
+2026-02-28 18:24:26.420 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 25.0s
+2026-02-28 18:24:26.420 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:24:26.422 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 18:24:26.730 | DEBUG    | __main__:build:874 - Simplicial complex: 67 simplices, dims={'2': 27, '1': 21, '3': 19}
+2026-02-28 18:24:38.367 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2943, splits=12, time=11.6s, n_simplices=67
+2026-02-28 18:24:59.509 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.2097, splits=6.4, time=4.2s
+2026-02-28 18:25:05.494 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2656, splits=8, time=6.0s
+2026-02-28 18:25:05.497 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 39.1s
+2026-02-28 18:25:05.498 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:25:05.501 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 18:25:05.798 | DEBUG    | __main__:build:874 - Simplicial complex: 89 simplices, dims={'1': 24, '3': 29, '2': 36}
+2026-02-28 18:25:11.966 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2414, splits=8, time=6.2s, n_simplices=89
+2026-02-28 18:25:42.932 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.1952, splits=8.8, time=6.2s
+2026-02-28 18:25:50.421 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2465, splits=9, time=7.5s
+2026-02-28 18:25:50.422 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 44.9s
+2026-02-28 18:25:50.422 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:25:50.425 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=11)
+2026-02-28 18:25:50.706 | DEBUG    | __main__:build:874 - Simplicial complex: 27 simplices, dims={'1': 15, '2': 10, '3': 2}
+2026-02-28 18:25:55.187 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2672, splits=7, time=4.5s, n_simplices=27
+2026-02-28 18:26:19.280 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.2299, splits=8.6, time=4.8s
+2026-02-28 18:26:25.154 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.2402, splits=8, time=5.9s
+2026-02-28 18:26:25.156 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 34.7s
+2026-02-28 18:26:25.156 | INFO     | __main__:run_experiment:1370 -   Dataset wine_quality completed in 181.8s
+2026-02-28 18:26:25.292 | INFO     | __main__:run_experiment:1389 - Total experiment time: 866.2s
+2026-02-28 18:26:25.294 | INFO     | __main__:main:1667 - Computing statistics...
+2026-02-28 18:26:25.298 | INFO     | __main__:main:1670 - Conclusion: Mixed results — no clear winner
+2026-02-28 18:26:25.298 | INFO     | __main__:main:1671 - Aggregate mean scores: {'SIMPLICIAL': 0.607545, 'RANDOM_MATCHED': 0.599551, 'UNCONSTRAINED': 0.612367}
+2026-02-28 18:26:25.298 | INFO     | __main__:main:1674 - Building output...
+2026-02-28 18:26:26.895 | INFO     | __main__:main:1678 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 18:26:27.719 | INFO     | __main__:main:1681 - Output written: 24.5 MB
+2026-02-28 18:26:46.943 | INFO     | __main__:main:1650 - ============================================================
+2026-02-28 18:26:46.943 | INFO     | __main__:main:1651 - SC-OTS Ablation Experiment
+2026-02-28 18:26:46.943 | INFO     | __main__:main:1652 - ============================================================
+2026-02-28 18:26:46.943 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 18:26:47.778 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 18:26:47.805 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:47.820 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:47.847 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:47.881 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:47.885 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:47.888 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:48.092 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:48.117 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:48.203 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:48.266 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:26:48.326 | INFO     | __main__:main:1656 - Loaded 10 datasets
+2026-02-28 18:26:48.396 | INFO     | __main__:run_experiment:1158 - Resuming: loaded 8 completed datasets from checkpoint: ['friedman1', 'friedman3', 'synth_3way', 'synth_4way', 'diabetes', 'breast_w', 'adult', 'wine_quality']
+2026-02-28 18:26:48.396 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 1/2: california_housing (n=20640, p=8, task=regression) ═══
+2026-02-28 18:26:48.397 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:26:48.400 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:26:49.148 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 18:26:52.151 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.5596, splits=9, time=3.0s, n_simplices=5
+2026-02-28 18:27:13.515 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4261, splits=10.0, time=4.3s
+2026-02-28 18:27:40.168 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6059, splits=12, time=26.6s
+2026-02-28 18:27:40.173 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 51.8s
+2026-02-28 18:27:40.173 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:27:40.176 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:27:40.811 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '2': 7, '3': 2}
+2026-02-28 18:27:46.098 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.2745, splits=6, time=5.3s, n_simplices=18
+2026-02-28 18:28:31.604 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4170, splits=9.0, time=9.1s
+2026-02-28 18:28:51.689 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3128, splits=10, time=20.1s
+2026-02-28 18:28:51.694 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 71.5s
+2026-02-28 18:28:51.694 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:28:51.698 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:28:52.429 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 18:28:55.768 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.3076, splits=9, time=3.3s, n_simplices=5
+2026-02-28 18:29:17.253 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4131, splits=9.4, time=4.3s
+2026-02-28 18:29:45.966 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3251, splits=11, time=28.7s
+2026-02-28 18:29:45.972 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 54.3s
+2026-02-28 18:29:45.972 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:29:45.977 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:29:46.928 | DEBUG    | __main__:build:874 - Simplicial complex: 18 simplices, dims={'1': 9, '2': 7, '3': 2}
+2026-02-28 18:30:02.742 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.3538, splits=10, time=15.8s, n_simplices=18
+2026-02-28 18:30:51.378 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4898, splits=9.8, time=9.7s
+2026-02-28 18:31:13.130 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.6200, splits=12, time=21.7s
+2026-02-28 18:31:13.134 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 87.2s
+2026-02-28 18:31:13.134 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:31:13.138 | DEBUG    | __main__:build:788 - Using dCor distance (n_features=8)
+2026-02-28 18:31:13.774 | DEBUG    | __main__:build:874 - Simplicial complex: 5 simplices, dims={'1': 4, '2': 1}
+2026-02-28 18:31:18.521 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.5046, splits=12, time=4.7s, n_simplices=5
+2026-02-28 18:31:39.346 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.4030, splits=10.0, time=4.2s
+2026-02-28 18:31:57.856 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.3517, splits=10, time=18.5s
+2026-02-28 18:31:57.860 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 44.7s
+2026-02-28 18:31:57.861 | INFO     | __main__:run_experiment:1370 -   Dataset california_housing completed in 309.5s
+2026-02-28 18:31:58.132 | INFO     | __main__:run_experiment:1177 - ═══ Dataset 2/2: spambase (n=4601, p=57, task=classification) ═══
+2026-02-28 18:31:58.132 | INFO     | __main__:run_experiment:1192 -   Fold 0/4
+2026-02-28 18:31:58.136 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:32:01.992 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 55, '3': 126}
+2026-02-28 18:32:08.940 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9403, splits=9, time=6.9s, n_simplices=200
+2026-02-28 18:32:57.970 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9392, splits=12.0, time=9.8s
+2026-02-28 18:33:07.021 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9424, splits=12, time=9.0s
+2026-02-28 18:33:07.022 | INFO     | __main__:run_experiment:1364 -   Fold 0 completed in 68.9s
+2026-02-28 18:33:07.022 | INFO     | __main__:run_experiment:1192 -   Fold 1/4
+2026-02-28 18:33:07.026 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:33:10.022 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 20, '2': 60, '3': 120}
+2026-02-28 18:33:19.337 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9492, splits=12, time=9.3s, n_simplices=200
+2026-02-28 18:34:03.650 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9402, splits=11.8, time=8.9s
+2026-02-28 18:34:13.072 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9469, splits=12, time=9.4s
+2026-02-28 18:34:13.073 | INFO     | __main__:run_experiment:1364 -   Fold 1 completed in 66.1s
+2026-02-28 18:34:13.073 | INFO     | __main__:run_experiment:1192 -   Fold 2/4
+2026-02-28 18:34:13.077 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:34:16.121 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 60, '3': 121}
+2026-02-28 18:34:25.835 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9455, splits=12, time=9.7s, n_simplices=200
+2026-02-28 18:35:05.561 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9205, splits=9.8, time=7.9s
+2026-02-28 18:35:17.254 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9346, splits=12, time=11.6s
+2026-02-28 18:35:17.256 | INFO     | __main__:run_experiment:1364 -   Fold 2 completed in 64.2s
+2026-02-28 18:35:17.256 | INFO     | __main__:run_experiment:1192 -   Fold 3/4
+2026-02-28 18:35:17.260 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:35:20.935 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 59, '3': 122}
+2026-02-28 18:35:26.914 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9373, splits=8, time=5.9s, n_simplices=200
+2026-02-28 18:36:04.060 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9449, splits=10.0, time=7.4s
+2026-02-28 18:36:14.004 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9460, splits=11, time=9.9s
+2026-02-28 18:36:14.005 | INFO     | __main__:run_experiment:1364 -   Fold 3 completed in 56.7s
+2026-02-28 18:36:14.005 | INFO     | __main__:run_experiment:1192 -   Fold 4/4
+2026-02-28 18:36:14.008 | DEBUG    | __main__:build:785 - Using Pearson correlation (n_features=57 > 30)
+2026-02-28 18:36:16.889 | DEBUG    | __main__:build:874 - Simplicial complex: 200 simplices, dims={'1': 19, '2': 57, '3': 124}
+2026-02-28 18:36:26.554 | INFO     | __main__:run_experiment:1238 -     Mode A (SIMPLICIAL): score=0.9496, splits=12, time=9.6s, n_simplices=200
+2026-02-28 18:37:16.631 | INFO     | __main__:run_experiment:1296 -     Mode B (RANDOM_MATCHED): score=0.9391, splits=11.8, time=10.0s
+2026-02-28 18:37:30.852 | INFO     | __main__:run_experiment:1324 -     Mode C (UNCONSTRAINED): score=0.9258, splits=12, time=14.2s
+2026-02-28 18:37:30.853 | INFO     | __main__:run_experiment:1364 -   Fold 4 completed in 76.8s
+2026-02-28 18:37:30.853 | INFO     | __main__:run_experiment:1370 -   Dataset spambase completed in 332.7s
+2026-02-28 18:37:31.222 | INFO     | __main__:run_experiment:1389 - Total experiment time: 642.8s
+2026-02-28 18:37:31.224 | INFO     | __main__:main:1667 - Computing statistics...
+2026-02-28 18:37:31.229 | INFO     | __main__:main:1670 - Conclusion: C > A (unconstrained best)
+2026-02-28 18:37:31.229 | INFO     | __main__:main:1671 - Aggregate mean scores: {'SIMPLICIAL': 0.620477, 'RANDOM_MATCHED': 0.616298, 'UNCONSTRAINED': 0.628117}
+2026-02-28 18:37:31.229 | INFO     | __main__:main:1674 - Building output...
+2026-02-28 18:37:33.748 | INFO     | __main__:main:1678 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 18:37:34.721 | INFO     | __main__:main:1681 - Output written: 25.4 MB
+2026-02-28 18:38:31.743 | INFO     | __main__:main:1653 - ============================================================
+2026-02-28 18:38:31.744 | INFO     | __main__:main:1654 - SC-OTS Ablation Experiment
+2026-02-28 18:38:31.744 | INFO     | __main__:main:1655 - ============================================================
+2026-02-28 18:38:31.744 | INFO     | __main__:load_datasets:141 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 18:38:32.452 | INFO     | __main__:load_datasets:143 - Loaded JSON with 10 datasets
+2026-02-28 18:38:32.480 | INFO     | __main__:load_datasets:178 -   friedman1: 5000 examples, 10 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.498 | INFO     | __main__:load_datasets:178 -   friedman3: 5000 examples, 4 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.526 | INFO     | __main__:load_datasets:178 -   synth_3way: 5000 examples, 15 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.555 | INFO     | __main__:load_datasets:178 -   synth_4way: 5000 examples, 20 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.558 | INFO     | __main__:load_datasets:178 -   diabetes: 768 examples, 8 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.560 | INFO     | __main__:load_datasets:178 -   breast_w: 699 examples, 9 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.734 | INFO     | __main__:load_datasets:178 -   adult: 10000 examples, 96 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.765 | INFO     | __main__:load_datasets:178 -   wine_quality: 6497 examples, 11 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.861 | INFO     | __main__:load_datasets:178 -   california_housing: 20640 examples, 8 features, task=regression, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.915 | INFO     | __main__:load_datasets:178 -   spambase: 4601 examples, 57 features, task=classification, folds=[0, 1, 2, 3, 4]
+2026-02-28 18:38:32.962 | INFO     | __main__:main:1659 - Loaded 10 datasets
+2026-02-28 18:38:33.049 | INFO     | __main__:run_experiment:1161 - Resuming: loaded 10 completed datasets from checkpoint: ['friedman1', 'friedman3', 'synth_3way', 'synth_4way', 'diabetes', 'breast_w', 'adult', 'wine_quality', 'california_housing', 'spambase']
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING friedman1 (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING friedman3 (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING synth_3way (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING synth_4way (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING diabetes (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING breast_w (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING adult (already completed with 5 folds) ═══
+2026-02-28 18:38:33.050 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING wine_quality (already completed with 5 folds) ═══
+2026-02-28 18:38:33.051 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING california_housing (already completed with 5 folds) ═══
+2026-02-28 18:38:33.051 | INFO     | __main__:run_experiment:1178 - ═══ SKIPPING spambase (already completed with 5 folds) ═══
+2026-02-28 18:38:33.051 | INFO     | __main__:run_experiment:1392 - Total experiment time: 0.0s
+2026-02-28 18:38:33.051 | INFO     | __main__:main:1670 - Computing statistics...
+2026-02-28 18:38:33.056 | INFO     | __main__:main:1673 - Conclusion: C > A (unconstrained best)
+2026-02-28 18:38:33.056 | INFO     | __main__:main:1674 - Aggregate mean scores: {'SIMPLICIAL': 0.620477, 'RANDOM_MATCHED': 0.616298, 'UNCONSTRAINED': 0.628117}
+2026-02-28 18:38:33.057 | INFO     | __main__:main:1677 - Building output...
+2026-02-28 18:38:34.573 | INFO     | __main__:main:1681 - Writing output to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-28 18:38:35.361 | INFO     | __main__:main:1684 - Output written: 30.5 MB

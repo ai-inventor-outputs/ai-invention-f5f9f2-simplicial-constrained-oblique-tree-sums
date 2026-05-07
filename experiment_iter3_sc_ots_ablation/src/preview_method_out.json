@@ -1,0 +1,377 @@
+{
+  "metadata": {
+    "experiment": "sc_ots_ablation_v1",
+    "modes": [
+      "SIMPLICIAL",
+      "RANDOM_MATCHED",
+      "UNCONSTRAINED"
+    ],
+    "description": "Three-mode ablation testing whether topological constraints from persistent homology improve predictive accuracy over random/unconstrained baselines",
+    "results_per_dataset": {
+      "friedman1": {
+        "task_type": "regression",
+        "n_samples": 5000,
+        "n_features": 10,
+        "mean_scores": {
+          "SIMPLICIAL": 0.546729,
+          "RANDOM_MATCHED": 0.549689,
+          "UNCONSTRAINED": 0.558557
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 8.0,
+          "RANDOM_MATCHED": 9.2,
+          "UNCONSTRAINED": 8.6
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 4.994,
+          "RANDOM_MATCHED": 6.174,
+          "UNCONSTRAINED": 5.982
+        }
+      },
+      "friedman3": {
+        "task_type": "regression",
+        "n_samples": 5000,
+        "n_features": 4,
+        "mean_scores": {
+          "SIMPLICIAL": 0.447737,
+          "RANDOM_MATCHED": 0.469928,
+          "UNCONSTRAINED": 0.53074
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 9.6,
+          "RANDOM_MATCHED": 8.5,
+          "UNCONSTRAINED": 8.0
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 0.937,
+          "RANDOM_MATCHED": 0.679,
+          "UNCONSTRAINED": 2.192
+        }
+      },
+      "synth_3way": {
+        "task_type": "regression",
+        "n_samples": 5000,
+        "n_features": 15,
+        "mean_scores": {
+          "SIMPLICIAL": 0.546971,
+          "RANDOM_MATCHED": 0.461322,
+          "UNCONSTRAINED": 0.307107
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 9.6,
+          "RANDOM_MATCHED": 8.3,
+          "UNCONSTRAINED": 5.6
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 7.081,
+          "RANDOM_MATCHED": 5.309,
+          "UNCONSTRAINED": 2.687
+        }
+      },
+      "synth_4way": {
+        "task_type": "regression",
+        "n_samples": 5000,
+        "n_features": 20,
+        "mean_scores": {
+          "SIMPLICIAL": 0.434889,
+          "RANDOM_MATCHED": 0.512284,
+          "UNCONSTRAINED": 0.682719
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 9.2,
+          "RANDOM_MATCHED": 7.5,
+          "UNCONSTRAINED": 8.8
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 5.632,
+          "RANDOM_MATCHED": 4.602,
+          "UNCONSTRAINED": 5.929
+        }
+      },
+      "diabetes": {
+        "task_type": "classification",
+        "n_samples": 768,
+        "n_features": 8,
+        "mean_scores": {
+          "SIMPLICIAL": 0.791537,
+          "RANDOM_MATCHED": 0.789582,
+          "UNCONSTRAINED": 0.801334
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 10.0,
+          "RANDOM_MATCHED": 8.6,
+          "UNCONSTRAINED": 8.8
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 4.227,
+          "RANDOM_MATCHED": 3.447,
+          "UNCONSTRAINED": 3.96
+        }
+      },
+      "breast_w": {
+        "task_type": "classification",
+        "n_samples": 699,
+        "n_features": 9,
+        "mean_scores": {
+          "SIMPLICIAL": 0.987097,
+          "RANDOM_MATCHED": 0.988789,
+          "UNCONSTRAINED": 0.988292
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 9.0,
+          "RANDOM_MATCHED": 7.8,
+          "UNCONSTRAINED": 9.2
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 4.34,
+          "RANDOM_MATCHED": 3.299,
+          "UNCONSTRAINED": 4.029
+        }
+      },
+      "adult": {
+        "task_type": "classification",
+        "n_samples": 10000,
+        "n_features": 96,
+        "mean_scores": {
+          "SIMPLICIAL": 0.873379,
+          "RANDOM_MATCHED": 0.814246,
+          "UNCONSTRAINED": 0.821281
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 12.0,
+          "RANDOM_MATCHED": 11.2,
+          "UNCONSTRAINED": 10.8
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 12.588,
+          "RANDOM_MATCHED": 10.268,
+          "UNCONSTRAINED": 10.783
+        }
+      },
+      "wine_quality": {
+        "task_type": "regression",
+        "n_samples": 6497,
+        "n_features": 11,
+        "mean_scores": {
+          "SIMPLICIAL": 0.232019,
+          "RANDOM_MATCHED": 0.210571,
+          "UNCONSTRAINED": 0.208908
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 8.6,
+          "RANDOM_MATCHED": 8.4,
+          "UNCONSTRAINED": 8.8
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 5.824,
+          "RANDOM_MATCHED": 4.683,
+          "UNCONSTRAINED": 6.783
+        }
+      },
+      "california_housing": {
+        "task_type": "regression",
+        "n_samples": 20640,
+        "n_features": 8,
+        "mean_scores": {
+          "SIMPLICIAL": 0.400003,
+          "RANDOM_MATCHED": 0.429803,
+          "UNCONSTRAINED": 0.443099
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 9.2,
+          "RANDOM_MATCHED": 9.6,
+          "UNCONSTRAINED": 11.0
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 6.432,
+          "RANDOM_MATCHED": 6.307,
+          "UNCONSTRAINED": 23.135
+        }
+      },
+      "spambase": {
+        "task_type": "classification",
+        "n_samples": 4601,
+        "n_features": 57,
+        "mean_scores": {
+          "SIMPLICIAL": 0.944412,
+          "RANDOM_MATCHED": 0.936771,
+          "UNCONSTRAINED": 0.939131
+        },
+        "mean_splits": {
+          "SIMPLICIAL": 10.6,
+          "RANDOM_MATCHED": 11.1,
+          "UNCONSTRAINED": 11.8
+        },
+        "mean_time_s": {
+          "SIMPLICIAL": 8.278,
+          "RANDOM_MATCHED": 8.802,
+          "UNCONSTRAINED": 10.809
+        }
+      }
+    },
+    "statistical_tests": {
+      "A_vs_B": {
+        "statistic": 26.0,
+        "p_value": 0.921875,
+        "interpretation": "not significant (p>=0.05)"
+      },
+      "A_vs_C": {
+        "statistic": 23.0,
+        "p_value": 0.695312,
+        "interpretation": "not significant (p>=0.05)"
+      },
+      "B_vs_C": {
+        "statistic": 12.0,
+        "p_value": 0.130859,
+        "interpretation": "not significant (p>=0.05)"
+      }
+    },
+    "win_tie_loss": {
+      "A_vs_B": {
+        "A_wins": 4,
+        "ties": 3,
+        "B_wins": 3
+      },
+      "A_vs_C": {
+        "A_wins": 4,
+        "ties": 1,
+        "C_wins": 5
+      },
+      "B_vs_C": {
+        "B_wins": 1,
+        "ties": 3,
+        "C_wins": 6
+      }
+    },
+    "aggregate": {
+      "mean_score": {
+        "SIMPLICIAL": 0.620477,
+        "RANDOM_MATCHED": 0.616298,
+        "UNCONSTRAINED": 0.628117
+      },
+      "std_score": {
+        "SIMPLICIAL": 0.246414,
+        "RANDOM_MATCHED": 0.238905,
+        "UNCONSTRAINED": 0.249818
+      },
+      "mean_splits": {
+        "SIMPLICIAL": 9.58,
+        "RANDOM_MATCHED": 9.02,
+        "UNCONSTRAINED": 9.14
+      },
+      "mean_time_s": {
+        "SIMPLICIAL": 6.033,
+        "RANDOM_MATCHED": 5.357,
+        "UNCONSTRAINED": 7.629
+      }
+    },
+    "conclusion": "C > A (unconstrained best)"
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073]",
+          "output": "16.836355",
+          "predict_SIMPLICIAL": "16.100405",
+          "predict_RANDOM_MATCHED": "16.168464",
+          "predict_UNCONSTRAINED": "15.998545",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman1"
+        },
+        {
+          "input": "[0.020584, 0.96991, 0.832443, 0.212339, 0.181825, 0.183405, 0.304242, 0.524756, 0.431945, 0.291229]",
+          "output": "5.990418",
+          "predict_SIMPLICIAL": "13.052182",
+          "predict_RANDOM_MATCHED": "8.938598",
+          "predict_UNCONSTRAINED": "12.276348",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman1"
+        },
+        {
+          "input": "[0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "9.519901",
+          "predict_SIMPLICIAL": "13.052182",
+          "predict_RANDOM_MATCHED": "8.825026",
+          "predict_UNCONSTRAINED": "12.276348",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman1"
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "[37.454012, 1678.777388, 0.731994, 6.986585]",
+          "output": "1.459947",
+          "predict_SIMPLICIAL": "1.445556",
+          "predict_RANDOM_MATCHED": "1.445628",
+          "predict_UNCONSTRAINED": "1.445556",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman3"
+        },
+        {
+          "input": "[15.601864, 380.50075, 0.058084, 9.661761]",
+          "output": "1.014689",
+          "predict_SIMPLICIAL": "1.447177",
+          "predict_RANDOM_MATCHED": "1.219507",
+          "predict_UNCONSTRAINED": "1.045446",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman3"
+        },
+        {
+          "input": "[60.111501, 1282.391023, 0.020584, 10.699099]",
+          "output": "0.544413",
+          "predict_SIMPLICIAL": "0.617459",
+          "predict_RANDOM_MATCHED": "0.90064",
+          "predict_UNCONSTRAINED": "0.670683",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "friedman3"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073, 0.020584, 0.96991, 0.832443, 0.212339, 0.181825]",
+          "output": "3.106792",
+          "predict_SIMPLICIAL": "1.851846",
+          "predict_RANDOM_MATCHED": "2.689716",
+          "predict_UNCONSTRAINED": "3.563092",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "synth_3way"
+        },
+        {
+          "input": "[0.183405, 0.304242, 0.524756, 0.431945, 0.291229, 0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "1.701095",
+          "predict_SIMPLICIAL": "1.273015",
+          "predict_RANDOM_MATCHED": "1.639137",
+          "predict_UNCONSTRAINED": "3.588626",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "synth_3way"
+        },
+        {
+          "input": "[0.607545, 0.170524, 0.065052, 0.948886, 0.965632, 0.808397, 0.304614, 0.097672, 0.684233, 0.440152, 0.122038, 0.495177, 0.034389, 0.90932, 0.25878]",
+          "output": "2.015276",
+          "predict_SIMPLICIAL": "4.648344",
+          "predict_RANDOM_MATCHED": "3.285129",
+          "predict_UNCONSTRAINED": "4.350864",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "metadata_dataset_name": "synth_3way"
+        }
+      ]
+    }
+  ]
+}
