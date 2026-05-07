@@ -1,0 +1,605 @@
+{
+  "metadata": {
+    "method_name": "SC-OTS v2",
+    "description": "Simplicial-Constrained Oblique Tree Sums with Elastic Net Splits and Adaptive Stopping",
+    "timestamp": "2026-02-28T19:43:30.879154",
+    "methods": [
+      "SC-OTS",
+      "FIGS",
+      "XGBoost"
+    ],
+    "overall_wins": {
+      "SC-OTS": 0,
+      "FIGS": 0,
+      "XGBoost": 3,
+      "XGBoost_constrained": 1,
+      "EBM": 6
+    },
+    "aggregated_results": {
+      "friedman1": {
+        "SC-OTS": {
+          "mean_score": 0.8482,
+          "std_score": 0.016,
+          "mean_time_s": 25.74
+        },
+        "FIGS": {
+          "mean_score": 0.9422,
+          "std_score": 0.0029,
+          "mean_time_s": 4.09
+        },
+        "XGBoost": {
+          "mean_score": 0.9779,
+          "std_score": 0.0022,
+          "mean_time_s": 11.12
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9599,
+          "std_score": 0.0298,
+          "mean_time_s": 8.69
+        },
+        "EBM": {
+          "mean_score": 0.9985,
+          "std_score": 0.0002,
+          "mean_time_s": 44.33
+        }
+      },
+      "friedman3": {
+        "SC-OTS": {
+          "mean_score": 0.8112,
+          "std_score": 0.0114,
+          "mean_time_s": 3.38
+        },
+        "FIGS": {
+          "mean_score": 0.846,
+          "std_score": 0.012,
+          "mean_time_s": 2.14
+        },
+        "XGBoost": {
+          "mean_score": 0.8825,
+          "std_score": 0.0084,
+          "mean_time_s": 6.74
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.7759,
+          "std_score": 0.0424,
+          "mean_time_s": 4.57
+        },
+        "EBM": {
+          "mean_score": 0.8815,
+          "std_score": 0.0101,
+          "mean_time_s": 3.05
+        }
+      },
+      "synth_3way": {
+        "SC-OTS": {
+          "mean_score": 0.7998,
+          "std_score": 0.0277,
+          "mean_time_s": 18.06
+        },
+        "FIGS": {
+          "mean_score": 0.9194,
+          "std_score": 0.0041,
+          "mean_time_s": 4.04
+        },
+        "XGBoost": {
+          "mean_score": 0.9759,
+          "std_score": 0.0017,
+          "mean_time_s": 0.55
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9081,
+          "std_score": 0.0349,
+          "mean_time_s": 0.32
+        },
+        "EBM": {
+          "mean_score": 0.9849,
+          "std_score": 0.0006,
+          "mean_time_s": 11.24
+        }
+      },
+      "synth_4way": {
+        "SC-OTS": {
+          "mean_score": 0.6627,
+          "std_score": 0.2051,
+          "mean_time_s": 18.6
+        },
+        "FIGS": {
+          "mean_score": 0.9404,
+          "std_score": 0.0023,
+          "mean_time_s": 4.2
+        },
+        "XGBoost": {
+          "mean_score": 0.9792,
+          "std_score": 0.0011,
+          "mean_time_s": 0.42
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9622,
+          "std_score": 0.004,
+          "mean_time_s": 0.75
+        },
+        "EBM": {
+          "mean_score": 0.9852,
+          "std_score": 0.0012,
+          "mean_time_s": 7.54
+        }
+      },
+      "diabetes": {
+        "SC-OTS": {
+          "mean_score": 0.7903,
+          "std_score": 0.0401,
+          "mean_time_s": 4.27
+        },
+        "FIGS": {
+          "mean_score": 0.7812,
+          "std_score": 0.0152,
+          "mean_time_s": 0.78
+        },
+        "XGBoost": {
+          "mean_score": 0.811,
+          "std_score": 0.0193,
+          "mean_time_s": 0.61
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.8033,
+          "std_score": 0.026,
+          "mean_time_s": 0.13
+        },
+        "EBM": {
+          "mean_score": 0.8347,
+          "std_score": 0.0233,
+          "mean_time_s": 2.03
+        }
+      },
+      "breast_w": {
+        "SC-OTS": {
+          "mean_score": 0.966,
+          "std_score": 0.0125,
+          "mean_time_s": 2.2
+        },
+        "FIGS": {
+          "mean_score": 0.9506,
+          "std_score": 0.0217,
+          "mean_time_s": 0.3
+        },
+        "XGBoost": {
+          "mean_score": 0.9904,
+          "std_score": 0.0042,
+          "mean_time_s": 0.1
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9919,
+          "std_score": 0.0041,
+          "mean_time_s": 0.16
+        },
+        "EBM": {
+          "mean_score": 0.9938,
+          "std_score": 0.0024,
+          "mean_time_s": 0.48
+        }
+      },
+      "adult": {
+        "SC-OTS": {
+          "mean_score": 0.8748,
+          "std_score": 0.0161,
+          "mean_time_s": 79.23
+        },
+        "FIGS": {
+          "mean_score": 0.8936,
+          "std_score": 0.0152,
+          "mean_time_s": 4.82
+        },
+        "XGBoost": {
+          "mean_score": 0.9245,
+          "std_score": 0.0045,
+          "mean_time_s": 0.19
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9245,
+          "std_score": 0.0049,
+          "mean_time_s": 2.48
+        },
+        "EBM": {
+          "mean_score": 0.9222,
+          "std_score": 0.0058,
+          "mean_time_s": 17.68
+        }
+      },
+      "wine_quality": {
+        "SC-OTS": {
+          "mean_score": 0.3011,
+          "std_score": 0.0216,
+          "mean_time_s": 31.39
+        },
+        "FIGS": {
+          "mean_score": 0.3106,
+          "std_score": 0.0145,
+          "mean_time_s": 2.44
+        },
+        "XGBoost": {
+          "mean_score": 0.4434,
+          "std_score": 0.0081,
+          "mean_time_s": 0.38
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.4078,
+          "std_score": 0.0087,
+          "mean_time_s": 0.21
+        },
+        "EBM": {
+          "mean_score": 0.3919,
+          "std_score": 0.01,
+          "mean_time_s": 5.51
+        }
+      },
+      "california_housing": {
+        "SC-OTS": {
+          "mean_score": 0.6884,
+          "std_score": 0.0162,
+          "mean_time_s": 33.17
+        },
+        "FIGS": {
+          "mean_score": 0.7481,
+          "std_score": 0.0097,
+          "mean_time_s": 7.42
+        },
+        "XGBoost": {
+          "mean_score": 0.8291,
+          "std_score": 0.008,
+          "mean_time_s": 0.61
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.8076,
+          "std_score": 0.0076,
+          "mean_time_s": 0.28
+        },
+        "EBM": {
+          "mean_score": 0.8316,
+          "std_score": 0.0085,
+          "mean_time_s": 35.25
+        }
+      },
+      "spambase": {
+        "SC-OTS": {
+          "mean_score": 0.9352,
+          "std_score": 0.0091,
+          "mean_time_s": 18.84
+        },
+        "FIGS": {
+          "mean_score": 0.9556,
+          "std_score": 0.0123,
+          "mean_time_s": 2.13
+        },
+        "XGBoost": {
+          "mean_score": 0.9862,
+          "std_score": 0.0025,
+          "mean_time_s": 0.37
+        },
+        "XGBoost_constrained": {
+          "mean_score": 0.9833,
+          "std_score": 0.0035,
+          "mean_time_s": 2.64
+        },
+        "EBM": {
+          "mean_score": 0.9852,
+          "std_score": 0.0027,
+          "mean_time_s": 7.74
+        }
+      }
+    },
+    "topological_analysis": {
+      "friedman1": {
+        "mean_betti": {
+          "b0": 1.8,
+          "b1": 0.0,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 10.0,
+          "dim_1": 29.0,
+          "dim_2": 39.4,
+          "dim_3": 26.8
+        },
+        "mean_persistence_threshold": 0.0005,
+        "interaction_recovery_mean": {
+          "precision": 0.0071,
+          "recall": 0.8,
+          "f1": 0.0141
+        }
+      },
+      "friedman3": {
+        "mean_betti": {
+          "b0": 1.2,
+          "b1": 0.0,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 4.0,
+          "dim_1": 3.0,
+          "dim_2": 0.2,
+          "dim_3": 0.0
+        },
+        "mean_persistence_threshold": 0.0,
+        "interaction_recovery_mean": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "synth_3way": {
+        "mean_betti": {
+          "b0": 1.0,
+          "b1": 0.0,
+          "b2": 0.2
+        },
+        "mean_simplex_counts": {
+          "dim_0": 15.0,
+          "dim_1": 67.8,
+          "dim_2": 89.8,
+          "dim_3": 67.2
+        },
+        "mean_persistence_threshold": 0.0006,
+        "interaction_recovery_mean": {
+          "precision": 0.0039,
+          "recall": 0.4,
+          "f1": 0.0076
+        }
+      },
+      "synth_4way": {
+        "mean_betti": {
+          "b0": 1.0,
+          "b1": 0.0,
+          "b2": 0.4
+        },
+        "mean_simplex_counts": {
+          "dim_0": 20.0,
+          "dim_1": 132.0,
+          "dim_2": 304.8,
+          "dim_3": 464.4
+        },
+        "mean_persistence_threshold": 0.0004,
+        "interaction_recovery_mean": {
+          "precision": 0.0012,
+          "recall": 0.5,
+          "f1": 0.0025
+        }
+      },
+      "diabetes": {
+        "mean_betti": {
+          "b0": 1.2,
+          "b1": 0.2,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 8.0,
+          "dim_1": 14.4,
+          "dim_2": 8.8,
+          "dim_3": 1.4
+        },
+        "mean_persistence_threshold": 0.0171
+      },
+      "breast_w": {
+        "mean_betti": {
+          "b0": 2.2,
+          "b1": 0.0,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 9.0,
+          "dim_1": 18.0,
+          "dim_2": 0.0,
+          "dim_3": 0.0
+        },
+        "mean_persistence_threshold": 0.0
+      },
+      "adult": {
+        "mean_betti": {
+          "b0": 3.0,
+          "b1": 0.8,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 96.0,
+          "dim_1": 1174.4,
+          "dim_2": 7764.8,
+          "dim_3": 0.0
+        },
+        "mean_persistence_threshold": 0.0086
+      },
+      "wine_quality": {
+        "mean_betti": {
+          "b0": 1.0,
+          "b1": 0.0,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 11.0,
+          "dim_1": 29.4,
+          "dim_2": 7.8,
+          "dim_3": 0.8
+        },
+        "mean_persistence_threshold": 0.0155
+      },
+      "california_housing": {
+        "mean_betti": {
+          "b0": 1.0,
+          "b1": 0.0,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 8.0,
+          "dim_1": 17.8,
+          "dim_2": 4.0,
+          "dim_3": 0.2
+        },
+        "mean_persistence_threshold": 0.0103
+      },
+      "spambase": {
+        "mean_betti": {
+          "b0": 2.4,
+          "b1": 0.2,
+          "b2": 0.0
+        },
+        "mean_simplex_counts": {
+          "dim_0": 57.0,
+          "dim_1": 698.2,
+          "dim_2": 5134.0,
+          "dim_3": 0.0
+        },
+        "mean_persistence_threshold": 0.006
+      }
+    },
+    "hyperparameters": {
+      "max_splits": 30,
+      "val_patience": 3,
+      "l1_ratio": 0.85,
+      "alpha": 0.001,
+      "mi_threshold_ratio": 0.1,
+      "max_dim_rips": 3,
+      "max_samples_dcor": 2000
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073]",
+          "output": "16.836355",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.830532",
+          "predict_FIGS": "0.94547",
+          "predict_XGBoost": "0.97867",
+          "predict_XGBoost_constrained": "0.966916",
+          "predict_EBM": "0.998467",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 10, \"dim_1\": 36, \"dim_2\": 58, \"dim_3\": 43}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0072992700729927005, \"recall\": 1.0, \"f1\": 0.014492753623188404}"
+        },
+        {
+          "input": "[0.020584, 0.96991, 0.832443, 0.212339, 0.181825, 0.183405, 0.304242, 0.524756, 0.431945, 0.291229]",
+          "output": "5.990418",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.867097",
+          "predict_FIGS": "0.94422",
+          "predict_XGBoost": "0.979728",
+          "predict_XGBoost_constrained": "0.901076",
+          "predict_EBM": "0.99817",
+          "metadata_betti": "{\"b0\": 5, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 10, \"dim_1\": 8, \"dim_2\": 3, \"dim_3\": 0}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0, \"recall\": 0.0, \"f1\": 0.0}"
+        },
+        {
+          "input": "[0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "9.519901",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.867097",
+          "predict_FIGS": "0.94422",
+          "predict_XGBoost": "0.979728",
+          "predict_XGBoost_constrained": "0.901076",
+          "predict_EBM": "0.99817",
+          "metadata_betti": "{\"b0\": 5, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 10, \"dim_1\": 8, \"dim_2\": 3, \"dim_3\": 0}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0, \"recall\": 0.0, \"f1\": 0.0}"
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "[37.454012, 1678.777388, 0.731994, 6.986585]",
+          "output": "1.459947",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.820712",
+          "predict_FIGS": "0.856498",
+          "predict_XGBoost": "0.893427",
+          "predict_XGBoost_constrained": "0.74273",
+          "predict_EBM": "0.893698",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 4, \"dim_1\": 3, \"dim_2\": 0, \"dim_3\": 0}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0, \"recall\": 0.0, \"f1\": 0.0}"
+        },
+        {
+          "input": "[15.601864, 380.50075, 0.058084, 9.661761]",
+          "output": "1.014689",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.824601",
+          "predict_FIGS": "0.864144",
+          "predict_XGBoost": "0.891475",
+          "predict_XGBoost_constrained": "0.793412",
+          "predict_EBM": "0.887227",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 4, \"dim_1\": 3, \"dim_2\": 0, \"dim_3\": 0}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0, \"recall\": 0.0, \"f1\": 0.0}"
+        },
+        {
+          "input": "[60.111501, 1282.391023, 0.020584, 10.699099]",
+          "output": "0.544413",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.824601",
+          "predict_FIGS": "0.864144",
+          "predict_XGBoost": "0.891475",
+          "predict_XGBoost_constrained": "0.793412",
+          "predict_EBM": "0.887227",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 4, \"dim_1\": 3, \"dim_2\": 0, \"dim_3\": 0}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0, \"recall\": 0.0, \"f1\": 0.0}"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073, 0.020584, 0.96991, 0.832443, 0.212339, 0.181825]",
+          "output": "3.106792",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.756622",
+          "predict_FIGS": "0.920487",
+          "predict_XGBoost": "0.976791",
+          "predict_XGBoost_constrained": "0.87599",
+          "predict_EBM": "0.983996",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 15, \"dim_1\": 63, \"dim_2\": 97, \"dim_3\": 68}",
+          "metadata_interaction_recovery": "{\"precision\": 0.0043859649122807015, \"recall\": 0.5, \"f1\": 0.008695652173913044}"
+        },
+        {
+          "input": "[0.183405, 0.304242, 0.524756, 0.431945, 0.291229, 0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "1.701095",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.832636",
+          "predict_FIGS": "0.924656",
+          "predict_XGBoost": "0.977062",
+          "predict_XGBoost_constrained": "0.941559",
+          "predict_EBM": "0.98514",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 15, \"dim_1\": 66, \"dim_2\": 97, \"dim_3\": 64}",
+          "metadata_interaction_recovery": "{\"precision\": 0.004405286343612335, \"recall\": 0.5, \"f1\": 0.008733624454148471}"
+        },
+        {
+          "input": "[0.607545, 0.170524, 0.065052, 0.948886, 0.965632, 0.808397, 0.304614, 0.097672, 0.684233, 0.440152, 0.122038, 0.495177, 0.034389, 0.90932, 0.25878]",
+          "output": "2.015276",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_SC_OTS": "0.832636",
+          "predict_FIGS": "0.924656",
+          "predict_XGBoost": "0.977062",
+          "predict_XGBoost_constrained": "0.941559",
+          "predict_EBM": "0.98514",
+          "metadata_betti": "{\"b0\": 1, \"b1\": 0, \"b2\": 0}",
+          "metadata_simplex_counts": "{\"dim_0\": 15, \"dim_1\": 66, \"dim_2\": 97, \"dim_3\": 64}",
+          "metadata_interaction_recovery": "{\"precision\": 0.004405286343612335, \"recall\": 0.5, \"f1\": 0.008733624454148471}"
+        }
+      ]
+    }
+  ]
+}

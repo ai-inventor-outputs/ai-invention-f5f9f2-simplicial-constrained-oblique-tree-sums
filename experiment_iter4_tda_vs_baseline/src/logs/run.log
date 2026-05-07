@@ -1,0 +1,1501 @@
+2026-02-28 20:03:11.703 | INFO     | __main__:load_data:77 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/mini_data_out.json
+2026-02-28 20:03:11.704 | INFO     | __main__:load_data:80 - Found 10 datasets
+2026-02-28 20:03:11.704 | INFO     | __main__:parse_dataset:124 -   Dataset 'friedman1': X=(3, 10), task=regression, gt_interactions={frozenset({0, 1})}
+2026-02-28 20:03:11.704 | INFO     | __main__:parse_dataset:124 -   Dataset 'friedman3': X=(3, 4), task=regression, gt_interactions={frozenset({0, 1, 3}), frozenset({0, 1, 2})}
+2026-02-28 20:03:11.704 | INFO     | __main__:parse_dataset:124 -   Dataset 'synth_3way': X=(3, 15), task=regression, gt_interactions={frozenset({3, 4}), frozenset({0, 1, 2})}
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'synth_4way': X=(3, 20), task=regression, gt_interactions={frozenset({4, 5}), frozenset({0, 1, 2, 3})}
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'diabetes': X=(3, 8), task=classification, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'breast_w': X=(3, 9), task=classification, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'adult': X=(3, 96), task=classification, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'wine_quality': X=(3, 11), task=regression, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'california_housing': X=(3, 8), task=regression, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:parse_dataset:124 -   Dataset 'spambase': X=(3, 57), task=classification, gt_interactions=None
+2026-02-28 20:03:11.705 | INFO     | __main__:main:669 - Parsed 10 datasets
+2026-02-28 20:03:11.705 | INFO     | __main__:main:683 - === Dataset: friedman1 (3 samples, 10 features, 2 folds) ===
+2026-02-28 20:03:11.705 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.705 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.705 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.706 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.706 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.706 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.706 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.706 | INFO     | __main__:main:683 - === Dataset: friedman3 (3 samples, 4 features, 2 folds) ===
+2026-02-28 20:03:11.706 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.706 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.707 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.707 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.707 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.707 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.707 | INFO     | __main__:main:683 - === Dataset: synth_3way (3 samples, 15 features, 2 folds) ===
+2026-02-28 20:03:11.707 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.707 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.708 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.708 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.708 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.708 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.708 | INFO     | __main__:main:683 - === Dataset: synth_4way (3 samples, 20 features, 2 folds) ===
+2026-02-28 20:03:11.708 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.708 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.709 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.709 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.709 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.709 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 1: only 2 training samples, skipping
+2026-02-28 20:03:11.709 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.709 | INFO     | __main__:main:683 - === Dataset: diabetes (3 samples, 8 features, 2 folds) ===
+2026-02-28 20:03:11.710 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.710 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.710 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.710 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.710 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.710 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.711 | INFO     | __main__:main:683 - === Dataset: breast_w (3 samples, 9 features, 2 folds) ===
+2026-02-28 20:03:11.711 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.711 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.711 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.711 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.711 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.711 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.712 | INFO     | __main__:main:683 - === Dataset: adult (3 samples, 96 features, 2 folds) ===
+2026-02-28 20:03:11.712 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 4: only 1 training samples, skipping
+2026-02-28 20:03:11.712 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 4: only 1 training samples, skipping
+2026-02-28 20:03:11.712 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 4: only 1 training samples, skipping
+2026-02-28 20:03:11.712 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 4: only 1 training samples, skipping
+2026-02-28 20:03:11.712 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.712 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 4: only 1 training samples, skipping
+2026-02-28 20:03:11.713 | INFO     | __main__:main:683 - === Dataset: wine_quality (3 samples, 11 features, 2 folds) ===
+2026-02-28 20:03:11.713 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.713 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.713 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.713 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.713 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.713 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 3: only 1 training samples, skipping
+2026-02-28 20:03:11.714 | INFO     | __main__:main:683 - === Dataset: california_housing (3 samples, 8 features, 3 folds) ===
+2026-02-28 20:03:11.714 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 3 folds)
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 3 folds)
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 3 folds)
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.714 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 3 folds)
+2026-02-28 20:03:11.714 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 3 folds)
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 0: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 2: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 3: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | INFO     | __main__:main:683 - === Dataset: spambase (3 samples, 57 features, 2 folds) ===
+2026-02-28 20:03:11.715 | INFO     | __main__:main:694 -   Method: TDA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 4: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | INFO     | __main__:main:694 -   Method: ANOVA (3 thresholds × 2 folds)
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 4: only 2 training samples, skipping
+2026-02-28 20:03:11.715 | INFO     | __main__:main:694 -   Method: MI_screening (3 thresholds × 2 folds)
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.715 | WARNING  | __main__:main:705 -     Fold 4: only 2 training samples, skipping
+2026-02-28 20:03:11.716 | INFO     | __main__:main:694 -   Method: Tree_based (3 thresholds × 2 folds)
+2026-02-28 20:03:11.716 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.716 | WARNING  | __main__:main:705 -     Fold 4: only 2 training samples, skipping
+2026-02-28 20:03:11.716 | INFO     | __main__:main:694 -   Method: Correlation (3 thresholds × 2 folds)
+2026-02-28 20:03:11.716 | WARNING  | __main__:main:705 -     Fold 2: only 1 training samples, skipping
+2026-02-28 20:03:11.716 | WARNING  | __main__:main:705 -     Fold 4: only 2 training samples, skipping
+2026-02-28 20:03:11.716 | INFO     | __main__:main:771 - Computing summary metrics...
+2026-02-28 20:03:11.716 | INFO     | __main__:main:807 - Best F1 per method: {'TDA': 0.0, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.0, 'Correlation': 0.0}
+2026-02-28 20:03:11.716 | INFO     | __main__:main:808 - Best thresholds: {'TDA': 0.0, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.0, 'Correlation': 0.0}
+2026-02-28 20:03:11.716 | INFO     | __main__:main:809 - Mean times: {'TDA': 0.0, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.0, 'Correlation': 0.0}
+2026-02-28 20:03:11.716 | INFO     | __main__:main:810 - Mean Jaccards: {'TDA': 0.0, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.0, 'Correlation': 0.0}
+2026-02-28 20:03:11.717 | INFO     | __main__:main:887 - Total examples: 0
+2026-02-28 20:03:11.717 | INFO     | __main__:main:888 - Total time: 0.0s
+2026-02-28 20:03:11.717 | INFO     | __main__:main:889 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-28 20:03:31.725 | INFO     | __main__:load_data:77 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 20:03:32.547 | INFO     | __main__:load_data:80 - Found 10 datasets
+2026-02-28 20:03:32.643 | INFO     | __main__:parse_dataset:124 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt_interactions={frozenset({0, 1})}
+2026-02-28 20:03:32.644 | INFO     | __main__:main:669 - Parsed 1 datasets
+2026-02-28 20:03:32.644 | INFO     | __main__:main:683 - === Dataset: friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 20:03:32.645 | INFO     | __main__:main:694 -   Method: TDA (20 thresholds × 5 folds)
+2026-02-28 20:03:46.586 | INFO     | __main__:main:694 -   Method: ANOVA (6 thresholds × 5 folds)
+2026-02-28 20:03:58.235 | INFO     | __main__:main:694 -   Method: MI_screening (6 thresholds × 5 folds)
+2026-02-28 20:09:35.131 | INFO     | __main__:main:694 -   Method: Tree_based (20 thresholds × 5 folds)
+2026-02-28 20:31:19.909 | INFO     | __main__:load_data:77 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 20:31:20.670 | INFO     | __main__:load_data:80 - Found 10 datasets
+2026-02-28 20:31:20.740 | INFO     | __main__:parse_dataset:120 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 20:31:20.741 | INFO     | __main__:main:597 - Parsed 1 datasets
+2026-02-28 20:31:20.741 | INFO     | __main__:main:611 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 20:31:20.741 | INFO     | __main__:main:618 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:31:20.856 | DEBUG    | __main__:main:656 -     TDA fold=0 precompute: 0.11s
+2026-02-28 20:31:20.974 | DEBUG    | __main__:main:656 -     TDA fold=1 precompute: 0.11s
+2026-02-28 20:31:21.091 | DEBUG    | __main__:main:656 -     TDA fold=2 precompute: 0.11s
+2026-02-28 20:31:21.215 | DEBUG    | __main__:main:656 -     TDA fold=3 precompute: 0.12s
+2026-02-28 20:31:21.337 | DEBUG    | __main__:main:656 -     TDA fold=4 precompute: 0.12s
+2026-02-28 20:31:21.339 | INFO     | __main__:main:618 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:31:21.542 | DEBUG    | __main__:main:656 -     ANOVA fold=0 precompute: 0.20s
+2026-02-28 20:31:21.756 | DEBUG    | __main__:main:656 -     ANOVA fold=1 precompute: 0.21s
+2026-02-28 20:31:21.983 | DEBUG    | __main__:main:656 -     ANOVA fold=2 precompute: 0.22s
+2026-02-28 20:31:22.196 | DEBUG    | __main__:main:656 -     ANOVA fold=3 precompute: 0.21s
+2026-02-28 20:31:22.454 | DEBUG    | __main__:main:656 -     ANOVA fold=4 precompute: 0.26s
+2026-02-28 20:31:22.455 | INFO     | __main__:main:618 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:31:25.052 | DEBUG    | __main__:main:656 -     MI_screening fold=0 precompute: 2.60s
+2026-02-28 20:31:27.608 | DEBUG    | __main__:main:656 -     MI_screening fold=1 precompute: 2.55s
+2026-02-28 20:31:30.656 | DEBUG    | __main__:main:656 -     MI_screening fold=2 precompute: 2.53s
+2026-02-28 20:31:33.288 | DEBUG    | __main__:main:656 -     MI_screening fold=3 precompute: 2.63s
+2026-02-28 20:31:36.240 | DEBUG    | __main__:main:656 -     MI_screening fold=4 precompute: 2.95s
+2026-02-28 20:31:36.241 | INFO     | __main__:main:618 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:31:48.535 | DEBUG    | __main__:main:656 -     Tree_based fold=0 precompute: 12.29s
+2026-02-28 20:32:00.930 | DEBUG    | __main__:main:656 -     Tree_based fold=1 precompute: 12.39s
+2026-02-28 20:32:15.117 | DEBUG    | __main__:main:656 -     Tree_based fold=2 precompute: 13.66s
+2026-02-28 20:32:28.120 | DEBUG    | __main__:main:656 -     Tree_based fold=3 precompute: 13.00s
+2026-02-28 20:32:41.439 | DEBUG    | __main__:main:656 -     Tree_based fold=4 precompute: 12.79s
+2026-02-28 20:32:41.443 | INFO     | __main__:main:618 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:32:41.445 | DEBUG    | __main__:main:656 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:32:41.448 | DEBUG    | __main__:main:656 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:32:41.451 | DEBUG    | __main__:main:656 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:32:41.454 | DEBUG    | __main__:main:656 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:32:41.456 | DEBUG    | __main__:main:656 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:32:41.459 | INFO     | __main__:main:718 -   Cumulative time: 80.0s
+2026-02-28 20:32:41.459 | INFO     | __main__:main:721 - Computing summary metrics...
+2026-02-28 20:32:41.460 | INFO     | __main__:main:753 - Best F1: {'TDA': 0.0, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.333333, 'Correlation': 0.0}
+2026-02-28 20:32:41.460 | INFO     | __main__:main:754 - Best thresholds: {'TDA': 0.05, 'ANOVA': 0.001, 'MI_screening': 1.01, 'Tree_based': 0.113158, 'Correlation': 0.1}
+2026-02-28 20:32:41.460 | INFO     | __main__:main:755 - Mean times: {'TDA': 0.0059, 'ANOVA': 0.0368, 'MI_screening': 0.4421, 'Tree_based': 0.6414, 'Correlation': 0.0001}
+2026-02-28 20:32:41.461 | ERROR    | __main__:<module>:822 - An error has been caught in function '<module>', process 'MainProcess' (889699), thread 'MainThread' (127429591131968):
+Traceback (most recent call last):
+
+> File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method.py", line 822, in <module>
+    main()
+    └ <function main at 0x73e54ce1c670>
+
+  File "/home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method.py", line 782, in main
+    "output": json.dumps(out_d),
+              │    │     └ {'detected': [[np.int64(0), np.int64(1)], [np.int64(0), np.int64(2)], [np.int64(0), np.int64(3)], [np.int64(0), np.int64(4)],...
+              │    └ <function dumps at 0x73e582d4fd90>
+              └ <module 'json' from '/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/__init__.py'>
+
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           │                │      └ {'detected': [[np.int64(0), np.int64(1)], [np.int64(0), np.int64(2)], [np.int64(0), np.int64(3)], [np.int64(0), np.int64(4)],...
+           │                └ <function JSONEncoder.encode at 0x73e582d64160>
+           └ <json.encoder.JSONEncoder object at 0x73e582d04460>
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             │    │          └ {'detected': [[np.int64(0), np.int64(1)], [np.int64(0), np.int64(2)], [np.int64(0), np.int64(3)], [np.int64(0), np.int64(4)],...
+             │    └ <function JSONEncoder.iterencode at 0x73e582d641f0>
+             └ <json.encoder.JSONEncoder object at 0x73e582d04460>
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+           │           └ {'detected': [[np.int64(0), np.int64(1)], [np.int64(0), np.int64(2)], [np.int64(0), np.int64(3)], [np.int64(0), np.int64(4)],...
+           └ <_json.Encoder object at 0x73e53dcb7400>
+  File "/home/adrian/.local/share/uv/python/cpython-3.10.19-linux-x86_64-gnu/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+
+TypeError: Object of type longlong is not JSON serializable
+2026-02-28 20:35:00.440 | INFO     | __main__:load_data:99 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 20:35:01.206 | INFO     | __main__:load_data:102 - Found 10 datasets
+2026-02-28 20:35:01.282 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 20:35:01.283 | INFO     | __main__:main:645 - Parsed 1 datasets
+2026-02-28 20:35:01.284 | INFO     | __main__:main:659 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 20:35:01.284 | INFO     | __main__:main:666 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:35:01.488 | DEBUG    | __main__:main:704 -     TDA fold=0 precompute: 0.20s
+2026-02-28 20:35:01.696 | DEBUG    | __main__:main:704 -     TDA fold=1 precompute: 0.21s
+2026-02-28 20:35:01.908 | DEBUG    | __main__:main:704 -     TDA fold=2 precompute: 0.21s
+2026-02-28 20:35:02.125 | DEBUG    | __main__:main:704 -     TDA fold=3 precompute: 0.21s
+2026-02-28 20:35:02.331 | DEBUG    | __main__:main:704 -     TDA fold=4 precompute: 0.20s
+2026-02-28 20:35:02.333 | INFO     | __main__:main:666 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:35:02.540 | DEBUG    | __main__:main:704 -     ANOVA fold=0 precompute: 0.21s
+2026-02-28 20:35:02.752 | DEBUG    | __main__:main:704 -     ANOVA fold=1 precompute: 0.21s
+2026-02-28 20:35:02.958 | DEBUG    | __main__:main:704 -     ANOVA fold=2 precompute: 0.20s
+2026-02-28 20:35:03.162 | DEBUG    | __main__:main:704 -     ANOVA fold=3 precompute: 0.20s
+2026-02-28 20:35:03.392 | DEBUG    | __main__:main:704 -     ANOVA fold=4 precompute: 0.23s
+2026-02-28 20:35:03.392 | INFO     | __main__:main:666 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:35:06.031 | DEBUG    | __main__:main:704 -     MI_screening fold=0 precompute: 2.64s
+2026-02-28 20:35:08.738 | DEBUG    | __main__:main:704 -     MI_screening fold=1 precompute: 2.71s
+2026-02-28 20:35:11.357 | DEBUG    | __main__:main:704 -     MI_screening fold=2 precompute: 2.62s
+2026-02-28 20:35:13.991 | DEBUG    | __main__:main:704 -     MI_screening fold=3 precompute: 2.63s
+2026-02-28 20:35:16.543 | DEBUG    | __main__:main:704 -     MI_screening fold=4 precompute: 2.55s
+2026-02-28 20:35:16.544 | INFO     | __main__:main:666 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:35:30.107 | DEBUG    | __main__:main:704 -     Tree_based fold=0 precompute: 13.00s
+2026-02-28 20:35:42.280 | DEBUG    | __main__:main:704 -     Tree_based fold=1 precompute: 12.17s
+2026-02-28 20:35:54.967 | DEBUG    | __main__:main:704 -     Tree_based fold=2 precompute: 12.08s
+2026-02-28 20:36:07.256 | DEBUG    | __main__:main:704 -     Tree_based fold=3 precompute: 12.29s
+2026-02-28 20:36:20.926 | DEBUG    | __main__:main:704 -     Tree_based fold=4 precompute: 13.67s
+2026-02-28 20:36:20.929 | INFO     | __main__:main:666 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:36:20.931 | DEBUG    | __main__:main:704 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:36:20.936 | DEBUG    | __main__:main:704 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:36:20.940 | DEBUG    | __main__:main:704 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:36:20.942 | DEBUG    | __main__:main:704 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:36:20.945 | DEBUG    | __main__:main:704 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:36:20.947 | INFO     | __main__:main:769 -   Cumulative time: 79.3s
+2026-02-28 20:36:20.948 | INFO     | __main__:main:772 - Computing summary metrics...
+2026-02-28 20:36:20.951 | INFO     | __main__:main:804 - Best F1: {'TDA': 0.63888, 'ANOVA': 0.0, 'MI_screening': 0.0, 'Tree_based': 0.333333, 'Correlation': 0.0}
+2026-02-28 20:36:20.951 | INFO     | __main__:main:805 - Best thresholds: {'TDA': 0.95, 'ANOVA': 0.001, 'MI_screening': 1.01, 'Tree_based': 0.113158, 'Correlation': 0.1}
+2026-02-28 20:36:20.951 | INFO     | __main__:main:806 - Mean times: {'TDA': 0.0104, 'ANOVA': 0.035, 'MI_screening': 0.4381, 'Tree_based': 0.632, 'Correlation': 0.0001}
+2026-02-28 20:36:20.972 | INFO     | __main__:main:867 - Total examples: 360
+2026-02-28 20:36:20.972 | INFO     | __main__:main:868 - Total time: 79.4s
+2026-02-28 20:36:20.972 | INFO     | __main__:main:869 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-28 20:38:40.511 | INFO     | __main__:load_data:99 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 20:38:41.308 | INFO     | __main__:load_data:102 - Found 10 datasets
+2026-02-28 20:38:41.382 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 20:38:41.398 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman3': X=(5000, 4), task=regression, gt={frozenset({0, 1, 3}), frozenset({0, 1, 2})}
+2026-02-28 20:38:41.425 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_3way': X=(5000, 15), task=regression, gt={frozenset({3, 4}), frozenset({0, 1, 2})}
+2026-02-28 20:38:41.460 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_4way': X=(5000, 20), task=regression, gt={frozenset({4, 5}), frozenset({0, 1, 2, 3})}
+2026-02-28 20:38:41.461 | INFO     | __main__:main:667 - Parsed 4 datasets
+2026-02-28 20:38:41.461 | INFO     | __main__:main:681 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 20:38:41.461 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:38:41.674 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.21s
+2026-02-28 20:38:41.887 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.21s
+2026-02-28 20:38:42.100 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.21s
+2026-02-28 20:38:42.316 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.21s
+2026-02-28 20:38:42.528 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.21s
+2026-02-28 20:38:42.530 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:38:42.746 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.21s
+2026-02-28 20:38:42.964 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.22s
+2026-02-28 20:38:43.184 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.22s
+2026-02-28 20:38:43.397 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.21s
+2026-02-28 20:38:43.607 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.21s
+2026-02-28 20:38:43.608 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:38:46.191 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 2.58s
+2026-02-28 20:38:48.831 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 2.64s
+2026-02-28 20:38:51.541 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 2.71s
+2026-02-28 20:38:54.056 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 2.51s
+2026-02-28 20:38:56.573 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 2.52s
+2026-02-28 20:38:56.574 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:39:09.945 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 12.85s
+2026-02-28 20:39:28.155 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 18.21s
+2026-02-28 20:39:42.551 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 13.86s
+2026-02-28 20:39:54.779 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 12.22s
+2026-02-28 20:40:07.210 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 12.43s
+2026-02-28 20:40:07.213 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:40:07.215 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:40:07.219 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:40:07.222 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:40:07.228 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:40:07.231 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:40:07.234 | INFO     | __main__:main:792 -   Cumulative time: 85.7s
+2026-02-28 20:40:07.234 | INFO     | __main__:main:681 - === friedman3 (5000 samples, 4 features, 5 folds) ===
+2026-02-28 20:40:07.235 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:40:07.271 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.03s
+2026-02-28 20:40:07.317 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.04s
+2026-02-28 20:40:07.350 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 20:40:07.387 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 20:40:07.426 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.04s
+2026-02-28 20:40:07.428 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:40:07.444 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.01s
+2026-02-28 20:40:07.459 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.01s
+2026-02-28 20:40:07.475 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.01s
+2026-02-28 20:40:07.491 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.01s
+2026-02-28 20:40:07.509 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.02s
+2026-02-28 20:40:07.509 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:40:07.743 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.23s
+2026-02-28 20:40:08.023 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.28s
+2026-02-28 20:40:08.272 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.25s
+2026-02-28 20:40:08.493 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.22s
+2026-02-28 20:40:08.704 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.21s
+2026-02-28 20:40:08.704 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:40:14.839 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 5.59s
+2026-02-28 20:40:20.296 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 5.45s
+2026-02-28 20:40:26.200 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 5.90s
+2026-02-28 20:40:32.057 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 5.86s
+2026-02-28 20:40:37.998 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 5.94s
+2026-02-28 20:40:38.000 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:40:38.002 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:40:38.005 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:40:38.008 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:40:38.012 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:40:38.016 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:40:38.020 | INFO     | __main__:main:792 -   Cumulative time: 115.9s
+2026-02-28 20:40:38.021 | INFO     | __main__:main:681 - === synth_3way (5000 samples, 15 features, 5 folds) ===
+2026-02-28 20:40:38.021 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:40:38.522 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.50s
+2026-02-28 20:40:39.024 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.49s
+2026-02-28 20:40:39.588 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.55s
+2026-02-28 20:40:40.104 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.50s
+2026-02-28 20:40:40.595 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.48s
+2026-02-28 20:40:40.604 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:40:41.464 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.86s
+2026-02-28 20:40:42.319 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.85s
+2026-02-28 20:40:43.092 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.77s
+2026-02-28 20:40:43.886 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.79s
+2026-02-28 20:40:44.701 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.81s
+2026-02-28 20:40:44.702 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:40:54.699 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 9.45s
+2026-02-28 20:41:05.196 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 10.49s
+2026-02-28 20:41:14.279 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 9.08s
+2026-02-28 20:41:23.906 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 9.03s
+2026-02-28 20:41:32.530 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 8.62s
+2026-02-28 20:41:32.532 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:41:49.094 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 16.56s
+2026-02-28 20:42:05.504 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 15.88s
+2026-02-28 20:42:21.779 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 16.27s
+2026-02-28 20:42:38.075 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 15.71s
+2026-02-28 20:42:53.667 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 15.59s
+2026-02-28 20:42:53.671 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:42:53.674 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:42:53.678 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:42:53.682 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:42:53.685 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:42:53.689 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:42:53.693 | INFO     | __main__:main:792 -   Cumulative time: 249.3s
+2026-02-28 20:42:53.693 | INFO     | __main__:main:681 - === synth_4way (5000 samples, 20 features, 5 folds) ===
+2026-02-28 20:42:53.693 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:42:54.437 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.74s
+2026-02-28 20:42:55.202 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.73s
+2026-02-28 20:42:55.961 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.73s
+2026-02-28 20:42:56.777 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.77s
+2026-02-28 20:42:58.163 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.77s
+2026-02-28 20:42:58.204 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:42:59.885 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 1.68s
+2026-02-28 20:43:01.552 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.66s
+2026-02-28 20:43:03.180 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.63s
+2026-02-28 20:43:04.965 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.78s
+2026-02-28 20:43:06.581 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.61s
+2026-02-28 20:43:06.582 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:43:26.426 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 19.84s
+2026-02-28 20:43:47.380 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 20.50s
+2026-02-28 20:44:08.185 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 20.34s
+2026-02-28 20:44:29.234 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 21.04s
+2026-02-28 20:44:52.015 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 22.28s
+2026-02-28 20:44:52.019 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:45:14.545 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 22.02s
+2026-02-28 20:45:35.825 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 21.28s
+2026-02-28 20:45:58.816 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 22.48s
+2026-02-28 20:46:21.058 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 21.72s
+2026-02-28 20:46:42.578 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 21.52s
+2026-02-28 20:46:42.581 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:46:42.584 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:46:42.588 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:46:42.592 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:46:42.596 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:46:42.600 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:46:42.604 | INFO     | __main__:main:792 -   Cumulative time: 474.8s
+2026-02-28 20:46:42.605 | INFO     | __main__:main:795 - Computing summary metrics...
+2026-02-28 20:46:42.608 | INFO     | __main__:main:827 - Best F1: {'TDA': 0.603334, 'ANOVA': 0.218254, 'MI_screening': 0.0, 'Tree_based': 0.397645, 'Correlation': 0.0}
+2026-02-28 20:46:42.608 | INFO     | __main__:main:828 - Best thresholds: {'TDA': 0.855263, 'ANOVA': 0.05, 'MI_screening': 1.01, 'Tree_based': 0.474211, 'Correlation': 0.1}
+2026-02-28 20:46:42.608 | INFO     | __main__:main:829 - Mean times: {'TDA': 0.0193, 'ANOVA': 0.1133, 'MI_screening': 1.3735, 'Tree_based': 0.7184, 'Correlation': 0.0001}
+2026-02-28 20:46:42.737 | INFO     | __main__:main:890 - Total examples: 1440
+2026-02-28 20:46:42.738 | INFO     | __main__:main:891 - Total time: 474.9s
+2026-02-28 20:46:42.738 | INFO     | __main__:main:892 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-28 20:47:02.922 | INFO     | __main__:load_data:99 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 20:47:03.720 | INFO     | __main__:load_data:102 - Found 10 datasets
+2026-02-28 20:47:03.748 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 20:47:03.766 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman3': X=(5000, 4), task=regression, gt={frozenset({0, 1, 3}), frozenset({0, 1, 2})}
+2026-02-28 20:47:03.800 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_3way': X=(5000, 15), task=regression, gt={frozenset({3, 4}), frozenset({0, 1, 2})}
+2026-02-28 20:47:03.833 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_4way': X=(5000, 20), task=regression, gt={frozenset({4, 5}), frozenset({0, 1, 2, 3})}
+2026-02-28 20:47:03.836 | INFO     | __main__:parse_dataset:142 -   Dataset 'diabetes': X=(768, 8), task=classification, gt=None
+2026-02-28 20:47:03.841 | INFO     | __main__:parse_dataset:142 -   Dataset 'breast_w': X=(699, 9), task=classification, gt=None
+2026-02-28 20:47:04.061 | INFO     | __main__:parse_dataset:142 -   Dataset 'adult': X=(10000, 96), task=classification, gt=None
+2026-02-28 20:47:04.108 | INFO     | __main__:parse_dataset:142 -   Dataset 'wine_quality': X=(6497, 11), task=regression, gt=None
+2026-02-28 20:47:04.201 | INFO     | __main__:parse_dataset:142 -   Dataset 'california_housing': X=(20640, 8), task=regression, gt=None
+2026-02-28 20:47:04.264 | INFO     | __main__:parse_dataset:142 -   Dataset 'spambase': X=(4601, 57), task=classification, gt=None
+2026-02-28 20:47:04.268 | INFO     | __main__:main:667 - Parsed 10 datasets
+2026-02-28 20:47:04.268 | INFO     | __main__:main:681 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 20:47:04.268 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:47:04.474 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.20s
+2026-02-28 20:47:04.684 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.20s
+2026-02-28 20:47:04.901 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.21s
+2026-02-28 20:47:05.126 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.22s
+2026-02-28 20:47:05.352 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.22s
+2026-02-28 20:47:05.356 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:47:05.584 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.23s
+2026-02-28 20:47:05.835 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.25s
+2026-02-28 20:47:06.096 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.26s
+2026-02-28 20:47:06.392 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.29s
+2026-02-28 20:47:06.729 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.33s
+2026-02-28 20:47:06.730 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:47:12.865 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 6.13s
+2026-02-28 20:47:17.029 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 4.16s
+2026-02-28 20:47:20.748 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 3.18s
+2026-02-28 20:47:23.568 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 2.82s
+2026-02-28 20:47:26.326 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 2.76s
+2026-02-28 20:47:26.328 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:47:38.781 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 12.45s
+2026-02-28 20:47:51.110 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 12.32s
+2026-02-28 20:48:04.115 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 12.46s
+2026-02-28 20:48:17.367 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 13.25s
+2026-02-28 20:48:29.990 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 12.03s
+2026-02-28 20:48:29.994 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:48:29.996 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:48:30.000 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:48:30.004 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:48:30.007 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:48:30.010 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:48:30.013 | INFO     | __main__:main:792 -   Cumulative time: 85.4s
+2026-02-28 20:48:30.014 | INFO     | __main__:main:681 - === friedman3 (5000 samples, 4 features, 5 folds) ===
+2026-02-28 20:48:30.014 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:48:30.053 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.04s
+2026-02-28 20:48:30.088 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 20:48:30.123 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 20:48:30.160 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 20:48:30.193 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.03s
+2026-02-28 20:48:30.194 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:48:30.205 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.01s
+2026-02-28 20:48:30.215 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.01s
+2026-02-28 20:48:30.228 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.01s
+2026-02-28 20:48:30.238 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.01s
+2026-02-28 20:48:30.249 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.01s
+2026-02-28 20:48:30.250 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:48:30.447 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.20s
+2026-02-28 20:48:30.642 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.19s
+2026-02-28 20:48:30.836 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.19s
+2026-02-28 20:48:31.033 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.20s
+2026-02-28 20:48:31.317 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.28s
+2026-02-28 20:48:31.317 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:48:36.597 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 5.28s
+2026-02-28 20:48:42.764 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 6.17s
+2026-02-28 20:48:48.173 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 5.41s
+2026-02-28 20:48:53.464 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 5.29s
+2026-02-28 20:48:59.241 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 5.24s
+2026-02-28 20:48:59.243 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:48:59.244 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:48:59.247 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:48:59.249 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:48:59.251 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:48:59.254 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:48:59.256 | INFO     | __main__:main:792 -   Cumulative time: 114.1s
+2026-02-28 20:48:59.256 | INFO     | __main__:main:681 - === synth_3way (5000 samples, 15 features, 5 folds) ===
+2026-02-28 20:48:59.256 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:48:59.708 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.45s
+2026-02-28 20:49:00.196 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.48s
+2026-02-28 20:49:00.641 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.43s
+2026-02-28 20:49:01.104 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.45s
+2026-02-28 20:49:01.618 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.50s
+2026-02-28 20:49:01.631 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:49:02.546 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.91s
+2026-02-28 20:49:03.333 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.79s
+2026-02-28 20:49:04.020 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.68s
+2026-02-28 20:49:04.702 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.68s
+2026-02-28 20:49:05.410 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.71s
+2026-02-28 20:49:05.411 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:49:13.537 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 8.12s
+2026-02-28 20:49:21.440 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 7.90s
+2026-02-28 20:49:30.586 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 9.14s
+2026-02-28 20:49:39.606 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 8.44s
+2026-02-28 20:49:48.788 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 9.18s
+2026-02-28 20:49:48.790 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:50:07.329 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 17.96s
+2026-02-28 20:50:24.935 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 17.60s
+2026-02-28 20:50:43.717 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 18.34s
+2026-02-28 20:51:00.926 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 17.20s
+2026-02-28 20:51:18.889 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 17.51s
+2026-02-28 20:51:18.892 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:51:18.894 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:51:18.898 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:51:18.902 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:51:18.906 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:51:18.910 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:51:18.913 | INFO     | __main__:main:792 -   Cumulative time: 251.8s
+2026-02-28 20:51:18.913 | INFO     | __main__:main:681 - === synth_4way (5000 samples, 20 features, 5 folds) ===
+2026-02-28 20:51:18.913 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:51:19.792 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.88s
+2026-02-28 20:51:20.692 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.87s
+2026-02-28 20:51:21.612 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.88s
+2026-02-28 20:51:22.503 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.85s
+2026-02-28 20:51:23.410 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.87s
+2026-02-28 20:51:23.440 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:51:25.598 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 2.16s
+2026-02-28 20:51:28.502 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 2.90s
+2026-02-28 20:51:30.707 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 2.20s
+2026-02-28 20:51:32.612 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.90s
+2026-02-28 20:51:34.482 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.87s
+2026-02-28 20:51:34.483 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:51:56.589 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 21.61s
+2026-02-28 20:52:18.200 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 21.11s
+2026-02-28 20:52:39.355 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 21.15s
+2026-02-28 20:53:01.230 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 21.37s
+2026-02-28 20:53:25.133 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 23.39s
+2026-02-28 20:53:25.136 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:53:45.248 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 20.11s
+2026-02-28 20:54:06.369 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 20.59s
+2026-02-28 20:54:28.271 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 21.36s
+2026-02-28 20:54:49.098 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 20.82s
+2026-02-28 20:55:09.344 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 19.70s
+2026-02-28 20:55:09.348 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:55:09.351 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:55:09.355 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:55:09.360 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:55:09.365 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:55:09.369 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:55:09.372 | INFO     | __main__:main:792 -   Cumulative time: 478.6s
+2026-02-28 20:55:09.372 | INFO     | __main__:main:681 - === diabetes (768 samples, 8 features, 5 folds) ===
+2026-02-28 20:55:09.372 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:55:09.406 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.03s
+2026-02-28 20:55:09.441 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 20:55:09.477 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 20:55:09.515 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 20:55:09.553 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.04s
+2026-02-28 20:55:09.555 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:55:09.596 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.04s
+2026-02-28 20:55:09.633 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.04s
+2026-02-28 20:55:09.672 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.04s
+2026-02-28 20:55:09.710 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.04s
+2026-02-28 20:55:09.748 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.04s
+2026-02-28 20:55:09.749 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:55:10.451 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.70s
+2026-02-28 20:55:11.172 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.72s
+2026-02-28 20:55:11.866 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.69s
+2026-02-28 20:55:12.594 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.73s
+2026-02-28 20:55:13.280 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.69s
+2026-02-28 20:55:13.280 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:55:13.591 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.31s
+2026-02-28 20:55:13.872 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.28s
+2026-02-28 20:55:14.139 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.26s
+2026-02-28 20:55:14.433 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.29s
+2026-02-28 20:55:14.701 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.27s
+2026-02-28 20:55:14.704 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:55:14.706 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:55:14.708 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:55:14.710 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:55:14.712 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:55:14.715 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:55:14.718 | INFO     | __main__:main:792 -   Cumulative time: 484.0s
+2026-02-28 20:55:14.719 | INFO     | __main__:main:681 - === breast_w (699 samples, 9 features, 5 folds) ===
+2026-02-28 20:55:14.719 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:55:14.758 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.04s
+2026-02-28 20:55:14.805 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.04s
+2026-02-28 20:55:14.853 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.04s
+2026-02-28 20:55:14.899 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 20:55:14.945 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.04s
+2026-02-28 20:55:14.957 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:55:15.010 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.05s
+2026-02-28 20:55:15.066 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.06s
+2026-02-28 20:55:15.121 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.05s
+2026-02-28 20:55:15.176 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.05s
+2026-02-28 20:55:15.232 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.06s
+2026-02-28 20:55:15.234 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:55:16.159 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.92s
+2026-02-28 20:55:17.083 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.92s
+2026-02-28 20:55:18.004 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.92s
+2026-02-28 20:55:18.935 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.93s
+2026-02-28 20:55:19.857 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.92s
+2026-02-28 20:55:19.858 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:55:20.010 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.15s
+2026-02-28 20:55:20.152 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.14s
+2026-02-28 20:55:20.297 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.14s
+2026-02-28 20:55:20.444 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.15s
+2026-02-28 20:55:20.626 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.18s
+2026-02-28 20:55:20.629 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:55:20.631 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:55:20.634 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:55:20.637 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:55:20.640 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:55:20.643 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:55:20.647 | INFO     | __main__:main:792 -   Cumulative time: 489.9s
+2026-02-28 20:55:20.647 | INFO     | __main__:main:681 - === adult (10000 samples, 96 features, 5 folds) ===
+2026-02-28 20:55:20.648 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:55:20.678 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 20:55:21.306 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.64s
+2026-02-28 20:55:22.483 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 20:55:23.103 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.63s
+2026-02-28 20:55:24.222 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 20:55:24.854 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.65s
+2026-02-28 20:55:25.840 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 20:55:26.487 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.66s
+2026-02-28 20:55:27.573 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 20:55:28.202 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.64s
+2026-02-28 20:55:29.313 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:55:30.751 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 1.43s
+2026-02-28 20:55:32.949 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.63s
+2026-02-28 20:55:34.432 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.47s
+2026-02-28 20:55:36.445 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 2.00s
+2026-02-28 20:55:37.823 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.37s
+2026-02-28 20:55:37.827 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:55:46.976 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 9.14s
+2026-02-28 20:55:56.165 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 9.18s
+2026-02-28 20:56:05.386 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 8.65s
+2026-02-28 20:56:15.565 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 10.17s
+2026-02-28 20:56:25.293 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 9.72s
+2026-02-28 20:56:25.294 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:56:27.887 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.58s
+2026-02-28 20:56:30.801 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.90s
+2026-02-28 20:56:33.636 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 2.82s
+2026-02-28 20:56:36.168 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 2.52s
+2026-02-28 20:56:39.498 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.58s
+2026-02-28 20:56:39.504 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:56:39.517 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:56:39.555 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:56:39.584 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:56:39.613 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:56:39.642 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:56:39.664 | INFO     | __main__:main:792 -   Cumulative time: 567.1s
+2026-02-28 20:56:39.664 | INFO     | __main__:main:681 - === wine_quality (6497 samples, 11 features, 5 folds) ===
+2026-02-28 20:56:39.664 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:56:39.895 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.23s
+2026-02-28 20:56:40.117 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.22s
+2026-02-28 20:56:40.346 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.22s
+2026-02-28 20:56:40.572 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.22s
+2026-02-28 20:56:40.791 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.21s
+2026-02-28 20:56:40.800 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:56:41.096 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.29s
+2026-02-28 20:56:41.400 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.30s
+2026-02-28 20:56:41.741 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.34s
+2026-02-28 20:56:42.106 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.36s
+2026-02-28 20:56:42.443 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.33s
+2026-02-28 20:56:42.444 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:56:45.692 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 3.25s
+2026-02-28 20:56:48.935 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 3.24s
+2026-02-28 20:56:52.096 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 3.16s
+2026-02-28 20:56:55.293 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 3.20s
+2026-02-28 20:56:58.892 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 3.60s
+2026-02-28 20:56:58.893 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:57:06.974 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 8.08s
+2026-02-28 20:57:15.298 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 7.91s
+2026-02-28 20:57:23.056 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 7.75s
+2026-02-28 20:57:30.766 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 7.71s
+2026-02-28 20:57:38.836 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 8.07s
+2026-02-28 20:57:38.841 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 20:57:38.844 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 20:57:38.847 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 20:57:38.850 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 20:57:38.854 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 20:57:38.858 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 20:57:38.860 | INFO     | __main__:main:792 -   Cumulative time: 625.8s
+2026-02-28 20:57:38.861 | INFO     | __main__:main:681 - === california_housing (20640 samples, 8 features, 5 folds) ===
+2026-02-28 20:57:38.861 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 20:57:38.985 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.12s
+2026-02-28 20:57:39.110 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.12s
+2026-02-28 20:57:39.235 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.12s
+2026-02-28 20:57:39.362 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.12s
+2026-02-28 20:57:39.489 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.12s
+2026-02-28 20:57:39.491 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 20:57:39.947 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.45s
+2026-02-28 20:57:40.320 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.37s
+2026-02-28 20:57:40.711 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.39s
+2026-02-28 20:57:41.077 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.36s
+2026-02-28 20:57:41.577 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.50s
+2026-02-28 20:57:41.578 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 20:57:43.843 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 1.76s
+2026-02-28 20:57:45.567 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 1.72s
+2026-02-28 20:57:47.294 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 1.72s
+2026-02-28 20:57:48.974 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 1.68s
+2026-02-28 20:57:50.660 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 1.68s
+2026-02-28 20:57:50.660 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 20:58:19.029 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 27.89s
+2026-02-28 20:58:47.389 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 28.36s
+2026-02-28 20:59:15.801 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 27.92s
+2026-02-28 20:59:45.566 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 29.26s
+2026-02-28 21:00:14.565 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 28.50s
+2026-02-28 21:00:14.569 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:00:14.573 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:00:14.580 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:00:14.587 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:00:14.593 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:00:14.599 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:00:14.602 | INFO     | __main__:main:792 -   Cumulative time: 779.1s
+2026-02-28 21:00:14.602 | INFO     | __main__:main:681 - === spambase (4601 samples, 57 features, 5 folds) ===
+2026-02-28 21:00:14.602 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:00:14.608 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:00:15.495 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.89s
+2026-02-28 21:00:17.135 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:00:17.906 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.77s
+2026-02-28 21:00:19.619 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:00:20.305 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.69s
+2026-02-28 21:00:21.024 | INFO     | __main__:load_data:99 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 21:00:21.746 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:00:21.763 | INFO     | __main__:load_data:102 - Found 10 datasets
+2026-02-28 21:00:21.793 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 21:00:21.807 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman3': X=(5000, 4), task=regression, gt={frozenset({0, 1, 3}), frozenset({0, 1, 2})}
+2026-02-28 21:00:21.831 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_3way': X=(5000, 15), task=regression, gt={frozenset({3, 4}), frozenset({0, 1, 2})}
+2026-02-28 21:00:21.860 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_4way': X=(5000, 20), task=regression, gt={frozenset({4, 5}), frozenset({0, 1, 2, 3})}
+2026-02-28 21:00:21.865 | INFO     | __main__:parse_dataset:142 -   Dataset 'diabetes': X=(768, 8), task=classification, gt=None
+2026-02-28 21:00:21.869 | INFO     | __main__:parse_dataset:142 -   Dataset 'breast_w': X=(699, 9), task=classification, gt=None
+2026-02-28 21:00:22.065 | INFO     | __main__:parse_dataset:142 -   Dataset 'adult': X=(10000, 96), task=classification, gt=None
+2026-02-28 21:00:22.098 | INFO     | __main__:parse_dataset:142 -   Dataset 'wine_quality': X=(6497, 11), task=regression, gt=None
+2026-02-28 21:00:22.179 | INFO     | __main__:parse_dataset:142 -   Dataset 'california_housing': X=(20640, 8), task=regression, gt=None
+2026-02-28 21:00:22.242 | INFO     | __main__:parse_dataset:142 -   Dataset 'spambase': X=(4601, 57), task=classification, gt=None
+2026-02-28 21:00:22.245 | INFO     | __main__:main:667 - Parsed 10 datasets
+2026-02-28 21:00:22.245 | INFO     | __main__:main:681 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 21:00:22.245 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:00:22.414 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.67s
+2026-02-28 21:00:22.448 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.20s
+2026-02-28 21:00:22.658 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.21s
+2026-02-28 21:00:22.901 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.24s
+2026-02-28 21:00:23.126 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.22s
+2026-02-28 21:00:23.370 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.24s
+2026-02-28 21:00:23.373 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:00:23.609 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.23s
+2026-02-28 21:00:23.842 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.23s
+2026-02-28 21:00:24.056 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.21s
+2026-02-28 21:00:24.095 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:00:24.300 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.24s
+2026-02-28 21:00:24.536 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.23s
+2026-02-28 21:00:24.537 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:00:24.893 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.80s
+2026-02-28 21:00:27.313 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:00:27.709 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 2.66s
+2026-02-28 21:00:28.011 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.69s
+2026-02-28 21:00:28.735 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.72s
+2026-02-28 21:00:29.414 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.67s
+2026-02-28 21:00:30.235 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.82s
+2026-02-28 21:00:30.476 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 2.76s
+2026-02-28 21:00:31.011 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.77s
+2026-02-28 21:00:31.016 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:00:33.182 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 2.70s
+2026-02-28 21:00:35.656 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 2.47s
+2026-02-28 21:00:38.099 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 2.44s
+2026-02-28 21:00:38.100 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:00:38.563 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 7.54s
+2026-02-28 21:00:45.894 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 7.33s
+2026-02-28 21:00:50.083 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 11.98s
+2026-02-28 21:00:53.031 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 7.13s
+2026-02-28 21:01:01.497 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 7.95s
+2026-02-28 21:01:02.747 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 12.14s
+2026-02-28 21:01:09.524 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 8.02s
+2026-02-28 21:01:09.524 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:01:12.293 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.77s
+2026-02-28 21:01:14.975 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.68s
+2026-02-28 21:01:15.881 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 13.13s
+2026-02-28 21:01:17.803 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 2.82s
+2026-02-28 21:01:20.215 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 2.41s
+2026-02-28 21:01:22.598 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.38s
+2026-02-28 21:01:22.604 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:01:22.904 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.30s
+2026-02-28 21:01:23.052 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.14s
+2026-02-28 21:01:23.139 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.07s
+2026-02-28 21:01:23.154 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:01:23.177 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:01:23.198 | INFO     | __main__:main:792 -   Cumulative time: 846.7s
+2026-02-28 21:01:23.198 | INFO     | __main__:main:795 - Computing summary metrics...
+2026-02-28 21:01:23.204 | INFO     | __main__:main:827 - Best F1: {'TDA': 0.603334, 'ANOVA': 0.218254, 'MI_screening': 0.0, 'Tree_based': 0.397645, 'Correlation': 0.0}
+2026-02-28 21:01:23.204 | INFO     | __main__:main:828 - Best thresholds: {'TDA': 0.855263, 'ANOVA': 0.05, 'MI_screening': 1.01, 'Tree_based': 0.474211, 'Correlation': 0.1}
+2026-02-28 21:01:23.204 | INFO     | __main__:main:829 - Mean times: {'TDA': 0.03, 'ANOVA': 0.1064, 'MI_screening': 0.965, 'Tree_based': 0.4912, 'Correlation': 0.0008}
+2026-02-28 21:01:23.923 | INFO     | __main__:main:890 - Total examples: 3600
+2026-02-28 21:01:23.924 | INFO     | __main__:main:891 - Total time: 847.4s
+2026-02-28 21:01:23.924 | INFO     | __main__:main:892 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-28 21:01:27.819 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 11.93s
+2026-02-28 21:01:39.515 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 11.17s
+2026-02-28 21:01:39.518 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:01:39.520 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:01:39.523 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:01:39.527 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:01:39.530 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:01:39.532 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:01:39.534 | INFO     | __main__:main:792 -   Cumulative time: 77.0s
+2026-02-28 21:01:39.535 | INFO     | __main__:main:681 - === friedman3 (5000 samples, 4 features, 5 folds) ===
+2026-02-28 21:01:39.535 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:01:39.565 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.03s
+2026-02-28 21:01:39.598 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 21:01:39.630 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 21:01:39.662 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.03s
+2026-02-28 21:01:39.694 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.03s
+2026-02-28 21:01:39.695 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:01:39.707 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.01s
+2026-02-28 21:01:39.719 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.01s
+2026-02-28 21:01:39.731 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.01s
+2026-02-28 21:01:39.742 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.01s
+2026-02-28 21:01:39.752 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.01s
+2026-02-28 21:01:39.753 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:01:39.953 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.20s
+2026-02-28 21:01:40.144 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.19s
+2026-02-28 21:01:40.331 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.19s
+2026-02-28 21:01:40.511 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.18s
+2026-02-28 21:01:40.706 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.19s
+2026-02-28 21:01:40.707 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:01:45.637 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 4.93s
+2026-02-28 21:01:50.646 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 5.01s
+2026-02-28 21:01:55.693 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 5.05s
+2026-02-28 21:02:00.886 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 5.19s
+2026-02-28 21:02:06.483 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 5.06s
+2026-02-28 21:02:06.485 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:02:06.487 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:02:06.489 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:02:06.491 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:02:06.493 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:02:06.495 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:02:06.497 | INFO     | __main__:main:792 -   Cumulative time: 103.4s
+2026-02-28 21:02:06.497 | INFO     | __main__:main:681 - === synth_3way (5000 samples, 15 features, 5 folds) ===
+2026-02-28 21:02:06.497 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:02:06.923 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.42s
+2026-02-28 21:02:07.384 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.45s
+2026-02-28 21:02:07.851 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.46s
+2026-02-28 21:02:08.302 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.44s
+2026-02-28 21:02:08.792 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.48s
+2026-02-28 21:02:08.800 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:02:09.509 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.71s
+2026-02-28 21:02:10.233 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.72s
+2026-02-28 21:02:10.977 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.74s
+2026-02-28 21:02:11.694 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.72s
+2026-02-28 21:02:12.386 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.69s
+2026-02-28 21:02:12.387 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:02:20.345 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 7.96s
+2026-02-28 21:02:29.187 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 8.84s
+2026-02-28 21:02:38.151 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 8.40s
+2026-02-28 21:02:46.420 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 8.27s
+2026-02-28 21:02:55.265 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 8.84s
+2026-02-28 21:02:55.267 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:03:11.662 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 15.84s
+2026-02-28 21:03:27.215 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 15.55s
+2026-02-28 21:03:43.776 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 15.99s
+2026-02-28 21:03:59.843 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 16.06s
+2026-02-28 21:04:16.463 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 16.05s
+2026-02-28 21:04:16.466 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:04:16.470 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:04:16.473 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:04:16.476 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:04:16.480 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:04:16.484 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:04:16.486 | INFO     | __main__:main:792 -   Cumulative time: 231.1s
+2026-02-28 21:04:16.487 | INFO     | __main__:main:681 - === synth_4way (5000 samples, 20 features, 5 folds) ===
+2026-02-28 21:04:16.487 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:04:17.306 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.82s
+2026-02-28 21:04:18.157 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.81s
+2026-02-28 21:04:18.972 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.78s
+2026-02-28 21:04:19.783 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.79s
+2026-02-28 21:04:20.613 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.80s
+2026-02-28 21:04:20.640 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:04:22.678 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 2.04s
+2026-02-28 21:04:24.479 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.80s
+2026-02-28 21:04:26.319 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.84s
+2026-02-28 21:04:28.290 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.97s
+2026-02-28 21:04:30.065 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.77s
+2026-02-28 21:04:30.066 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:04:49.517 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 19.01s
+2026-02-28 21:05:09.383 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 19.86s
+2026-02-28 21:05:29.019 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 19.18s
+2026-02-28 21:05:47.978 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 18.95s
+2026-02-28 21:06:07.674 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 19.20s
+2026-02-28 21:06:07.677 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:06:28.509 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 20.33s
+2026-02-28 21:06:49.474 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 20.96s
+2026-02-28 21:07:10.207 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 20.23s
+2026-02-28 21:07:29.865 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 19.66s
+2026-02-28 21:07:50.024 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 19.65s
+2026-02-28 21:07:50.027 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:07:50.029 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:07:50.033 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:07:50.037 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:07:50.040 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:07:50.044 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:07:50.047 | INFO     | __main__:main:792 -   Cumulative time: 441.8s
+2026-02-28 21:07:50.047 | INFO     | __main__:main:681 - === diabetes (768 samples, 8 features, 5 folds) ===
+2026-02-28 21:07:50.047 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:07:50.080 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.03s
+2026-02-28 21:07:50.116 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 21:07:50.151 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 21:07:50.187 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.03s
+2026-02-28 21:07:50.223 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.03s
+2026-02-28 21:07:50.226 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:07:50.266 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.04s
+2026-02-28 21:07:50.305 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.04s
+2026-02-28 21:07:50.346 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.04s
+2026-02-28 21:07:50.384 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.04s
+2026-02-28 21:07:50.431 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.05s
+2026-02-28 21:07:50.431 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:07:51.086 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.65s
+2026-02-28 21:07:51.746 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.66s
+2026-02-28 21:07:52.466 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.72s
+2026-02-28 21:07:53.145 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.68s
+2026-02-28 21:07:53.882 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.74s
+2026-02-28 21:07:53.882 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:07:54.202 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.32s
+2026-02-28 21:07:54.518 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.31s
+2026-02-28 21:07:54.800 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.28s
+2026-02-28 21:07:55.111 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.31s
+2026-02-28 21:07:55.381 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.27s
+2026-02-28 21:07:55.386 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:07:55.387 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:07:55.389 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:07:55.392 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:07:55.394 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:07:55.397 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:07:55.400 | INFO     | __main__:main:792 -   Cumulative time: 447.2s
+2026-02-28 21:07:55.400 | INFO     | __main__:main:681 - === breast_w (699 samples, 9 features, 5 folds) ===
+2026-02-28 21:07:55.400 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:07:55.445 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.04s
+2026-02-28 21:07:55.497 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.04s
+2026-02-28 21:07:55.548 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.04s
+2026-02-28 21:07:55.606 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 21:07:55.660 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.04s
+2026-02-28 21:07:55.676 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:07:55.742 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.06s
+2026-02-28 21:07:55.806 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.06s
+2026-02-28 21:07:55.870 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.06s
+2026-02-28 21:07:55.941 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.07s
+2026-02-28 21:07:56.004 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.06s
+2026-02-28 21:07:56.006 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:07:57.066 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 1.06s
+2026-02-28 21:07:58.115 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 1.05s
+2026-02-28 21:07:59.172 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 1.06s
+2026-02-28 21:08:00.392 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 1.22s
+2026-02-28 21:08:01.394 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 1.00s
+2026-02-28 21:08:01.394 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:08:01.553 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.16s
+2026-02-28 21:08:01.729 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.17s
+2026-02-28 21:08:01.909 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.18s
+2026-02-28 21:08:02.071 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.16s
+2026-02-28 21:08:02.235 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.16s
+2026-02-28 21:08:02.238 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:08:02.239 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:08:02.243 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:08:02.247 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:08:02.250 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:08:02.253 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:08:02.257 | INFO     | __main__:main:792 -   Cumulative time: 454.0s
+2026-02-28 21:08:02.258 | INFO     | __main__:main:681 - === adult (10000 samples, 96 features, 5 folds) ===
+2026-02-28 21:08:02.258 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:08:02.289 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:08:02.910 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.64s
+2026-02-28 21:08:04.149 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:08:05.513 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.86s
+2026-02-28 21:08:06.725 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:08:07.382 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.67s
+2026-02-28 21:08:08.392 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:08:09.004 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.62s
+2026-02-28 21:08:10.049 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:08:10.683 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.64s
+2026-02-28 21:08:11.916 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:08:13.939 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 2.01s
+2026-02-28 21:08:15.945 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.99s
+2026-02-28 21:08:17.523 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.56s
+2026-02-28 21:08:19.044 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.51s
+2026-02-28 21:08:20.830 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.77s
+2026-02-28 21:08:20.835 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:08:30.823 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 9.97s
+2026-02-28 21:08:40.725 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 9.37s
+2026-02-28 21:08:50.876 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 10.14s
+2026-02-28 21:09:04.060 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 13.17s
+2026-02-28 21:09:13.610 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 9.01s
+2026-02-28 21:09:13.610 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:09:16.477 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.86s
+2026-02-28 21:09:18.946 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.46s
+2026-02-28 21:09:23.238 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 4.28s
+2026-02-28 21:09:27.284 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 4.03s
+2026-02-28 21:09:30.244 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.95s
+2026-02-28 21:09:30.250 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:09:30.263 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:09:30.295 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:09:30.346 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.02s
+2026-02-28 21:09:30.387 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.01s
+2026-02-28 21:09:30.464 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:09:30.494 | INFO     | __main__:main:792 -   Cumulative time: 540.7s
+2026-02-28 21:09:30.494 | INFO     | __main__:main:681 - === wine_quality (6497 samples, 11 features, 5 folds) ===
+2026-02-28 21:09:30.494 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:09:30.811 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.31s
+2026-02-28 21:09:31.085 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.27s
+2026-02-28 21:09:31.395 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.30s
+2026-02-28 21:09:31.707 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.30s
+2026-02-28 21:09:31.991 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.27s
+2026-02-28 21:09:32.000 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:09:32.441 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.44s
+2026-02-28 21:09:32.857 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.41s
+2026-02-28 21:09:33.246 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.39s
+2026-02-28 21:09:33.660 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.41s
+2026-02-28 21:09:34.057 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.39s
+2026-02-28 21:09:34.058 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:09:37.760 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 3.70s
+2026-02-28 21:09:41.300 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 3.54s
+2026-02-28 21:09:45.304 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 3.46s
+2026-02-28 21:09:49.072 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 3.77s
+2026-02-28 21:09:52.972 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 3.90s
+2026-02-28 21:09:52.973 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:10:01.607 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 8.63s
+2026-02-28 21:10:09.896 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 8.29s
+2026-02-28 21:10:18.524 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 8.11s
+2026-02-28 21:10:26.424 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 7.90s
+2026-02-28 21:10:34.302 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 7.87s
+2026-02-28 21:10:34.307 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:10:34.309 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:10:34.313 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:10:34.317 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:10:34.321 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:10:34.324 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:10:34.327 | INFO     | __main__:main:792 -   Cumulative time: 603.5s
+2026-02-28 21:10:34.328 | INFO     | __main__:main:681 - === california_housing (20640 samples, 8 features, 5 folds) ===
+2026-02-28 21:10:34.328 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:10:34.451 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.12s
+2026-02-28 21:10:34.577 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.12s
+2026-02-28 21:10:34.734 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.15s
+2026-02-28 21:10:34.857 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.12s
+2026-02-28 21:10:34.981 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.12s
+2026-02-28 21:10:34.983 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:10:35.413 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.43s
+2026-02-28 21:10:35.799 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.38s
+2026-02-28 21:10:36.217 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.41s
+2026-02-28 21:10:36.775 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.55s
+2026-02-28 21:10:37.190 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.41s
+2026-02-28 21:10:37.193 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:10:39.042 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 1.84s
+2026-02-28 21:10:40.775 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 1.73s
+2026-02-28 21:10:42.455 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 1.68s
+2026-02-28 21:10:44.331 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 1.87s
+2026-02-28 21:10:45.972 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 1.64s
+2026-02-28 21:10:45.973 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:11:15.012 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 28.44s
+2026-02-28 21:11:43.960 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 28.28s
+2026-02-28 21:12:13.646 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 29.68s
+2026-02-28 21:12:42.955 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 28.85s
+2026-02-28 21:13:13.243 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 29.80s
+2026-02-28 21:13:13.246 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:13:13.250 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:13:13.255 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:13:13.259 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:13:13.264 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:13:13.269 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:13:13.272 | INFO     | __main__:main:792 -   Cumulative time: 760.2s
+2026-02-28 21:13:13.272 | INFO     | __main__:main:681 - === spambase (4601 samples, 57 features, 5 folds) ===
+2026-02-28 21:13:13.272 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:13:13.276 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:13:13.937 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.66s
+2026-02-28 21:13:15.548 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:13:16.403 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.86s
+2026-02-28 21:13:18.131 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:13:18.800 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.67s
+2026-02-28 21:13:20.320 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:13:21.083 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.76s
+2026-02-28 21:13:22.494 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:13:23.151 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.66s
+2026-02-28 21:13:24.908 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:13:25.636 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.72s
+2026-02-28 21:13:26.331 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.69s
+2026-02-28 21:13:26.986 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.65s
+2026-02-28 21:13:27.660 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.67s
+2026-02-28 21:13:28.322 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.66s
+2026-02-28 21:13:28.327 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:13:36.038 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 7.22s
+2026-02-28 21:13:44.302 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 8.26s
+2026-02-28 21:13:51.965 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 7.66s
+2026-02-28 21:13:59.275 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 7.31s
+2026-02-28 21:14:06.839 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 7.05s
+2026-02-28 21:14:06.840 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:14:09.116 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.27s
+2026-02-28 21:14:11.505 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.38s
+2026-02-28 21:14:13.811 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 2.30s
+2026-02-28 21:14:16.078 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 2.26s
+2026-02-28 21:14:18.302 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.22s
+2026-02-28 21:14:18.307 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:14:18.311 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:14:18.323 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:14:18.335 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:14:18.354 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:14:18.366 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:14:18.377 | INFO     | __main__:main:792 -   Cumulative time: 824.3s
+2026-02-28 21:14:18.378 | INFO     | __main__:main:795 - Computing summary metrics...
+2026-02-28 21:14:18.381 | INFO     | __main__:main:827 - Best F1: {'TDA': 0.603334, 'ANOVA': 0.218254, 'MI_screening': 0.0, 'Tree_based': 0.397645, 'Correlation': 0.0}
+2026-02-28 21:14:18.381 | INFO     | __main__:main:828 - Best thresholds: {'TDA': 0.855263, 'ANOVA': 0.05, 'MI_screening': 1.01, 'Tree_based': 0.474211, 'Correlation': 0.1}
+2026-02-28 21:14:18.382 | INFO     | __main__:main:829 - Mean times: {'TDA': 0.0299, 'ANOVA': 0.1039, 'MI_screening': 0.9254, 'Tree_based': 0.4821, 'Correlation': 0.0003}
+2026-02-28 21:14:19.115 | INFO     | __main__:main:890 - Total examples: 3600
+2026-02-28 21:14:19.115 | INFO     | __main__:main:891 - Total time: 825.1s
+2026-02-28 21:14:19.116 | INFO     | __main__:main:892 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-28 21:18:39.317 | INFO     | __main__:load_data:99 - Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-28 21:18:40.045 | INFO     | __main__:load_data:102 - Found 10 datasets
+2026-02-28 21:18:40.075 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman1': X=(5000, 10), task=regression, gt={frozenset({0, 1})}
+2026-02-28 21:18:40.098 | INFO     | __main__:parse_dataset:142 -   Dataset 'friedman3': X=(5000, 4), task=regression, gt={frozenset({0, 1, 3}), frozenset({0, 1, 2})}
+2026-02-28 21:18:40.138 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_3way': X=(5000, 15), task=regression, gt={frozenset({3, 4}), frozenset({0, 1, 2})}
+2026-02-28 21:18:40.180 | INFO     | __main__:parse_dataset:142 -   Dataset 'synth_4way': X=(5000, 20), task=regression, gt={frozenset({4, 5}), frozenset({0, 1, 2, 3})}
+2026-02-28 21:18:40.184 | INFO     | __main__:parse_dataset:142 -   Dataset 'diabetes': X=(768, 8), task=classification, gt=None
+2026-02-28 21:18:40.186 | INFO     | __main__:parse_dataset:142 -   Dataset 'breast_w': X=(699, 9), task=classification, gt=None
+2026-02-28 21:18:40.409 | INFO     | __main__:parse_dataset:142 -   Dataset 'adult': X=(10000, 96), task=classification, gt=None
+2026-02-28 21:18:40.445 | INFO     | __main__:parse_dataset:142 -   Dataset 'wine_quality': X=(6497, 11), task=regression, gt=None
+2026-02-28 21:18:40.524 | INFO     | __main__:parse_dataset:142 -   Dataset 'california_housing': X=(20640, 8), task=regression, gt=None
+2026-02-28 21:18:40.597 | INFO     | __main__:parse_dataset:142 -   Dataset 'spambase': X=(4601, 57), task=classification, gt=None
+2026-02-28 21:18:40.599 | INFO     | __main__:main:667 - Parsed 10 datasets
+2026-02-28 21:18:40.600 | INFO     | __main__:main:681 - === friedman1 (5000 samples, 10 features, 5 folds) ===
+2026-02-28 21:18:40.600 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:18:40.832 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.23s
+2026-02-28 21:18:41.076 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.24s
+2026-02-28 21:18:41.289 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.21s
+2026-02-28 21:18:41.503 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.21s
+2026-02-28 21:18:41.712 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.21s
+2026-02-28 21:18:41.715 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:18:41.924 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.21s
+2026-02-28 21:18:42.126 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.20s
+2026-02-28 21:18:42.328 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.20s
+2026-02-28 21:18:42.521 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.19s
+2026-02-28 21:18:42.723 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.20s
+2026-02-28 21:18:42.723 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:18:45.229 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 2.50s
+2026-02-28 21:18:47.733 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 2.50s
+2026-02-28 21:18:50.369 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 2.63s
+2026-02-28 21:18:52.811 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 2.44s
+2026-02-28 21:18:55.132 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 2.32s
+2026-02-28 21:18:55.133 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:19:07.355 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 11.63s
+2026-02-28 21:19:18.869 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 11.51s
+2026-02-28 21:19:31.075 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 12.20s
+2026-02-28 21:19:43.173 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 11.52s
+2026-02-28 21:19:55.241 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 12.07s
+2026-02-28 21:19:55.245 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:19:55.247 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:19:55.250 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:19:55.253 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:19:55.256 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:19:55.260 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:19:55.262 | INFO     | __main__:main:792 -   Cumulative time: 74.8s
+2026-02-28 21:19:55.262 | INFO     | __main__:main:681 - === friedman3 (5000 samples, 4 features, 5 folds) ===
+2026-02-28 21:19:55.262 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:19:55.298 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.04s
+2026-02-28 21:19:55.335 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 21:19:55.368 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 21:19:55.402 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.03s
+2026-02-28 21:19:55.435 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.03s
+2026-02-28 21:19:55.436 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:19:55.447 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.01s
+2026-02-28 21:19:55.459 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.01s
+2026-02-28 21:19:55.475 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.01s
+2026-02-28 21:19:55.493 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.02s
+2026-02-28 21:19:55.509 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.01s
+2026-02-28 21:19:55.510 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:19:55.752 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.24s
+2026-02-28 21:19:56.012 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.26s
+2026-02-28 21:19:56.218 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.21s
+2026-02-28 21:19:56.419 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.20s
+2026-02-28 21:19:56.637 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.22s
+2026-02-28 21:19:56.637 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:20:01.994 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 5.36s
+2026-02-28 21:20:07.677 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 5.23s
+2026-02-28 21:20:12.891 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 5.21s
+2026-02-28 21:20:18.588 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 5.70s
+2026-02-28 21:20:24.050 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 5.46s
+2026-02-28 21:20:24.052 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:20:24.053 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:20:24.056 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:20:24.058 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:20:24.061 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:20:24.064 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:20:24.067 | INFO     | __main__:main:792 -   Cumulative time: 103.1s
+2026-02-28 21:20:24.067 | INFO     | __main__:main:681 - === synth_3way (5000 samples, 15 features, 5 folds) ===
+2026-02-28 21:20:24.067 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:20:24.530 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.46s
+2026-02-28 21:20:25.017 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.48s
+2026-02-28 21:20:25.532 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.50s
+2026-02-28 21:20:26.069 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.53s
+2026-02-28 21:20:26.560 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.48s
+2026-02-28 21:20:26.569 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:20:27.420 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.85s
+2026-02-28 21:20:28.298 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.87s
+2026-02-28 21:20:29.226 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.92s
+2026-02-28 21:20:29.971 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.74s
+2026-02-28 21:20:30.678 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.70s
+2026-02-28 21:20:30.678 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:20:38.811 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 8.13s
+2026-02-28 21:20:48.016 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 8.74s
+2026-02-28 21:20:56.659 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 8.64s
+2026-02-28 21:21:04.606 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 7.94s
+2026-02-28 21:21:12.913 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 7.80s
+2026-02-28 21:21:12.916 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:21:29.414 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 16.50s
+2026-02-28 21:21:45.936 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 16.01s
+2026-02-28 21:22:02.264 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 16.33s
+2026-02-28 21:22:19.702 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 16.93s
+2026-02-28 21:22:35.730 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 16.02s
+2026-02-28 21:22:35.734 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:22:35.736 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:22:35.739 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:22:35.743 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:22:35.746 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:22:35.749 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:22:35.752 | INFO     | __main__:main:792 -   Cumulative time: 232.8s
+2026-02-28 21:22:35.752 | INFO     | __main__:main:681 - === synth_4way (5000 samples, 20 features, 5 folds) ===
+2026-02-28 21:22:35.752 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:22:36.645 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.89s
+2026-02-28 21:22:37.504 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.82s
+2026-02-28 21:22:38.341 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.81s
+2026-02-28 21:22:39.211 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.84s
+2026-02-28 21:22:40.044 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.81s
+2026-02-28 21:22:40.080 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:22:41.800 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 1.72s
+2026-02-28 21:22:43.456 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.65s
+2026-02-28 21:22:45.260 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.80s
+2026-02-28 21:22:46.902 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.64s
+2026-02-28 21:22:48.620 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.72s
+2026-02-28 21:22:48.621 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:23:09.571 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 20.42s
+2026-02-28 21:23:29.598 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 19.50s
+2026-02-28 21:23:48.330 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 18.73s
+2026-02-28 21:24:08.140 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 19.25s
+2026-02-28 21:24:27.653 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 19.51s
+2026-02-28 21:24:27.656 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:24:49.723 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 21.53s
+2026-02-28 21:25:10.195 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 19.90s
+2026-02-28 21:25:29.953 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 19.75s
+2026-02-28 21:25:50.002 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 19.49s
+2026-02-28 21:26:10.004 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 19.41s
+2026-02-28 21:26:10.007 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:26:10.010 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:26:10.013 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:26:10.017 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:26:10.022 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:26:10.027 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:26:10.031 | INFO     | __main__:main:792 -   Cumulative time: 443.3s
+2026-02-28 21:26:10.031 | INFO     | __main__:main:681 - === diabetes (768 samples, 8 features, 5 folds) ===
+2026-02-28 21:26:10.031 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:26:10.065 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.03s
+2026-02-28 21:26:10.099 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.03s
+2026-02-28 21:26:10.133 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.03s
+2026-02-28 21:26:10.167 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.03s
+2026-02-28 21:26:10.204 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.03s
+2026-02-28 21:26:10.206 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:26:10.249 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.04s
+2026-02-28 21:26:10.292 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.04s
+2026-02-28 21:26:10.336 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.04s
+2026-02-28 21:26:10.374 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.04s
+2026-02-28 21:26:10.413 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.04s
+2026-02-28 21:26:10.413 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:26:11.104 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.69s
+2026-02-28 21:26:11.799 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 0.69s
+2026-02-28 21:26:12.500 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 0.70s
+2026-02-28 21:26:13.201 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.70s
+2026-02-28 21:26:13.918 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.72s
+2026-02-28 21:26:13.918 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:26:14.234 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.31s
+2026-02-28 21:26:14.533 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.30s
+2026-02-28 21:26:14.850 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.32s
+2026-02-28 21:26:15.142 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.29s
+2026-02-28 21:26:15.414 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.27s
+2026-02-28 21:26:15.417 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:26:15.418 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:26:15.420 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:26:15.422 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:26:15.424 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:26:15.425 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:26:15.427 | INFO     | __main__:main:792 -   Cumulative time: 448.7s
+2026-02-28 21:26:15.428 | INFO     | __main__:main:681 - === breast_w (699 samples, 9 features, 5 folds) ===
+2026-02-28 21:26:15.428 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:26:15.464 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.04s
+2026-02-28 21:26:15.510 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.04s
+2026-02-28 21:26:15.563 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.04s
+2026-02-28 21:26:15.608 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.04s
+2026-02-28 21:26:15.658 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.04s
+2026-02-28 21:26:15.673 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:26:15.728 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.05s
+2026-02-28 21:26:15.785 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.06s
+2026-02-28 21:26:15.842 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.06s
+2026-02-28 21:26:15.901 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.06s
+2026-02-28 21:26:15.960 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.06s
+2026-02-28 21:26:15.961 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:26:16.901 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 0.94s
+2026-02-28 21:26:17.975 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 1.07s
+2026-02-28 21:26:19.059 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 1.08s
+2026-02-28 21:26:19.996 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 0.94s
+2026-02-28 21:26:20.959 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 0.96s
+2026-02-28 21:26:20.959 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:26:21.115 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 0.16s
+2026-02-28 21:26:21.281 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 0.16s
+2026-02-28 21:26:21.428 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 0.14s
+2026-02-28 21:26:21.593 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 0.16s
+2026-02-28 21:26:21.756 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 0.16s
+2026-02-28 21:26:21.759 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:26:21.760 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:26:21.763 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:26:21.765 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:26:21.768 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:26:21.771 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:26:21.774 | INFO     | __main__:main:792 -   Cumulative time: 455.0s
+2026-02-28 21:26:21.774 | INFO     | __main__:main:681 - === adult (10000 samples, 96 features, 5 folds) ===
+2026-02-28 21:26:21.775 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:26:21.807 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:26:22.435 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.64s
+2026-02-28 21:26:23.594 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:26:24.222 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.64s
+2026-02-28 21:26:25.275 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:26:25.900 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.64s
+2026-02-28 21:26:26.828 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:26:27.456 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.64s
+2026-02-28 21:26:28.549 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:26:29.183 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.64s
+2026-02-28 21:26:30.374 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:26:31.865 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 1.48s
+2026-02-28 21:26:33.218 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 1.34s
+2026-02-28 21:26:34.581 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 1.35s
+2026-02-28 21:26:35.913 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 1.32s
+2026-02-28 21:26:37.305 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 1.38s
+2026-02-28 21:26:37.309 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:26:46.860 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 8.96s
+2026-02-28 21:26:55.671 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 8.80s
+2026-02-28 21:27:04.378 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 8.69s
+2026-02-28 21:27:13.455 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 8.62s
+2026-02-28 21:27:22.541 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 9.07s
+2026-02-28 21:27:22.542 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:27:25.220 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.67s
+2026-02-28 21:27:27.804 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.57s
+2026-02-28 21:27:30.226 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 2.41s
+2026-02-28 21:27:32.643 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 2.41s
+2026-02-28 21:27:35.182 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.53s
+2026-02-28 21:27:35.190 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:27:35.204 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:27:35.247 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:27:35.283 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:27:35.313 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:27:35.343 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:27:35.369 | INFO     | __main__:main:792 -   Cumulative time: 527.6s
+2026-02-28 21:27:35.369 | INFO     | __main__:main:681 - === wine_quality (6497 samples, 11 features, 5 folds) ===
+2026-02-28 21:27:35.369 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:27:35.596 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.22s
+2026-02-28 21:27:35.841 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.24s
+2026-02-28 21:27:36.059 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.21s
+2026-02-28 21:27:36.282 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.22s
+2026-02-28 21:27:36.507 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.22s
+2026-02-28 21:27:36.514 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:27:36.815 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.30s
+2026-02-28 21:27:37.111 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.29s
+2026-02-28 21:27:37.404 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.29s
+2026-02-28 21:27:37.744 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.34s
+2026-02-28 21:27:38.057 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.31s
+2026-02-28 21:27:38.058 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:27:41.365 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 3.31s
+2026-02-28 21:27:44.508 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 3.14s
+2026-02-28 21:27:48.432 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 3.47s
+2026-02-28 21:27:51.785 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 3.35s
+2026-02-28 21:27:55.244 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 3.46s
+2026-02-28 21:27:55.244 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:28:03.149 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 7.90s
+2026-02-28 21:28:11.267 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 8.11s
+2026-02-28 21:28:19.451 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 7.68s
+2026-02-28 21:28:27.132 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 7.68s
+2026-02-28 21:28:34.965 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 7.83s
+2026-02-28 21:28:34.972 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:28:34.975 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:28:34.979 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:28:34.983 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:28:34.986 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:28:34.990 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:28:34.993 | INFO     | __main__:main:792 -   Cumulative time: 586.3s
+2026-02-28 21:28:34.993 | INFO     | __main__:main:681 - === california_housing (20640 samples, 8 features, 5 folds) ===
+2026-02-28 21:28:34.993 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:28:35.121 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.13s
+2026-02-28 21:28:35.246 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.12s
+2026-02-28 21:28:35.369 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.12s
+2026-02-28 21:28:35.494 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.12s
+2026-02-28 21:28:35.628 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.13s
+2026-02-28 21:28:35.630 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:28:36.105 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.47s
+2026-02-28 21:28:36.591 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.47s
+2026-02-28 21:28:37.048 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.45s
+2026-02-28 21:28:37.474 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.42s
+2026-02-28 21:28:38.058 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.58s
+2026-02-28 21:28:38.059 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:28:39.722 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 1.66s
+2026-02-28 21:28:41.350 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 1.63s
+2026-02-28 21:28:42.982 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 1.63s
+2026-02-28 21:28:44.721 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 1.74s
+2026-02-28 21:28:46.361 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 1.64s
+2026-02-28 21:28:46.361 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:29:15.154 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 28.29s
+2026-02-28 21:29:43.994 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 28.33s
+2026-02-28 21:30:12.044 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 27.53s
+2026-02-28 21:30:40.531 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 27.96s
+2026-02-28 21:31:08.700 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 27.62s
+2026-02-28 21:31:08.703 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:31:08.707 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:31:08.712 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:31:08.716 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:31:08.721 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:31:08.726 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:31:08.728 | INFO     | __main__:main:792 -   Cumulative time: 737.4s
+2026-02-28 21:31:08.729 | INFO     | __main__:main:681 - === spambase (4601 samples, 57 features, 5 folds) ===
+2026-02-28 21:31:08.729 | INFO     | __main__:main:688 -   TDA: 20 thresholds × 5 folds
+2026-02-28 21:31:08.732 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:31:09.375 | DEBUG    | __main__:main:726 -     TDA fold=0 precompute: 0.64s
+2026-02-28 21:31:10.775 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:31:11.420 | DEBUG    | __main__:main:726 -     TDA fold=1 precompute: 0.65s
+2026-02-28 21:31:12.948 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:31:13.606 | DEBUG    | __main__:main:726 -     TDA fold=2 precompute: 0.66s
+2026-02-28 21:31:14.976 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:31:15.640 | DEBUG    | __main__:main:726 -     TDA fold=3 precompute: 0.67s
+2026-02-28 21:31:16.968 | DEBUG    | __main__:tda_precompute:207 -     TDA: capped to top 20 features
+2026-02-28 21:31:17.617 | DEBUG    | __main__:main:726 -     TDA fold=4 precompute: 0.65s
+2026-02-28 21:31:19.272 | INFO     | __main__:main:688 -   ANOVA: 6 thresholds × 5 folds
+2026-02-28 21:31:19.936 | DEBUG    | __main__:main:726 -     ANOVA fold=0 precompute: 0.66s
+2026-02-28 21:31:20.571 | DEBUG    | __main__:main:726 -     ANOVA fold=1 precompute: 0.63s
+2026-02-28 21:31:21.236 | DEBUG    | __main__:main:726 -     ANOVA fold=2 precompute: 0.66s
+2026-02-28 21:31:21.891 | DEBUG    | __main__:main:726 -     ANOVA fold=3 precompute: 0.65s
+2026-02-28 21:31:22.512 | DEBUG    | __main__:main:726 -     ANOVA fold=4 precompute: 0.62s
+2026-02-28 21:31:22.517 | INFO     | __main__:main:688 -   MI_screening: 6 thresholds × 5 folds
+2026-02-28 21:31:29.550 | DEBUG    | __main__:main:726 -     MI_screening fold=0 precompute: 7.03s
+2026-02-28 21:31:37.028 | DEBUG    | __main__:main:726 -     MI_screening fold=1 precompute: 6.94s
+2026-02-28 21:31:43.771 | DEBUG    | __main__:main:726 -     MI_screening fold=2 precompute: 6.74s
+2026-02-28 21:31:50.541 | DEBUG    | __main__:main:726 -     MI_screening fold=3 precompute: 6.77s
+2026-02-28 21:31:57.391 | DEBUG    | __main__:main:726 -     MI_screening fold=4 precompute: 6.85s
+2026-02-28 21:31:57.391 | INFO     | __main__:main:688 -   Tree_based: 20 thresholds × 5 folds
+2026-02-28 21:31:59.645 | DEBUG    | __main__:main:726 -     Tree_based fold=0 precompute: 2.25s
+2026-02-28 21:32:01.917 | DEBUG    | __main__:main:726 -     Tree_based fold=1 precompute: 2.27s
+2026-02-28 21:32:04.088 | DEBUG    | __main__:main:726 -     Tree_based fold=2 precompute: 2.17s
+2026-02-28 21:32:06.326 | DEBUG    | __main__:main:726 -     Tree_based fold=3 precompute: 2.23s
+2026-02-28 21:32:09.114 | DEBUG    | __main__:main:726 -     Tree_based fold=4 precompute: 2.22s
+2026-02-28 21:32:09.118 | INFO     | __main__:main:688 -   Correlation: 20 thresholds × 5 folds
+2026-02-28 21:32:09.122 | DEBUG    | __main__:main:726 -     Correlation fold=0 precompute: 0.00s
+2026-02-28 21:32:09.135 | DEBUG    | __main__:main:726 -     Correlation fold=1 precompute: 0.00s
+2026-02-28 21:32:09.154 | DEBUG    | __main__:main:726 -     Correlation fold=2 precompute: 0.00s
+2026-02-28 21:32:09.175 | DEBUG    | __main__:main:726 -     Correlation fold=3 precompute: 0.00s
+2026-02-28 21:32:09.188 | DEBUG    | __main__:main:726 -     Correlation fold=4 precompute: 0.00s
+2026-02-28 21:32:09.199 | INFO     | __main__:main:792 -   Cumulative time: 796.8s
+2026-02-28 21:32:09.199 | INFO     | __main__:main:795 - Computing summary metrics...
+2026-02-28 21:32:09.204 | INFO     | __main__:main:827 - Best F1: {'TDA': 0.603334, 'ANOVA': 0.218254, 'MI_screening': 0.0, 'Tree_based': 0.397645, 'Correlation': 0.0}
+2026-02-28 21:32:09.204 | INFO     | __main__:main:828 - Best thresholds: {'TDA': 0.855263, 'ANOVA': 0.05, 'MI_screening': 1.01, 'Tree_based': 0.474211, 'Correlation': 0.1}
+2026-02-28 21:32:09.204 | INFO     | __main__:main:829 - Mean times: {'TDA': 0.0284, 'ANOVA': 0.094, 'MI_screening': 0.8806, 'Tree_based': 0.4727, 'Correlation': 0.0003}
+2026-02-28 21:32:10.497 | INFO     | __main__:main:893 - Total examples: 3600
+2026-02-28 21:32:10.498 | INFO     | __main__:main:894 - Total time: 798.1s
+2026-02-28 21:32:10.498 | INFO     | __main__:main:895 - Output: /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
