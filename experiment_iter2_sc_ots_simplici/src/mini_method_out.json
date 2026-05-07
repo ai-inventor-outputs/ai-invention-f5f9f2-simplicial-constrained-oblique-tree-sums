@@ -1,0 +1,803 @@
+{
+  "metadata": {
+    "method_name": "SC-OTS",
+    "description": "Simplicial-Constrained Oblique Tree Sums: uses persistent homology on target-aware feature interaction distances to discover multi-way feature interactions, constraining oblique tree splits to these interactions.",
+    "summary_table": "| Dataset | Task | SC-OTS | RO-FIGS | FIGS | XGB | XGB+SC | EBM |\n|---------|------|--------|---------|------|-----|--------|-----|\n| friedman1 | regr | 0.743 | 0.733 | 0.915 | 0.974 | 0.988 | 0.998 |\n| friedman3 | regr | 0.709 | 0.709 | 0.828 | 0.874 | 0.876 | 0.884 |\n| synth_3way | regr | 0.689 | 0.687 | 0.876 | 0.970 | 0.938 | 0.986 |\n| synth_4way | regr | 0.770 | 0.757 | 0.919 | 0.976 | 0.950 | 0.977 |\n| diabetes | clas | 0.755 | 0.751 | 0.729 | 0.747 | 0.721 | 0.766 |\n| breast_w | clas | 0.947 | 0.956 | 0.951 | 0.961 | 0.959 | 0.966 |\n| wine_quality | regr | 0.275 | 0.253 | 0.328 | 0.472 | 0.364 | 0.385 |\n| california_h | regr | 0.618 | 0.560 | 0.719 | 0.835 | 0.823 | 0.803 |\n| spambase | clas | 0.876 | 0.895 | 0.919 | 0.951 | 0.948 | 0.952 |\n| adult | clas | 0.844 | 0.854 | 0.859 | 0.871 | 0.876 | 0.876 |",
+    "per_dataset_results": {
+      "friedman1": {
+        "dataset": "friedman1",
+        "task_type": "regression",
+        "n_features": 10,
+        "n_samples": 5000,
+        "category": "A_synthetic",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.7429704621244724,
+        "std_scots": 0.017899663025616536,
+        "mean_rofigs": 0.732790122047972,
+        "std_rofigs": 0.02720544373467499,
+        "mean_figs": 0.9145515846890513,
+        "std_figs": 0.002910189217275697,
+        "mean_xgb": 0.973530184137837,
+        "std_xgb": 0.0015695713363893004,
+        "mean_xgb_sc": 0.9876014539300023,
+        "std_xgb_sc": 0.0008048595650005147,
+        "mean_ebm": 0.9983045701682919,
+        "std_ebm": 0.00019788875904600513,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 8.2,
+        "scots_avg_time": 5.796385622024536,
+        "avg_n_simplices_dim0": 10.0,
+        "avg_n_simplices_dim1": 3.0,
+        "avg_n_simplices_dim2": 1.0,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.8630850993482111,
+        "avg_betti": [
+          7.0,
+          0.0,
+          0.0
+        ],
+        "interaction_recovery": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        },
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 0.3,
+          "f1": 0.4615384615384615
+        }
+      },
+      "friedman3": {
+        "dataset": "friedman3",
+        "task_type": "regression",
+        "n_features": 4,
+        "n_samples": 5000,
+        "category": "A_synthetic",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.7094582022376148,
+        "std_scots": 0.024028852545685528,
+        "mean_rofigs": 0.7090395094491421,
+        "std_rofigs": 0.024326430742562556,
+        "mean_figs": 0.8284216826920107,
+        "std_figs": 0.009673383549546959,
+        "mean_xgb": 0.8741759050704433,
+        "std_xgb": 0.011549392791236962,
+        "mean_xgb_sc": 0.8762548735363838,
+        "std_xgb_sc": 0.006855022209583598,
+        "mean_ebm": 0.8842000939884306,
+        "std_ebm": 0.00893779276060464,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 5.6,
+        "scots_avg_time": 4.852345275878906,
+        "avg_n_simplices_dim0": 4.0,
+        "avg_n_simplices_dim1": 3.0,
+        "avg_n_simplices_dim2": 1.0,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.9274153030675156,
+        "avg_betti": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "interaction_recovery": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999
+        },
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "synth_3way": {
+        "dataset": "synth_3way",
+        "task_type": "regression",
+        "n_features": 15,
+        "n_samples": 5000,
+        "category": "A_synthetic",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.6893468602074853,
+        "std_scots": 0.03018520133401984,
+        "mean_rofigs": 0.6868695702528489,
+        "std_rofigs": 0.02182288134116768,
+        "mean_figs": 0.8761751328085106,
+        "std_figs": 0.0061395303817650005,
+        "mean_xgb": 0.9696032450617388,
+        "std_xgb": 0.001055528394157061,
+        "mean_xgb_sc": 0.9383457770239845,
+        "std_xgb_sc": 0.018076424707716175,
+        "mean_ebm": 0.9857444995121284,
+        "std_ebm": 0.00036277423584553343,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 6.4,
+        "scots_avg_time": 7.985169267654419,
+        "avg_n_simplices_dim0": 15.0,
+        "avg_n_simplices_dim1": 5.0,
+        "avg_n_simplices_dim2": 1.2,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.9330364615130243,
+        "avg_betti": [
+          10.8,
+          0.0,
+          0.0
+        ],
+        "interaction_recovery": {
+          "precision": 0.52,
+          "recall": 0.65,
+          "f1": 0.5777777777777777
+        },
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 0.5111111111111111,
+          "f1": 0.6761904761904761
+        }
+      },
+      "synth_4way": {
+        "dataset": "synth_4way",
+        "task_type": "regression",
+        "n_features": 20,
+        "n_samples": 5000,
+        "category": "A_synthetic",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.770475694067208,
+        "std_scots": 0.013173070593167408,
+        "mean_rofigs": 0.7573892321083904,
+        "std_rofigs": 0.018436390576694977,
+        "mean_figs": 0.9185854119012233,
+        "std_figs": 0.0032390688862136,
+        "mean_xgb": 0.9756472883586061,
+        "std_xgb": 0.0016730392778256532,
+        "mean_xgb_sc": 0.9500521949159852,
+        "std_xgb_sc": 0.00218291115710173,
+        "mean_ebm": 0.9773989280748735,
+        "std_ebm": 0.0010734539476192396,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 5.4,
+        "scots_avg_time": 9.374448537826538,
+        "avg_n_simplices_dim0": 20.0,
+        "avg_n_simplices_dim1": 6.2,
+        "avg_n_simplices_dim2": 1.4,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.9790923593200522,
+        "avg_betti": [
+          14.0,
+          0.0,
+          0.0
+        ],
+        "interaction_recovery": {
+          "precision": 0.35238095238095235,
+          "recall": 0.3142857142857143,
+          "f1": 0.33186813186813185
+        }
+      },
+      "diabetes": {
+        "dataset": "diabetes",
+        "task_type": "classification",
+        "n_features": 8,
+        "n_samples": 768,
+        "category": "B_realworld",
+        "metric_name": "Accuracy",
+        "n_folds_completed": 5,
+        "mean_scots": 0.7551141668788729,
+        "std_scots": 0.037615851286668625,
+        "mean_rofigs": 0.7512859689330277,
+        "std_rofigs": 0.018301988200393814,
+        "mean_figs": 0.7291146761734998,
+        "std_figs": 0.03200565003740504,
+        "mean_xgb": 0.747347423818012,
+        "std_xgb": 0.02011554391688753,
+        "mean_xgb_sc": 0.7212715389185977,
+        "std_xgb_sc": 0.03592893817478804,
+        "mean_ebm": 0.7655377302436126,
+        "std_ebm": 0.03176933862585876,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 4.0,
+        "scots_avg_time": 3.434742784500122,
+        "avg_n_simplices_dim0": 8.0,
+        "avg_n_simplices_dim1": 4.8,
+        "avg_n_simplices_dim2": 0.4,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.9284112080829721,
+        "avg_betti": [
+          3.8,
+          0.0,
+          0.0
+        ]
+      },
+      "breast_w": {
+        "dataset": "breast_w",
+        "task_type": "classification",
+        "n_features": 9,
+        "n_samples": 699,
+        "category": "B_realworld",
+        "metric_name": "Accuracy",
+        "n_folds_completed": 5,
+        "mean_scots": 0.9471017471736897,
+        "std_scots": 0.02045527202098696,
+        "mean_rofigs": 0.9556526207605345,
+        "std_rofigs": 0.006987032025164403,
+        "mean_figs": 0.9513360739979444,
+        "std_figs": 0.015349082918161526,
+        "mean_xgb": 0.9613874614594039,
+        "std_xgb": 0.013217214714777919,
+        "mean_xgb_sc": 0.958530318602261,
+        "std_xgb_sc": 0.009420486452021863,
+        "mean_ebm": 0.9656526207605344,
+        "std_ebm": 0.008394050206009258,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 4.4,
+        "scots_avg_time": 3.681844139099121,
+        "avg_n_simplices_dim0": 9.0,
+        "avg_n_simplices_dim1": 5.8,
+        "avg_n_simplices_dim2": 1.6,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.8470113278969409,
+        "avg_betti": [
+          4.8,
+          0.0,
+          0.0
+        ]
+      },
+      "wine_quality": {
+        "dataset": "wine_quality",
+        "task_type": "regression",
+        "n_features": 11,
+        "n_samples": 6497,
+        "category": "B_realworld",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.27505251069871745,
+        "std_scots": 0.01841854749214209,
+        "mean_rofigs": 0.2527422393077704,
+        "std_rofigs": 0.028305786715738288,
+        "mean_figs": 0.3281374146635636,
+        "std_figs": 0.02381594108458061,
+        "mean_xgb": 0.4721038822364097,
+        "std_xgb": 0.010968245453938421,
+        "mean_xgb_sc": 0.36369081944181986,
+        "std_xgb_sc": 0.0069354274407131865,
+        "mean_ebm": 0.38505985017882016,
+        "std_ebm": 0.015296553073765146,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 6.8,
+        "scots_avg_time": 7.128328323364258,
+        "avg_n_simplices_dim0": 11.0,
+        "avg_n_simplices_dim1": 3.4,
+        "avg_n_simplices_dim2": 0.0,
+        "avg_n_simplices_dim3": 0.0,
+        "avg_threshold": 0.9425168257136326,
+        "avg_betti": [
+          6.6,
+          0.0,
+          0.0
+        ]
+      },
+      "california_housing": {
+        "dataset": "california_housing",
+        "task_type": "regression",
+        "n_features": 8,
+        "n_samples": 20640,
+        "category": "B_realworld",
+        "metric_name": "R²",
+        "n_folds_completed": 5,
+        "mean_scots": 0.6179026307395826,
+        "std_scots": 0.02190110296862389,
+        "mean_rofigs": 0.5598849809546281,
+        "std_rofigs": 0.02200717308553448,
+        "mean_figs": 0.7191251582713367,
+        "std_figs": 0.014172824355454364,
+        "mean_xgb": 0.8346953181878028,
+        "std_xgb": 0.008049443878593306,
+        "mean_xgb_sc": 0.8233081605446992,
+        "std_xgb_sc": 0.00970610946185853,
+        "mean_ebm": 0.8029695343840018,
+        "std_ebm": 0.012274083623027746,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 7.2,
+        "scots_avg_time": 22.346189117431642,
+        "avg_n_simplices_dim0": 8.0,
+        "avg_n_simplices_dim1": 7.8,
+        "avg_n_simplices_dim2": 2.6,
+        "avg_n_simplices_dim3": 0.2,
+        "avg_threshold": 0.9435720972644152,
+        "avg_betti": [
+          2.4,
+          0.0,
+          0.0
+        ]
+      },
+      "spambase": {
+        "dataset": "spambase",
+        "task_type": "classification",
+        "n_features": 57,
+        "n_samples": 4601,
+        "category": "C_medium_complexity",
+        "metric_name": "Accuracy",
+        "n_folds_completed": 5,
+        "mean_scots": 0.8763362130009915,
+        "std_scots": 0.012939825513102158,
+        "mean_rofigs": 0.8952440636359345,
+        "std_rofigs": 0.012593118604317622,
+        "mean_figs": 0.9185002124344994,
+        "std_figs": 0.013803688600851594,
+        "mean_xgb": 0.9513168578577161,
+        "std_xgb": 0.005232290602427235,
+        "mean_xgb_sc": 0.9476195534154745,
+        "std_xgb_sc": 0.0028767103398023063,
+        "mean_ebm": 0.9521857149601095,
+        "std_ebm": 0.007166512850230714,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 5.0,
+        "scots_avg_time": 26.138101673126222,
+        "avg_n_simplices_dim0": 57.0,
+        "avg_n_simplices_dim1": 183.8,
+        "avg_n_simplices_dim2": 909.0,
+        "avg_n_simplices_dim3": 2944.2,
+        "avg_threshold": 0.9147629830471654,
+        "avg_betti": [
+          32.4,
+          0.0,
+          0.0
+        ]
+      },
+      "adult": {
+        "dataset": "adult",
+        "task_type": "classification",
+        "n_features": 96,
+        "n_samples": 10000,
+        "category": "B_realworld",
+        "metric_name": "Accuracy",
+        "n_folds_completed": 5,
+        "mean_scots": 0.8440999999999999,
+        "std_scots": 0.009635351576356737,
+        "mean_rofigs": 0.8535999999999999,
+        "std_rofigs": 0.007920858539325148,
+        "mean_figs": 0.8591000000000001,
+        "std_figs": 0.007882892870006557,
+        "mean_xgb": 0.8710000000000001,
+        "std_xgb": 0.007655063683601849,
+        "mean_xgb_sc": 0.8759,
+        "std_xgb_sc": 0.006681317235396032,
+        "mean_ebm": 0.8760000000000001,
+        "std_ebm": 0.005375872022286236,
+        "scots_avg_splits": 20.0,
+        "scots_avg_trees": 6.0,
+        "scots_avg_time": 40.986975860595706,
+        "avg_n_simplices_dim0": 96.0,
+        "avg_n_simplices_dim1": 33.2,
+        "avg_n_simplices_dim2": 30.6,
+        "avg_n_simplices_dim3": 13.6,
+        "avg_threshold": 0.9588639268820941,
+        "avg_betti": [
+          80.2,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "hypothesis_confirmed": false,
+    "success_criteria": {
+      "scots_competitive_with_figs": "2/10 datasets",
+      "hypothesis_confirmed": false
+    },
+    "checkpoint": "final",
+    "datasets_completed": 10
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073]",
+          "output": "16.836355",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_scots": "19.079201367595132",
+          "predict_rofigs": "16.036223707099506",
+          "predict_figs": "16.79243517344919",
+          "predict_xgb": "16.402891159057617",
+          "predict_xgb_sc": "17.310073852539062",
+          "predict_ebm": "16.589242856709486"
+        },
+        {
+          "input": "[0.020584, 0.96991, 0.832443, 0.212339, 0.181825, 0.183405, 0.304242, 0.524756, 0.431945, 0.291229]",
+          "output": "5.990418",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "7.917705278571733",
+          "predict_rofigs": "13.653548679486722",
+          "predict_figs": "8.111406391860069",
+          "predict_xgb": "5.55051851272583",
+          "predict_xgb_sc": "4.6073222160339355",
+          "predict_ebm": "6.301685824921212"
+        },
+        {
+          "input": "[0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "9.519901",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "7.917705278571733",
+          "predict_rofigs": "11.624261311562659",
+          "predict_figs": "9.974505966367355",
+          "predict_xgb": "10.198739051818848",
+          "predict_xgb_sc": "10.64962100982666",
+          "predict_ebm": "9.355060259283132"
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "[37.454012, 1678.777388, 0.731994, 6.986585]",
+          "output": "1.459947",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_scots": "1.5350114518723992",
+          "predict_rofigs": "1.5350114518723992",
+          "predict_figs": "1.5359993791419397",
+          "predict_xgb": "1.5328996181488037",
+          "predict_xgb_sc": "1.5157784223556519",
+          "predict_ebm": "1.5421108569409459"
+        },
+        {
+          "input": "[15.601864, 380.50075, 0.058084, 9.661761]",
+          "output": "1.014689",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "0.35618105730051863",
+          "predict_rofigs": "0.35618105730051863",
+          "predict_figs": "0.9843615258001119",
+          "predict_xgb": "0.963849663734436",
+          "predict_xgb_sc": "0.965049684047699",
+          "predict_ebm": "0.9325709340606974"
+        },
+        {
+          "input": "[60.111501, 1282.391023, 0.020584, 10.699099]",
+          "output": "0.544413",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "0.9953559998826393",
+          "predict_rofigs": "0.9953559998826393",
+          "predict_figs": "0.43654549009430005",
+          "predict_xgb": "0.3086666762828827",
+          "predict_xgb_sc": "0.3204725980758667",
+          "predict_ebm": "0.5251749434927199"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073, 0.020584, 0.96991, 0.832443, 0.212339, 0.181825]",
+          "output": "3.106792",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_scots": "3.133272467142909",
+          "predict_rofigs": "3.3652594056909706",
+          "predict_figs": "3.1625089509190993",
+          "predict_xgb": "2.920614004135132",
+          "predict_xgb_sc": "3.1619503498077393",
+          "predict_ebm": "3.019176934068342"
+        },
+        {
+          "input": "[0.183405, 0.304242, 0.524756, 0.431945, 0.291229, 0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645]",
+          "output": "1.701095",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "1.5013739825429853",
+          "predict_rofigs": "0.8085510502867438",
+          "predict_figs": "2.0756528013467133",
+          "predict_xgb": "1.5036436319351196",
+          "predict_xgb_sc": "1.5032504796981812",
+          "predict_ebm": "1.6900878262028414"
+        },
+        {
+          "input": "[0.607545, 0.170524, 0.065052, 0.948886, 0.965632, 0.808397, 0.304614, 0.097672, 0.684233, 0.440152, 0.122038, 0.495177, 0.034389, 0.90932, 0.25878]",
+          "output": "2.015276",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "3.356187873724018",
+          "predict_rofigs": "4.1047549233967215",
+          "predict_figs": "3.6986321666610533",
+          "predict_xgb": "2.5476391315460205",
+          "predict_xgb_sc": "2.437714099884033",
+          "predict_ebm": "1.8935218573951507"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_4way",
+      "examples": [
+        {
+          "input": "[0.37454, 0.950714, 0.731994, 0.598658, 0.156019, 0.155995, 0.058084, 0.866176, 0.601115, 0.708073, 0.020584, 0.96991, 0.832443, 0.212339, 0.181825, 0.183405, 0.304242, 0.524756, 0.431945, 0.291229]",
+          "output": "1.764552",
+          "metadata_fold": 1,
+          "metadata_task_type": "regression",
+          "predict_scots": "1.3390145339709036",
+          "predict_rofigs": "0.8003486558774948",
+          "predict_figs": "1.1530664939711088",
+          "predict_xgb": "1.5616861581802368",
+          "predict_xgb_sc": "1.964223861694336",
+          "predict_ebm": "1.7493023685457258"
+        },
+        {
+          "input": "[0.611853, 0.139494, 0.292145, 0.366362, 0.45607, 0.785176, 0.199674, 0.514234, 0.592415, 0.04645, 0.607545, 0.170524, 0.065052, 0.948886, 0.965632, 0.808397, 0.304614, 0.097672, 0.684233, 0.440152]",
+          "output": "3.271025",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "3.606225393853495",
+          "predict_rofigs": "3.606599644826922",
+          "predict_figs": "3.0315263844631666",
+          "predict_xgb": "3.051882028579712",
+          "predict_xgb_sc": "2.908104181289673",
+          "predict_ebm": "3.0053708693555707"
+        },
+        {
+          "input": "[0.122038, 0.495177, 0.034389, 0.90932, 0.25878, 0.662522, 0.311711, 0.520068, 0.54671, 0.184854, 0.969585, 0.775133, 0.939499, 0.894827, 0.5979, 0.921874, 0.088493, 0.195983, 0.045227, 0.32533]",
+          "output": "1.144134",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "1.1261396994076927",
+          "predict_rofigs": "0.8158671643497719",
+          "predict_figs": "1.121684234773371",
+          "predict_xgb": "1.2645034790039062",
+          "predict_xgb_sc": "1.2809172868728638",
+          "predict_ebm": "1.0163700166380971"
+        }
+      ]
+    },
+    {
+      "dataset": "diabetes",
+      "examples": [
+        {
+          "input": "[6.0, 148.0, 72.0, 35.0, 0.0, 33.6, 0.627, 50.0]",
+          "output": "1",
+          "metadata_fold": 2,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.8229215906520186",
+          "predict_rofigs": "0.7227428498878785",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        },
+        {
+          "input": "[1.0, 85.0, 66.0, 29.0, 0.0, 26.6, 0.351, 31.0]",
+          "output": "0",
+          "metadata_fold": 2,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.1618053412343502",
+          "predict_rofigs": "-0.01901430497575369",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        },
+        {
+          "input": "[8.0, 183.0, 64.0, 0.0, 0.0, 23.3, 0.672, 32.0]",
+          "output": "1",
+          "metadata_fold": 3,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.6846073127083182",
+          "predict_rofigs": "0.9526282909490411",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        }
+      ]
+    },
+    {
+      "dataset": "breast_w",
+      "examples": [
+        {
+          "input": "[5.0, 1.0, 1.0, 1.0, 2.0, 1.0, 3.0, 1.0, 1.0]",
+          "output": "0",
+          "metadata_fold": 3,
+          "metadata_task_type": "classification",
+          "predict_scots": "-0.01455858009102283",
+          "predict_rofigs": "-0.016686594073554963",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        },
+        {
+          "input": "[5.0, 4.0, 4.0, 5.0, 7.0, 10.0, 3.0, 2.0, 1.0]",
+          "output": "0",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.3068736657512718",
+          "predict_rofigs": "0.8792861987194973",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        },
+        {
+          "input": "[3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 3.0, 1.0, 1.0]",
+          "output": "0",
+          "metadata_fold": 3,
+          "metadata_task_type": "classification",
+          "predict_scots": "-0.01455858009102283",
+          "predict_rofigs": "-0.016686594073554963",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        }
+      ]
+    },
+    {
+      "dataset": "wine_quality",
+      "examples": [
+        {
+          "input": "[7.4, 0.7, 0.0, 1.9, 0.076, 11.0, 34.0, 0.9978, 3.51, 0.56, 9.4]",
+          "output": "5.0",
+          "metadata_fold": 2,
+          "metadata_task_type": "regression",
+          "predict_scots": "5.058315918753094",
+          "predict_rofigs": "5.009640165567306",
+          "predict_figs": "4.811753424375492",
+          "predict_xgb": "5.0340142250061035",
+          "predict_xgb_sc": "5.050332546234131",
+          "predict_ebm": "5.064228139089569"
+        },
+        {
+          "input": "[7.8, 0.88, 0.0, 2.6, 0.098, 25.0, 67.0, 0.9968, 3.2, 0.68, 9.8]",
+          "output": "5.0",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "5.477416426676583",
+          "predict_rofigs": "5.0619360332235255",
+          "predict_figs": "5.131193638210326",
+          "predict_xgb": "5.160858154296875",
+          "predict_xgb_sc": "4.616247653961182",
+          "predict_ebm": "4.7059130270872656"
+        },
+        {
+          "input": "[7.8, 0.76, 0.04, 2.3, 0.092, 15.0, 54.0, 0.997, 3.26, 0.65, 9.8]",
+          "output": "5.0",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "5.278972951860365",
+          "predict_rofigs": "5.0619360332235255",
+          "predict_figs": "5.131193638210326",
+          "predict_xgb": "5.41178560256958",
+          "predict_xgb_sc": "5.308499813079834",
+          "predict_ebm": "5.083010557193964"
+        }
+      ]
+    },
+    {
+      "dataset": "california_housing",
+      "examples": [
+        {
+          "input": "[8.3252, 41.0, 6.984127, 1.02381, 322.0, 2.555556, 37.88, -122.23]",
+          "output": "4.526",
+          "metadata_fold": 0,
+          "metadata_task_type": "regression",
+          "predict_scots": "4.613651241859295",
+          "predict_rofigs": "4.436033012451702",
+          "predict_figs": "4.7777501377889156",
+          "predict_xgb": "4.391175746917725",
+          "predict_xgb_sc": "4.313178539276123",
+          "predict_ebm": "3.8536444516948634"
+        },
+        {
+          "input": "[8.3014, 21.0, 6.238137, 0.97188, 2401.0, 2.109842, 37.86, -122.22]",
+          "output": "3.585",
+          "metadata_fold": 3,
+          "metadata_task_type": "regression",
+          "predict_scots": "4.764408490112417",
+          "predict_rofigs": "4.843951156021228",
+          "predict_figs": "4.260325867212828",
+          "predict_xgb": "4.548895359039307",
+          "predict_xgb_sc": "4.002984523773193",
+          "predict_ebm": "3.7725966155125237"
+        },
+        {
+          "input": "[7.2574, 52.0, 8.288136, 1.073446, 496.0, 2.80226, 37.85, -122.24]",
+          "output": "3.521",
+          "metadata_fold": 2,
+          "metadata_task_type": "regression",
+          "predict_scots": "3.2784314099807483",
+          "predict_rofigs": "2.9702626767666818",
+          "predict_figs": "3.7796126089567927",
+          "predict_xgb": "4.183741569519043",
+          "predict_xgb_sc": "4.286120891571045",
+          "predict_ebm": "3.9163914039380767"
+        }
+      ]
+    },
+    {
+      "dataset": "spambase",
+      "examples": [
+        {
+          "input": "[0.0, 0.64, 0.64, 0.0, 0.32, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.64, 0.0, 0.0, 0.0, 0.32, 0.0, 1.29, 1.93, 0.0, 0.96, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.778, 0.0, 0.0, 3.756, 61.0, 278.0]",
+          "output": "1",
+          "metadata_fold": 2,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.9625708522691543",
+          "predict_rofigs": "0.5960484168890359",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        },
+        {
+          "input": "[0.21, 0.28, 0.5, 0.0, 0.14, 0.28, 0.21, 0.07, 0.0, 0.94, 0.21, 0.79, 0.65, 0.21, 0.14, 0.14, 0.07, 0.28, 3.47, 0.0, 1.59, 0.0, 0.43, 0.43, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.132, 0.0, 0.372, 0.18, 0.048, 5.114, 101.0, 1028.0]",
+          "output": "1",
+          "metadata_fold": 2,
+          "metadata_task_type": "classification",
+          "predict_scots": "1.091433577731501",
+          "predict_rofigs": "1.2444494329113454",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        },
+        {
+          "input": "[0.06, 0.0, 0.71, 0.0, 1.23, 0.19, 0.19, 0.12, 0.64, 0.25, 0.38, 0.45, 0.12, 0.0, 1.75, 0.06, 0.06, 1.03, 1.36, 0.32, 0.51, 0.0, 1.16, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06, 0.0, 0.0, 0.12, 0.0, 0.06, 0.06, 0.0, 0.0, 0.01, 0.143, 0.0, 0.276, 0.184, 0.01, 9.821, 485.0, 2259.0]",
+          "output": "1",
+          "metadata_fold": 4,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.9489423434312434",
+          "predict_rofigs": "1.2500140767182093",
+          "predict_figs": "1.0",
+          "predict_xgb": "1.0",
+          "predict_xgb_sc": "1.0",
+          "predict_ebm": "1.0"
+        }
+      ]
+    },
+    {
+      "dataset": "adult",
+      "examples": [
+        {
+          "input": "[38.0, 89814.0, 9.0, 0.0, 0.0, 50.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]",
+          "output": "0",
+          "metadata_fold": 4,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.2804525445347962",
+          "predict_rofigs": "0.32872256365744074",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        },
+        {
+          "input": "[18.0, 103497.0, 10.0, 0.0, 0.0, 30.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]",
+          "output": "0",
+          "metadata_fold": 2,
+          "metadata_task_type": "classification",
+          "predict_scots": "-0.03665987734810172",
+          "predict_rofigs": "-0.050270803402410684",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        },
+        {
+          "input": "[29.0, 227026.0, 9.0, 0.0, 0.0, 40.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]",
+          "output": "0",
+          "metadata_fold": 4,
+          "metadata_task_type": "classification",
+          "predict_scots": "0.005982650330642499",
+          "predict_rofigs": "-0.054136830188701995",
+          "predict_figs": "0.0",
+          "predict_xgb": "0.0",
+          "predict_xgb_sc": "0.0",
+          "predict_ebm": "0.0"
+        }
+      ]
+    }
+  ]
+}

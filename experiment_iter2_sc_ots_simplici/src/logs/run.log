@@ -1,0 +1,657 @@
+[92m15:50:34[0m|INFO   |[96mmain[0m| ============================================================
+[92m15:50:34[0m|INFO   |[96mmain[0m| SC-OTS EXPERIMENT START
+[92m15:50:34[0m|INFO   |[96mmain[0m| ============================================================
+[92m15:50:34[0m|INFO   |[96mload_datasets[0m| Loading data from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   friedman1: 5000 samples, 10 features, task=regression
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   friedman3: 5000 samples, 4 features, task=regression
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   synth_3way: 5000 samples, 15 features, task=regression
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   synth_4way: 5000 samples, 20 features, task=regression
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   diabetes: 768 samples, 8 features, task=classification
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   breast_w: 699 samples, 9 features, task=classification
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   adult: 10000 samples, 96 features, task=classification
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   wine_quality: 6497 samples, 11 features, task=regression
+[92m15:50:35[0m|INFO   |[96mload_datasets[0m|   california_housing: 20640 samples, 8 features, task=regression
+[92m15:50:36[0m|INFO   |[96mload_datasets[0m|   spambase: 4601 samples, 57 features, task=classification
+[92m15:50:36[0m|INFO   |[96mload_datasets[0m| Loaded 10 datasets total
+[92m15:50:36[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m15:50:36[0m|INFO   |[96mmain[0m| Dataset: friedman1
+[92m15:50:36[0m|INFO   |[96mmain[0m| ==================================================
+[92m15:50:36[0m|INFO   |[96mrun_dataset[0m|   === friedman1 (5000×10, regression) ===
+[92m15:50:36[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for friedman1 --
+[92m15:50:36[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman1 fold 0
+[92m15:50:36[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.870, oblique=4
+[92m15:50:42[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7711, splits=20, time=5.8s
+[92m15:50:59[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7228
+[92m15:51:01[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9141
+[92m15:51:08[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9726
+[92m15:51:14[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9877479192713813
+[92m15:51:26[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9979878465178629
+[92m15:51:26[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=1.000
+[92m15:51:27[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.300
+[92m15:51:27[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for friedman1 --
+[92m15:51:27[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman1 fold 1
+[92m15:51:27[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.862, oblique=4
+[92m15:51:33[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7350, splits=20, time=5.6s
+[92m15:51:52[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6879
+[92m15:51:53[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9118
+[92m15:51:59[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9733
+[92m15:52:03[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9869323803927526
+[92m15:52:13[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.998212106151716
+[92m15:52:13[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=1.000
+[92m15:52:14[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.300
+[92m15:52:14[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for friedman1 --
+[92m15:52:14[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman1 fold 2
+[92m15:52:14[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.867, oblique=4
+[92m15:52:20[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7326, splits=20, time=5.4s
+[92m15:52:39[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7484
+[92m15:52:40[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9177
+[92m15:52:46[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9714
+[92m15:52:49[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9871159084069733
+[92m15:52:59[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9982993643998379
+[92m15:52:59[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=1.000
+[92m15:53:00[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.300
+[92m15:53:00[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for friedman1 --
+[92m15:53:00[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman1 fold 3
+[92m15:53:00[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.864, oblique=4
+[92m15:53:06[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7209, splits=20, time=5.5s
+[92m15:53:24[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7356
+[92m15:53:25[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9181
+[92m15:53:30[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9745
+[92m15:53:33[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9870990662627571
+[92m15:53:43[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9985346609898551
+[92m15:53:43[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=1.000
+[92m15:53:43[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.300
+[92m15:53:44[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for friedman1 --
+[92m15:53:44[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman1 fold 4
+[92m15:53:44[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.853, oblique=4
+[92m15:53:50[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7553, splits=20, time=6.7s
+[92m15:54:10[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7693
+[92m15:54:11[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9111
+[92m15:54:18[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9759
+[92m15:54:22[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9891119953161475
+[92m15:54:32[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.998488872782187
+[92m15:54:32[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=1.000
+[92m15:54:33[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.300
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|   === friedman1 Summary ===
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     scots: 0.7430 ± 0.0179
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.7328 ± 0.0272
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     figs: 0.9146 ± 0.0029
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.9735 ± 0.0016
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.9876 ± 0.0008
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.9983 ± 0.0002
+[92m15:54:33[0m|INFO   |[96mmain[0m|   friedman1: 237.2s (total: 238s)
+[92m15:54:33[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_friedman1] saved: 2.6 MB
+[92m15:54:33[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m15:54:33[0m|INFO   |[96mmain[0m| Dataset: friedman3
+[92m15:54:33[0m|INFO   |[96mmain[0m| ==================================================
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|   === friedman3 (5000×4, regression) ===
+[92m15:54:33[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for friedman3 --
+[92m15:54:33[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman3 fold 0
+[92m15:54:33[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.932, oblique=4
+[92m15:54:38[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7365, splits=20, time=5.1s
+[92m15:54:57[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7365
+[92m15:54:58[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8309
+[92m15:55:01[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8743
+[92m15:55:06[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.876213991872166
+[92m15:55:13[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8894802598105678
+[92m15:55:13[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=1.000, R=0.600
+[92m15:55:14[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=1.000
+[92m15:55:14[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for friedman3 --
+[92m15:55:14[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman3 fold 1
+[92m15:55:14[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.919, oblique=4
+[92m15:55:19[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7240, splits=20, time=4.9s
+[92m15:55:36[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7240
+[92m15:55:37[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8330
+[92m15:55:43[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8914
+[92m15:55:47[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8839986868205069
+[92m15:55:54[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8942957879292752
+[92m15:55:54[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=1.000, R=0.600
+[92m15:55:55[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=1.000
+[92m15:55:55[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for friedman3 --
+[92m15:55:55[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman3 fold 2
+[92m15:55:55[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.933, oblique=4
+[92m15:56:00[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6931, splits=20, time=5.0s
+[92m15:56:15[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6910
+[92m15:56:16[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8139
+[92m15:56:21[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8604
+[92m15:56:27[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8668876322521217
+[92m15:56:35[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8712549254175322
+[92m15:56:35[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=1.000, R=0.600
+[92m15:56:35[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=1.000
+[92m15:56:35[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for friedman3 --
+[92m15:56:35[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman3 fold 3
+[92m15:56:35[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.923, oblique=4
+[92m15:56:40[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7229, splits=20, time=4.8s
+[92m15:56:55[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7229
+[92m15:56:55[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8422
+[92m15:56:59[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8818
+[92m15:57:03[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8836390570380876
+[92m15:57:09[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8900234269166755
+[92m15:57:09[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=1.000, R=0.600
+[92m15:57:10[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=1.000
+[92m15:57:10[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for friedman3 --
+[92m15:57:10[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for friedman3 fold 4
+[92m15:57:10[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=1, dim3=0, thr=0.929, oblique=4
+[92m15:57:14[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6708, splits=20, time=4.4s
+[92m15:57:29[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6708
+[92m15:57:29[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8222
+[92m15:57:34[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8631
+[92m15:57:39[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8705349996990362
+[92m15:57:45[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8759460698681026
+[92m15:57:45[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=1.000, R=0.600
+[92m15:57:45[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=1.000
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|   === friedman3 Summary ===
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     scots: 0.7095 ± 0.0240
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.7090 ± 0.0243
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     figs: 0.8284 ± 0.0097
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.8742 ± 0.0115
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.8763 ± 0.0069
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.8842 ± 0.0089
+[92m15:57:45[0m|INFO   |[96mmain[0m|   friedman3: 192.1s (total: 431s)
+[92m15:57:45[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_friedman3] saved: 4.9 MB
+[92m15:57:45[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m15:57:45[0m|INFO   |[96mmain[0m| Dataset: synth_3way
+[92m15:57:45[0m|INFO   |[96mmain[0m| ==================================================
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|   === synth_3way (5000×15, regression) ===
+[92m15:57:45[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for synth_3way --
+[92m15:57:45[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_3way fold 0
+[92m15:57:46[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=2, dim3=0, thr=0.926, oblique=7
+[92m15:57:53[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6508, splits=20, time=7.7s
+[92m15:58:12[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6851
+[92m15:58:13[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8801
+[92m15:58:20[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9686
+[92m15:58:24[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9027515724910893
+[92m15:58:34[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9856512192541396
+[92m15:58:34[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.200, R=0.250
+[92m15:58:35[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.500
+[92m15:58:36[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for synth_3way --
+[92m15:58:36[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_3way fold 1
+[92m15:58:36[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=1, dim3=0, thr=0.933, oblique=6
+[92m15:58:44[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7272, splits=20, time=8.5s
+[92m15:59:02[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6737
+[92m15:59:03[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8779
+[92m15:59:09[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9698
+[92m15:59:13[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9421829653300287
+[92m15:59:25[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9851318983861602
+[92m15:59:25[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.600, R=0.750
+[92m15:59:26[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.556
+[92m15:59:26[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for synth_3way --
+[92m15:59:26[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_3way fold 2
+[92m15:59:27[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=1, dim3=0, thr=0.937, oblique=6
+[92m15:59:35[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6774, splits=20, time=8.1s
+[92m15:59:54[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7033
+[92m15:59:55[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8818
+[92m16:00:02[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9711
+[92m16:00:06[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9478832512332109
+[92m16:00:17[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9858249696828404
+[92m16:00:17[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.600, R=0.750
+[92m16:00:18[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.500
+[92m16:00:18[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for synth_3way --
+[92m16:00:18[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_3way fold 3
+[92m16:00:19[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=1, dim3=0, thr=0.940, oblique=6
+[92m16:00:27[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6690, splits=20, time=7.9s
+[92m16:00:44[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7173
+[92m16:00:46[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8644
+[92m16:00:55[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9702
+[92m16:00:59[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9521291974689505
+[92m16:01:11[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9858674693238971
+[92m16:01:11[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.600, R=0.750
+[92m16:01:12[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.500
+[92m16:01:12[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for synth_3way --
+[92m16:01:12[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_3way fold 4
+[92m16:01:13[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=1, dim3=0, thr=0.929, oblique=6
+[92m16:01:20[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7223, splits=20, time=7.8s
+[92m16:01:37[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6550
+[92m16:01:38[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8766
+[92m16:01:46[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9683
+[92m16:01:52[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9467818985966429
+[92m16:02:04[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.986246940913605
+[92m16:02:04[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.600, R=0.750
+[92m16:02:05[0m|INFO   |[96mevaluate_single_fold[0m|     Faithfulness: P=1.000, R=0.500
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|   === synth_3way Summary ===
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     scots: 0.6893 ± 0.0302
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.6869 ± 0.0218
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     figs: 0.8762 ± 0.0061
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.9696 ± 0.0011
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.9383 ± 0.0181
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.9857 ± 0.0004
+[92m16:02:05[0m|INFO   |[96mmain[0m|   synth_3way: 259.2s (total: 690s)
+[92m16:02:05[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_synth_3way] saved: 7.7 MB
+[92m16:02:05[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:02:05[0m|INFO   |[96mmain[0m| Dataset: synth_4way
+[92m16:02:05[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|   === synth_4way (5000×20, regression) ===
+[92m16:02:05[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for synth_4way --
+[92m16:02:05[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_4way fold 0
+[92m16:02:06[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=6, dim2=1, dim3=0, thr=0.980, oblique=7
+[92m16:02:15[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7865, splits=20, time=8.9s
+[92m16:02:33[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7449
+[92m16:02:34[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9163
+[92m16:02:41[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9750
+[92m16:02:47[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.949815700575094
+[92m16:02:58[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9786546285713392
+[92m16:02:58[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=0.286
+[92m16:02:58[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for synth_4way --
+[92m16:02:58[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_4way fold 1
+[92m16:02:59[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=6, dim2=1, dim3=0, thr=0.980, oblique=7
+[92m16:03:07[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7609, splits=20, time=8.5s
+[92m16:03:24[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7554
+[92m16:03:25[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9189
+[92m16:03:34[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9771
+[92m16:03:40[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9466227759177799
+[92m16:03:49[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9782373889359166
+[92m16:03:49[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=0.286
+[92m16:03:49[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for synth_4way --
+[92m16:03:49[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_4way fold 2
+[92m16:03:50[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=6, dim2=1, dim3=0, thr=0.979, oblique=7
+[92m16:03:58[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7846, splits=20, time=8.5s
+[92m16:04:16[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7747
+[92m16:04:17[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9242
+[92m16:04:26[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9779
+[92m16:04:32[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9527222706927034
+[92m16:04:44[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9778555725231416
+[92m16:04:44[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=0.286
+[92m16:04:44[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for synth_4way --
+[92m16:04:44[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_4way fold 3
+[92m16:04:45[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=6, dim2=2, dim3=0, thr=0.982, oblique=8
+[92m16:04:56[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7674, splits=20, time=11.0s
+[92m16:05:13[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7311
+[92m16:05:14[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9146
+[92m16:05:21[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9751
+[92m16:05:27[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9520305714780197
+[92m16:05:39[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9760238074342357
+[92m16:05:39[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.333, R=0.286
+[92m16:05:39[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for synth_4way --
+[92m16:05:39[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for synth_4way fold 4
+[92m16:05:39[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=7, dim2=2, dim3=0, thr=0.975, oblique=9
+[92m16:05:49[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7529, splits=20, time=9.9s
+[92m16:06:07[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7809
+[92m16:06:08[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9189
+[92m16:06:16[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9731
+[92m16:06:26[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9490696559163287
+[92m16:06:38[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9762232429097341
+[92m16:06:38[0m|INFO   |[96mevaluate_single_fold[0m|     Interaction recovery: P=0.429, R=0.429
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|   === synth_4way Summary ===
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     scots: 0.7705 ± 0.0132
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.7574 ± 0.0184
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     figs: 0.9186 ± 0.0032
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.9756 ± 0.0017
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.9501 ± 0.0022
+[92m16:06:38[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.9774 ± 0.0011
+[92m16:06:38[0m|INFO   |[96mmain[0m|   synth_4way: 272.5s (total: 963s)
+[92m16:06:39[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_synth_4way] saved: 10.7 MB
+[92m16:06:39[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:06:39[0m|INFO   |[96mmain[0m| Dataset: diabetes
+[92m16:06:39[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:06:39[0m|INFO   |[96mrun_dataset[0m|   === diabetes (768×8, classification) ===
+[92m16:06:39[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for diabetes --
+[92m16:06:39[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for diabetes fold 0
+[92m16:06:39[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=8, dim2=1, dim3=0, thr=0.937, oblique=9
+[92m16:06:44[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7532, splits=20, time=5.6s
+[92m16:06:53[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7468
+[92m16:06:54[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7532
+[92m16:06:58[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.7468
+[92m16:07:02[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.7272727272727273
+[92m16:07:04[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7727272727272727
+[92m16:07:05[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for diabetes --
+[92m16:07:05[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for diabetes fold 1
+[92m16:07:05[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=4, dim2=0, dim3=0, thr=0.929, oblique=4
+[92m16:07:07[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8052, splits=20, time=2.6s
+[92m16:07:17[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7857
+[92m16:07:17[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7597
+[92m16:07:23[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.7727
+[92m16:07:29[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.7792207792207793
+[92m16:07:32[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8051948051948052
+[92m16:07:32[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for diabetes --
+[92m16:07:32[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for diabetes fold 2
+[92m16:07:32[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=6, dim2=1, dim3=0, thr=0.930, oblique=7
+[92m16:07:36[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7792, splits=20, time=4.5s
+[92m16:07:46[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7338
+[92m16:07:47[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7143
+[92m16:07:50[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.7597
+[92m16:07:54[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.7207792207792207
+[92m16:07:58[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7857142857142857
+[92m16:07:58[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for diabetes --
+[92m16:07:58[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for diabetes fold 3
+[92m16:07:58[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.923, oblique=3
+[92m16:08:00[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.7451, splits=20, time=2.2s
+[92m16:08:09[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7516
+[92m16:08:09[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7451
+[92m16:08:13[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.7451
+[92m16:08:18[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.6666666666666666
+[92m16:08:23[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7124183006535948
+[92m16:08:23[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for diabetes --
+[92m16:08:23[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for diabetes fold 4
+[92m16:08:23[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.923, oblique=3
+[92m16:08:25[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6928, splits=20, time=2.3s
+[92m16:08:36[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.7386
+[92m16:08:36[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.6732
+[92m16:08:40[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.7124
+[92m16:08:42[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.7124183006535948
+[92m16:08:45[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7516339869281046
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|   === diabetes Summary ===
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     scots: 0.7551 ± 0.0376
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.7513 ± 0.0183
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     figs: 0.7291 ± 0.0320
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.7473 ± 0.0201
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.7213 ± 0.0359
+[92m16:08:45[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.7655 ± 0.0318
+[92m16:08:45[0m|INFO   |[96mmain[0m|   diabetes: 126.6s (total: 1091s)
+[92m16:08:46[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_diabetes] saved: 11.0 MB
+[92m16:08:46[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:08:46[0m|INFO   |[96mmain[0m| Dataset: breast_w
+[92m16:08:46[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:08:46[0m|INFO   |[96mrun_dataset[0m|   === breast_w (699×9, classification) ===
+[92m16:08:46[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for breast_w --
+[92m16:08:46[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for breast_w fold 0
+[92m16:08:46[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.830, oblique=3
+[92m16:08:48[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.9643, splits=20, time=1.5s
+[92m16:08:52[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9429
+[92m16:08:52[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9429
+[92m16:08:58[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9429
+[92m16:09:00[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9571428571428572
+[92m16:09:01[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9714285714285714
+[92m16:09:01[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for breast_w --
+[92m16:09:01[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for breast_w fold 1
+[92m16:09:01[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=8, dim2=3, dim3=0, thr=0.867, oblique=11
+[92m16:09:06[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.9500, splits=20, time=5.1s
+[92m16:09:12[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9571
+[92m16:09:12[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9571
+[92m16:09:12[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9500
+[92m16:09:16[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9428571428571428
+[92m16:09:17[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9571428571428572
+[92m16:09:17[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for breast_w --
+[92m16:09:17[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for breast_w fold 2
+[92m16:09:17[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.829, oblique=3
+[92m16:09:19[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.9143, splits=20, time=1.7s
+[92m16:09:24[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9643
+[92m16:09:24[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9786
+[92m16:09:26[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9786
+[92m16:09:31[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9642857142857143
+[92m16:09:32[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9785714285714285
+[92m16:09:32[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for breast_w --
+[92m16:09:32[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for breast_w fold 3
+[92m16:09:32[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=4, dim2=0, dim3=0, thr=0.836, oblique=4
+[92m16:09:34[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.9357, splits=20, time=1.8s
+[92m16:09:39[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9571
+[92m16:09:39[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9429
+[92m16:09:49[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9643
+[92m16:09:57[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9571428571428572
+[92m16:09:58[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9642857142857143
+[92m16:09:58[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for breast_w --
+[92m16:09:58[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for breast_w fold 4
+[92m16:09:58[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=11, dim2=5, dim3=0, thr=0.873, oblique=16
+[92m16:10:07[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.9712, splits=20, time=8.3s
+[92m16:10:14[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9568
+[92m16:10:15[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9353
+[92m16:10:17[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9712
+[92m16:10:20[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9712230215827338
+[92m16:10:22[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9568345323741008
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|   === breast_w Summary ===
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     scots: 0.9471 ± 0.0205
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.9557 ± 0.0070
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     figs: 0.9513 ± 0.0153
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.9614 ± 0.0132
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.9585 ± 0.0094
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.9657 ± 0.0084
+[92m16:10:22[0m|INFO   |[96mmain[0m|   breast_w: 95.7s (total: 1187s)
+[92m16:10:22[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_breast_w] saved: 11.3 MB
+[92m16:10:22[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:10:22[0m|INFO   |[96mmain[0m| Dataset: wine_quality
+[92m16:10:22[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|   === wine_quality (6497×11, regression) ===
+[92m16:10:22[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for wine_quality --
+[92m16:10:22[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for wine_quality fold 0
+[92m16:10:23[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.938, oblique=3
+[92m16:10:27[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.2570, splits=20, time=4.9s
+[92m16:10:47[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.2297
+[92m16:10:48[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.3027
+[92m16:11:06[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.4593
+[92m16:11:12[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.3730889549985428
+[92m16:11:26[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.3640447077017277
+[92m16:11:26[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for wine_quality --
+[92m16:11:26[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for wine_quality fold 1
+[92m16:11:26[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.937, oblique=3
+[92m16:11:33[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.2585, splits=20, time=7.1s
+[92m16:11:58[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.2232
+[92m16:11:59[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.3203
+[92m16:12:09[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.4581
+[92m16:12:17[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.352728229823033
+[92m16:12:30[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.3798172036284734
+[92m16:12:30[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for wine_quality --
+[92m16:12:30[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for wine_quality fold 2
+[92m16:12:30[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=4, dim2=0, dim3=0, thr=0.943, oblique=4
+[92m16:12:38[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.2688, splits=20, time=7.7s
+[92m16:13:02[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.2836
+[92m16:13:03[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.3125
+[92m16:13:10[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.4816
+[92m16:13:19[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.3658497472498655
+[92m16:13:32[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.38406098880572836
+[92m16:13:32[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for wine_quality --
+[92m16:13:32[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for wine_quality fold 3
+[92m16:13:32[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=3, dim2=0, dim3=0, thr=0.948, oblique=3
+[92m16:13:37[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.2849, splits=20, time=5.4s
+[92m16:14:01[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.2369
+[92m16:14:02[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.3340
+[92m16:14:18[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.4820
+[92m16:14:28[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.359708492540293
+[92m16:14:45[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.3858752736012455
+[92m16:14:45[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for wine_quality --
+[92m16:14:45[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for wine_quality fold 4
+[92m16:14:46[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=4, dim2=0, dim3=0, thr=0.946, oblique=4
+[92m16:14:56[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.3060, splits=20, time=10.5s
+[92m16:15:20[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.2902
+[92m16:15:21[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.3711
+[92m16:15:29[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.4794
+[92m16:15:37[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.36707867259736493
+[92m16:15:52[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.4115010771569261
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|   === wine_quality Summary ===
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     scots: 0.2751 ± 0.0184
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.2527 ± 0.0283
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     figs: 0.3281 ± 0.0238
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.4721 ± 0.0110
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.3637 ± 0.0069
+[92m16:15:52[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.3851 ± 0.0153
+[92m16:15:52[0m|INFO   |[96mmain[0m|   wine_quality: 329.7s (total: 1518s)
+[92m16:15:53[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_wine_quality] saved: 14.4 MB
+[92m16:15:53[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:15:53[0m|INFO   |[96mmain[0m| Dataset: california_housing
+[92m16:15:53[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:15:53[0m|INFO   |[96mrun_dataset[0m|   === california_housing (20640×8, regression) ===
+[92m16:15:53[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for california_housing --
+[92m16:15:54[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for california_housing fold 0
+[92m16:15:54[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=7, dim2=1, dim3=0, thr=0.950, oblique=8
+[92m16:16:19[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6161, splits=20, time=25.7s
+[92m16:16:50[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.5470
+[92m16:16:53[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7091
+[92m16:17:00[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8312
+[92m16:17:09[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8146004078274284
+[92m16:17:25[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7973121330553444
+[92m16:17:25[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for california_housing --
+[92m16:17:25[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for california_housing fold 1
+[92m16:17:25[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=5, dim2=1, dim3=0, thr=0.936, oblique=6
+[92m16:17:39[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6271, splits=20, time=14.0s
+[92m16:18:10[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.5371
+[92m16:18:12[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7209
+[92m16:18:12[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8352
+[92m16:18:12[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8249674251852999
+[92m16:18:24[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8085305269357168
+[92m16:18:24[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for california_housing --
+[92m16:18:24[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for california_housing fold 2
+[92m16:18:24[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=12, dim2=7, dim3=1, thr=0.950, oblique=20
+[92m16:19:00[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.5817, splits=20, time=35.5s
+[92m16:19:24[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.5507
+[92m16:19:27[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7248
+[92m16:19:27[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8245
+[92m16:19:27[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8206938546238504
+[92m16:19:38[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7961350359426761
+[92m16:19:38[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for california_housing --
+[92m16:19:38[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for california_housing fold 3
+[92m16:19:38[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=8, dim2=2, dim3=0, thr=0.950, oblique=10
+[92m16:19:58[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6494, splits=20, time=20.1s
+[92m16:20:26[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.6003
+[92m16:20:29[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.7412
+[92m16:20:30[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8491
+[92m16:20:30[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8411577236686891
+[92m16:20:41[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8240362054168406
+[92m16:20:41[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for california_housing --
+[92m16:20:41[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for california_housing fold 4
+[92m16:20:42[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=7, dim2=2, dim3=0, thr=0.932, oblique=9
+[92m16:20:58[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.6152, splits=20, time=16.3s
+[92m16:21:25[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.5643
+[92m16:21:27[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.6996
+[92m16:21:31[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8335
+[92m16:21:31[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8151213914182289
+[92m16:21:42[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.7888337705694309
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|   === california_housing Summary ===
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     scots: 0.6179 ± 0.0219
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.5599 ± 0.0220
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     figs: 0.7191 ± 0.0142
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.8347 ± 0.0080
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.8233 ± 0.0097
+[92m16:21:42[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.8030 ± 0.0123
+[92m16:21:42[0m|INFO   |[96mmain[0m|   california_housing: 348.3s (total: 1867s)
+[92m16:21:43[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_california_housing] saved: 24.3 MB
+[92m16:21:43[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:21:43[0m|INFO   |[96mmain[0m| Dataset: spambase
+[92m16:21:43[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:21:43[0m|INFO   |[96mrun_dataset[0m|   === spambase (4601×57, classification) ===
+[92m16:21:43[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for spambase --
+[92m16:21:43[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for spambase fold 0
+[92m16:21:44[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=320, dim2=1823, dim3=6511, thr=0.950, oblique=8654
+[92m16:22:16[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8534, splits=20, time=31.1s
+[92m16:22:30[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8773
+[92m16:22:30[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8990
+[92m16:22:31[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9425
+[92m16:22:32[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9500542888165038
+[92m16:22:45[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9457111834961998
+[92m16:22:45[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for spambase --
+[92m16:22:45[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for spambase fold 1
+[92m16:22:46[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=20, dim2=3, dim3=0, thr=0.863, oblique=23
+[92m16:23:08[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8880, splits=20, time=22.2s
+[92m16:23:23[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9120
+[92m16:23:23[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9141
+[92m16:23:24[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9576
+[92m16:23:24[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9489130434782609
+[92m16:23:38[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9565217391304348
+[92m16:23:38[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for spambase --
+[92m16:23:38[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for spambase fold 2
+[92m16:23:39[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=19, dim2=4, dim3=0, thr=0.861, oblique=23
+[92m16:23:57[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8804, splits=20, time=18.5s
+[92m16:24:13[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8957
+[92m16:24:14[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9337
+[92m16:24:15[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9543
+[92m16:24:16[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9467391304347826
+[92m16:24:29[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9619565217391305
+[92m16:24:29[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for spambase --
+[92m16:24:29[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for spambase fold 3
+[92m16:24:30[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=266, dim2=1244, dim3=3669, thr=0.950, oblique=5179
+[92m16:24:59[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8880, splits=20, time=28.9s
+[92m16:25:13[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.9054
+[92m16:25:14[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9348
+[92m16:25:14[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9533
+[92m16:25:15[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.95
+[92m16:25:29[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9543478260869566
+[92m16:25:29[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for spambase --
+[92m16:25:29[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for spambase fold 4
+[92m16:25:30[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=294, dim2=1471, dim3=4541, thr=0.950, oblique=6306
+[92m16:26:00[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8717, splits=20, time=30.0s
+[92m16:26:15[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8859
+[92m16:26:16[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.9109
+[92m16:26:16[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.9489
+[92m16:26:17[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.9423913043478261
+[92m16:26:31[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.9423913043478261
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|   === spambase Summary ===
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     scots: 0.8763 ± 0.0129
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.8952 ± 0.0126
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     figs: 0.9185 ± 0.0138
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.9513 ± 0.0052
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.9476 ± 0.0029
+[92m16:26:31[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.9522 ± 0.0072
+[92m16:26:31[0m|INFO   |[96mmain[0m|   spambase: 287.6s (total: 2157s)
+[92m16:26:33[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_spambase] saved: 27.3 MB
+[92m16:26:33[0m|INFO   |[96mmain[0m| 
+==================================================
+[92m16:26:33[0m|INFO   |[96mmain[0m| Dataset: adult
+[92m16:26:33[0m|INFO   |[96mmain[0m| ==================================================
+[92m16:26:33[0m|INFO   |[96mrun_dataset[0m|   === adult (10000×96, classification) ===
+[92m16:26:33[0m|INFO   |[96mrun_dataset[0m|   -- Fold 0 for adult --
+[92m16:26:33[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for adult fold 0
+[92m16:26:36[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=34, dim2=30, dim3=10, thr=0.960, oblique=74
+[92m16:27:22[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8350, splits=20, time=45.5s
+[92m16:27:35[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8420
+[92m16:27:36[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8485
+[92m16:27:37[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8590
+[92m16:27:37[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.871
+[92m16:27:53[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8735
+[92m16:27:53[0m|INFO   |[96mrun_dataset[0m|   -- Fold 1 for adult --
+[92m16:27:53[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for adult fold 1
+[92m16:27:56[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=35, dim2=24, dim3=6, thr=0.962, oblique=65
+[92m16:28:39[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8570, splits=20, time=42.7s
+[92m16:28:52[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8570
+[92m16:28:53[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8645
+[92m16:28:53[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8735
+[92m16:28:53[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.883
+[92m16:29:13[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.877
+[92m16:29:13[0m|INFO   |[96mrun_dataset[0m|   -- Fold 2 for adult --
+[92m16:29:13[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for adult fold 2
+[92m16:29:17[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=32, dim2=32, dim3=14, thr=0.955, oblique=78
+[92m16:29:58[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8485, splits=20, time=40.9s
+[92m16:30:12[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8615
+[92m16:30:13[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8685
+[92m16:30:13[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8815
+[92m16:30:13[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.883
+[92m16:30:33[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.882
+[92m16:30:33[0m|INFO   |[96mrun_dataset[0m|   -- Fold 3 for adult --
+[92m16:30:33[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for adult fold 3
+[92m16:30:37[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=32, dim2=33, dim3=17, thr=0.958, oblique=82
+[92m16:31:17[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8490, splits=20, time=40.4s
+[92m16:31:29[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8610
+[92m16:31:30[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8630
+[92m16:31:30[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8745
+[92m16:31:31[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.8765
+[92m16:31:53[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.8805
+[92m16:31:53[0m|INFO   |[96mrun_dataset[0m|   -- Fold 4 for adult --
+[92m16:31:53[0m|INFO   |[96mevaluate_single_fold[0m|     Building complex for adult fold 4
+[92m16:31:56[0m|INFO   |[96mevaluate_single_fold[0m|     Simplices: dim1=33, dim2=34, dim3=21, thr=0.959, oblique=88
+[92m16:32:32[0m|INFO   |[96mevaluate_single_fold[0m|     SC-OTS: 0.8310, splits=20, time=35.4s
+[92m16:32:45[0m|INFO   |[96mevaluate_single_fold[0m|     RO-FIGS: 0.8465
+[92m16:32:47[0m|INFO   |[96mevaluate_single_fold[0m|     FIGS: 0.8510
+[92m16:32:47[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost: 0.8665
+[92m16:32:47[0m|INFO   |[96mevaluate_single_fold[0m|     XGBoost+SC: 0.866
+[92m16:33:07[0m|INFO   |[96mevaluate_single_fold[0m|     EBM: 0.867
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|   === adult Summary ===
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     scots: 0.8441 ± 0.0096
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     rofigs: 0.8536 ± 0.0079
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     figs: 0.8591 ± 0.0079
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     xgb: 0.8710 ± 0.0077
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     xgb_sc: 0.8759 ± 0.0067
+[92m16:33:07[0m|INFO   |[96mrun_dataset[0m|     ebm: 0.8760 ± 0.0054
+[92m16:33:07[0m|INFO   |[96mmain[0m|   adult: 393.8s (total: 2552s)
+[92m16:33:09[0m|INFO   |[96m_save_checkpoint[0m|   Checkpoint [after_adult] saved: 35.6 MB
+[92m16:33:09[0m|INFO   |[96mmain[0m| 
+| Dataset | Task | SC-OTS | RO-FIGS | FIGS | XGB | XGB+SC | EBM |
+|---------|------|--------|---------|------|-----|--------|-----|
+| friedman1 | regr | 0.743 | 0.733 | 0.915 | 0.974 | 0.988 | 0.998 |
+| friedman3 | regr | 0.709 | 0.709 | 0.828 | 0.874 | 0.876 | 0.884 |
+| synth_3way | regr | 0.689 | 0.687 | 0.876 | 0.970 | 0.938 | 0.986 |
+| synth_4way | regr | 0.770 | 0.757 | 0.919 | 0.976 | 0.950 | 0.977 |
+| diabetes | clas | 0.755 | 0.751 | 0.729 | 0.747 | 0.721 | 0.766 |
+| breast_w | clas | 0.947 | 0.956 | 0.951 | 0.961 | 0.959 | 0.966 |
+| wine_quality | regr | 0.275 | 0.253 | 0.328 | 0.472 | 0.364 | 0.385 |
+| california_h | regr | 0.618 | 0.560 | 0.719 | 0.835 | 0.823 | 0.803 |
+| spambase | clas | 0.876 | 0.895 | 0.919 | 0.951 | 0.948 | 0.952 |
+| adult | clas | 0.844 | 0.854 | 0.859 | 0.871 | 0.876 | 0.876 |
+[92m16:33:11[0m|INFO   |[96mmain[0m| Output saved to /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/method_out.json
+[92m16:33:11[0m|INFO   |[96mmain[0m| File size: 35.6 MB
+[92m16:33:11[0m|INFO   |[96mmain[0m| Total runtime: 2556s (42.6min)
+[92m16:33:11[0m|INFO   |[96mmain[0m| SC-OTS EXPERIMENT COMPLETE
