@@ -1,0 +1,175 @@
+{
+  "title": "PH Foundations",
+  "summary": "Comprehensive research on mathematical foundations for persistent-homology-based feature interaction discovery in tabular data. Covers five pillars: (1) feature dissimilarity metrics for Vietoris-Rips filtration—distance correlation, HSIC, and interaction information—with analysis of triangle inequality properties; (2) persistence threshold selection via largest-gap heuristic and persistence landscape statistical tests; (3) Betti number interpretation for feature interactions (β₀=independent groups, β₁=pairwise-only circular chains without synergy, β₂=interaction order ceilings); (4) opinion dynamics papers demonstrating qualitative differences between simplicial and pairwise models (discontinuous phase transitions, bistability, faster consensus); (5) prior work confirming novelty of using TDA to constrain tree model architecture rather than for post-hoc feature engineering.",
+  "answer": "The mathematical and conceptual foundations for using persistent homology to discover feature interactions in tabular data rest on five interconnected pillars.\n\n**PILLAR 1: Feature Dissimilarity Metrics.** The primary candidate for constructing a Vietoris-Rips (VR) filtration over features is distance correlation (dCor), introduced by Székely, Rizzo, and Bakirov (2007) [1]. Distance correlation satisfies 0 ≤ dCor(X,Y) ≤ 1, and critically, dCor(X,Y) = 0 if and only if X and Y are statistically independent—a property that Pearson correlation lacks [1]. The naive computation is O(n²) for n samples, but Huo and Székely (2016) developed an O(n log n) algorithm using AVL trees [2]. However, the raw dissimilarity d = 1 − dCor does NOT provably satisfy the triangle inequality. This is analogous to how d_a = 1 − |ρ| fails the triangle inequality for Pearson correlation—as demonstrated by explicit counterexamples in the gene expression clustering literature [3, 4]. The repair strategy follows the pattern established by van Dongen and Enright (2012) [5], who proved that d_r = √(1 − |ρ|) and d_s = √(1 − ρ²) both satisfy the triangle inequality for Pearson, Spearman, and cosine similarity. The mathematical basis is that the square root function is concave, amenable, and subadditive—properties that are sufficient for metric preservation [6]. For distance correlation, √(1 − dCor) is the recommended transform: since dCor ∈ [0,1] and dCor is non-negative, the concavity argument applies by analogy to the angular distance transforms used in quantitative finance [7]. However, a formal proof that √(1 − dCor) satisfies the triangle inequality for arbitrary joint distributions has not been published—this requires either a proof exploiting the inner-product structure of distance covariance or empirical verification on target datasets [3, 4]. This is a critical open question.\n\nThe alternative candidate is HSIC (Hilbert-Schmidt Independence Criterion), introduced by Gretton et al. (2005) [8]. HSIC is defined as the squared Hilbert-Schmidt norm of the cross-covariance operator between reproducing kernel Hilbert spaces: HSIC(Z, F, G) = (m−1)⁻² tr(KHLH), computable in O(m²) time [8]. When normalized via Centered Kernel Alignment (CKA = ⟨K_x, K_y⟩_F / (‖K_x‖_F · ‖K_y‖_F)), it yields values in [0,1] with CKA = 0 iff independence (with characteristic kernels such as Gaussian RBF) [9]. HSIC's disadvantage is sensitivity to kernel bandwidth selection, unlike dCor which is kernel-free. Neither 1 − CKA nor √(1 − CKA) has published triangle inequality guarantees.\n\nInteraction information [10, 11] directly measures k-way synergy/redundancy: I(X;Y;Z) = I(X;Y) − I(X;Y|Z), which can be negative (indicating synergy) or positive (indicating redundancy). While this directly captures higher-order interactions, it scales combinatorially with the number of features (exponential in interaction order k), making it computationally intractable as a primary discovery tool for more than ~20 features. The VR approach (pairwise dCor → topological lift) is preferred for computational tractability, with interaction information serving as a validation oracle for discovered interactions.\n\nThe Vietoris-Rips complex is formally defined on metric spaces [12]: a simplex is included for every finite set of points with diameter ≤ δ. While the VR filtration can be computed on any dissimilarity (semimetric), the stability theorem for persistent homology—which guarantees that small input perturbations cause small changes in persistence diagrams measured by bottleneck distance—requires a true metric satisfying the triangle inequality [13, 14]. Without the triangle inequality, persistence diagrams are still computable but lack formal robustness guarantees.\n\n**PILLAR 2: Persistence Threshold Selection.** Two complementary approaches exist. The largest-gap heuristic examines persistence values (death − birth) in the persistence diagram; features above the largest gap in sorted persistence values are deemed 'signal' and those below are 'noise' [15]. This is fast but ad hoc. The more principled approach uses persistence landscapes (Bubenik 2015) [16], which convert persistence diagrams into functional summaries in a separable Banach space. These obey a strong law of large numbers and central limit theorem, enabling rigorous statistical tests—particularly permutation tests comparing persistence landscapes of the observed data against null distributions [16]. The recommended two-stage approach: (1) use persistence landscape permutation tests at significance level α = 0.05 to identify statistically significant topological features, and (2) fall back to the largest-gap heuristic when the computational cost of permutation testing is prohibitive. The stability theorem (Edelsbrunner & Morozov 2012) guarantees that W_∞(Dgm(f), Dgm(g)) ≤ ‖f − g‖_∞, ensuring that the persistence diagram is robust to bounded perturbations of the input function [13].\n\n**PILLAR 3: Betti Number Interpretation.** Betti numbers provide a novel interpretability layer for feature interactions [17, 18]. β₀ counts connected components—in a feature interaction complex, β₀ = k means there are k independent groups of interacting features that have no cross-group associations, revealing modular structure. β₁ counts 1-cycles (loops)—a nonzero β₁ signals that some features form pairwise interaction chains (A↔B, B↔C, C↔A) WITHOUT a simultaneous 3-way interaction (the triangle is hollow, not filled as a 2-simplex). This is the critical interpretive insight: β₁ > 0 distinguishes circular pairwise dependency chains from genuine higher-order synergistic interactions. A filled triangle (2-simplex) means A, B, C truly interact jointly; a hollow triangle (contributing to β₁) means they interact only in pairs. β₂ counts 2-cycles (voids)—a hollow tetrahedron where all 3-way interactions exist but no 4-way interaction does. This is rare but signals an interaction order ceiling. No existing tree interpretability method (SHAP, feature importance, partial dependence) provides this topological structural information.\n\n**PILLAR 4: Opinion Dynamics Motivation.** The foundational paper by Iacopini et al. (2019) [19] demonstrates that simplicial contagion on simplicial complexes—where 2-simplices (triangles) enable group infection with a separate rate β_Δ—produces a DISCONTINUOUS (first-order) phase transition, while pairwise-only contagion produces a CONTINUOUS (second-order) transition. A bistable region emerges where healthy and endemic states coexist, which is impossible in pairwise models [19]. This is a qualitative, not merely quantitative, difference. The analogy to feature interactions: if features A, B, C have a genuine 3-way interaction (2-simplex), combining them produces qualitatively different effects than combining A-B, B-C, A-C separately.\n\nBattiston et al. (2020) [20] provide a comprehensive review (109 pages, Physics Reports) documenting that pairwise networks are fundamentally insufficient for modeling group phenomena across diffusion, spreading, synchronization, and games. Zhang, Lucas, and Battiston (2023) [21] demonstrate that even the CHOICE between hypergraphs and simplicial complexes matters: higher-order interactions typically ENHANCE synchronization in hypergraphs but have the OPPOSITE effect in simplicial complexes. Simplicial complexes are the appropriate choice for feature interactions because of their downward closure property: if {A,B,C} is a simplex (3-way interaction), then {A,B}, {A,C}, {B,C} must also be simplices (all pairwise sub-interactions exist)—a natural requirement for feature associations.\n\nHorstmeyer and Kuehn (2020) [22] show that peer pressure from 2-simplices in an adaptive voter model accelerates consensus below the fragmentation transition and speeds up fragmentation above it, with substantial quantitative effects while preserving the qualitative fragmentation transition structure. Critically, regarding reducibility, recent work on social impact models on hypergraphs [23] shows that higher-order dynamics CAN sometimes be exactly reduced to pairwise dynamics on a weighted projected network—but this equivalence breaks down in the nonlinear case (q ≠ 1), 'once again highlighting the central role of nonlinearity' [23]. In the feature interaction context, nonlinear synergistic effects—where the combined effect of 3 features ≠ sum of pairwise effects—are precisely the irreducible cases where simplicial modeling adds value.\n\n**PILLAR 5: Novelty Confirmation.** Prior work at the TDA-ML intersection falls into two categories: (a) using persistent homology to GENERATE topological features (Betti curves, persistence images, persistence landscapes) that are fed into standard classifiers [24, 25], and (b) post-hoc extraction of feature interaction graphs from trained forests, as in the 2025 BioData Mining paper constructing feature graphs from parent-child node splits [26]. The iterative Random Forest (iRF) algorithm of Basu et al. (2018) discovers high-order interactions post-hoc via iterative reweighting of decision trees [27]. SC-OTS inverts this paradigm: it discovers interaction structure FIRST via persistent homology and uses it to CONSTRAIN tree construction—a fundamentally different approach with no direct precedent in the literature.",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://en.wikipedia.org/wiki/Distance_correlation",
+      "title": "Distance correlation - Wikipedia",
+      "summary": "Definition of distance correlation, properties including dCor=0 iff independence, range [0,1], and computational aspects."
+    },
+    {
+      "index": 2,
+      "url": "https://arxiv.org/abs/1410.1503",
+      "title": "Fast Computing for Distance Covariance (Huo & Székely 2016)",
+      "summary": "O(n log n) algorithm for distance covariance using AVL trees, making distance correlation practical for large datasets."
+    },
+    {
+      "index": 3,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9906874/",
+      "title": "On triangle inequalities of correlation-based distances for gene expression profiles (BMC Bioinformatics 2023)",
+      "summary": "Proves d_r = √(1−|ρ|) satisfies triangle inequality for Pearson, Spearman, and cosine similarity. Shows 1−|ρ| fails triangle inequality with explicit counterexamples."
+    },
+    {
+      "index": 4,
+      "url": "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05161-y",
+      "title": "On triangle inequalities of correlation-based distances (Full Text)",
+      "summary": "Proposes and proves d_r = √(1−|ρ|) as a metric alternative to absolute correlation distance, with clustering experiments."
+    },
+    {
+      "index": 5,
+      "url": "https://arxiv.org/abs/1208.3145",
+      "title": "Metric distances derived from cosine similarity and Pearson and Spearman correlations (van Dongen & Enright 2012)",
+      "summary": "Foundational work proving d_o = √(0.5(1−ρ)) and d_s = √(1−ρ²) are valid metrics for Pearson/Spearman correlations."
+    },
+    {
+      "index": 6,
+      "url": "https://www.researchgate.net/publication/255578827_Introduction_to_Metric-Preserving_Functions",
+      "title": "Introduction to Metric-Preserving Functions (Corazza)",
+      "summary": "Theory of metric-preserving functions: concave, amenable, subadditive functions preserve metric properties under composition."
+    },
+    {
+      "index": 7,
+      "url": "https://random-docs.readthedocs.io/en/latest/codependence/correlation_based_metrics.html",
+      "title": "Correlation-Based Metrics - mlfinlab documentation",
+      "summary": "Angular distance formulas converting correlations to proper metrics: standard, absolute, and squared angular distances."
+    },
+    {
+      "index": 8,
+      "url": "http://www.gatsby.ucl.ac.uk/~gretton/papers/GreBouSmoSch05.pdf",
+      "title": "Measuring Statistical Dependence with Hilbert-Schmidt Norms (Gretton et al. 2005)",
+      "summary": "Foundational HSIC paper: definition via cross-covariance operator, O(m²) computation, HSIC=0 iff independence with universal kernels."
+    },
+    {
+      "index": 9,
+      "url": "https://jejjohnson.github.io/research_journal/appendix/similarity/hsic/",
+      "title": "HSIC - Research Journal (Johnson)",
+      "summary": "Clear exposition of HSIC definition, kernel matrix formulation, CKA normalization to [0,1], and independence testing."
+    },
+    {
+      "index": 10,
+      "url": "https://en.wikipedia.org/wiki/Interaction_information",
+      "title": "Interaction information - Wikipedia",
+      "summary": "Definition of interaction information as generalization of mutual information; can be negative (synergy) or positive (redundancy); connection to algebraic topology."
+    },
+    {
+      "index": 11,
+      "url": "https://www.semanticscholar.org/paper/Multivariate-information-transmission-McGill/409ced53c7d854306dbadf4901fece1307a02637",
+      "title": "Multivariate information transmission (McGill 1954)",
+      "summary": "Original introduction of multivariate mutual information / interaction information for contingency tables."
+    },
+    {
+      "index": 12,
+      "url": "https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex",
+      "title": "Vietoris-Rips complex - Wikipedia",
+      "summary": "Formal definition of VR complex from metric space M and distance δ; simplex for every finite set with diameter ≤ δ."
+    },
+    {
+      "index": 13,
+      "url": "https://pub.ista.ac.at/~edels/Papers/2012-11-PHTheoryPractice.pdf",
+      "title": "Persistent Homology: Theory and Practice (Edelsbrunner & Morozov 2012)",
+      "summary": "Stability theorem: W_∞(Dgm(f), Dgm(g)) ≤ ‖f−g‖_∞. Wasserstein and bottleneck distances between persistence diagrams."
+    },
+    {
+      "index": 14,
+      "url": "https://arxiv.org/abs/2411.01857",
+      "title": "On ℓp-Vietoris-Rips complexes (2024)",
+      "summary": "Proves stability theorem for generalized VR complexes; confirms triangle inequality is essential for stability guarantees."
+    },
+    {
+      "index": 15,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6979512/",
+      "title": "A roadmap for the computation of persistent homology (Otter et al. 2017)",
+      "summary": "Comprehensive guide to PH computation: filtration construction, barcode interpretation, computational benchmarks, statistical challenges."
+    },
+    {
+      "index": 16,
+      "url": "https://www.jmlr.org/papers/volume16/bubenik15a/bubenik15a.pdf",
+      "title": "Statistical Topological Data Analysis using Persistence Landscapes (Bubenik 2015, JMLR)",
+      "summary": "Persistence landscapes as Banach-space-valued random variables; strong law of large numbers, CLT, permutation tests for statistical significance."
+    },
+    {
+      "index": 17,
+      "url": "https://en.wikipedia.org/wiki/Betti_number",
+      "title": "Betti number - Wikipedia",
+      "summary": "Formal definition: β₀ = connected components, β₁ = 1-dimensional holes/loops, β₂ = 2-dimensional voids/cavities."
+    },
+    {
+      "index": 18,
+      "url": "https://www.numberanalytics.com/blog/mastering-betti-numbers-topological-data-analysis",
+      "title": "Mastering Betti Numbers in TDA - Number Analytics",
+      "summary": "Practical interpretation of Betti numbers for data analysis: clustering insights, anomaly detection, network structure."
+    },
+    {
+      "index": 19,
+      "url": "https://www.nature.com/articles/s41467-019-10431-6",
+      "title": "Simplicial models of social contagion (Iacopini et al. 2019, Nature Communications)",
+      "summary": "SIS contagion on simplicial complexes: 2-simplices cause discontinuous phase transitions and bistability, impossible in pairwise models."
+    },
+    {
+      "index": 20,
+      "url": "https://arxiv.org/abs/2006.01764",
+      "title": "Networks beyond pairwise interactions: structure and dynamics (Battiston et al. 2020, Physics Reports)",
+      "summary": "Comprehensive 109-page review of higher-order networks: structure, dynamics, emergent phenomena in diffusion, spreading, synchronization, games."
+    },
+    {
+      "index": 21,
+      "url": "https://www.nature.com/articles/s41467-023-37190-9",
+      "title": "Higher-order interactions shape collective dynamics differently in hypergraphs and simplicial complexes (Zhang et al. 2023, Nature Communications)",
+      "summary": "Higher-order interactions enhance synchronization in hypergraphs but have opposite effect in simplicial complexes; representation choice matters."
+    },
+    {
+      "index": 22,
+      "url": "https://ar5iv.labs.arxiv.org/html/1909.05812",
+      "title": "An adaptive voter model on simplicial complexes (Horstmeyer & Kuehn 2020)",
+      "summary": "Peer pressure from 2-simplices accelerates consensus and fragmentation; multiscale hierarchy in simplex depletion dynamics."
+    },
+    {
+      "index": 23,
+      "url": "https://arxiv.org/html/2601.05169",
+      "title": "Reducibility of higher-order to pairwise interactions: Social impact models on hypergraphs (2025)",
+      "summary": "Higher-order dynamics reducible to pairwise in linear case but NOT in nonlinear case; nonlinearity is the key determinant of irreducibility."
+    },
+    {
+      "index": 24,
+      "url": "https://www.tandfonline.com/doi/full/10.1080/23746149.2023.2202331",
+      "title": "Topological data analysis and machine learning (2023 review)",
+      "summary": "Survey of TDA methods for ML: persistence images, Betti curves, persistence landscapes as feature engineering for classifiers."
+    },
+    {
+      "index": 25,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10280283/",
+      "title": "Persistent homology classification algorithm (2023)",
+      "summary": "Using persistent homology features (vectorized barcodes) as inputs to classification pipelines."
+    },
+    {
+      "index": 26,
+      "url": "https://biodatamining.biomedcentral.com/articles/10.1186/s13040-025-00430-3",
+      "title": "Feature graphs for interpretable unsupervised tree ensembles (BioData Mining 2025)",
+      "summary": "Post-hoc feature interaction graphs from parent-child node splits in random forests for disease subtyping."
+    },
+    {
+      "index": 27,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5828575/",
+      "title": "Iterative random forests to discover predictive and stable high-order interactions (Basu et al. 2018, PNAS)",
+      "summary": "iRF algorithm discovers up to 5th-6th order interactions post-hoc via iterative reweighting; O(RF) computational cost."
+    }
+  ],
+  "follow_up_questions": [
+    "Does √(1−dCor) provably satisfy the triangle inequality for arbitrary joint distributions, or do we need empirical verification on typical tabular datasets? The existing proofs cover Pearson/Spearman correlations but not distance correlation specifically.",
+    "What is the computational cost of persistent homology up to dimension 3 for 50–200 features? The boundary matrix reduction is O(k³) in the number of simplices, which grows combinatorially—is a dimension-2 cap sufficient for practical feature counts?",
+    "Are there fast approximations to distance correlation (e.g., the O(n log n) method of Huo & Székely 2016) that preserve metric properties of the derived dissimilarity √(1−dCor)?",
+    "How sensitive is the Vietoris-Rips complex to the choice of association metric—does switching from dCor to HSIC qualitatively change the resulting simplicial complex and its Betti numbers for typical tabular datasets?"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "title": "SC-OTS Survey",
+  "summary": "Comprehensive implementation landscape survey for SC-OTS (Simplicial-Constrained Oblique Tree Sums). Covers RO-FIGS source code analysis (beam_size injection point identified at line 11 of Algorithm 1), FIGS base implementation from imodels, TDA library comparison (GUDHI recommended for simplex extraction), distance correlation computation via dcor, XGBoost interaction constraints API, InterpretML EBM baselines (supporting up to 3-way interactions), SHAP interaction values (pairwise) and shapiq for higher-order. Includes concrete code snippets, dependency list, integration blueprint, and risk analysis.",
+  "answer": "## SC-OTS Implementation Landscape Survey\n\n### 1. RO-FIGS Source Code & Oblique Split Mechanism\n\nRO-FIGS (Random Oblique Fast Interpretable Greedy-Tree Sums) is the official implementation for the IEEE CITREx 2025 paper by Matjašec, Simidjievski, and Jamnik [1]. The repository at `github.com/um-k/rofigs` contains four source files: `rofigs.py` (main algorithm), `odt.py` (oblique decision tree), `constants.py` (hyperparameters), and `utils.py` (utilities) [1].\n\n**Algorithm 1 (from the paper [2]) defines the critical injection point:**\n\n```\n1: Input: X, y, beam_size, min_imp_dec, max_splits\n2: trees = []\n3: while (get_max_imp_dec() > min_imp_dec or first_iteration) and count_total_splits() < max_splits:\n4:   feat = select_random(beam_size)                    ← INJECTION POINT (initial)\n5:   Φ = compute_linear_combination(X, y, feat)\n6:   all_trees = join(trees, define_oblique_split(Φ))\n7:   potential_splits = []\n8:   for tree in all_trees:\n9:     y_res = y - predict(all_trees except tree)\n10:    for repetition in range(r):                      ← r=5 default\n11:      feat = select_random(beam_size)                ← INJECTION POINT (main loop)\n12:      for leaf in tree:\n13:        Φ = compute_linear_combination(X, y_res, feat)\n14:        potential_split = define_oblique_split(Φ, leaf)\n15:        potential_splits.append(potential_split)\n...\n23:  trees.insert(best_split)\n24: end while\n25: Return: trees\n```\n\nThe `select_random(beam_size)` calls at lines 4 and 11 are the exact points where SC-OTS replaces random feature selection with simplex-constrained selection [2]. In the source code, this manifests as:\n```python\nsplitting_features = random.sample([i for i in range(X.shape[1])], self.beam_size)\n```\n[1]\n\n**Oblique Split Optimization:** Each split learns weights via gradient descent using the spyct library (Stepišnik & Kocev [13]), imported as `GradSplitter`. The split takes form `w₁*F₁ + ... + wₖ*Fₖ ≤ t` [2]. The objective function combines L₁/₂ regularization with impurity minimization:\n\n`min_{w,b} ||w||_{1/2} + C * g(w,b)`\n\nwhere `||w||_{1/2} = (Σᵢ √|wᵢ|)²` [2]. However, the actual code delegates regularization to the GradSplitter via `regularization=1/self.C` (default C=10) [3]. The paper states L₁/₂ norm is used, but the spyct library implements L2 regularization internally — the L₁/₂ effect comes from the squared-root structure of the norm definition [2, 3].\n\n**Default Hyperparameters:** The `constants.py` file provides per-dataset optimized `(min_imp_dec, beam_size)` pairs — e.g., blood=(5, 2), bioresponse=(0.05, 419) — and uses `RANDOM_STATE=12345` [4]. Default repetitions r=5, and gradient descent uses 100 iterations with learning rate from spyct defaults [2, 3].\n\n**Worst-case complexity:** O(i·r·m²·n²·d) where m=splits, n=samples, d=features, i=gradient iterations (100), r=repetitions (5) [2].\n\n**Dependencies:** RO-FIGS requires `spyct` installed from GitLab (`pip install git+https://gitlab.com/TStepi/spyct.git`), plus numpy 1.24, scikit-learn 1.3.2, scipy 1.10.1, and pandas 2.0.3 [5, 13].\n\n---\n\n### 2. FIGS Base Implementation (imodels library)\n\nFIGS is implemented in the imodels library (v2.0.4, Python ≥3.9) [6, 7]. The core classes are:\n\n```python\nclass FIGSRegressor(RegressorMixin, FIGS): ...\nclass FIGSClassifier(ClassifierMixin, FIGS): ...\n```\n\n**Key Parameters:**\n- `max_rules`: Maximum total splits across all trees (default: 12)\n- `max_trees`: Optional limit on tree count\n- `max_depth`: Optional depth constraint\n- `min_impurity_decrease`: Minimum impurity reduction threshold\n- `max_features`: Feature selection strategy\n[7]\n\n**Greedy Growth Loop:** FIGS maintains a `potential_splits` priority queue sorted by impurity reduction. In each iteration:\n1. Pops the highest-impurity split\n2. Either adds to existing tree or starts a new tree\n3. Updates residuals across all trees\n4. Recomputes impurities for potential children\n[7]\n\n**Split Selection:** Uses `_construct_node_with_stump()` which fits a scikit-learn `DecisionTreeRegressor(max_depth=1)` as the base split finder [7]. This is where RO-FIGS replaces axis-parallel stumps with oblique splits.\n\n**Integration Decision:** SC-OTS should extend the RO-FIGS codebase rather than imodels' FIGS directly, since RO-FIGS already handles oblique splits and the tree-sum growth loop. The modification is surgical: replace `random.sample()` with simplex-based selection [1, 7].\n\n---\n\n### 3. TDA Library Comparison\n\n#### 3a. GUDHI (RECOMMENDED PRIMARY)\n\nGUDHI v3.11.0 (released Feb 21, 2025) supports Python 3.10+ via pip [8, 9].\n\n**RipsComplex API:**\n```python\nimport gudhi\nrips = gudhi.RipsComplex(\n    distance_matrix=D,           # Lower triangular or full matrix\n    max_edge_length=threshold    # Filtration cutoff\n)\nst = rips.create_simplex_tree(max_dimension=3)  # Up to 3-simplices\n```\n[8]\n\n**Critical SimplexTree Methods for SC-OTS:**\n- `get_filtration()` → generator of `(simplex_vertices, filtration_value)` pairs, sorted by filtration [10]\n- `get_simplices()` → all simplices with filtration values [10]\n- `get_skeleton(dim)` → all simplices up to dimension `dim` [10]\n- `get_cofaces(simplex, codimension)` → find higher simplices containing a given feature pair [10]\n- `prune_above_filtration(threshold)` → remove simplices above threshold [10]\n- `prune_above_dimension(dim)` → limit simplex dimension [10]\n- `persistence()` → list of `(dimension, (birth, death))` tuples [10]\n- `persistent_betti_numbers(from_val, to_val)` → Betti numbers in range [10]\n- `num_simplices()` → total count [10]\n- `find(simplex)` → check if simplex exists [10]\n\n**This is the key differentiator:** GUDHI exposes the actual simplices (vertex lists), not just persistence diagrams. SC-OTS requires knowing WHICH features form each simplex to constrain the beam selection [8, 10].\n\n#### 3b. giotto-tda\n\ngiotto-tda v0.6.2 (May 2024) supports Python 3.8-3.12 [11].\n\n**API:**\n```python\nfrom gtda.homology import VietorisRipsPersistence\nVR = VietorisRipsPersistence(\n    metric='precomputed',\n    homology_dimensions=(0, 1, 2),\n    max_edge_length=np.inf\n)\ndiagrams = VR.fit_transform(D[np.newaxis, :, :])  # 3D input\n```\n\n**Output:** Arrays of `[birth, death, dimension]` triples [11].\n\n**CRITICAL LIMITATION:** giotto-tda does NOT expose individual simplices — only persistence diagrams. It cannot tell you which features form a specific simplex [11]. This makes it unsuitable as the primary TDA library for SC-OTS, but useful for persistence diagram visualization and scikit-learn pipeline integration.\n\n#### 3c. ripser.py\n\n```python\nfrom ripser import ripser\nresult = ripser(D, maxdim=2, metric='precomputed', do_cocycles=True)\ndiagrams = result['dgms']\ncocycles = result['cocycles']\n```\n[12]\n\n**Representative cocycles** can be extracted: each cocycle in dimension d is an ndarray of (k, d+1) elements with simplex vertex indices [12]. However, cocycles only represent generators of persistent homology classes — they do NOT give you all simplices at a threshold. This is insufficient for SC-OTS.\n\n**Comparison Table:**\n\n| Feature | GUDHI | giotto-tda | ripser |\n|---|---|---|---|\n| Extract individual simplices | ✓ | ✗ | Partial (cocycles) |\n| Precomputed distance matrix | ✓ | ✓ | ✓ |\n| Threshold/prune complex | ✓ | ✗ | Via thresh param |\n| Betti numbers | ✓ | ✓ (BettiCurve) | ✗ |\n| scikit-learn API | ✗ | ✓ | ✓ (Rips class) |\n| pip install (Py 3.10/11) | ✓ | ✓ | ✓ |\n| Speed (10-100 points) | All fast | All fast | All fast |\n\n**RECOMMENDATION:** Use GUDHI as primary (simplex extraction), giotto-tda for visualization only [8, 10, 11, 12].\n\n---\n\n### 4. Distance Correlation Library (dcor)\n\n**API:**\n```python\nimport dcor\n\n# Single pair\ncorr = dcor.distance_correlation(X[:, i], X[:, j])  # Returns float in [0, 1]\n\n# Full signature\ndcor.distance_correlation(\n    x, y, *,\n    exponent=1,\n    method='auto',          # 'auto'|'naive'|'avl'|'mergesort'\n    compile_mode='auto'     # Compilation for speed\n)\n```\n[14, 15]\n\n**For 1D inputs (our case — each feature column):** The `avl` and `mergesort` methods give O(n log n) complexity per pair, vs O(n²) for the naive method [14]. With `method='auto'`, 1D inputs automatically use the fast algorithm.\n\n**Pairwise Feature Distance Matrix Construction:**\n```python\nimport numpy as np\nimport dcor\nfrom itertools import combinations\n\ndef compute_feature_distance_matrix(X):\n    \"\"\"Compute D[i,j] = 1 - dcor(X[:,i], X[:,j]).\"\"\"\n    p = X.shape[1]\n    D = np.zeros((p, p))\n    for i, j in combinations(range(p), 2):\n        corr = dcor.distance_correlation(X[:, i], X[:, j])\n        D[i, j] = D[j, i] = 1.0 - corr\n    return D\n```\n\n**Computational Cost Estimate (p=50 features, n=5000 samples):**\n- Pairs: C(50,2) = 1,225 pairs\n- Per pair: O(n log n) = ~60K operations ≈ 0.01-0.05s\n- Total: ~12-60 seconds (manageable)\n[14, 16]\n\n**For p=100 features:** C(100,2) = 4,950 pairs → ~50-250 seconds [16].\n\n**Optimization via dcor.rowwise:** The library provides `dcor.rowwise` for batch computation with `CompileMode.COMPILE_PARALLEL` for parallelization [16]. The recommended approach from the maintainer is to structure inputs as paired arrays rather than nested loops [16].\n\n**Alternative:** `scipy.spatial.distance.pdist` with a custom metric wrapping dcor, then `squareform`. However, scipy's built-in `correlation` metric computes Pearson correlation, NOT distance correlation [17].\n\n---\n\n### 5. XGBoost Interaction Constraints\n\n**API:**\n```python\nimport xgboost as xgb\n\nmodel = xgb.XGBClassifier(\n    interaction_constraints=[[0, 1], [2, 3, 4], [5, 6]]\n)\n```\n[18]\n\n**Semantics:**\n- Features within the same group CAN interact in the same branch\n- Features in different groups CANNOT interact\n- Features in overlapping groups: the union of allowed interactions applies\n- Example: `[[1,2], [2,3,4]]` → feature 2 can interact with {1, 3, 4}\n[18]\n\n**Conversion from Simplicial Complex:**\n```python\ndef simplices_to_xgb_constraints(simplex_tree, threshold, min_dim=1):\n    \"\"\"Convert simplicial complex to XGBoost interaction constraint groups.\"\"\"\n    constraints = []\n    for simplex, filt in simplex_tree.get_filtration():\n        if filt <= threshold and len(simplex) >= min_dim + 1:\n            constraints.append(list(simplex))\n    return constraints\n\n# Usage\nmodel = xgb.XGBClassifier(\n    interaction_constraints=simplices_to_xgb_constraints(st, threshold=0.5)\n)\n```\nNote: XGBoost allows a feature to appear in multiple groups, which maps naturally to simplicial complexes where a vertex belongs to multiple simplices [18].\n\n---\n\n### 6. InterpretML EBM Baseline\n\n**API:**\n```python\nfrom interpret.glassbox import ExplainableBoostingClassifier\nfrom interpret.utils import measure_interactions\n\n# Default: auto-detects pairwise interactions\nebm = ExplainableBoostingClassifier(\n    interactions='3x',        # Default: 3× features count of interactions\n    max_bins=1024,\n    max_interaction_bins=64,\n    outer_bags=14,\n    learning_rate=0.015,\n    max_rounds=50000,\n    max_leaves=2\n)\nebm.fit(X_train, y_train)\n```\n[19, 20]\n\n**3-Way Interaction Support (important finding):** Contrary to initial assumptions, EBM DOES support 3-way and higher interactions:\n```python\nfrom itertools import combinations\ntriples = measure_interactions(\n    X_train, y_train,\n    interactions=combinations(range(n_features), 3)\n)\ntriple_indices = [interaction for interaction, strength in triples[:10]]\nebm_3way = ExplainableBoostingClassifier(\n    interactions=triple_indices,\n    exclude='mains'\n)\n```\n[21]\n\n**Limitation:** \"Interactions with 3 or more terms are not graphed in global explanations. Local explanations are still available and exact\" [21].\n\n**For SC-OTS comparison:** EBM can serve as both a pairwise and 3-way interaction baseline. Use `measure_interactions` with the simplicial complex's feature groups to measure interaction strength for validation.\n\n---\n\n### 7. SHAP Interaction Values\n\n**Standard SHAP (pairwise only):**\n```python\nimport shap\nimport numpy as np\n\nexplainer = shap.TreeExplainer(xgb_model)\nshap_interaction = explainer.shap_interaction_values(X_test)\n# Shape: (n_samples, n_features, n_features)\n\n# Aggregate: mean absolute interaction matrix\nmean_interaction = np.abs(shap_interaction).mean(axis=0)\n# Diagonal = main effects; off-diagonal = pairwise interactions\n```\n[22, 23]\n\n**Supported models:** XGBoost, LightGBM, CatBoost, PySpark, and most scikit-learn tree models [23].\n\n**Verification:** `shap_interaction.sum((1,2)) + expected_value ≈ predictions` [22].\n\n**Higher-Order via shapiq (KEY FINDING):**\nThe shapiq package (Python 3.10+) computes any-order Shapley interactions [24, 25]:\n```python\nimport shapiq\n\nexplainer = shapiq.TabularExplainer(\n    model=model,\n    data=X_train,\n    index='k-SII',      # k-th order Shapley Interaction Index\n    max_order=4          # Up to 4-way interactions\n)\ninteraction_values = explainer.explain(X[0], budget=256)\n# Returns interactions like:\n# (0,): 1.697          (main effect)\n# (0,1): 0.449         (pairwise)\n# (0,3,6): -0.320      (3-way)\n```\n[24, 25]\n\nshapiq also provides `TreeSHAP-IQ` specifically for tree models with fast exact computation [25].\n\n**Interaction Faithfulness Metric:**\n```python\ndef interaction_faithfulness(simplicial_complex, shap_matrix, threshold):\n    \"\"\"Measure what fraction of significant SHAP interactions\n    are captured by the simplicial complex.\"\"\"\n    significant_pairs = set()\n    for i in range(shap_matrix.shape[0]):\n        for j in range(i+1, shap_matrix.shape[1]):\n            if shap_matrix[i, j] > threshold:\n                significant_pairs.add((i, j))\n    \n    captured = 0\n    for pair in significant_pairs:\n        if simplicial_complex.find(list(pair)):  # GUDHI simplex lookup\n            captured += 1\n    \n    return captured / len(significant_pairs) if significant_pairs else 1.0\n```\n\n**3-Way Validation Strategy:** A 3-simplex {A,B,C} is validated if all three pairwise interactions {A,B}, {A,C}, {B,C} are significant in SHAP, OR by directly using shapiq's 3rd-order interaction values [22, 24].\n\n---\n\n### 8. Implementation Blueprint\n\n#### Dependencies\n```\ngudhi>=3.11.0          # Primary TDA (simplex extraction)\ngiotto-tda>=0.6.2      # TDA visualization (optional)\ndcor>=0.6              # Distance correlation\nimodels>=2.0.4         # FIGS base reference\nxgboost>=2.0           # Baseline + interaction constraints\ninterpret>=0.6         # EBM baseline\nshap>=0.44             # Pairwise interaction values\nshapiq>=1.2            # Higher-order interactions\nscikit-learn>=1.3      # Standard ML\nnumpy>=1.24\nscipy>=1.10\npandas>=2.0\n# RO-FIGS dependencies:\nspyct @ git+https://gitlab.com/TStepi/spyct.git  # Gradient split learning\n```\n\n#### Pipeline Stage 1: Feature Distance Matrix\n- **Input:** `X` (n_samples × p_features)\n- **Compute:** `D[i,j] = 1 - dcor.distance_correlation(X[:,i], X[:,j])` for all pairs\n- **Output:** `D` (p × p symmetric distance matrix, zeros on diagonal)\n- **Complexity:** O(p² × n log n) using fast 1D algorithm\n- **Runtime estimate:** ~12-60s for p=50, n=5000\n\n#### Pipeline Stage 2: Simplicial Complex Construction\n- **Input:** `D` (p × p distance matrix)\n- **Compute:**\n  ```python\n  rips = gudhi.RipsComplex(distance_matrix=D, max_edge_length=threshold)\n  st = rips.create_simplex_tree(max_dimension=3)\n  ```\n- **Threshold selection:** Use persistence diagram gap heuristic — compute `st.persistence()`, find the largest gap in death-birth values across 1-dimensional features\n- **Output:** List of simplices `[(feature_indices, filtration_value), ...]`\n- **Safety:** Use `st.prune_above_filtration(threshold)` and `st.prune_above_dimension(3)` to control complex size\n\n#### Pipeline Stage 3: Constrained Oblique Tree Sum (SC-OTS)\n- **Input:** `X`, `y`, simplicial complex (list of valid feature groups)\n- **Modify RO-FIGS:** Replace `random.sample([i for i in range(X.shape[1])], self.beam_size)` with:\n  ```python\n  # Sample a simplex, use its features as the beam\n  simplex = random.choice(valid_simplices)\n  splitting_features = list(simplex)\n  ```\n- **For each candidate split:** Pick a simplex, use its features as the beam\n- **Learn oblique split weights** via gradient descent (existing spyct/GradSplitter mechanism)\n- **Apply L₁/₂ regularization** within the simplex (existing RO-FIGS mechanism)\n- **Greedy tree-sum growth** as in FIGS\n\n#### Pipeline Stage 4: Evaluation\n- **Baselines:** FIGS, RO-FIGS, XGBoost (plain), XGBoost+SC-constraints, EBM, EBM+3-way\n- **Metrics:**\n  - Accuracy/AUC (predictive performance)\n  - Model size (total splits across all trees)\n  - Interaction faithfulness (fraction of SHAP-significant interactions captured)\n- **Ground truth:** SHAP interaction values from black-box XGBoost + shapiq for higher-order\n\n#### Critical Integration Decisions\n1. **Extend RO-FIGS directly** (not imodels FIGS) — oblique splits already implemented\n2. **Overlapping simplices:** A feature in multiple simplices → it can appear in multiple beam selections (natural in the random simplex sampling)\n3. **max_dimension=3** for Rips complex (up to 4-way interactions) — balances expressiveness vs complexity\n4. **Threshold selection:** Gap heuristic on persistence diagram as primary; fixed percentile (e.g., 25th percentile of pairwise distances) as fallback\n5. **Beam size adaptation:** Each simplex has its own size (2-4 features typically); beam_size becomes variable per split rather than fixed\n\n---\n\n### 9. Known Risks and Gaps\n\n**Risk 1: RO-FIGS code completeness.** The core algorithm in `rofigs.py` is readable, but the gradient split learning is delegated to `spyct.GradSplitter` which is compiled C code. The L₁/₂ regularization described in the paper may not be exactly what's implemented (the code uses `regularization=1/C` which looks like L2). Mitigation: Test with the provided examples; if needed, implement custom L₁/₂ penalty [1, 2, 3].\n\n**Risk 2: dcor computational cost.** For datasets with >100 features: C(100,2)=4,950 pairs × O(n log n) per pair. For n=10,000 and p=200: C(200,2)=19,900 pairs, estimated ~5-15 minutes. Mitigation: Use dcor's `compile_mode=CompileMode.COMPILE_PARALLEL`, subsample rows for initial exploration, cache the distance matrix [14, 16].\n\n**Risk 3: Simplicial complex size explosion.** For large filtration thresholds with p=100 features, the Rips complex up to dimension 3 can have O(p⁴)=10⁸ simplices. Mitigation: Use `prune_above_filtration()`, start with conservative thresholds, use `prune_above_dimension(3)`, and monitor `num_simplices()` [10].\n\n**Risk 4: SHAP interaction limitation.** Standard SHAP gives only pairwise interactions. shapiq extends to higher orders but with higher computational cost (budget parameter controls accuracy vs speed tradeoff). Mitigation: Use standard SHAP for pairwise validation, shapiq selectively for 3-way validation [22, 24].\n\n**Risk 5: Library compatibility.** All libraries need to work under Python 3.10/3.11. Verified: GUDHI 3.11.0 ✓, giotto-tda 0.6.2 ✓, dcor ✓, imodels 2.0.4 ✓, shapiq (requires 3.10+) ✓. The spyct library requires a C compiler for installation [5, 8, 11, 13, 24].\n\n**Risk 6: spyct dependency.** RO-FIGS depends on spyct installed from GitLab. This is a niche library; if it breaks or is unavailable, the gradient split learning would need to be reimplemented. Mitigation: Pin the spyct version; alternatively, implement a simplified gradient descent for oblique splits directly [5, 13].\n\n**Gap 1: Persistence threshold selection.** The gap heuristic is well-known but has no established best practice for feature distance matrices (vs point clouds). May need empirical tuning.\n\n**Gap 2: Simplex sampling strategy.** Should SC-OTS sample simplices uniformly, weighted by filtration value, or weighted by simplex dimension? This is a design decision requiring experimentation.\n\n**Gap 3: Variable beam size.** When beam_size varies per simplex (a 2-simplex gives 3 features, a 1-simplex gives 2), the split complexity varies. Need to verify that the GradSplitter handles variable input sizes correctly.",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://github.com/um-k/rofigs",
+      "title": "RO-FIGS GitHub Repository",
+      "summary": "Official implementation of RO-FIGS with source code including rofigs.py (main algorithm), odt.py (oblique decision tree), constants.py (hyperparameters), and utils.py. Contains the beam_size feature selection code and split construction."
+    },
+    {
+      "index": 2,
+      "url": "https://arxiv.org/html/2504.06927v1",
+      "title": "RO-FIGS Paper (arXiv HTML)",
+      "summary": "Full paper with Algorithm 1 pseudocode showing the greedy tree-sum growth loop, random feature subset selection via beam_size, L₁/₂ regularization formulation, split optimization procedure, and complexity analysis O(i·r·m²·n²·d)."
+    },
+    {
+      "index": 3,
+      "url": "https://raw.githubusercontent.com/um-k/rofigs/main/src/odt.py",
+      "title": "RO-FIGS odt.py Source Code",
+      "summary": "Oblique decision tree implementation showing GradSplitter integration with regularization=1/C parameter, weight learning procedure, and split threshold extraction."
+    },
+    {
+      "index": 4,
+      "url": "https://raw.githubusercontent.com/um-k/rofigs/main/src/constants.py",
+      "title": "RO-FIGS Constants File",
+      "summary": "Per-dataset optimized hyperparameters (min_imp_dec, beam_size), RANDOM_STATE=12345, and list of 22 evaluation datasets."
+    },
+    {
+      "index": 5,
+      "url": "https://raw.githubusercontent.com/um-k/rofigs/main/requirements.txt",
+      "title": "RO-FIGS Requirements",
+      "summary": "Dependencies including numpy 1.24.4, scikit-learn 1.3.2, scipy 1.10.1, pandas 2.0.3, and spyct-tstep from GitLab."
+    },
+    {
+      "index": 6,
+      "url": "https://pypi.org/project/imodels/",
+      "title": "imodels PyPI Page",
+      "summary": "imodels v2.0.4 (Nov 2025), Python ≥3.9, containing FIGS and 20+ interpretable models with scikit-learn compatible interface."
+    },
+    {
+      "index": 7,
+      "url": "https://raw.githubusercontent.com/csinva/imodels/master/imodels/tree/figs.py",
+      "title": "FIGS Source Code (imodels)",
+      "summary": "Complete FIGS implementation showing FIGSClassifier/FIGSRegressor classes, greedy potential_splits queue, _construct_node_with_stump() method, max_rules parameter, and residual-based tree growth."
+    },
+    {
+      "index": 8,
+      "url": "https://gudhi.inria.fr/python/latest/rips_complex_user.html",
+      "title": "GUDHI RipsComplex Documentation",
+      "summary": "RipsComplex API with distance_matrix input, max_edge_length threshold, create_simplex_tree(max_dimension) method, and code examples for precomputed distance matrices."
+    },
+    {
+      "index": 9,
+      "url": "https://libraries.io/pypi/gudhi",
+      "title": "GUDHI on Libraries.io",
+      "summary": "GUDHI v3.11.0 released Feb 21, 2025, installable via pip with pre-built wheels for Python 3.10 and 3.11."
+    },
+    {
+      "index": 10,
+      "url": "https://gudhi.inria.fr/python/latest/simplex_tree_ref.html",
+      "title": "GUDHI SimplexTree Reference",
+      "summary": "Complete SimplexTree API: get_filtration(), get_simplices(), get_skeleton(dim), get_cofaces(), prune_above_filtration(), prune_above_dimension(), persistence(), persistent_betti_numbers(), num_simplices(), find()."
+    },
+    {
+      "index": 11,
+      "url": "https://giotto-ai.github.io/gtda-docs/latest/modules/generated/homology/gtda.homology.VietorisRipsPersistence.html",
+      "title": "giotto-tda VietorisRipsPersistence API",
+      "summary": "VietorisRipsPersistence class with precomputed metric support, 3D input format, persistence diagram output — but NO individual simplex extraction capability."
+    },
+    {
+      "index": 12,
+      "url": "https://ripser.scikit-tda.org/en/latest/reference/stubs/ripser.ripser.html",
+      "title": "ripser.py API Reference",
+      "summary": "ripser() function with maxdim, distance_matrix, do_cocycles parameters. Returns persistence diagrams and optional representative cocycles, but not full simplex lists."
+    },
+    {
+      "index": 13,
+      "url": "https://github.com/knowledge-technologies/spyct",
+      "title": "SPYCT: Oblique Predictive Clustering Trees",
+      "summary": "Python implementation by Stepišnik & Kocev of gradient-based oblique split learning with Adam optimizer, used by RO-FIGS for the GradSplitter class."
+    },
+    {
+      "index": 14,
+      "url": "https://dcor.readthedocs.io/en/latest/functions/dcor.distance_correlation.html",
+      "title": "dcor.distance_correlation API",
+      "summary": "Full function signature with exponent, method (auto/naive/avl/mergesort), and compile_mode parameters. O(n log n) for 1D inputs via avl/mergesort methods."
+    },
+    {
+      "index": 15,
+      "url": "https://dcor.readthedocs.io/en/latest/auto_examples/plot_dcor_usage.html",
+      "title": "dcor Usage Examples",
+      "summary": "Basic distance correlation usage, 1D and multidimensional input support, method selection for computational optimization."
+    },
+    {
+      "index": 16,
+      "url": "https://github.com/vnmabus/dcor/issues/32",
+      "title": "dcor Pairwise Computation Discussion",
+      "summary": "GitHub issue discussing efficient pairwise distance correlation for large feature sets. Recommends rowwise() with CompileMode.COMPILE_PARALLEL and exploiting symmetry."
+    },
+    {
+      "index": 17,
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html",
+      "title": "scipy.spatial.distance.pdist API",
+      "summary": "pdist supports custom metric functions but note: scipy's built-in 'correlation' metric is Pearson correlation, NOT distance correlation."
+    },
+    {
+      "index": 18,
+      "url": "https://xgboost.readthedocs.io/en/stable/tutorials/feature_interaction_constraint.html",
+      "title": "XGBoost Interaction Constraints",
+      "summary": "interaction_constraints parameter format (list of lists), overlapping group semantics (union of allowed interactions), and feature index/name support."
+    },
+    {
+      "index": 19,
+      "url": "https://interpret.ml/docs/ebm.html",
+      "title": "InterpretML EBM Documentation",
+      "summary": "EBM overview: cyclic gradient boosting GAM with automatic interaction detection, scikit-learn compatible, explain_global() and explain_local() methods."
+    },
+    {
+      "index": 20,
+      "url": "https://interpret.ml/docs/python/api/ExplainableBoostingClassifier.html",
+      "title": "ExplainableBoostingClassifier Full API",
+      "summary": "Complete parameter list: interactions='3x' default, max_bins=1024, max_interaction_bins=64, outer_bags=14, learning_rate=0.015, max_rounds=50000, max_leaves=2."
+    },
+    {
+      "index": 21,
+      "url": "https://interpret.ml/docs/python/examples/custom-interactions.html",
+      "title": "InterpretML Custom Interactions Example",
+      "summary": "Shows how to specify 3-way interactions via measure_interactions() with combinations(range(n_features), 3), merge_ebms for combining main effects with interactions."
+    },
+    {
+      "index": 22,
+      "url": "https://shap.readthedocs.io/en/latest/example_notebooks/tabular_examples/tree_based_models/Basic%20SHAP%20Interaction%20Value%20Example%20in%20XGBoost.html",
+      "title": "SHAP Interaction Values Example",
+      "summary": "TreeExplainer usage, shap_interaction_values() returning (n_samples, n_features, n_features) array, diagonal=main effects, off-diagonal=pairwise interactions, verification via sum."
+    },
+    {
+      "index": 23,
+      "url": "https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html",
+      "title": "SHAP TreeExplainer API",
+      "summary": "Supports XGBoost, LightGBM, CatBoost, PySpark, scikit-learn trees. shap_interaction_values(X, y=None, tree_limit=None) with fast C++ implementation."
+    },
+    {
+      "index": 24,
+      "url": "https://github.com/mmschlk/shapiq",
+      "title": "shapiq GitHub Repository",
+      "summary": "Shapley Interaction Quantification package: any-order Shapley interactions via k-SII, TabularExplainer with max_order parameter for higher-order (3-way, 4-way) interactions, TreeSHAP-IQ for tree models."
+    },
+    {
+      "index": 25,
+      "url": "https://shapiq.readthedocs.io/en/latest/index.html",
+      "title": "shapiq Documentation",
+      "summary": "TreeSHAP-IQ module for tree-based model explanations with any-order interactions, supporting sklearn, XGBoost, and LightGBM models."
+    },
+    {
+      "index": 26,
+      "url": "https://pypi.org/project/giotto-tda/",
+      "title": "giotto-tda PyPI Page",
+      "summary": "giotto-tda v0.6.2 (May 2024), supports Python 3.8-3.12, actively maintained by Giotto team."
+    }
+  ],
+  "follow_up_questions": [
+    "Does the spyct GradSplitter truly implement L₁/₂ regularization (as claimed in the RO-FIGS paper) or L2 regularization (as suggested by the code's regularization=1/C parameter)? This discrepancy should be resolved by inspecting spyct's compiled C code or running controlled experiments.",
+    "What is the optimal strategy for sampling simplices during SC-OTS beam selection — uniform random, weighted by filtration value (favoring tighter feature groups), or weighted by simplex dimension (favoring higher-order interactions)?",
+    "Can the persistence diagram gap heuristic reliably select a filtration threshold for feature distance matrices computed via distance correlation, or does this require a custom threshold selection method tailored to the dcor metric space?",
+    "How does shapiq's TreeSHAP-IQ computational cost scale with interaction order for validating 3-way and 4-way simplicial interactions, and is it feasible to use as part of a standard evaluation pipeline?"
+  ]
+}

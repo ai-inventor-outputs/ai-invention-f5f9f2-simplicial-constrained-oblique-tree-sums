@@ -1,0 +1,117 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Lou2013,Caruana2015}
+\citation{Lundberg2017,Tsang2020}
+\citation{Breiman2001,Chen2016}
+\citation{Iacopini2019,Battiston2021}
+\citation{Tan2022}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\citation{Tan2022}
+\citation{Matjasec2025}
+\citation{Chen2016}
+\citation{Lou2013}
+\citation{Caruana2015}
+\citation{Nori2019}
+\citation{Kumbier2018}
+\citation{Tsang2020}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Interpretable tree ensembles.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Generalized additive models and interaction detection.}{2}{section*.2}\protected@file@percent }
+\citation{Zomorodian2005}
+\citation{Pun2022}
+\citation{Maria2014}
+\citation{Sirocchi2025}
+\citation{Battiston2021}
+\citation{Iacopini2019}
+\citation{Szekely2007}
+\@writefile{toc}{\contentsline {paragraph}{Neural interaction detection.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Topological data analysis in machine learning.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Feature interaction graphs.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Higher-order interactions in complex systems.}{3}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Distance correlation.}{3}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{3}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{3}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Feature Interaction Simplicial Complex Construction}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:complex}{{3.1}{3}{Feature Interaction Simplicial Complex Construction}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Target-aware dissimilarity matrix.}{3}{section*.8}\protected@file@percent }
+\newlabel{eq:dissimilarity}{{1}{3}{Step 1: Target-aware dissimilarity matrix}{equation.3.1}{}}
+\citation{Maria2014}
+\@writefile{toc}{\contentsline {paragraph}{Step 2: Vietoris--Rips persistent homology.}{4}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 3: MI-based simplex filtering.}{4}{section*.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the SC-OTS pipeline. Stage~1 computes a target-aware distance correlation dissimilarity matrix. Stage~2 performs Vietoris--Rips persistent homology to identify robust topological features. Stage~3 extracts the simplicial complex with MI-based filtering. Stage~4 constrains oblique splits in the greedy tree sum to features sharing a simplex.}}{4}{figure.1}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{4}{Overview of the SC-OTS pipeline. Stage~1 computes a target-aware distance correlation dissimilarity matrix. Stage~2 performs Vietoris--Rips persistent homology to identify robust topological features. Stage~3 extracts the simplicial complex with MI-based filtering. Stage~4 constrains oblique splits in the greedy tree sum to features sharing a simplex}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Constrained Oblique Tree Sum}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:tree_sum}{{3.2}{4}{Constrained Oblique Tree Sum}{subsection.3.2}{}}
+\citation{Lundberg2017}
+\citation{Tan2022}
+\citation{Matjasec2025}
+\citation{Chen2016}
+\citation{Nori2019}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Interaction Faithfulness Metric}{5}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:faithfulness}{{3.3}{5}{Interaction Faithfulness Metric}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{5}{section.4}\protected@file@percent }
+\newlabel{sec:setup}{{4}{5}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:datasets}{{4.1}{5}{Datasets}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Baselines}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:baselines}{{4.2}{5}{Baselines}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Metrics}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:metrics}{{4.3}{5}{Evaluation Metrics}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{6}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{6}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Predictive Performance}{6}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:pred_perf}{{5.1}{6}{Predictive Performance}{subsection.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Friedman--Nemenyi critical difference diagram showing mean ranks of all methods across 10 datasets. Connected groups are not significantly different at $\alpha = 0.05$ (CD $= 4.284$). EBM and XGBoost variants dominate; SC-OTS v2 is competitive with FIGS-20 but significantly worse than EBM.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:cd_diagram}{{2}{6}{Friedman--Nemenyi critical difference diagram showing mean ranks of all methods across 10 datasets. Connected groups are not significantly different at $\alpha = 0.05$ (CD $= 4.284$). EBM and XGBoost variants dominate; SC-OTS v2 is competitive with FIGS-20 but significantly worse than EBM}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Ablation: Do Topological Constraints Help?}{6}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:ablation}{{5.2}{6}{Ablation: Do Topological Constraints Help?}{subsection.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Predictive performance across 10 datasets (5-fold CV). $R^2$ for regression, accuracy for classification. Best interpretable method (FIGS/RO-FIGS/SC-OTS) in \textbf  {bold}.}}{7}{table.1}\protected@file@percent }
+\newlabel{tab:performance}{{1}{7}{Predictive performance across 10 datasets (5-fold CV). $R^2$ for regression, accuracy for classification. Best interpretable method (FIGS/RO-FIGS/SC-OTS) in \textbf {bold}}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Ablation comparing simplicial, random-matched, and unconstrained oblique splits across 10 datasets. No pairwise comparison reaches statistical significance (Wilcoxon signed-rank tests: S vs.\ R $p = 0.92$, S vs.\ U $p = 0.70$, R vs.\ U $p = 0.13$). The unconstrained mode achieves the highest aggregate score.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:ablation}{{3}{7}{Ablation comparing simplicial, random-matched, and unconstrained oblique splits across 10 datasets. No pairwise comparison reaches statistical significance (Wilcoxon signed-rank tests: S vs.\ R $p = 0.92$, S vs.\ U $p = 0.70$, R vs.\ U $p = 0.13$). The unconstrained mode achieves the highest aggregate score}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Interaction Detection: Where TDA Excels}{8}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:interaction_detection}{{5.3}{8}{Interaction Detection: Where TDA Excels}{subsection.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Interaction detection F1 scores across four synthetic datasets with ground-truth interactions. TDA achieves the best overall F1 $= 0.603$, with perfect scores on friedman1 and friedman3. Classical methods (ANOVA, MI screening, correlation) largely fail to detect higher-order interactions.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:interaction_f1}{{4}{8}{Interaction detection F1 scores across four synthetic datasets with ground-truth interactions. TDA achieves the best overall F1 $= 0.603$, with perfect scores on friedman1 and friedman3. Classical methods (ANOVA, MI screening, correlation) largely fail to detect higher-order interactions}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Topological Interpretability}{9}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:topo_interp}{{5.4}{9}{Topological Interpretability}{subsection.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Simplicial complex topologies for six datasets. The topological structure varies dramatically: breast\_w exhibits a dense interaction network (24 edges, 38 triangles, $\beta _0 = 5$), while california\_housing has just one dominant edge ($\beta _0 = 7$). This variation is itself informative, revealing which datasets have rich interaction structure versus predominantly additive effects.}}{9}{figure.5}\protected@file@percent }
+\newlabel{fig:simplicial_topologies}{{5}{9}{Simplicial complex topologies for six datasets. The topological structure varies dramatically: breast\_w exhibits a dense interaction network (24 edges, 38 triangles, $\beta _0 = 5$), while california\_housing has just one dominant edge ($\beta _0 = 7$). This variation is itself informative, revealing which datasets have rich interaction structure versus predominantly additive effects}{figure.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{10}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{10}{Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}The Asymmetry Between Discovery and Constraint}{10}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:asymmetry}{{6.1}{10}{The Asymmetry Between Discovery and Constraint}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Search space effect.}{10}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Optimizer weakness.}{10}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interaction density.}{10}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}TDA as an Interaction Diagnostic Tool}{10}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:diagnostic}{{6.2}{10}{TDA as an Interaction Diagnostic Tool}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Limitations}{10}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:limitations}{{6.3}{10}{Limitations}{subsection.6.3}{}}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Battiston2021}{{1}{2021}{{Battiston et~al.}}{{Battiston, Amico, Barrat, Bianconi, de~Arruda, Franceschiello, Iacopini, K\'{e}fi, Latora, Moreno, Murray, Peixoto, Vaccarino, and Petri}}}
+\bibcite{Breiman2001}{{2}{2001}{{Breiman}}{{}}}
+\bibcite{Caruana2015}{{3}{2015}{{Caruana et~al.}}{{Caruana, Lou, Gehrke, Koch, Sturm, and Elhadad}}}
+\bibcite{Chen2016}{{4}{2016}{{Chen and Guestrin}}{{}}}
+\bibcite{Iacopini2019}{{5}{2019}{{Iacopini et~al.}}{{Iacopini, Petri, Barrat, and Latora}}}
+\bibcite{Kumbier2018}{{6}{2018}{{Kumbier et~al.}}{{Kumbier, Basu, Brown, Celniker, and Yu}}}
+\bibcite{Lou2013}{{7}{2013}{{Lou et~al.}}{{Lou, Caruana, Gehrke, and Hooker}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{11}{Conclusion}{section.7}{}}
+\bibcite{Lundberg2017}{{8}{2017}{{Lundberg and Lee}}{{}}}
+\bibcite{Maria2014}{{9}{2014}{{Maria et~al.}}{{Maria, Boissonnat, Glisse, and Yvinec}}}
+\bibcite{Matjasec2025}{{10}{2025}{{Matja\v {s}ec et~al.}}{{Matja\v {s}ec, Simidjievski, and Jamnik}}}
+\bibcite{Nori2019}{{11}{2019}{{Nori et~al.}}{{Nori, Jenkins, Koch, and Caruana}}}
+\bibcite{Pun2022}{{12}{2022}{{Pun et~al.}}{{Pun, Lee, and Xia}}}
+\bibcite{Sirocchi2025}{{13}{2025}{{Sirocchi et~al.}}{{Sirocchi, Urschler, and Pfeifer}}}
+\bibcite{Szekely2007}{{14}{2007}{{Sz\'{e}kely et~al.}}{{Sz\'{e}kely, Rizzo, and Bakirov}}}
+\bibcite{Tan2022}{{15}{2022}{{Tan et~al.}}{{Tan, Singh, Nasseri, Agarwal, and Yu}}}
+\bibcite{Tsang2020}{{16}{2020}{{Tsang et~al.}}{{Tsang, Cheng, Liu, Feng, Zhou, and Liu}}}
+\bibcite{Zomorodian2005}{{17}{2005}{{Zomorodian and Carlsson}}{{}}}
+\gdef \@abspage@last{12}

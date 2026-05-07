@@ -1,0 +1,365 @@
+{
+  "metadata": {
+    "experiment": "interaction_detection_benchmark",
+    "methods": [
+      "TDA",
+      "ANOVA",
+      "MI_screening",
+      "Tree_based",
+      "Correlation"
+    ],
+    "threshold_ranges": {
+      "TDA": {
+        "min": 0.05,
+        "max": 0.95,
+        "n": 20
+      },
+      "ANOVA": {
+        "values": [
+          0.001,
+          0.005,
+          0.01,
+          0.05,
+          0.1,
+          0.2
+        ]
+      },
+      "MI_screening": {
+        "values": [
+          1.01,
+          1.05,
+          1.1,
+          1.2,
+          1.5,
+          2.0
+        ]
+      },
+      "Tree_based": {
+        "min": 0.01,
+        "max": 0.5,
+        "n": 20
+      },
+      "Correlation": {
+        "min": 0.1,
+        "max": 0.9,
+        "n": 20
+      }
+    },
+    "best_thresholds": {
+      "TDA": 0.855263,
+      "ANOVA": 0.05,
+      "MI_screening": 1.01,
+      "Tree_based": 0.474211,
+      "Correlation": 0.1
+    },
+    "summary_metrics": {
+      "TDA_best_f1": 0.603334,
+      "ANOVA_best_f1": 0.218254,
+      "MI_screening_best_f1": 0.0,
+      "Tree_based_best_f1": 0.397645,
+      "Correlation_best_f1": 0.0,
+      "TDA_mean_time": 0.0284,
+      "ANOVA_mean_time": 0.094,
+      "MI_screening_mean_time": 0.8806,
+      "Tree_based_mean_time": 0.4727,
+      "Correlation_mean_time": 0.0003,
+      "TDA_mean_jaccard": 0.799159,
+      "ANOVA_mean_jaccard": 0.756521,
+      "MI_screening_mean_jaccard": 0.43879,
+      "Tree_based_mean_jaccard": 0.945066,
+      "Correlation_mean_jaccard": 0.882541
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0018, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0234, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "synth_4way",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.046, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.046, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0458, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0458, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0459, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0459, \"f1_exact\": 0.0, \"f1_superset\": 0.0, \"precision_exact\": 0.0, \"recall_exact\": 0.0, \"precision_superset\": 0.0, \"recall_superset\": 0.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "diabetes",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.002, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.002, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0017, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0017, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0017, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0017, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "breast_w",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0019, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "adult",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0341, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0341, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0332, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0332, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0333, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0333, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "wine_quality",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0116, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0113, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0113, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0113, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0113, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "california_housing",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0064, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0064, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0063, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0063, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0063, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0063, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    },
+    {
+      "dataset": "spambase",
+      "examples": [
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.05, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0339, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0339, \"jaccard_stability\": 1.0, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.05
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.097368, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0336, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0336, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.097368
+        },
+        {
+          "input": "{\"method\": \"TDA\", \"threshold\": 0.144737, \"fold\": 0}",
+          "output": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0335, \"betti_0\": 1, \"betti_1\": 0}",
+          "predict_tda": "{\"detected\": [], \"num_detected\": 0, \"wall_clock_seconds\": 0.0335, \"betti_0\": 1, \"betti_1\": 0}",
+          "metadata_method": "TDA",
+          "metadata_fold": 0,
+          "metadata_threshold": 0.144737
+        }
+      ]
+    }
+  ]
+}

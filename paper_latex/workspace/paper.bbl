@@ -1,0 +1,136 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Battiston et~al.(2021)Battiston, Amico, Barrat, Bianconi, de~Arruda,
+  Franceschiello, Iacopini, K\'{e}fi, Latora, Moreno, Murray, Peixoto,
+  Vaccarino, and Petri]{Battiston2021}
+Federico Battiston, Enrico Amico, Alain Barrat, Ginestra Bianconi,
+  Guilherme~Ferraz de~Arruda, Benedetta Franceschiello, Iacopo Iacopini, Sonia
+  K\'{e}fi, Vito Latora, Yamir Moreno, Micah~M. Murray, Tiago~P. Peixoto,
+  Francesco Vaccarino, and Giovanni Petri.
+\newblock The physics of higher-order interactions in complex systems.
+\newblock \emph{arXiv preprint arXiv:2110.06023}, 2021.
+
+\bibitem[Breiman(2001)]{Breiman2001}
+Leo Breiman.
+\newblock Random forests.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
+\newblock \doi{10.1023/A:1010933404324}.
+
+\bibitem[Caruana et~al.(2015)Caruana, Lou, Gehrke, Koch, Sturm, and
+  Elhadad]{Caruana2015}
+Rich Caruana, Yin Lou, Johannes Gehrke, Paul Koch, Marc Sturm, and Noemie
+  Elhadad.
+\newblock Intelligible models for healthcare: Predicting pneumonia risk and
+  hospital 30-day readmission.
+\newblock In Longbing Cao, Chengqi Zhang, Thorsten Joachims, Geoffrey~I. Webb,
+  Dragos~D. Margineantu, and Graham Williams, editors, \emph{Proceedings of the
+  21th {ACM} {SIGKDD} International Conference on Knowledge Discovery and Data
+  Mining, Sydney, NSW, Australia, August 10-13, 2015}, pages 1721--1730. {ACM},
+  2015.
+\newblock \doi{10.1145/2783258.2788613}.
+\newblock URL \url{https://doi.org/10.1145/2783258.2788613}.
+
+\bibitem[Chen and Guestrin(2016)]{Chen2016}
+Tianqi Chen and Carlos Guestrin.
+\newblock {XGBoost}: {A} scalable tree boosting system.
+\newblock In \emph{Proceedings of the 22nd {ACM} {SIGKDD} International
+  Conference on Knowledge Discovery and Data Mining}, pages 785--794. {ACM},
+  2016.
+\newblock \doi{10.1145/2939672.2939785}.
+
+\bibitem[Iacopini et~al.(2019)Iacopini, Petri, Barrat, and
+  Latora]{Iacopini2019}
+Iacopo Iacopini, Giovanni Petri, Alain Barrat, and Vito Latora.
+\newblock Simplicial models of social contagion.
+\newblock \emph{Nature Communications}, 10:\penalty0 2485, 2019.
+\newblock \doi{10.1038/s41467-019-10431-6}.
+
+\bibitem[Kumbier et~al.(2018)Kumbier, Basu, Brown, Celniker, and
+  Yu]{Kumbier2018}
+Karl Kumbier, Sumanta Basu, James~B. Brown, Susan Celniker, and Bin Yu.
+\newblock Refining interaction search through signed iterative random forests.
+\newblock \emph{arXiv preprint arXiv:1810.07287}, 2018.
+
+\bibitem[Lou et~al.(2013)Lou, Caruana, Gehrke, and Hooker]{Lou2013}
+Yin Lou, Rich Caruana, Johannes Gehrke, and Giles Hooker.
+\newblock Accurate intelligible models with pairwise interactions.
+\newblock In Inderjit~S. Dhillon, Yehuda Koren, Rayid Ghani, Ted~E. Senator,
+  Paul Bradley, Rajesh Parekh, Jingrui He, Robert~L. Grossman, and Ramasamy
+  Uthurusamy, editors, \emph{The 19th {ACM} {SIGKDD} International Conference
+  on Knowledge Discovery and Data Mining, {KDD} 2013, Chicago, IL, USA, August
+  11-14, 2013}, pages 623--631. {ACM}, 2013.
+\newblock \doi{10.1145/2487575.2487579}.
+\newblock URL \url{https://doi.org/10.1145/2487575.2487579}.
+
+\bibitem[Lundberg and Lee(2017)]{Lundberg2017}
+Scott~M. Lundberg and Su-In Lee.
+\newblock A unified approach to interpreting model predictions.
+\newblock In \emph{Advances in Neural Information Processing Systems 30
+  ({NeurIPS})}, pages 4765--4774, 2017.
+
+\bibitem[Maria et~al.(2014)Maria, Boissonnat, Glisse, and Yvinec]{Maria2014}
+Cl\'{e}ment Maria, Jean-Daniel Boissonnat, Marc Glisse, and Mariette Yvinec.
+\newblock The {GUDHI} library: Simplicial complexes and persistent homology.
+\newblock In \emph{Mathematical Software -- {ICMS} 2014}, volume 8592 of
+  \emph{LNCS}, pages 167--174. Springer, 2014.
+\newblock \doi{10.1007/978-3-662-44199-2_28}.
+
+\bibitem[Matja\v{s}ec et~al.(2025)Matja\v{s}ec, Simidjievski, and
+  Jamnik]{Matjasec2025}
+Matja\v{s}ec, Nikola Simidjievski, and Mateja Jamnik.
+\newblock {RO-FIGS}: Oblique splits for interpretable tree sums with random
+  feature subsets and {L1/2} regularization.
+\newblock In \emph{{IEEE} {CITREx}}, 2025.
+
+\bibitem[Nori et~al.(2019)Nori, Jenkins, Koch, and Caruana]{Nori2019}
+Harsha Nori, Samuel Jenkins, Paul Koch, and Rich Caruana.
+\newblock {InterpretML}: {A} unified framework for machine learning
+  interpretability.
+\newblock \emph{arXiv preprint arXiv:1909.09223}, 2019.
+
+\bibitem[Pun et~al.(2022)Pun, Lee, and Xia]{Pun2022}
+Chi~Seng Pun, Si~Xian Lee, and Kelin Xia.
+\newblock Persistent-homology-based machine learning: a survey and a
+  comparative study.
+\newblock \emph{Artificial Intelligence Review}, 2022.
+\newblock \doi{10.1007/s10462-022-10146-z}.
+
+\bibitem[Sirocchi et~al.(2025)Sirocchi, Urschler, and Pfeifer]{Sirocchi2025}
+Christel Sirocchi, Martin Urschler, and Bastian Pfeifer.
+\newblock Feature graphs for interpretable unsupervised tree ensembles:
+  centrality, interaction, and application in disease subtyping.
+\newblock \emph{BioData Mining}, 2025.
+\newblock \doi{10.1186/s13040-025-00430-3}.
+
+\bibitem[Sz\'{e}kely et~al.(2007)Sz\'{e}kely, Rizzo, and Bakirov]{Szekely2007}
+G\'{a}bor~J. Sz\'{e}kely, Maria~L. Rizzo, and Nail~K. Bakirov.
+\newblock Measuring and testing dependence by correlation of distances.
+\newblock \emph{Annals of Statistics}, 35\penalty0 (6):\penalty0 2769--2794,
+  2007.
+\newblock \doi{10.1214/009053607000000505}.
+
+\bibitem[Tan et~al.(2022)Tan, Singh, Nasseri, Agarwal, and Yu]{Tan2022}
+Yan~Shuo Tan, Chandan Singh, Keyan Nasseri, Abhineet Agarwal, and Bin Yu.
+\newblock Fast interpretable greedy-tree sums ({FIGS}).
+\newblock \emph{arXiv preprint arXiv:2201.11931}, 2022.
+
+\bibitem[Tsang et~al.(2020)Tsang, Cheng, Liu, Feng, Zhou, and Liu]{Tsang2020}
+Michael Tsang, Dehua Cheng, Hanpeng Liu, Xue Feng, Eric Zhou, and Yan Liu.
+\newblock Feature interaction interpretability: {A} case for explaining
+  ad-recommendation systems via neural interaction detection.
+\newblock In \emph{8th International Conference on Learning Representations,
+  {ICLR} 2020}, 2020.
+
+\bibitem[Zomorodian and Carlsson(2005)]{Zomorodian2005}
+Afra Zomorodian and Gunnar~E. Carlsson.
+\newblock Computing persistent homology.
+\newblock \emph{Discrete and Computational Geometry}, 33\penalty0 (2):\penalty0
+  249--274, 2005.
+\newblock \doi{10.1007/s00454-004-1146-y}.
+
+\end{thebibliography}
