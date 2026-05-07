@@ -1,0 +1,225 @@
+2026-02-28 16:58:38.256 | INFO     | __main__:main:1308 - ============================================================
+2026-02-28 16:58:38.256 | INFO     | __main__:main:1309 - SC-OTS Comprehensive Statistical Evaluation
+2026-02-28 16:58:38.256 | INFO     | __main__:main:1310 - ============================================================
+2026-02-28 16:58:38.257 | INFO     | __main__:load_exp1:145 - Loading exp_id1 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-28 16:58:38.466 | INFO     | __main__:load_exp1:147 - Loaded exp_id1: 10 datasets
+2026-02-28 16:58:38.467 | INFO     | __main__:load_exp2:155 - Loading exp_id2 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus/full_method_out.json
+2026-02-28 16:58:38.468 | INFO     | __main__:load_exp2:157 - Loaded exp_id2: 10 datasets, methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'XGBoost-default', 'XGBoost-oracle', 'EBM-default', 'EBM-high-interaction', 'EBM-3way']
+2026-02-28 16:58:38.469 | INFO     | __main__:load_exp3:165 - Loading exp_id3 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-28 16:58:38.695 | INFO     | __main__:load_exp3:167 - Loaded exp_id3: 10 datasets
+2026-02-28 16:58:38.845 | INFO     | __main__:build_exp1_fold_scores:218 - Built exp_id1 fold scores: 300 rows, 10 datasets, 6 methods
+2026-02-28 16:58:38.846 | INFO     | __main__:build_exp2_fold_scores:261 - Built exp_id2 fold scores: 180 rows (exp_id2-only methods)
+2026-02-28 16:58:38.847 | INFO     | __main__:build_unified_df:270 - Unified DataFrame: 480 rows, methods: ['EBM', 'EBM-3way', 'EBM-high', 'FIGS-10', 'FIGS-20', 'FIGS-5', 'RO-FIGS', 'SC-OTS', 'XGBoost', 'XGBoost+SC', 'XGBoost-oracle']
+2026-02-28 16:58:38.857 | INFO     | __main__:compute_mean_scores:283 - Mean score matrix: (10, 11)
+2026-02-28 16:58:38.862 | INFO     | __main__:main:1325 - Mean scores matrix:
+method                 EBM  EBM-3way  EBM-high  FIGS-10  FIGS-20  FIGS-5  RO-FIGS  SC-OTS  XGBoost  XGBoost+SC  XGBoost-oracle
+dataset                                                                                                                       
+friedman1           0.9983       NaN    0.9968   0.8212   0.9146  0.6870   0.7328  0.7430   0.9735      0.9876          0.9935
+friedman3           0.8842       NaN    0.8727   0.7663   0.8284  0.6837   0.7090  0.7095   0.8742      0.8763          0.8742
+synth_3way          0.9857    0.9373    0.9837   0.7904   0.8762  0.6647   0.6869  0.6893   0.9696      0.9383          0.9826
+synth_4way          0.9774    0.9816    0.9844   0.8468   0.9186  0.7484   0.7574  0.7705   0.9756      0.9501          0.9818
+diabetes            0.7655       NaN    0.7695   0.7200   0.7291  0.7616   0.7513  0.7551   0.7473      0.7213             NaN
+breast_w            0.9657       NaN    0.9656   0.9499   0.9513  0.9442   0.9557  0.9471   0.9614      0.9585             NaN
+wine_quality        0.3851       NaN    0.3935   0.2960   0.3281  0.2506   0.2527  0.2751   0.4721      0.3637             NaN
+california_housing  0.8030       NaN    0.8109   0.6492   0.7191  0.5351   0.5599  0.6179   0.8347      0.8233             NaN
+spambase            0.9522       NaN    0.9487   0.9055   0.9185  0.8937   0.8952  0.8763   0.9513      0.9476             NaN
+adult               0.8760       NaN    0.8724   0.8564   0.8591  0.8544   0.8536  0.8441   0.8710      0.8759             NaN
+2026-02-28 16:58:38.862 | INFO     | __main__:metric1_wilcoxon_pairwise:291 - Computing Metric 1: Wilcoxon pairwise tests
+2026-02-28 16:58:38.880 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.884 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.898 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.901 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.914 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.917 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.927 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.931 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.939 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.942 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.948 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.951 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.955 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.958 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.959 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:58:38.963 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.964 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-high: only 4 common datasets
+2026-02-28 16:58:38.965 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:38.966 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM-high vs EBM-3way: only 2 common datasets
+2026-02-28 16:58:39.008 | INFO     | __main__:metric1_wilcoxon_pairwise:398 - Wilcoxon: 36 pairs, 0 significant at 0.05
+2026-02-28 16:58:39.009 | INFO     | __main__:metric2_friedman_nemenyi:409 - Computing Metric 2: Friedman + Nemenyi
+2026-02-28 16:58:39.010 | INFO     | __main__:metric2_friedman_nemenyi:417 - Methods with scores on all datasets: ['SC-OTS', 'RO-FIGS', 'FIGS-20', 'XGBoost', 'XGBoost+SC', 'EBM', 'FIGS-5', 'FIGS-10', 'EBM-high']
+2026-02-28 16:58:39.012 | INFO     | __main__:metric2_friedman_nemenyi:440 - Friedman chi2=60.8800, p=0.000000
+2026-02-28 16:58:39.247 | INFO     | __main__:metric3_error_analysis:502 - Computing Metric 3: Error analysis
+2026-02-28 16:58:39.925 | INFO     | __main__:metric3_error_analysis:603 - Error analysis: 10 datasets, best_predictor=gap_vs_n_samples
+2026-02-28 16:58:39.925 | INFO     | __main__:metric4_xgb_sc_benefit:611 - Computing Metric 4: XGBoost+SC benefit
+2026-02-28 16:58:40.196 | INFO     | __main__:metric4_xgb_sc_benefit:725 - XGBoost+SC benefit: 3 better, 7 worse, mean_d=-1.658
+2026-02-28 16:58:40.196 | INFO     | __main__:metric5_interaction_recovery:733 - Computing Metric 5: Interaction recovery curves
+2026-02-28 16:58:40.961 | INFO     | __main__:metric5_interaction_recovery:870 - Interaction recovery: mean_oracle_f1=0.748, mean_gap_f1=0.356
+2026-02-28 16:58:40.961 | INFO     | __main__:metric6_pareto_frontier:879 - Computing Metric 6: Pareto frontier
+2026-02-28 16:58:41.546 | INFO     | __main__:metric6_pareto_frontier:979 - Pareto: 4 optimal methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'EBM']
+2026-02-28 16:58:41.547 | INFO     | __main__:metric7_characteristics_regression:990 - Computing Metric 7: Characteristics regression
+2026-02-28 16:58:42.370 | INFO     | __main__:metric7_characteristics_regression:1100 - Regression: R²=0.20176362529608005, categories={'A_synthetic': 8.5, 'B_realworld': 7.0, 'C_medium_complexity': 9.0}
+2026-02-28 16:58:42.370 | INFO     | __main__:compute_hypothesis_verdict:1114 - Computing hypothesis verdict
+2026-02-28 16:58:42.371 | INFO     | __main__:compute_hypothesis_verdict:1173 - Hypothesis verdict: confirmed=True, C1=True, C3=True
+2026-02-28 16:58:42.371 | INFO     | __main__:build_output:1193 - Building output JSON
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1375 - Wrote eval_out.json (1572.9 KB)
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1378 - ============================================================
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1379 - EVALUATION SUMMARY
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1380 -   SC-OTS mean rank: 7.20
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1381 -   Friedman p-value: 0.000000
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1382 -   SC-OTS vs RO-FIGS p: 1.000000
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1383 -   SC-OTS wins vs RO-FIGS: 7/10
+2026-02-28 16:58:42.389 | INFO     | __main__:main:1384 -   Mean interaction F1 (enhanced): 0.748
+2026-02-28 16:58:42.390 | INFO     | __main__:main:1385 -   Mean faithfulness precision: 1.000
+2026-02-28 16:58:42.390 | INFO     | __main__:main:1386 -   Mean Cohen's d (XGB+SC): -1.658
+2026-02-28 16:58:42.390 | INFO     | __main__:main:1387 -   Hypothesis confirmed: True
+2026-02-28 16:58:42.390 | INFO     | __main__:main:1388 - ============================================================
+2026-02-28 16:59:56.542 | INFO     | __main__:main:1310 - ============================================================
+2026-02-28 16:59:56.543 | INFO     | __main__:main:1311 - SC-OTS Comprehensive Statistical Evaluation
+2026-02-28 16:59:56.544 | INFO     | __main__:main:1312 - ============================================================
+2026-02-28 16:59:56.544 | INFO     | __main__:load_exp1:145 - Loading exp_id1 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-28 16:59:56.863 | INFO     | __main__:load_exp1:147 - Loaded exp_id1: 10 datasets
+2026-02-28 16:59:56.863 | INFO     | __main__:load_exp2:155 - Loading exp_id2 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus/full_method_out.json
+2026-02-28 16:59:56.866 | INFO     | __main__:load_exp2:157 - Loaded exp_id2: 10 datasets, methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'XGBoost-default', 'XGBoost-oracle', 'EBM-default', 'EBM-high-interaction', 'EBM-3way']
+2026-02-28 16:59:56.866 | INFO     | __main__:load_exp3:165 - Loading exp_id3 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-28 16:59:57.160 | INFO     | __main__:load_exp3:167 - Loaded exp_id3: 10 datasets
+2026-02-28 16:59:57.375 | INFO     | __main__:build_exp1_fold_scores:218 - Built exp_id1 fold scores: 300 rows, 10 datasets, 6 methods
+2026-02-28 16:59:57.377 | INFO     | __main__:build_exp2_fold_scores:261 - Built exp_id2 fold scores: 180 rows (exp_id2-only methods)
+2026-02-28 16:59:57.377 | INFO     | __main__:build_unified_df:270 - Unified DataFrame: 480 rows, methods: ['EBM', 'EBM-3way', 'EBM-high', 'FIGS-10', 'FIGS-20', 'FIGS-5', 'RO-FIGS', 'SC-OTS', 'XGBoost', 'XGBoost+SC', 'XGBoost-oracle']
+2026-02-28 16:59:57.382 | INFO     | __main__:compute_mean_scores:283 - Mean score matrix: (10, 11)
+2026-02-28 16:59:57.387 | INFO     | __main__:main:1327 - Mean scores matrix:
+method                 EBM  EBM-3way  EBM-high  FIGS-10  FIGS-20  FIGS-5  RO-FIGS  SC-OTS  XGBoost  XGBoost+SC  XGBoost-oracle
+dataset                                                                                                                       
+friedman1           0.9983       NaN    0.9968   0.8212   0.9146  0.6870   0.7328  0.7430   0.9735      0.9876          0.9935
+friedman3           0.8842       NaN    0.8727   0.7663   0.8284  0.6837   0.7090  0.7095   0.8742      0.8763          0.8742
+synth_3way          0.9857    0.9373    0.9837   0.7904   0.8762  0.6647   0.6869  0.6893   0.9696      0.9383          0.9826
+synth_4way          0.9774    0.9816    0.9844   0.8468   0.9186  0.7484   0.7574  0.7705   0.9756      0.9501          0.9818
+diabetes            0.7655       NaN    0.7695   0.7200   0.7291  0.7616   0.7513  0.7551   0.7473      0.7213             NaN
+breast_w            0.9657       NaN    0.9656   0.9499   0.9513  0.9442   0.9557  0.9471   0.9614      0.9585             NaN
+wine_quality        0.3851       NaN    0.3935   0.2960   0.3281  0.2506   0.2527  0.2751   0.4721      0.3637             NaN
+california_housing  0.8030       NaN    0.8109   0.6492   0.7191  0.5351   0.5599  0.6179   0.8347      0.8233             NaN
+spambase            0.9522       NaN    0.9487   0.9055   0.9185  0.8937   0.8952  0.8763   0.9513      0.9476             NaN
+adult               0.8760       NaN    0.8724   0.8564   0.8591  0.8544   0.8536  0.8441   0.8710      0.8759             NaN
+2026-02-28 16:59:57.387 | INFO     | __main__:metric1_wilcoxon_pairwise:291 - Computing Metric 1: Wilcoxon pairwise tests
+2026-02-28 16:59:57.412 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.416 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.432 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.436 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.448 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.452 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.466 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.473 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.482 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.485 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.494 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.498 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.502 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.507 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.508 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 16:59:57.512 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.514 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-high: only 4 common datasets
+2026-02-28 16:59:57.515 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.517 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM-high vs EBM-3way: only 2 common datasets
+2026-02-28 16:59:57.565 | INFO     | __main__:metric1_wilcoxon_pairwise:398 - Wilcoxon: 36 pairs, 0 significant at 0.05
+2026-02-28 16:59:57.565 | INFO     | __main__:metric2_friedman_nemenyi:409 - Computing Metric 2: Friedman + Nemenyi
+2026-02-28 16:59:57.566 | INFO     | __main__:metric2_friedman_nemenyi:417 - Methods with scores on all datasets: ['SC-OTS', 'RO-FIGS', 'FIGS-20', 'XGBoost', 'XGBoost+SC', 'EBM', 'FIGS-5', 'FIGS-10', 'EBM-high']
+2026-02-28 16:59:57.570 | INFO     | __main__:metric2_friedman_nemenyi:440 - Friedman chi2=60.8800, p=0.000000
+2026-02-28 16:59:57.846 | INFO     | __main__:metric3_error_analysis:502 - Computing Metric 3: Error analysis
+2026-02-28 16:59:58.971 | INFO     | __main__:metric3_error_analysis:603 - Error analysis: 10 datasets, best_predictor=gap_vs_n_samples
+2026-02-28 16:59:58.971 | INFO     | __main__:metric4_xgb_sc_benefit:611 - Computing Metric 4: XGBoost+SC benefit
+2026-02-28 16:59:59.306 | INFO     | __main__:metric4_xgb_sc_benefit:725 - XGBoost+SC benefit: 3 better, 7 worse, mean_d=-1.658
+2026-02-28 16:59:59.307 | INFO     | __main__:metric5_interaction_recovery:733 - Computing Metric 5: Interaction recovery curves
+2026-02-28 17:00:00.455 | INFO     | __main__:metric5_interaction_recovery:870 - Interaction recovery: mean_oracle_f1=0.748, mean_gap_f1=0.356
+2026-02-28 17:00:00.456 | INFO     | __main__:metric6_pareto_frontier:879 - Computing Metric 6: Pareto frontier
+2026-02-28 17:00:01.191 | INFO     | __main__:metric6_pareto_frontier:979 - Pareto: 4 optimal methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'EBM']
+2026-02-28 17:00:01.192 | INFO     | __main__:metric7_characteristics_regression:990 - Computing Metric 7: Characteristics regression
+2026-02-28 17:00:01.555 | INFO     | __main__:metric7_characteristics_regression:1100 - Regression: R²=0.20176362529608005, categories={'A_synthetic': 8.5, 'B_realworld': 7.0, 'C_medium_complexity': 9.0}
+2026-02-28 17:00:01.555 | INFO     | __main__:compute_hypothesis_verdict:1114 - Computing hypothesis verdict
+2026-02-28 17:00:01.556 | INFO     | __main__:compute_hypothesis_verdict:1173 - Hypothesis verdict: confirmed=True, C1=True, C3=True
+2026-02-28 17:00:01.556 | INFO     | __main__:build_output:1193 - Building output JSON
+2026-02-28 17:00:01.579 | INFO     | __main__:main:1377 - Wrote eval_out.json (1573.7 KB)
+2026-02-28 17:00:01.579 | INFO     | __main__:main:1380 - ============================================================
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1381 - EVALUATION SUMMARY
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1382 -   SC-OTS mean rank: 7.20
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1383 -   Friedman p-value: 0.000000
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1384 -   SC-OTS vs RO-FIGS p: 1.000000
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1385 -   SC-OTS wins vs RO-FIGS: 7/10
+2026-02-28 17:00:01.580 | INFO     | __main__:main:1386 -   Mean interaction F1 (enhanced): 0.748
+2026-02-28 17:00:01.581 | INFO     | __main__:main:1387 -   Mean faithfulness precision: 1.000
+2026-02-28 17:00:01.581 | INFO     | __main__:main:1388 -   Mean Cohen's d (XGB+SC): -1.658
+2026-02-28 17:00:01.581 | INFO     | __main__:main:1389 -   Hypothesis confirmed: True
+2026-02-28 17:00:01.581 | INFO     | __main__:main:1390 - ============================================================
+2026-02-28 17:00:38.860 | INFO     | __main__:main:1310 - ============================================================
+2026-02-28 17:00:38.861 | INFO     | __main__:main:1311 - SC-OTS Comprehensive Statistical Evaluation
+2026-02-28 17:00:38.861 | INFO     | __main__:main:1312 - ============================================================
+2026-02-28 17:00:38.861 | INFO     | __main__:load_exp1:145 - Loading exp_id1 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json
+2026-02-28 17:00:39.116 | INFO     | __main__:load_exp1:147 - Loaded exp_id1: 10 datasets
+2026-02-28 17:00:39.116 | INFO     | __main__:load_exp2:155 - Loading exp_id2 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus/full_method_out.json
+2026-02-28 17:00:39.117 | INFO     | __main__:load_exp2:157 - Loaded exp_id2: 10 datasets, methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'XGBoost-default', 'XGBoost-oracle', 'EBM-default', 'EBM-high-interaction', 'EBM-3way']
+2026-02-28 17:00:39.118 | INFO     | __main__:load_exp3:165 - Loading exp_id3 from /home/adrian/projects/temp/ai-inventor-old3/aii_pipeline/runs/run__20260228_133939/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json
+2026-02-28 17:00:39.342 | INFO     | __main__:load_exp3:167 - Loaded exp_id3: 10 datasets
+2026-02-28 17:00:39.525 | INFO     | __main__:build_exp1_fold_scores:218 - Built exp_id1 fold scores: 300 rows, 10 datasets, 6 methods
+2026-02-28 17:00:39.526 | INFO     | __main__:build_exp2_fold_scores:261 - Built exp_id2 fold scores: 180 rows (exp_id2-only methods)
+2026-02-28 17:00:39.527 | INFO     | __main__:build_unified_df:270 - Unified DataFrame: 480 rows, methods: ['EBM', 'EBM-3way', 'EBM-high', 'FIGS-10', 'FIGS-20', 'FIGS-5', 'RO-FIGS', 'SC-OTS', 'XGBoost', 'XGBoost+SC', 'XGBoost-oracle']
+2026-02-28 17:00:39.531 | INFO     | __main__:compute_mean_scores:283 - Mean score matrix: (10, 11)
+2026-02-28 17:00:39.535 | INFO     | __main__:main:1327 - Mean scores matrix:
+method                 EBM  EBM-3way  EBM-high  FIGS-10  FIGS-20  FIGS-5  RO-FIGS  SC-OTS  XGBoost  XGBoost+SC  XGBoost-oracle
+dataset                                                                                                                       
+friedman1           0.9983       NaN    0.9968   0.8212   0.9146  0.6870   0.7328  0.7430   0.9735      0.9876          0.9935
+friedman3           0.8842       NaN    0.8727   0.7663   0.8284  0.6837   0.7090  0.7095   0.8742      0.8763          0.8742
+synth_3way          0.9857    0.9373    0.9837   0.7904   0.8762  0.6647   0.6869  0.6893   0.9696      0.9383          0.9826
+synth_4way          0.9774    0.9816    0.9844   0.8468   0.9186  0.7484   0.7574  0.7705   0.9756      0.9501          0.9818
+diabetes            0.7655       NaN    0.7695   0.7200   0.7291  0.7616   0.7513  0.7551   0.7473      0.7213             NaN
+breast_w            0.9657       NaN    0.9656   0.9499   0.9513  0.9442   0.9557  0.9471   0.9614      0.9585             NaN
+wine_quality        0.3851       NaN    0.3935   0.2960   0.3281  0.2506   0.2527  0.2751   0.4721      0.3637             NaN
+california_housing  0.8030       NaN    0.8109   0.6492   0.7191  0.5351   0.5599  0.6179   0.8347      0.8233             NaN
+spambase            0.9522       NaN    0.9487   0.9055   0.9185  0.8937   0.8952  0.8763   0.9513      0.9476             NaN
+adult               0.8760       NaN    0.8724   0.8564   0.8591  0.8544   0.8536  0.8441   0.8710      0.8759             NaN
+2026-02-28 17:00:39.535 | INFO     | __main__:metric1_wilcoxon_pairwise:291 - Computing Metric 1: Wilcoxon pairwise tests
+2026-02-28 17:00:39.551 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.554 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping SC-OTS vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.567 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.570 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping RO-FIGS vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.581 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.584 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-20 vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.594 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.597 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.604 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.607 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost+SC vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.613 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.617 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.621 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.626 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-5 vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.628 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs XGBoost-oracle: only 4 common datasets
+2026-02-28 17:00:39.632 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping FIGS-10 vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.633 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-high: only 4 common datasets
+2026-02-28 17:00:39.634 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping XGBoost-oracle vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.635 | WARNING  | __main__:metric1_wilcoxon_pairwise:310 - Skipping EBM-high vs EBM-3way: only 2 common datasets
+2026-02-28 17:00:39.673 | INFO     | __main__:metric1_wilcoxon_pairwise:398 - Wilcoxon: 36 pairs, 0 significant at 0.05
+2026-02-28 17:00:39.673 | INFO     | __main__:metric2_friedman_nemenyi:409 - Computing Metric 2: Friedman + Nemenyi
+2026-02-28 17:00:39.674 | INFO     | __main__:metric2_friedman_nemenyi:417 - Methods with scores on all datasets: ['SC-OTS', 'RO-FIGS', 'FIGS-20', 'XGBoost', 'XGBoost+SC', 'EBM', 'FIGS-5', 'FIGS-10', 'EBM-high']
+2026-02-28 17:00:39.677 | INFO     | __main__:metric2_friedman_nemenyi:440 - Friedman chi2=60.8800, p=0.000000
+2026-02-28 17:00:39.891 | INFO     | __main__:metric3_error_analysis:502 - Computing Metric 3: Error analysis
+2026-02-28 17:00:40.572 | INFO     | __main__:metric3_error_analysis:603 - Error analysis: 10 datasets, best_predictor=gap_vs_n_samples
+2026-02-28 17:00:40.573 | INFO     | __main__:metric4_xgb_sc_benefit:611 - Computing Metric 4: XGBoost+SC benefit
+2026-02-28 17:00:40.857 | INFO     | __main__:metric4_xgb_sc_benefit:725 - XGBoost+SC benefit: 3 better, 7 worse, mean_d=-1.658
+2026-02-28 17:00:40.857 | INFO     | __main__:metric5_interaction_recovery:733 - Computing Metric 5: Interaction recovery curves
+2026-02-28 17:00:41.670 | INFO     | __main__:metric5_interaction_recovery:870 - Interaction recovery: mean_oracle_f1=0.748, mean_gap_f1=0.356
+2026-02-28 17:00:41.670 | INFO     | __main__:metric6_pareto_frontier:879 - Computing Metric 6: Pareto frontier
+2026-02-28 17:00:42.226 | INFO     | __main__:metric6_pareto_frontier:979 - Pareto: 4 optimal methods: ['FIGS-5', 'FIGS-10', 'FIGS-20', 'EBM']
+2026-02-28 17:00:42.227 | INFO     | __main__:metric7_characteristics_regression:990 - Computing Metric 7: Characteristics regression
+2026-02-28 17:00:42.493 | INFO     | __main__:metric7_characteristics_regression:1100 - Regression: R²=0.20176362529608005, categories={'A_synthetic': 8.5, 'B_realworld': 7.0, 'C_medium_complexity': 9.0}
+2026-02-28 17:00:42.493 | INFO     | __main__:compute_hypothesis_verdict:1114 - Computing hypothesis verdict
+2026-02-28 17:00:42.494 | INFO     | __main__:compute_hypothesis_verdict:1173 - Hypothesis verdict: confirmed=True, C1=True, C3=True
+2026-02-28 17:00:42.494 | INFO     | __main__:build_output:1193 - Building output JSON
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1377 - Wrote eval_out.json (1573.7 KB)
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1380 - ============================================================
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1381 - EVALUATION SUMMARY
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1382 -   SC-OTS mean rank: 7.20
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1383 -   Friedman p-value: 0.000000
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1384 -   SC-OTS vs RO-FIGS p: 1.000000
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1385 -   SC-OTS wins vs RO-FIGS: 7/10
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1386 -   Mean interaction F1 (enhanced): 0.748
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1387 -   Mean faithfulness precision: 1.000
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1388 -   Mean Cohen's d (XGB+SC): -1.658
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1389 -   Hypothesis confirmed: True
+2026-02-28 17:00:42.512 | INFO     | __main__:main:1390 - ============================================================

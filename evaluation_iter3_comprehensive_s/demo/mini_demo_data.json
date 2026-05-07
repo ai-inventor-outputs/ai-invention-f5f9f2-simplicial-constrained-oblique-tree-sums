@@ -1,0 +1,4799 @@
+{
+  "fold_scores": [
+    {
+      "dataset": "friedman1",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.73500213,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.68789299,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.91184693,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.97328195,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.98693238,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.99821211,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.72091622,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.73557219,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.9180911,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.97448751,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.98709907,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.99853466,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.75525193,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.76927774,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.91105178,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.97592664,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.989112,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.99848887,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.73255504,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.74844924,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.91771478,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.97135513,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.98711591,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.99829936,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.771127,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.72275846,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.91405333,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.9725997,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.98774792,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.99798785,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.72403941,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.72403941,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.8329832,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.89135558,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.88399869,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.89429579,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.72290502,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.72290502,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.84218006,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.88180262,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.88363906,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.89002343,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.67076878,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.67076878,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.82216041,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.86306821,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.870535,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.87594607,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.69311177,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.69101831,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.81385239,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.860383,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.86688763,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.87125493,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.73646603,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.73646603,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.83093236,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.87427012,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.87621399,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.88948026,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.72721966,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.67372806,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.87794469,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.96982024,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.94218297,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.9851319,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.66901335,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.71725873,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.86441432,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.97024584,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.9521292,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.98586747,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.72225534,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.65503511,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.87663484,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.96826529,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.9467819,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.98624694,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.67739842,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.70325061,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.88177297,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.97110855,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.94788325,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.98582497,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.65084754,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.68507535,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.88010884,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.9685763,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.90275157,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.98565122,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.76091894,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.75535494,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.91893226,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.97705941,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.94662278,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.97823739,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.76738829,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.73113337,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.91457053,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.97511028,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.95203057,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.97602381,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.75290764,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.78088519,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.91891456,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.97314298,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.94906966,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.97622324,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.7846438,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.77465982,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.92416227,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.97789614,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.95272227,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.97785557,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.7865198,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.74491284,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.91634743,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.97502764,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.9498157,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.97865463,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.77922078,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.73376623,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.71428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.75974026,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.72077922,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.78571429,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.74509804,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.75163399,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.74509804,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.74509804,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.66666667,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.7124183,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.75324675,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.74675325,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.75324675,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.74675325,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.72727273,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.77272727,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.80519481,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.78571429,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.75974026,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.77272727,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.77922078,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.80519481,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.69281046,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.73856209,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.67320261,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.7124183,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.7124183,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.75163399,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.93571429,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.94285714,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.96428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.96428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.96428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.94285714,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.94285714,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.94285714,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.97142857,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.91428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.96428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.97857143,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.97857143,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.96428571,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.97857143,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.95,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.95,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.94285714,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.95714286,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.97122302,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.95683453,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.9352518,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.97122302,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.97122302,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.95683453,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.26882292,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.28358577,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.3125174,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.48162226,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.36584975,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.38406099,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.28492061,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.2369441,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.33402826,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.48203997,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.35970849,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.38587527,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.30603186,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.29022243,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.37113631,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.47941034,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.36707867,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.41150108,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.25699895,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.22971599,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.3027001,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.45932703,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.37308895,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.36404471,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.25848821,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.22324291,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.32030501,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.45811981,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.35272823,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.3798172,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.61610084,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.54702264,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.70906112,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.83116009,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.81460041,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.79731213,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.64943595,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.60028899,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.74121216,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.8490521,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.84115772,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.82403621,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.58172742,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.55073625,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.72480979,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.82451226,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.82069385,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.79613504,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.62709477,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.53707225,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.72090455,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.83522882,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.82496743,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.80853053,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.61515417,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.56430477,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.69963816,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.83352332,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.81512139,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.78883377,
+      "task_type": "regression",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.88043478,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.89565217,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.93369565,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.95434783,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.94673913,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.96195652,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.87173913,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.88586957,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.91086957,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.94891304,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.9423913,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.9423913,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.88804348,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.90543478,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.93478261,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.95326087,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.95,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.95434783,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.8534202,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.87730727,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.8990228,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.94245385,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.95005429,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.94571118,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.88804348,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.91195652,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.91413043,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.9576087,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.94891304,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.95652174,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "SC-OTS",
+      "fold": 4,
+      "score": 0.831,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "RO-FIGS",
+      "fold": 4,
+      "score": 0.8465,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-20",
+      "fold": 4,
+      "score": 0.851,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost",
+      "fold": 4,
+      "score": 0.8665,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost+SC",
+      "fold": 4,
+      "score": 0.866,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM",
+      "fold": 4,
+      "score": 0.867,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "SC-OTS",
+      "fold": 2,
+      "score": 0.8485,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "RO-FIGS",
+      "fold": 2,
+      "score": 0.8615,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-20",
+      "fold": 2,
+      "score": 0.8685,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost",
+      "fold": 2,
+      "score": 0.8815,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost+SC",
+      "fold": 2,
+      "score": 0.883,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM",
+      "fold": 2,
+      "score": 0.882,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "SC-OTS",
+      "fold": 0,
+      "score": 0.835,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "RO-FIGS",
+      "fold": 0,
+      "score": 0.842,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-20",
+      "fold": 0,
+      "score": 0.8485,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost",
+      "fold": 0,
+      "score": 0.859,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost+SC",
+      "fold": 0,
+      "score": 0.871,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM",
+      "fold": 0,
+      "score": 0.8735,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "SC-OTS",
+      "fold": 1,
+      "score": 0.857,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "RO-FIGS",
+      "fold": 1,
+      "score": 0.857,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-20",
+      "fold": 1,
+      "score": 0.8645,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost",
+      "fold": 1,
+      "score": 0.8735,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost+SC",
+      "fold": 1,
+      "score": 0.883,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM",
+      "fold": 1,
+      "score": 0.877,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "SC-OTS",
+      "fold": 3,
+      "score": 0.849,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "RO-FIGS",
+      "fold": 3,
+      "score": 0.861,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-20",
+      "fold": 3,
+      "score": 0.863,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost",
+      "fold": 3,
+      "score": 0.8745,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "XGBoost+SC",
+      "fold": 3,
+      "score": 0.8765,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM",
+      "fold": 3,
+      "score": 0.8805,
+      "task_type": "classification",
+      "source": "exp_id1"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.685835,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.674433,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.671925,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.691803,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.710985,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.814676,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.81981,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.817717,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.822837,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.830871,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost-oracle",
+      "fold": 0,
+      "score": 0.993736,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost-oracle",
+      "fold": 1,
+      "score": 0.992718,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost-oracle",
+      "fold": 2,
+      "score": 0.993459,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost-oracle",
+      "fold": 3,
+      "score": 0.993554,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "XGBoost-oracle",
+      "fold": 4,
+      "score": 0.993863,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.996477,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.996722,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.996933,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.996812,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman1",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.997003,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.69098,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.683196,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.683112,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.711803,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.649645,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.769841,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.771198,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.753795,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.781412,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.755188,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost-oracle",
+      "fold": 0,
+      "score": 0.87427,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost-oracle",
+      "fold": 1,
+      "score": 0.891356,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost-oracle",
+      "fold": 2,
+      "score": 0.860383,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost-oracle",
+      "fold": 3,
+      "score": 0.881803,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "XGBoost-oracle",
+      "fold": 4,
+      "score": 0.863068,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.873779,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.886051,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.860582,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.875044,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "friedman3",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.868168,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.64452,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.65832,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.708424,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.658511,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.653764,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.774545,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.793855,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.805439,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.788533,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.789556,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost-oracle",
+      "fold": 0,
+      "score": 0.982893,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost-oracle",
+      "fold": 1,
+      "score": 0.982435,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost-oracle",
+      "fold": 2,
+      "score": 0.983309,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost-oracle",
+      "fold": 3,
+      "score": 0.981377,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "XGBoost-oracle",
+      "fold": 4,
+      "score": 0.982911,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.983484,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.982944,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.984642,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.984198,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.983453,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-3way",
+      "fold": 0,
+      "score": 0.935634,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-3way",
+      "fold": 1,
+      "score": 0.935722,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-3way",
+      "fold": 2,
+      "score": 0.940863,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-3way",
+      "fold": 3,
+      "score": 0.934792,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_3way",
+      "method": "EBM-3way",
+      "fold": 4,
+      "score": 0.939413,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.770108,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.745198,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.752386,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.75943,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.715115,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.85124,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.849522,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.856754,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.850517,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.825798,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost-oracle",
+      "fold": 0,
+      "score": 0.981424,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost-oracle",
+      "fold": 1,
+      "score": 0.981297,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost-oracle",
+      "fold": 2,
+      "score": 0.981406,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost-oracle",
+      "fold": 3,
+      "score": 0.982186,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "XGBoost-oracle",
+      "fold": 4,
+      "score": 0.982635,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.984957,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.984196,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.984455,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.984516,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.984003,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-3way",
+      "fold": 0,
+      "score": 0.983092,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-3way",
+      "fold": 1,
+      "score": 0.98016,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-3way",
+      "fold": 2,
+      "score": 0.981554,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-3way",
+      "fold": 3,
+      "score": 0.980249,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "synth_4way",
+      "method": "EBM-3way",
+      "fold": 4,
+      "score": 0.982697,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.792208,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.811688,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.746753,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.738562,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.718954,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.714286,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.753247,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.733766,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.732026,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.666667,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.785714,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.805195,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.779221,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.738562,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "diabetes",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.738562,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.942857,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.942857,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.964286,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.942857,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.928058,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.957143,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.95,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.971429,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.957143,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.913669,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.971429,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.964286,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.971429,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.971429,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "breast_w",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.94964,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.842,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.8555,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.862,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.8625,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.85,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.846,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.8555,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.8675,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.862,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.851,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.8665,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.8765,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.8795,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.871,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "adult",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.8685,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.233735,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.255658,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.2472,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.261241,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.255092,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.268479,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.302425,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.294377,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.293133,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.32146,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.37744,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.379103,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.395204,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.400239,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "wine_quality",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.415519,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.516048,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.541278,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.541435,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.552501,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.524142,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.634875,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.651647,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.6566,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.664149,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.638927,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.803932,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.813199,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.80718,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.827792,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "california_housing",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.802258,
+      "task_type": "regression",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-5",
+      "fold": 0,
+      "score": 0.883822,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-5",
+      "fold": 1,
+      "score": 0.897826,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-5",
+      "fold": 2,
+      "score": 0.901087,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-5",
+      "fold": 3,
+      "score": 0.892391,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-5",
+      "fold": 4,
+      "score": 0.893478,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-10",
+      "fold": 0,
+      "score": 0.889251,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-10",
+      "fold": 1,
+      "score": 0.901087,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-10",
+      "fold": 2,
+      "score": 0.920652,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-10",
+      "fold": 3,
+      "score": 0.920652,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "FIGS-10",
+      "fold": 4,
+      "score": 0.895652,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM-high",
+      "fold": 0,
+      "score": 0.944625,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM-high",
+      "fold": 1,
+      "score": 0.954348,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM-high",
+      "fold": 2,
+      "score": 0.952174,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM-high",
+      "fold": 3,
+      "score": 0.95,
+      "task_type": "classification",
+      "source": "exp_id2"
+    },
+    {
+      "dataset": "spambase",
+      "method": "EBM-high",
+      "fold": 4,
+      "score": 0.942391,
+      "task_type": "classification",
+      "source": "exp_id2"
+    }
+  ],
+  "exp1_meta": {
+    "per_dataset_results": {
+      "friedman1": {
+        "n_features": 10,
+        "n_samples": 5000,
+        "task_type": "regression",
+        "category": "A_synthetic",
+        "avg_n_simplices_dim1": 3.0,
+        "avg_threshold": 0.8630850993482111,
+        "avg_betti": [
+          7.0,
+          0.0,
+          0.0
+        ],
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 0.3,
+          "f1": 0.4615384615384615
+        }
+      },
+      "friedman3": {
+        "n_features": 4,
+        "n_samples": 5000,
+        "task_type": "regression",
+        "category": "A_synthetic",
+        "avg_n_simplices_dim1": 3.0,
+        "avg_threshold": 0.9274153030675156,
+        "avg_betti": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "synth_3way": {
+        "n_features": 15,
+        "n_samples": 5000,
+        "task_type": "regression",
+        "category": "A_synthetic",
+        "avg_n_simplices_dim1": 5.0,
+        "avg_threshold": 0.9330364615130243,
+        "avg_betti": [
+          10.8,
+          0.0,
+          0.0
+        ],
+        "interaction_faithfulness": {
+          "precision": 1.0,
+          "recall": 0.5111111111111111,
+          "f1": 0.6761904761904761
+        }
+      },
+      "synth_4way": {
+        "n_features": 20,
+        "n_samples": 5000,
+        "task_type": "regression",
+        "category": "A_synthetic",
+        "avg_n_simplices_dim1": 6.2,
+        "avg_threshold": 0.9790923593200522,
+        "avg_betti": [
+          14.0,
+          0.0,
+          0.0
+        ]
+      },
+      "diabetes": {
+        "n_features": 8,
+        "n_samples": 768,
+        "task_type": "classification",
+        "category": "B_realworld",
+        "avg_n_simplices_dim1": 4.8,
+        "avg_threshold": 0.9284112080829721,
+        "avg_betti": [
+          3.8,
+          0.0,
+          0.0
+        ]
+      },
+      "breast_w": {
+        "n_features": 9,
+        "n_samples": 699,
+        "task_type": "classification",
+        "category": "B_realworld",
+        "avg_n_simplices_dim1": 5.8,
+        "avg_threshold": 0.8470113278969409,
+        "avg_betti": [
+          4.8,
+          0.0,
+          0.0
+        ]
+      },
+      "wine_quality": {
+        "n_features": 11,
+        "n_samples": 6497,
+        "task_type": "regression",
+        "category": "B_realworld",
+        "avg_n_simplices_dim1": 3.4,
+        "avg_threshold": 0.9425168257136326,
+        "avg_betti": [
+          6.6,
+          0.0,
+          0.0
+        ]
+      },
+      "california_housing": {
+        "n_features": 8,
+        "n_samples": 20640,
+        "task_type": "regression",
+        "category": "B_realworld",
+        "avg_n_simplices_dim1": 7.8,
+        "avg_threshold": 0.9435720972644152,
+        "avg_betti": [
+          2.4,
+          0.0,
+          0.0
+        ]
+      },
+      "spambase": {
+        "n_features": 57,
+        "n_samples": 4601,
+        "task_type": "classification",
+        "category": "C_medium_complexity",
+        "avg_n_simplices_dim1": 183.8,
+        "avg_threshold": 0.9147629830471654,
+        "avg_betti": [
+          32.4,
+          0.0,
+          0.0
+        ]
+      },
+      "adult": {
+        "n_features": 96,
+        "n_samples": 10000,
+        "task_type": "classification",
+        "category": "B_realworld",
+        "avg_n_simplices_dim1": 33.2,
+        "avg_threshold": 0.9588639268820941,
+        "avg_betti": [
+          80.2,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "exp3_meta": {
+    "enhanced_interaction_dcor": {
+      "friedman1": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 0.0,
+        "f1_at_gap": 0.4,
+        "gap_threshold": 0.854326,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "0.789474": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "0.842105": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.854326": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.894737": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "0.947368": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 3,
+            "fn": 0
+          },
+          "1.0": {
+            "precision": 0.0016,
+            "recall": 1.0,
+            "f1": 0.0032,
+            "tp": 1,
+            "fp": 626,
+            "fn": 0
+          }
+        }
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 1.0,
+        "f1_at_gap": 0.3077,
+        "gap_threshold": 0.895796,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.789474": {
+            "precision": 1.0,
+            "recall": 0.0909,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 10
+          },
+          "0.842105": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.894737": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.895796": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "0.947368": {
+            "precision": 1.0,
+            "recall": 0.1818,
+            "f1": 0.3077,
+            "tp": 2,
+            "fp": 0,
+            "fn": 9
+          },
+          "1.0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 11,
+            "fp": 0,
+            "fn": 0
+          }
+        }
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.5714,
+        "optimal_threshold": 0.789474,
+        "f1_at_gap": 0.5714,
+        "gap_threshold": 0.822443,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.052632": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.105263": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.157895": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.210526": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.263158": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.315789": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.368421": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.421053": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.473684": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.526316": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.578947": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.631579": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.684211": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.736842": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333,
+            "tp": 1,
+            "fp": 0,
+            "fn": 4
+          },
+          "0.789474": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.822443": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.842105": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.894737": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "0.947368": {
+            "precision": 0.1111,
+            "recall": 0.4,
+            "f1": 0.1739,
+            "tp": 2,
+            "fp": 16,
+            "fn": 3
+          },
+          "1.0": {
+            "precision": 0.001,
+            "recall": 1.0,
+            "f1": 0.002,
+            "tp": 5,
+            "fp": 4923,
+            "fn": 0
+          }
+        }
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.4211,
+        "optimal_threshold": 0.947368,
+        "f1_at_gap": 0.1429,
+        "gap_threshold": 0.910922,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "metrics_by_threshold": {
+          "0.0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.052632": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.105263": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.157895": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.210526": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.263158": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.315789": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.368421": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.421053": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.473684": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.526316": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.578947": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.631579": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.684211": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.736842": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.789474": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.842105": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "0.894737": {
+            "precision": 0.5,
+            "recall": 0.0833,
+            "f1": 0.1429,
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "0.910922": {
+            "precision": 0.5,
+            "recall": 0.0833,
+            "f1": 0.1429,
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "0.947368": {
+            "precision": 0.5714,
+            "recall": 0.3333,
+            "f1": 0.4211,
+            "tp": 4,
+            "fp": 3,
+            "fn": 8
+          },
+          "1.0": {
+            "precision": 0.0006,
+            "recall": 1.0,
+            "f1": 0.0011,
+            "tp": 12,
+            "fp": 21667,
+            "fn": 0
+          }
+        }
+      }
+    },
+    "step4_interaction_recovery": {
+      "friedman1": {
+        "f1_at_optimal": 0.0163,
+        "f1_at_gap": 0.0,
+        "optimal_threshold": 0.97009,
+        "gap_threshold": 0.962078
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "f1_at_gap": 0.3077,
+        "optimal_threshold": 0.977905,
+        "gap_threshold": 0.965445
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.0784,
+        "f1_at_gap": 0.0,
+        "optimal_threshold": 0.96276,
+        "gap_threshold": 0.934706
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.129,
+        "f1_at_gap": 0.0976,
+        "optimal_threshold": 0.952753,
+        "gap_threshold": 0.957243
+      }
+    },
+    "baseline_pearson": {
+      "friedman1": {
+        "f1_at_optimal": 0.0125,
+        "optimal_threshold": 0.998281,
+        "f1_at_gap": 0.0,
+        "gap_threshold": 0.986029,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "friedman3": {
+        "f1_at_optimal": 1.0,
+        "optimal_threshold": 0.999965,
+        "f1_at_gap": 0.3077,
+        "gap_threshold": 0.995728,
+        "betti_numbers": [
+          1,
+          0,
+          0
+        ]
+      },
+      "synth_3way": {
+        "f1_at_optimal": 0.1111,
+        "optimal_threshold": 0.99107,
+        "f1_at_gap": 0.0,
+        "gap_threshold": 0.990442,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "synth_4way": {
+        "f1_at_optimal": 0.1429,
+        "optimal_threshold": 0.983457,
+        "f1_at_gap": 0.1429,
+        "gap_threshold": 0.983883,
+        "betti_numbers": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}

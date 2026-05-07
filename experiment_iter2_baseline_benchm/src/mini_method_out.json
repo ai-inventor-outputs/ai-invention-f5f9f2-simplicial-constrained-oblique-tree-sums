@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "experiment": "baseline_benchmarks",
+    "run_mode": "full",
+    "n_datasets": 10,
+    "methods": [
+      "FIGS-5",
+      "FIGS-10",
+      "FIGS-20",
+      "XGBoost-default",
+      "XGBoost-oracle",
+      "EBM-default",
+      "EBM-high-interaction",
+      "EBM-3way"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.685835, rmse=2.714388",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1214,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.685835, \"rmse\": 2.714388}",
+          "predict_FIGS_5_r2": "0.685835",
+          "predict_FIGS_5_rmse": "2.714388"
+        },
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.674433, rmse=2.723365",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1266,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.674433, \"rmse\": 2.723365}",
+          "predict_FIGS_5_r2": "0.674433",
+          "predict_FIGS_5_rmse": "2.723365"
+        },
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.671925, rmse=2.754032",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1213,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.671925, \"rmse\": 2.754032}",
+          "predict_FIGS_5_r2": "0.671925",
+          "predict_FIGS_5_rmse": "2.754032"
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.69098, rmse=0.179267",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0861,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.69098, \"rmse\": 0.179267}",
+          "predict_FIGS_5_r2": "0.69098",
+          "predict_FIGS_5_rmse": "0.179267"
+        },
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.683196, rmse=0.187188",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0924,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.683196, \"rmse\": 0.187188}",
+          "predict_FIGS_5_r2": "0.683196",
+          "predict_FIGS_5_rmse": "0.187188"
+        },
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.683112, rmse=0.183127",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0894,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.683112, \"rmse\": 0.183127}",
+          "predict_FIGS_5_r2": "0.683112",
+          "predict_FIGS_5_rmse": "0.183127"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.64452, rmse=0.897754",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1661,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.64452, \"rmse\": 0.897754}",
+          "predict_FIGS_5_r2": "0.64452",
+          "predict_FIGS_5_rmse": "0.897754"
+        },
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.65832, rmse=0.870217",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1819,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.65832, \"rmse\": 0.870217}",
+          "predict_FIGS_5_r2": "0.65832",
+          "predict_FIGS_5_rmse": "0.870217"
+        },
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.708424, rmse=0.812621",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1911,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.708424, \"rmse\": 0.812621}",
+          "predict_FIGS_5_r2": "0.708424",
+          "predict_FIGS_5_rmse": "0.812621"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_4way",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"synth_4way\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.770108, rmse=0.616753",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "synth_4way",
+          "metadata_train_time_sec": 0.1896,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.770108, \"rmse\": 0.616753}",
+          "predict_FIGS_5_r2": "0.770108",
+          "predict_FIGS_5_rmse": "0.616753"
+        },
+        {
+          "input": "{\"dataset\": \"synth_4way\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.745198, rmse=0.6484",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "synth_4way",
+          "metadata_train_time_sec": 0.1797,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.745198, \"rmse\": 0.6484}",
+          "predict_FIGS_5_r2": "0.745198",
+          "predict_FIGS_5_rmse": "0.6484"
+        },
+        {
+          "input": "{\"dataset\": \"synth_4way\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.752386, rmse=0.651036",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "synth_4way",
+          "metadata_train_time_sec": 0.192,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.752386, \"rmse\": 0.651036}",
+          "predict_FIGS_5_r2": "0.752386",
+          "predict_FIGS_5_rmse": "0.651036"
+        }
+      ]
+    },
+    {
+      "dataset": "diabetes",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"diabetes\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 614, \"n_test\": 154}",
+          "output": "accuracy=0.792208, auroc=0.826574",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "diabetes",
+          "metadata_train_time_sec": 0.0285,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"accuracy\": 0.792208, \"auroc\": 0.826574}",
+          "predict_FIGS_5_accuracy": "0.792208",
+          "predict_FIGS_5_auroc": "0.826574"
+        },
+        {
+          "input": "{\"dataset\": \"diabetes\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 614, \"n_test\": 154}",
+          "output": "accuracy=0.811688, auroc=0.856944",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "diabetes",
+          "metadata_train_time_sec": 0.023,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"accuracy\": 0.811688, \"auroc\": 0.856944}",
+          "predict_FIGS_5_accuracy": "0.811688",
+          "predict_FIGS_5_auroc": "0.856944"
+        },
+        {
+          "input": "{\"dataset\": \"diabetes\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 614, \"n_test\": 154}",
+          "output": "accuracy=0.746753, auroc=0.758426",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "diabetes",
+          "metadata_train_time_sec": 0.0221,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"accuracy\": 0.746753, \"auroc\": 0.758426}",
+          "predict_FIGS_5_accuracy": "0.746753",
+          "predict_FIGS_5_auroc": "0.758426"
+        }
+      ]
+    },
+    {
+      "dataset": "breast_w",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"breast_w\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 559, \"n_test\": 140}",
+          "output": "accuracy=0.942857, auroc=0.960258",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "breast_w",
+          "metadata_train_time_sec": 0.0208,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 1}",
+          "metadata_metrics": "{\"accuracy\": 0.942857, \"auroc\": 0.960258}",
+          "predict_FIGS_5_accuracy": "0.942857",
+          "predict_FIGS_5_auroc": "0.960258"
+        },
+        {
+          "input": "{\"dataset\": \"breast_w\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 559, \"n_test\": 140}",
+          "output": "accuracy=0.942857, auroc=0.954144",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "breast_w",
+          "metadata_train_time_sec": 0.0176,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 1}",
+          "metadata_metrics": "{\"accuracy\": 0.942857, \"auroc\": 0.954144}",
+          "predict_FIGS_5_accuracy": "0.942857",
+          "predict_FIGS_5_auroc": "0.954144"
+        },
+        {
+          "input": "{\"dataset\": \"breast_w\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 559, \"n_test\": 140}",
+          "output": "accuracy=0.964286, auroc=0.973505",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "breast_w",
+          "metadata_train_time_sec": 0.0182,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 1}",
+          "metadata_metrics": "{\"accuracy\": 0.964286, \"auroc\": 0.973505}",
+          "predict_FIGS_5_accuracy": "0.964286",
+          "predict_FIGS_5_auroc": "0.973505"
+        }
+      ]
+    },
+    {
+      "dataset": "adult",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"adult\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 8000, \"n_test\": 2000}",
+          "output": "accuracy=0.842, auroc=0.856417",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "adult",
+          "metadata_train_time_sec": 0.2356,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"accuracy\": 0.842, \"auroc\": 0.856417}",
+          "predict_FIGS_5_accuracy": "0.842",
+          "predict_FIGS_5_auroc": "0.856417"
+        },
+        {
+          "input": "{\"dataset\": \"adult\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 8000, \"n_test\": 2000}",
+          "output": "accuracy=0.8555, auroc=0.870498",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "adult",
+          "metadata_train_time_sec": 0.2274,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"accuracy\": 0.8555, \"auroc\": 0.870498}",
+          "predict_FIGS_5_accuracy": "0.8555",
+          "predict_FIGS_5_auroc": "0.870498"
+        },
+        {
+          "input": "{\"dataset\": \"adult\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 8000, \"n_test\": 2000}",
+          "output": "accuracy=0.862, auroc=0.888354",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "adult",
+          "metadata_train_time_sec": 0.2197,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"accuracy\": 0.862, \"auroc\": 0.888354}",
+          "predict_FIGS_5_accuracy": "0.862",
+          "predict_FIGS_5_auroc": "0.888354"
+        }
+      ]
+    },
+    {
+      "dataset": "wine_quality",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"wine_quality\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 5197, \"n_test\": 1300}",
+          "output": "r2=0.233735, rmse=0.752278",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "wine_quality",
+          "metadata_train_time_sec": 0.0845,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.233735, \"rmse\": 0.752278}",
+          "predict_FIGS_5_r2": "0.233735",
+          "predict_FIGS_5_rmse": "0.752278"
+        },
+        {
+          "input": "{\"dataset\": \"wine_quality\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 5197, \"n_test\": 1300}",
+          "output": "r2=0.255658, rmse=0.753264",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "wine_quality",
+          "metadata_train_time_sec": 0.1076,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.255658, \"rmse\": 0.753264}",
+          "predict_FIGS_5_r2": "0.255658",
+          "predict_FIGS_5_rmse": "0.753264"
+        },
+        {
+          "input": "{\"dataset\": \"wine_quality\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 5198, \"n_test\": 1299}",
+          "output": "r2=0.2472, rmse=0.760988",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "wine_quality",
+          "metadata_train_time_sec": 0.0894,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.2472, \"rmse\": 0.760988}",
+          "predict_FIGS_5_r2": "0.2472",
+          "predict_FIGS_5_rmse": "0.760988"
+        }
+      ]
+    },
+    {
+      "dataset": "california_housing",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"california_housing\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 16512, \"n_test\": 4128}",
+          "output": "r2=0.516048, rmse=0.796351",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "california_housing",
+          "metadata_train_time_sec": 0.3526,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.516048, \"rmse\": 0.796351}",
+          "predict_FIGS_5_r2": "0.516048",
+          "predict_FIGS_5_rmse": "0.796351"
+        },
+        {
+          "input": "{\"dataset\": \"california_housing\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 16512, \"n_test\": 4128}",
+          "output": "r2=0.541278, rmse=0.791617",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "california_housing",
+          "metadata_train_time_sec": 0.3144,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.541278, \"rmse\": 0.791617}",
+          "predict_FIGS_5_r2": "0.541278",
+          "predict_FIGS_5_rmse": "0.791617"
+        },
+        {
+          "input": "{\"dataset\": \"california_housing\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 16512, \"n_test\": 4128}",
+          "output": "r2=0.541435, rmse=0.77241",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "california_housing",
+          "metadata_train_time_sec": 0.3691,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.541435, \"rmse\": 0.77241}",
+          "predict_FIGS_5_r2": "0.541435",
+          "predict_FIGS_5_rmse": "0.77241"
+        }
+      ]
+    },
+    {
+      "dataset": "spambase",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"spambase\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 3680, \"n_test\": 921}",
+          "output": "accuracy=0.883822, auroc=0.883712",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "spambase",
+          "metadata_train_time_sec": 0.0894,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 1}",
+          "metadata_metrics": "{\"accuracy\": 0.883822, \"auroc\": 0.883712}",
+          "predict_FIGS_5_accuracy": "0.883822",
+          "predict_FIGS_5_auroc": "0.883712"
+        },
+        {
+          "input": "{\"dataset\": \"spambase\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 3681, \"n_test\": 920}",
+          "output": "accuracy=0.897826, auroc=0.915216",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "spambase",
+          "metadata_train_time_sec": 0.0861,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 1}",
+          "metadata_metrics": "{\"accuracy\": 0.897826, \"auroc\": 0.915216}",
+          "predict_FIGS_5_accuracy": "0.897826",
+          "predict_FIGS_5_auroc": "0.915216"
+        },
+        {
+          "input": "{\"dataset\": \"spambase\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 3681, \"n_test\": 920}",
+          "output": "accuracy=0.901087, auroc=0.928496",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "spambase",
+          "metadata_train_time_sec": 0.1205,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"accuracy\": 0.901087, \"auroc\": 0.928496}",
+          "predict_FIGS_5_accuracy": "0.901087",
+          "predict_FIGS_5_auroc": "0.928496"
+        }
+      ]
+    }
+  ]
+}

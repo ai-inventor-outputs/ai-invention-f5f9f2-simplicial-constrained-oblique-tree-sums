@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "experiment": "baseline_benchmarks",
+    "run_mode": "full",
+    "n_datasets": 10,
+    "methods": [
+      "FIGS-5",
+      "FIGS-10",
+      "FIGS-20"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "friedman1",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.685835, rmse=2.714388",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1214,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.685835, \"rmse\": 2.714388}",
+          "predict_FIGS_5_r2": "0.685835",
+          "predict_FIGS_5_rmse": "2.714388"
+        },
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.674433, rmse=2.723365",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1266,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.674433, \"rmse\": 2.723365}",
+          "predict_FIGS_5_r2": "0.674433",
+          "predict_FIGS_5_rmse": "2.723365"
+        },
+        {
+          "input": "{\"dataset\": \"friedman1\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.671925, rmse=2.754032",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "friedman1",
+          "metadata_train_time_sec": 0.1213,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.671925, \"rmse\": 2.754032}",
+          "predict_FIGS_5_r2": "0.671925",
+          "predict_FIGS_5_rmse": "2.754032"
+        }
+      ]
+    },
+    {
+      "dataset": "friedman3",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.69098, rmse=0.179267",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0861,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.69098, \"rmse\": 0.179267}",
+          "predict_FIGS_5_r2": "0.69098",
+          "predict_FIGS_5_rmse": "0.179267"
+        },
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.683196, rmse=0.187188",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0924,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.683196, \"rmse\": 0.187188}",
+          "predict_FIGS_5_r2": "0.683196",
+          "predict_FIGS_5_rmse": "0.187188"
+        },
+        {
+          "input": "{\"dataset\": \"friedman3\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.683112, rmse=0.183127",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "friedman3",
+          "metadata_train_time_sec": 0.0894,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.683112, \"rmse\": 0.183127}",
+          "predict_FIGS_5_r2": "0.683112",
+          "predict_FIGS_5_rmse": "0.183127"
+        }
+      ]
+    },
+    {
+      "dataset": "synth_3way",
+      "examples": [
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 0, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.64452, rmse=0.897754",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 0,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1661,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.64452, \"rmse\": 0.897754}",
+          "predict_FIGS_5_r2": "0.64452",
+          "predict_FIGS_5_rmse": "0.897754"
+        },
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 1, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.65832, rmse=0.870217",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 1,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1819,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 3}",
+          "metadata_metrics": "{\"r2\": 0.65832, \"rmse\": 0.870217}",
+          "predict_FIGS_5_r2": "0.65832",
+          "predict_FIGS_5_rmse": "0.870217"
+        },
+        {
+          "input": "{\"dataset\": \"synth_3way\", \"method\": \"FIGS-5\", \"fold\": 2, \"n_train\": 4000, \"n_test\": 1000}",
+          "output": "r2=0.708424, rmse=0.812621",
+          "metadata_method": "FIGS-5",
+          "metadata_fold": 2,
+          "metadata_dataset": "synth_3way",
+          "metadata_train_time_sec": 0.1911,
+          "metadata_complexity": "{\"n_splits\": 5, \"n_trees\": 2}",
+          "metadata_metrics": "{\"r2\": 0.708424, \"rmse\": 0.812621}",
+          "predict_FIGS_5_r2": "0.708424",
+          "predict_FIGS_5_rmse": "0.812621"
+        }
+      ]
+    }
+  ]
+}
